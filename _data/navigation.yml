@@ -1,16 +1,13 @@
 # Site navigation links
 
-- title: About
-  url: /about/
+- title: Sobre
+  url: /sobre/
 
-- title: Articles
-  url: /articles/
+- title: Artigos
+  url: /artigos/
+
+- title: Edições Anteriores
+  url: /edicoes-anteriores/
 
 - title: Blog
   url: /blog/
-
-- title: Theme Setup
-  url: /theme-setup/
-
-- title: Search
-  url: /search/
