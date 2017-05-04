@@ -5,8 +5,8 @@ locale: pt_BR
 #description: Describe your website here.
 #logo: site-logo.png
 search: true
-url: ""
-#url: https://dsnnunes.com.br/maratona
+#url: ""
+url: https://dsnnunes.com.br/maratona
 
 # Jekyll configuration
 
