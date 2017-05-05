@@ -5,8 +5,8 @@ locale: pt_BR
 #description: Describe your website here.
 #logo: site-logo.png
 search: true
-#url: ""
-url: https://dsnnunes.com.br/maratona
+url: ""
+#url: https://dsnnunes.com.br/maratona
 
 # Jekyll configuration
 
@@ -37,10 +37,10 @@ exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.
 
 # Site owner
 owner:
-  name: Daniel Saad
+  name: Maratona IFB
   avatar: bio-photo.jpg
   email: daniel.saad.nunes@gmail.com
-  disqus-shortname:
+  disqus-shortname: dsnnunes-maratona
   twitter: #username
   facebook: #username
   github: #username
@@ -66,11 +66,12 @@ defaults:
     type: posts
   values:
     layout: post
-    categories: blog
     excerpt: ''
+    comments: true
+    author: daniel_saad
 - scope:
     path: ''
     type: pages
   values:
     layout: page
-    excerpt:
+    excerpt: ''
