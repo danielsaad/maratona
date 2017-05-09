@@ -54,19 +54,19 @@ __3º lugar__: É NOIS
 
 * Gilberto Veras Rosa Junior
 * Luis Felipe Araujo Pimenta
-* Wellington Mesquita Santos&quot;]
+* Wellington Mesquita Santos
 
 [Fotos da III Maratona de Programação do IFG-Formosa](https://goo.gl/photos/mznewVtcJKNYkXto6)
 
 ## II Maratona de Programação do IFG Formosa
 __1º lugar__:
 
-* Hermano Neves Cunha</li>
-* Matheus Wisniewski</li>
+* Hermano Neves Cunha
+* Matheus Wisniewski
 
 __2º lugar__:
 
-* Marcelo Gustavo Simon<
+* Marcelo Gustavo Simon
 * Macrysla Yohanna Araújo Silva
 
 __3º lugar__: Skillo , tá de sacanagem e kings of code
