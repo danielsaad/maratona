@@ -39,7 +39,7 @@ exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.
 owner:
   name: Maratona IFB
   avatar: bio-photo.jpg
-  email: daniel.saad.nunes@gmail.com
+  email: daniel.nunes@ifb.edu.br
   disqus-shortname: dsnnunes-maratona
   twitter: #username
   facebook: #username
