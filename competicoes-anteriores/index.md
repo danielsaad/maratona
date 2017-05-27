@@ -1,7 +1,14 @@
 ---
-title: Edições Anteriores
+title: Competições Anteriores
 layout: page
 ---
+
+## ConTEST Centro-Oeste (27/05/2017)
+
+
+[Scoreboard](/images/conTEST-2017-05-27.pdf)
+
+[Scoreboard (IFB)](/images/conTEST-2017-05-27-IFB.pdf)
 
 ## V Maratona de Programação do IFG Formosa
 __1º lugar__: Medusa
