@@ -25,5 +25,7 @@ possamos adquirir esta cultura de programação competitiva no IFB e melhorar
 atributos como: capacidade de resolver problemas, criativitade, trabalho em
 equipe, entre outros ...
 
-** Precisamos fazer a inscrição o quanto antes para podermos pedir o auxílio
-ao IFB e pagar a taxa mais barata. **
+**Precisamos fazer a inscrição o quanto antes para podermos pedir o auxílio
+ao IFB e pagar a taxa mais barata.**
+
+Mais informações em: [http://maratona.ime.usp.br/](http://maratona.ime.usp.br/)
