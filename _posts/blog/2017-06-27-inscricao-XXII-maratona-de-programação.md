@@ -2,6 +2,7 @@
 title: Inscrição para a XXII Maratona de Programação
 date: 2017-06-27 00:00:00 Z
 layout: post
+categories: blog
 status: publish
 comments: true
 ---
