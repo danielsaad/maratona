@@ -20,7 +20,7 @@ um e-mail para daniel.nunes@ifb.edu.br contendo:
 * Data de nascimento de cada integrante e do reserva
 * Ano em que iniciaram os estudos universitários.
 
-É muito importante que tenhamos equipes participando da competição, para que
+É muito importante que tenhamos equipes participando da competição para que
 possamos adquirir esta cultura de programação competitiva no IFB e melhorar
 atributos como: capacidade de resolver problemas, criativitade, trabalho em
 equipe, entre outros ...
