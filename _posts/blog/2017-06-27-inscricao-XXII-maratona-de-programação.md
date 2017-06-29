@@ -17,9 +17,10 @@ no concurso ACM International Collegiate Programming (ICPC), a etapa mundial.
 Aqueles alunos que possuirem interesse em participar da Maratona, mandem
 um e-mail para daniel.nunes@ifb.edu.br contendo:
 
-* Nome dos três integrantes + nome do reserva
-* Data de nascimento de cada integrante e do reserva
+* Nome dos três integrantes + nome do reserva.
+* Data de nascimento de cada integrante e do reserva.
 * Ano em que iniciaram os estudos universitários.
+* Nome da equipe.
 
 É muito importante que tenhamos equipes participando da competição para que
 possamos adquirir esta cultura de programação competitiva no IFB e melhorar
