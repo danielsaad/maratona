@@ -45,8 +45,6 @@
         {{ content }}
         {% if site.owner.facebook-comments and page.comments or site.comments %}
           <div class="fb-comments" data-href= "{{site.url}}/{{page.url}}" data-numposts="5"></div>
-
-          {% include facebook-comments.html %}
         {% endif %}
         <!-- {% if site.owner.disqus-shortname and page.comments or site.comments %}
           <div id="disqus_thread"></div>
