@@ -41,6 +41,7 @@ owner:
   avatar:
   email:
   disqus-shortname: dsnnunes-maratona
+  facebook-comments: true
   twitter: #username
   facebook: maratonaIF
   github:
