@@ -38,11 +38,11 @@ exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.
 # Site owner
 owner:
   name: Maratona IFB
-  avatar: bio-photo.jpg
-  email: daniel.nunes@ifb.edu.br
+  avatar:
+  email:
   disqus-shortname: dsnnunes-maratona
   twitter: #username
-  facebook: #username
+  facebook: "https://www.facebook.com/maratonaIF/"
   github: danielsaad
   stackexchange: #http://stackoverflow.com/users/123456/username
   linkedin: #username
@@ -68,6 +68,7 @@ defaults:
     layout: post
     excerpt: ''
     comments: true
+    share: true
     author: daniel_saad
 - scope:
     path: ''
