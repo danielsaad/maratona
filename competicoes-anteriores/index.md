@@ -10,7 +10,7 @@ layout: page
 
 [Scoreboard (IFB)]({{site.url}}/images/conTEST-2017-05-27-IFB.pdf)
 
-## V Maratona de Programação do IFG Formosa
+## V Maratona de Programação do IFG Formosa (15/10/2016)
 __1º lugar__: Medusa
 
 * Gilberto Veras
@@ -23,7 +23,7 @@ __2º lugar__: FULLSTACK OVERKILL
 
 __3° lugar__: C_Mitos, 3M, Supercharged Programmers, Gigabirds
 
-## IV Maratona de Programação do IFG Formosa
+## IV Maratona de Programação do IFG Formosa (11/06/2016)
 __1º lugar__ : FULLSTACK OVERKILL
 
 * Alex Sandro da Silva Magalhães Junior
@@ -43,7 +43,7 @@ __3º lugar__: É NÓIS
 ![Placar da IV Maratona de Programação do IFG-Formosa]({{ site.baseurl }}/images/yKqn9Dk.png)
 
 
-## III Maratona de Programação do IFG Formosa
+## III Maratona de Programação do IFG Formosa (20/11/2015)
 
 __1º lugar__: FULLSTACK OVERKILL
 
@@ -65,7 +65,7 @@ __3º lugar__: É NOIS
 
 [Fotos da III Maratona de Programação do IFG-Formosa](https://goo.gl/photos/mznewVtcJKNYkXto6)
 
-## II Maratona de Programação do IFG Formosa
+## II Maratona de Programação do IFG Formosa (14/11/2014)
 __1º lugar__:
 
 * Hermano Neves Cunha
