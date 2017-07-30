@@ -5,9 +5,7 @@ layout: post
 categories: blog
 status: publish
 comments: true
-description: Estão abertas as inscrições para a XXII Maratona de Programação
-organizada pela SBC.
-
+description: Estão abertas as inscrições para a XXII Maratona de Programação organizada pela SBC.
 ---
 
 Prezados, está aberto o período de inscrição para a XXII Maratona de Programação,
