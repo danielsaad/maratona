@@ -67,7 +67,7 @@ defaults:
     type: posts
   values:
     layout: post
-    excerpt: ''
+    description: ''
     comments: true
     share: true
     author: daniel_saad
@@ -76,4 +76,4 @@ defaults:
     type: pages
   values:
     layout: page
-    excerpt: ''
+    description: ''
