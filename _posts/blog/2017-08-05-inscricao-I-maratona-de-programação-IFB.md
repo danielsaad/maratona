@@ -8,7 +8,7 @@ comments: true
 description: Estão abertas as inscrições para a I Maratona de Programação do IFB
 ---
 
-<img src="{{site.url}}/assets/logo-1-maratona-de-programacao-ifb.jpg" alt="I Maratona de Programação do IFB" style="width: 200px;"/>
+<img src="{{site.url}}/assets/logo-1-maratona-de-programacao-ifb.jpg" alt="I Maratona de Programação do IFB" style="width: 500px; align: middle;"/>
 
 
 É com prazer que declaramos que estão abertas as inscrições para a 1° Maratona de Programação do IFB.
