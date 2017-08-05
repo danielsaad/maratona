@@ -8,6 +8,8 @@ comments: true
 description: Estão abertas as inscrições para a I Maratona de Programação do IFB
 ---
 
+![I Maratona de Programação do IFB]({{site.url}}/assets/logo-1-maratona-de-programacao-ifb.jpg =250x)
+
 É com prazer que declaramos que estão abertas as inscrições para a 1° Maratona de Programação do IFB.
 
 A 1° Maratona de Programação do IFB terá um nível voltado para um público iniciante, no entanto, não há restrições na inscrição.
