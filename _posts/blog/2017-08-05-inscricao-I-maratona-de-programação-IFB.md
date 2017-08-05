@@ -18,7 +18,7 @@ Ela será subdividida em Aquecimento e Maratona. O Aquecimento tem como objetivo
 
 O regulamento da 1° Maratona de Programação do IFB pode ser obtido aqui: [Regulamento]({{site.url}}/assets/Regulamento-1-Maratona-IFB.pdf)
 
-As inscrições podem ser realizadas via: [Inscrições](#)
+As inscrições podem ser realizadas via: [Inscrições](https://docs.google.com/forms/d/e/1FAIpQLSeqLfQLyqfDWO6cy7BiRb89suXd2ntk_xsw1V-eIUERK_Oysg/viewform?usp=sf_link)
 
 
 Esperamos vocês lá!
@@ -29,4 +29,4 @@ Esperamos vocês lá!
 * Horário da Maratona: 13h às 18h
 * Cerimônia de Encerramento: 18h às 19h
 * [Regulamento]({{site.url}}/assets/Regulamento-1-Maratona-IFB.pdf)
-* [Inscrições](#)
+* [Inscrições](https://docs.google.com/forms/d/e/1FAIpQLSeqLfQLyqfDWO6cy7BiRb89suXd2ntk_xsw1V-eIUERK_Oysg/viewform?usp=sf_link)
