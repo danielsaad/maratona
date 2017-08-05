@@ -5,6 +5,7 @@ layout: post
 categories: blog
 status: publish
 comments: true
+image: assets/logo-1-maratona-de-programacao-ifb.jpg
 description: Estão abertas as inscrições para a I Maratona de Programação do IFB
 ---
 
