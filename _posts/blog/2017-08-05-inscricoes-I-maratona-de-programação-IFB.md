@@ -14,11 +14,9 @@ description: Estão abertas as inscrições para a I Maratona de Programação d
 
 É com prazer que declaramos que estão abertas as inscrições para a 1° Maratona de Programação do IFB.
 
-A 1° Maratona de Programação do IFB terá um nível voltado para um público iniciante, no entanto, não há restrições na inscrição.
+A 1° Maratona de Programação do IFB terá um nível voltado para um público iniciante, no entanto, não há restrições na inscrição. Qualquer equipe de qualquer escola poderá inscrever-se, ficando limitada apenas à capacidade dos laboratórios da instituição.
 
-Qualquer equipe de qualquer escola poderá inscrever-se, ficando limitada apenas à capacidade dos laboratórios da instituição.
-
-Ela será subdividida em Aquecimento e Maratona. O Aquecimento tem como objetivo familiarizar os competidores com o ambiente da Maratona e a plataforma computacional utilizada. Já a Maratona é a competição própriamente dita.
+Ela será subdividida em Aquecimento e Maratona. O Aquecimento tem como objetivo familiarizar os competidores com o ambiente da Maratona e a plataforma computacional utilizada. Já a Maratona é a competição propriamente dita.
 
 O regulamento da 1° Maratona de Programação do IFB pode ser obtido aqui: [Regulamento]({{site.url}}/assets/Regulamento-1-Maratona-IFB.pdf)
 
@@ -28,7 +26,8 @@ As inscrições podem ser realizadas via: [Inscrições](https://docs.google.com
 Esperamos vocês lá!
 
 ## Informações
-* Data: 26/08/2017
+* Data: 26/08/2017 (Sábado)
+* Local: Laboratórios de Informática do IFB-Taguatinga
 * Horário do Aquecimento: 10h às 11h
 * Horário da Maratona: 13h às 18h
 * Cerimônia de Encerramento: 18h às 19h
