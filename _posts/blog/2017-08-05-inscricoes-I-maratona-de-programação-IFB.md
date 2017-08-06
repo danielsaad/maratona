@@ -33,3 +33,8 @@ Esperamos vocês lá!
 * Cerimônia de Encerramento: 18h às 19h
 * [Regulamento]({{site.url}}/assets/Regulamento-1-Maratona-IFB.pdf)
 * [Inscrições](https://docs.google.com/forms/d/e/1FAIpQLSeqLfQLyqfDWO6cy7BiRb89suXd2ntk_xsw1V-eIUERK_Oysg/viewform?usp=sf_link)
+
+
+## Localização do IFB-Taguatinga
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1919.5975406813993!2d-48.101444527716204!3d-15.793664356859884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935bcc9fd5140ce1%3A0x63a91cbeaf63f89e!2sInstituto+Federal+de+Bras%C3%ADlia+Campus+Taguatinga!5e0!3m2!1spt-BR!2sbr!4v1501979852905" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
