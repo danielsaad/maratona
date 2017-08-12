@@ -1,5 +1,5 @@
 ---
-title: E/S rápida em  Java
+title: Exemplo de artigo
 layout: post
-categories: articles 
+categories: articles
 ---
