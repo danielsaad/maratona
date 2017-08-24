@@ -1,5 +1,5 @@
 ---
-title: ! 'I Maratona de Programação do IFB: Inscrições Homologadas'
+title: "I Maratona de Programação do IFB: Inscrições Homologadas"
 date: 2017-08-23 00:00:00 Z
 layout: post
 categories: blog
