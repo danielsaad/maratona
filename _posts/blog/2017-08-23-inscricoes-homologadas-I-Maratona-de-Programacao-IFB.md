@@ -1,6 +1,6 @@
 ---
 title: "I Maratona de Programação do IFB: Inscrições Homologadas"
-date: 2017-08-23 12:00:00
+date: 2017-08-23 20:00:00
 layout: post
 categories: blog
 status: publish
