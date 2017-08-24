@@ -5,7 +5,6 @@ layout: post
 categories: blog
 status: publish
 comments: true
-future: true
 image: "logo-1-maratona-de-programacao-ifb.jpg"
 description: Inscrições homologadas da I Maratona de Programação do IFB
 ---
