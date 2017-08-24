@@ -21,7 +21,7 @@ Olá pessoal, seguem as incrições homologadas da 1° Maratona de Programação
 |           Team PIGEON          	| Instituto Federal de Brasília - IFB 	|    Virgílio Stefanin Pacheco dos Santos   	|   Luiz Gustavo Benício Neves    	|       Eloy Oliveira Guimaraes       	|
 |          Holy Avengers         	| Instituto Federal de Brasília - IFB 	|     Danyelle da Silva Oliveira Angelo     	|  Carlos Eduardo Pereira Santana 	|        Italo de Souza Moraes        	|
 |           Duck Season          	|    Universidade de Brasília - CIC   	|        Khalil Carsten do Nascimento       	|       Renato Avelar Nobre       	|     Marcelo Araujo Lopes Junior     	|
-|        #<includeBatata>        	| Instituto Federal de Brasília - IFB 	| Matheus de Azevedo Feitosa Juca de Araujo 	|   Jerônimo Hermano Neves Cunha  	|        Davi Ferreira Cordeiro       	|
+|        \#\<includeBatata\>        	| Instituto Federal de Brasília - IFB 	| Matheus de Azevedo Feitosa Juca de Araujo 	|   Jerônimo Hermano Neves Cunha  	|        Davi Ferreira Cordeiro       	|
 |             Haappy             	| Instituto Federal de Brasília - IFB 	|      Bruno Faustino Cecilio da Silva      	|         Iago Costa Silva        	|          Rafael Job Pereira         	|
 |     Mágicos da Programação     	| Instituto Federal de Brasília - IFB 	|     Victor Marques de Souza dos Anjos     	|      Lucas Alves Capristano     	|    Anderson Vieira do Nascimento    	|
 |          Cangaçoftware         	|    Universidade de Brasília - FGA   	|          Leonardo da Silva Santos         	|     Vinícius Almeida Barbosa    	|     Leonardo de Araujo Medeiros     	|
