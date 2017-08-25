@@ -11,6 +11,7 @@ description: Inscrições homologadas da I Maratona de Programação do IFB
 
 Olá pessoal, seguem as incrições homologadas da 1° Maratona de Programação do IFB.
 
+
 |         Nome da Equipe         	|             Instituição             	|           Nome (participante 1)           	|      Nome (participante 2)      	|        Nome (participante 3)        	|
 |:------------------------------:	|:-----------------------------------:	|:-----------------------------------------:	|:-------------------------------:	|:-----------------------------------:	|
 |           Só C Salva           	| Instituto Federal de Brasília - IFB 	|         Francisco Lucas Paz Vieira        	|    Gustavo Soares de Oliveira   	|     Lucas Martins Mendes Vieira     	|
@@ -28,3 +29,4 @@ Olá pessoal, seguem as incrições homologadas da 1° Maratona de Programação
 |          Lo and Behold         	|    Universidade de Brasília - FGA   	|            Bruno Giuliani Gomes           	|  Julia de Melo Franco Fernandes 	|    Tiago Miguel Caetano da Silva    	|
 |         Fanclube_Duerno        	|    Universidade de Brasília - FGA   	|      Gabriel Familiar Amorim da Silva     	|   Felipe Moreno Lago dos Anjos  	|   Vinícius Vilela Medeiros Sotero   	|
 |             Time 7             	|    Universidade de Brasília - FGA   	|        Isla Kalleny Marques Brandão       	| João de Assis da Silva Carneiro 	|        Isaac Moura de Alencar       	|
+|            Einsteins              |    Centro Universitário IESB          |           Thiago Santana Pereira              | Jonas Siqueira Ramos              |      Lucca Pessoa da Silva Matos      |
