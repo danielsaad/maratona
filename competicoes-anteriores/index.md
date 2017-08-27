@@ -3,8 +3,21 @@ title: Competições Anteriores
 layout: page
 ---
 
-## ConTEST Centro-Oeste (27/05/2017)
+## I Maratona de Programação do IFB (27/08/2017)
 
+[Scoreboard]({{site.url}}assets/1-maratona-de-programacao-ifb/estatisticas.pdf)
+
+[Estatísticas]({{site.url}}assets/1-maratona-de-programacao-ifb/estatisticas.pdf)
+
+[Aquecimento]({{site.url}}assets/1-maratona-de-programacao-ifb/Aquecimento.pdf)
+
+[Maratona]({{site.url}}assets/1-maratona-de-programacao-ifb/Maratona)
+
+[Fotos](#)
+
+
+
+## ConTEST Centro-Oeste (27/05/2017)
 
 [Scoreboard]({{site.url}}/images/conTEST-2017-05-27.pdf)
 
