@@ -5,7 +5,7 @@ layout: page
 
 ## I Maratona de Programação do IFB (27/08/2017)
 
-[Scoreboard]({{site.url}}/assets/1-maratona-de-programacao-ifb/estatisticas.pdf)
+[Scoreboard]({{site.url}}/assets/1-maratona-de-programacao-ifb/scoreboard.pdf)
 
 [Estatísticas]({{site.url}}/assets/1-maratona-de-programacao-ifb/estatisticas.pdf)
 
