@@ -11,7 +11,7 @@ layout: page
 
 [Caderno do  Aquecimento]({{site.url}}/assets/1-maratona-de-programacao-ifb/Aquecimento.pdf)
 
-[Caderno da Maratona]({{site.url}}/assets/1-maratona-de-programacao-ifb/Maratona)
+[Caderno da Maratona]({{site.url}}/assets/1-maratona-de-programacao-ifb/Maratona.pdf)
 
 [Fotos](https://www.facebook.com/media/set/?set=a.1657164007668782.1073741829.1604086749643175&type=1&l=2bff38168f)
 
