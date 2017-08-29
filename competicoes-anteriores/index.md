@@ -1,6 +1,7 @@
 ---
 title: Competições Anteriores
 layout: page
+description: Competições anteriores
 ---
 
 ## I Maratona de Programação do IFB (27/08/2017)
