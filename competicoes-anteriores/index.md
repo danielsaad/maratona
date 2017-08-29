@@ -13,9 +13,25 @@ layout: page
 
 [Maratona]({{site.url}}/assets/1-maratona-de-programacao-ifb/Maratona)
 
-[Fotos](#)
+[Fotos](https://www.facebook.com/media/set/?set=a.1657164007668782.1073741829.1604086749643175&type=1&l=2bff38168f)
 
+__1° lugar__: Programação Orientada a Cebola [IESB]
 
+* João Pedro Ferraz
+* Rodrigo Guimarães Araújo
+* Vinícius Nobre
+
+__2° lugar__: BitBox [IESB]
+
+* Allan Teotonion
+* Edson Sousa
+* Érika Espindola
+
+__3° lugar__: Lo and Behold [UnB/FGA]
+
+* Bruno Giuliani Gomes
+* Julia de Melo Franco Fernandes
+* Tiago Miguel Caetano da Silva
 
 ## ConTEST Centro-Oeste (27/05/2017)
 
