@@ -17,6 +17,7 @@ IFSociety: **16° Lugar** :clap:
 
 [Scoreboard Nacional]({{site.url}}/assets/22-maratona-de-programacao/scoreboard.pdf)
 
+[Fotos](https://www.facebook.com/pg/maratona/photos/?tab=album&album_id=10155159553274118)
 
 ## I Maratona de Programação do IFB (27/08/2017)
 
