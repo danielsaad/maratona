@@ -6,7 +6,7 @@ description:
 #logo: site-logo.png
 search: true
 # url: http://localhost:4000
-url: "https://danielsaad.com/maratona"
+url: https://danielsaad.com/maratona
 
 timezone: America/Sao_Paulo
 future: true
