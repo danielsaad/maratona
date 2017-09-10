@@ -4,9 +4,20 @@ layout: page
 description: Competições anteriores
 ---
 
-## I Maratona de Programação do IFB (27/08/2017)
+## XXII Maratona de Programação (09/09/2017)
+IFSociety: **16° Lugar**
 
-[Scoreboard]({{site.url}}/assets/1-maratona-de-programacao-ifb/scoreboard.pdf)
+* Jerônimo Hermano
+* Luis Eduardo Ximenes Neto
+* Samuel Novaes Sena
+
+
+[Scoreboard DF]({{site.url}}/assets/22-maratona-de-programacao/scoreboard-df.pdf)
+
+[Scoreboard Nacional]({{site.url}}/assets/22-maratona-de-programacao/scoreboard.pdf)
+
+
+## I Maratona de Programação do IFB (27/08/2017)
 
 [Estatísticas]({{site.url}}/assets/1-maratona-de-programacao-ifb/estatisticas.pdf)
 
