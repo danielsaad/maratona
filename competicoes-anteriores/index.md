@@ -19,6 +19,7 @@ IFSociety: **16° Lugar**
 
 [Fotos](https://www.facebook.com/pg/maratona/photos/?tab=album&album_id=10155159553274118)
 
+
 ## I Maratona de Programação do IFB (27/08/2017)
 
 [Estatísticas]({{site.url}}/assets/1-maratona-de-programacao-ifb/estatisticas.pdf)
