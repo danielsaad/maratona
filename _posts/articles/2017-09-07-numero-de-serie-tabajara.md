@@ -6,7 +6,7 @@ categories: articles
 status: publish
 comments: true
 image: "logo-1-maratona-de-programacao-ifb.jpg"
-description: Editorial do problema.
+description: "Editorial do problema Número de Série Tabajara."
 ---
 
 Olá pessoal.
