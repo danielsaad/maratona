@@ -2,7 +2,7 @@
 title: "I Maratona de Programação do IFB: Número de Série Tabajara"
 date: 2017-09-07
 layout: post
-categories: article
+categories: articles
 status: publish
 comments: true
 image: "logo-1-maratona-de-programacao-ifb.jpg"
