@@ -7,7 +7,7 @@ description: Competições anteriores
 ## XXII Maratona de Programação (09/09/2017)
 IFSociety: **16° Lugar**
 
-* Jerônimo Hermano
+* Jerônimo Hermano Neves Cunha
 * Luis Eduardo Ximenes Neto
 * Samuel Novaes Sena
 

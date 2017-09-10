@@ -11,7 +11,7 @@ description: "Resultado final da XXII Maratona de Programação (1° Fase)"
 
 Olá, pessoal.
 
-Está disponível o [resultado final]({{site.url}}/competicoes-anteriores) da XXII Maratona de Programação (1° Fase).
+Está disponível o [resultado final]({{site.url}}/competicoes-anteriores/##XXII Maratona de Programação (09/09/2017)) da XXII Maratona de Programação (1° Fase).
 
 Parabéns ao IFSociety, que representou muito bem o IFB na competição.
 
