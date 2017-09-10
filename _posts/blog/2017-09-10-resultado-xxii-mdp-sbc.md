@@ -1,6 +1,6 @@
 ---
 title: "XXII Maratona de Programação (1° Fase): Resultados"
-date: 2017-09-06
+date: 2017-09-10
 layout: post
 categories: blog
 status: publish
