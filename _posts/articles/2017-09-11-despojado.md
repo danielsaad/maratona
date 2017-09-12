@@ -1,5 +1,5 @@
 ---
-title: "XXII Maratona de Programação: Despojados"
+title: "XXII Maratona de Programação (1° Fase): Despojados"
 date: 2017-09-11
 layout: post
 categories: articles
