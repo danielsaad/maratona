@@ -18,9 +18,12 @@ description: Competições anteriores
 [Scoreboard Nacional]({{site.url}}/assets/22-maratona-de-programacao/scoreboard.pdf)
 
 [Estatisticas]({{site.url}}/assets/22-maratona-de-programacao/estatisticas.pdf)
+
 [Caderno do Aquecimento]({{site.url}}/assets/22-maratona-de-programacao/aquecimento.pdf)
 
 [Caderno da Maratona]({{site.url}}/assets/22-maratona-de-programacao/maratona.pdf)
+
+[Entradas e Saídas](https://www.dropbox.com/s/qbospkvtkfcnyb1/Entradas%20e%20Sa%C3%ADdas%20-%2022%20Maratona%20de%20Programa%C3%A7%C3%A3o.zip?dl=0)
 
 [Fotos](https://www.facebook.com/pg/maratona/photos/?tab=album&album_id=10155159553274118)
 
