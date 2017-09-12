@@ -1,12 +1,11 @@
 ---
-title: "I Maratona de Programação do IFB: Número de Série Tabajara"
-date: 2017-09-07
+title: "XXII Maratona de Programação: Despojados"
+date: 2017-09-11
 layout: post
 categories: articles
 status: publish
 comments: true
-image: "logo-1-maratona-de-programacao-ifb.jpg"
-description: "Editorial do problema Número de Série Tabajara."
+description: "Editorial do problema Despojados."
 ---
 
 Olá pessoal.
