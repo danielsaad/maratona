@@ -4,7 +4,7 @@ layout: page
 description: Competições anteriores
 ---
 
-## XXII Maratona de Programação (09/09/2017) <a name="xxii-mdp"></a>
+## XXII Maratona de Programação (1° Fase - 09/09/2017) <a name="xxii-mdp"></a>
 
 **16° Lugar**: IFSociety
 
