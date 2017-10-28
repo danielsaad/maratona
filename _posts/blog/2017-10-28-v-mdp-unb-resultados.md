@@ -13,4 +13,4 @@ Olá pessoal, estão disponíveis os resultados, o caderno de problemas e as ent
 
 Eles podem ser conferidos [aqui]({{site.url}}/competicoes-anteriores/#v-mdp-unb).
 
-Parabenizamos mais uma vez as nossas equipes, que representaram a nossa instituição, e a todos os organizadores da **5° Maratona de Programação da UnB**, a qual foi um evento excelente e de altíssimo nível cuja participação estendeu-se a nível nacional.
+Parabenizamos mais uma vez as nossas equipes, que representaram a nossa instituição, e a todos os organizadores da **V Maratona de Programação da UnB**, a qual foi um evento excelente e de altíssimo nível cuja participação estendeu-se a nível nacional.
