@@ -1,6 +1,6 @@
 ---
 title: "5° Maratona de Programação da UnB: Resultados"
-date: 2017-10-16
+date: 2017-10-28
 layout: post
 categories: blog
 status: publish
