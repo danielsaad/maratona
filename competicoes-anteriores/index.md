@@ -5,7 +5,7 @@ description: Competições anteriores
 ---
 
 
-## V Maratona de Programação da UnB <a name="v-mdp-unb"></a>
+## V Maratona de Programação da UnB (25/10/2017) <a name="v-mdp-unb"></a>
 
 
 [Scoreboard]({{site.url}}/assets/5-mdp-unb/resultados.pdf)
