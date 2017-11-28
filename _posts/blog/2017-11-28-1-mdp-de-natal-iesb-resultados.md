@@ -5,7 +5,7 @@ layout: post
 categories: blog
 status: publish
 comments: true
-description: "Resultado da 1° Maratona de Programação de Natal do IESB"
+description: "Resultados da 1° Maratona de Programação de Natal do IESB"
 ---
 
 
