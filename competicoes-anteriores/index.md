@@ -5,7 +5,7 @@ description: Competições anteriores
 ---
 
 
-## 1° Maratona de Programação da UnB (25/11/2017) <a name="1-mdp-de-natal-iesb"></a>
+## 1° Maratona de Programação de Natal do IESB (25/11/2017) <a name="1-mdp-de-natal-iesb"></a>
 
 [Scoreboard]({{site.url}}/assets/1-mdp-de-natal-iesb/resultados.pdf)
 
