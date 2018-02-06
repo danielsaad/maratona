@@ -76,6 +76,8 @@ description: Competições anteriores
 
 ## I Maratona de Programação do IFB (27/08/2017)
 
+[Estatísticas]({{site.url}}/assets/1-maratona-de-programacao-ifb/scoreboard.pdf)
+
 [Estatísticas]({{site.url}}/assets/1-maratona-de-programacao-ifb/estatisticas.pdf)
 
 [Caderno do  Aquecimento]({{site.url}}/assets/1-maratona-de-programacao-ifb/Aquecimento.pdf)
