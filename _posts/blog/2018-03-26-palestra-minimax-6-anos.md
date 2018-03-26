@@ -1,11 +1,11 @@
 ---
-title: "1° Maratona de Programação de Natal do IESB: Resultados"
+title: "Divulgação da palestra Minimax: prof. Edson Alves da Costa Júnior (UnB/FGA)"
 date: 2018-03-26
 layout: post
 categories: blog
 status: publish
 comments: true
-description: "Palestra Minimax: prof. Edson Alves da Costa"
+description: "Anúncio da palestra Minimax: 6 anos de participação da Faculdade UnB Gama na Maratona de Programação proferida pelo prof. Edson Alves da Costa"
 ---
 
 
