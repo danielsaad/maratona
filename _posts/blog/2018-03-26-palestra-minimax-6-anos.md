@@ -5,7 +5,7 @@ layout: post
 categories: blog
 status: publish
 comments: true
-description: "Anúncio da palestra Minimax: 6 anos de participação da Faculdade UnB Gama na Maratona de Programação proferida pelo prof. Edson Alves da Costa"
+description: " Anúncio da palestra 'Minimax: 6 anos de participação da Faculdade UnB Gama na Maratona de Programação', proferida pelo prof. Edson Alves da Costa"
 ---
 
 
