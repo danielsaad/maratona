@@ -5,7 +5,7 @@ layout: post
 categories: blog
 status: publish
 comments: true
-image: "ninja-baloes.png"
+image: "2-maratona-de-programacao-ifb/ninja-baloes.png"
 description: "Estão abertas as inscrições para a II Maratona de Programação do IFB"
 ---
 
