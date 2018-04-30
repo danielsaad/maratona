@@ -10,8 +10,6 @@
 
 <body id="post">
 
-{% include facebook-init.html %}
-
 {% include navigation.html %}
 
 <div id="main" role="main">
@@ -46,6 +44,7 @@
       </footer>
       <div class="entry-content">
         {{ content }}
+        {% include facebook-init.html %}
         {% if site.owner.facebook-comments and page.comments or site.comments %}
           <div class="fb-comments" data-href= "{{site.url}}{{page.url}}" data-numposts="5"></div>
         {% endif %}
