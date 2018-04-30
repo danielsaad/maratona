@@ -5,7 +5,7 @@ layout: post
 categories: blog
 status: publish
 comments: true
-image: "2-maratona-de-programacao-ifb/ninja-baloes.png"
+image: "ninja-baloes.png"
 description: Estão abertas as inscrições para a II Maratona de Programação do IFB
 ---
 
@@ -14,7 +14,7 @@ description: Estão abertas as inscrições para a II Maratona de Programação 
 
 É com prazer que declaramos que estão abertas as inscrições para a 2° Maratona de Programação do IFB.
 
-Qualquer equipe de qualquer escola poderá inscrever-se, ficando limitada apenas à capacidade dos laboratórios da instituição.
+Qualquer equipe de qualquer escola poderá seinscrever , ficando limitada apenas à capacidade dos laboratórios da instituição.
 
 
 O regulamento da 2° Maratona de Programação do IFB pode ser obtido aqui: [Regulamento]({{site.url}}/assets/2-maratona-de-programacao-ifb/Regulamento-2-Maratona-IFB.pdf)
