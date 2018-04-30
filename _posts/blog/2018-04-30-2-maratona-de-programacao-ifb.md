@@ -14,7 +14,7 @@ description: Estão abertas as inscrições para a II Maratona de Programação 
 
 É com prazer que declaramos que estão abertas as inscrições para a 2° Maratona de Programação do IFB.
 
-Qualquer equipe de qualquer escola poderá seinscrever , ficando limitada apenas à capacidade dos laboratórios da instituição.
+Qualquer equipe de qualquer escola poderá se inscrever , ficando limitada apenas à capacidade dos laboratórios da instituição.
 
 
 O regulamento da 2° Maratona de Programação do IFB pode ser obtido aqui: [Regulamento]({{site.url}}/assets/2-maratona-de-programacao-ifb/Regulamento-2-Maratona-IFB.pdf)
