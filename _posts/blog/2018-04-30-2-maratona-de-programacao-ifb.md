@@ -6,7 +6,7 @@ categories: blog
 status: publish
 comments: true
 image: "ninja-baloes.png"
-description: Estão abertas as inscrições para a II Maratona de Programação do IFB
+description: "Estão abertas as inscrições para a II Maratona de Programação do IFB"
 ---
 
 <img src="{{site.url}}/assets/2-maratona-de-programacao-ifb/chamada-2-mdp-ifb.png" alt="II Maratona de Programação do IFB" align="middle" style="width: 500px; text-align: center"/>
