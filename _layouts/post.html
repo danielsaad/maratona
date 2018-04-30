@@ -44,10 +44,10 @@
       </footer>
       <div class="entry-content">
         {{ content }}
-        <!-- {% include facebook-init.html %}
-        {% if site.owner.facebook-comments and page.comments or site.comments %}
-          <div class="fb-comments" data-href= "{{site.url}}{{page.url}}" data-numposts="5"></div>
-        {% endif %} -->
+        <!-- {% include facebook-init.html %} -->
+        <!-- {% if site.owner.facebook-comments and page.comments or site.comments %} -->
+          <!-- <div class="fb-comments" data-href= "{{site.url}}{{page.url}}" data-numposts="5"></div> -->
+        <!-- {% endif %} -->
         {% if site.owner.disqus-shortname and page.comments or site.comments %}
           <div id="disqus_thread"></div>
           {% include disqus-comments.html %}
