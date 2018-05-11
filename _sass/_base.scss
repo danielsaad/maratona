@@ -230,3 +230,11 @@ pre {
 b, i, strong, em, blockquote, p, q, span, figure, img, h1, h2, header, input, a, .highlight {
 	@include transition(all 0.2s ease);
 }
+
+
+table tr:nth-child(odd) td{
+	background:#ccc;
+}
+table tr:nth-child(even) td{
+	 background:#fff;
+}
