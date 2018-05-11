@@ -9,7 +9,7 @@ image: "2-maratona-de-programacao-ifb/ninja-baloes.png"
 description: "Inscrições homologadas da II Maratona de Programação do IFB"
 ---
 
-Olá. pessoal.
+Olá, pessoal.
 
 Seguem a lista das inscrições presenciais e remotas homologadas.
 Um e-mail foi enviado para cada um dos participantes confirmando a inscrição.
