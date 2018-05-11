@@ -59,6 +59,6 @@ Em caso do não recebimento do e-mail (cheque a caixa de SPAM), envie uma mensag
 | Stark                          	| Universidade de Brasília - FGA                     	| Erick Pereira Araujo            	| Alexandre Miguel Rodrigues Nunes Pereira 	| Gabriel Williams Silva de Mendonça 	|
 | Linux²-Bacon_Blue              	| Centro Universitário IESB                          	| Gabriel Yassunaga               	| Yago Lucas                               	| Pedro Sérgio                       	|
 | Mário Verde                    	| Universidade de Brasília - FGA                     	| Igor Barbosa Duarte             	| Vitor Barbosa de Araujo                  	|                                    	|
-| Eu, Eu Mesmo e Irene           	| Centro Universitário IESB                          	| Bruno de Amorim Campos          	|                                          	|                                    	
-
+| Eu, Eu Mesmo e Irene           	| Centro Universitário IESB                          	| Bruno de Amorim Campos          	|                                          	|                                    	|
+| Zezo > Jimi Hendrix				| Universidade de Brasília - FGA                        | Bruna Pinos de Oliveira           | Matheus Miranda Lacerda                   | Luan Guimarães Lacerda                |
 
