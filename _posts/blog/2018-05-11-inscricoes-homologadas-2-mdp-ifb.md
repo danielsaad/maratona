@@ -5,8 +5,8 @@ layout: post
 categories: blog
 status: publish
 comments: true
-image: 2-maratona-de-programacao-ifb/ninja-baloes.png
-description: "Inscrições homologadas da II Maratona de Programação do IFB"
+image: "2-maratona-de-programacao-ifb/ninja-baloes.png"
+excerpt: "Inscrições homologadas da II Maratona de Programação do IFB"
 ---
 
 Olá, pessoal.
