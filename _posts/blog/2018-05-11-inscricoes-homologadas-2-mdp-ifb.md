@@ -34,6 +34,7 @@ Em caso do não recebimento do e-mail (cheque a caixa de SPAM), envie uma mensag
 | #include <batata.h>       	| Instituto Federal de Brasília - IFB 	| Matheus de Azevedo Feitosa Juca de Araujo 	| Virgílio Stefanin Pacheco                   	| Caio César Félix Caldeira         	|
 | Ahn? Quer namorar comigo? 	| Universidade de Brasília - CIC      	| Mikael Mello                              	| Thiago Veras                                	| Giovanni Guidini                  	|
 | Holy Avengers             	| Instituto Federal de Brasília - IFB 	| Carlos Eduardo Pereira Santana            	| Raquel Pinheiro da Costa                    	| Danyelle da Silva Oliveira Angelo 	|
+| É dificil xover um nome 		| Universidade de Brasília - CIC 		| José Marcos da Silva Leite 					| Luis Felipe Braga Gebrim Silva 				| Rafael Lourenço de Lima Chehab |
 
 
 ## Participação Remota
@@ -61,4 +62,9 @@ Em caso do não recebimento do e-mail (cheque a caixa de SPAM), envie uma mensag
 | Mário Verde                    	| Universidade de Brasília - FGA                     	| Igor Barbosa Duarte             	| Vitor Barbosa de Araujo                  	|                                    	|
 | Eu, Eu Mesmo e Irene           	| Centro Universitário IESB                          	| Bruno de Amorim Campos          	|                                          	|                                    	|
 | Zezo > Jimi Hendrix				| Universidade de Brasília - FGA                        | Bruna Pinos de Oliveira           | Matheus Miranda Lacerda                   | Luan Guimarães Lacerda                |
-
+| Mr robots               			| Universidade de Brasília - FGA     					| Eduardo Nunes                     |                          					|                             |
+| Codebusters              			| Centro Universitário IESB           					| Sara Selis                        | Gabriel Rodrigues        					| Sabrina Rolim               |
+| Que Huffman os tambores  			| Universidade de Brasília - FGA      					| Vitor Meireles                    | José Reinaldo            					| Luiza Irina                 |
+| VSBzaGFsbCBub3QgcGFzcw== 			| Universidade Federal de Goiás - UFG 					| Murilo                            |                          					|                             |
+| Chuva seca               			| Universidade de Brasília - FGA     					| Damarcones dos Santos Duque Porto |                          					|                             |
+| BID                      			| Universidade de Brasília - FGA     					| Iuri de Souza Severo Alves        | Douglas Farias de Castro 					| Bruno Henrique Sousa Duarte |
