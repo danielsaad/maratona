@@ -35,14 +35,14 @@ description: "Inscrições homologadas da II Maratona de Programação do IFB"
 | Nome da Equipe                 	| Instituição                                        	| Nome (participante 1)           	| Nome (participante 2)                    	| Nome (participante 3)              	|
 |--------------------------------	|----------------------------------------------------	|---------------------------------	|------------------------------------------	|------------------------------------	|
 | Catlangos do Cerrado           	| Centro Universitário IESB                          	| Rodrigo Guimarães Araújo        	| Rafael Rodrigues Pereira Araújo          	| Douglas Ammirante da Cunha         	|
-| Linux Bacon Tema Livre         	| Centro Universitário IESB                          	| Luiz Filipe Azevedo de Lima     	| Rodrigo Touriño Machado de Oliveira Lima 	| Puquê Is                           	|
-| LinuX2-Bacon Blue              	| Centro Universitário IESB                          	| Pedro Sérgio Vieira Da Silva    	| Gaybriel Yassunaga                       	| Mana Jeyjey                        	|
+| Linux Bacon Tema Livre         	| Centro Universitário IESB                          	| Luiz Filipe Azevedo de Lima     	| Rodrigo Touriño Machado de Oliveira Lima 	|                            	|
+| LinuX2-Bacon Blue              	| Centro Universitário IESB                          	| Pedro Sérgio Vieira Da Silva    	| Gaybriel Yassunaga                       	|                         	|
 | Cvaicomnois                    	| Universidade Federal do Pará - UFPA                	| Carlos Aparecido Serrato Junior 	| Lucas Queiroz Correa                     	| Flavio Mendes de Brito             	|
-| Gabriel Duarte                 	| Universidade Federal Fluminense - UFF              	| Gabriel Duarte                  	| Gabriel Duarte                           	| Gabriel Duarte                     	|
+| Gabriel Duarte                 	| Universidade Federal Fluminense - UFF              	| Gabriel Duarte                  	|                            				|                     	|
 | Invisibilidade na UFPA lvl 100 	| UFPA                                               	| Felipe Cunha Cardoso            	| Diego Dantas Figueiredo                  	| Marcos Lude da silva ferreira      	|
 | Deep IESB                      	| Centro Universitário IESB                          	| Thiago Santana Pereira          	| Jonas Siqueira Ramos                     	| Lucca Pessoa da Silva Matos        	|
 | LinuX-Bacon Red                	| Centro Universitário IESB                          	| Fernanda Arruda                 	| Valber Medeiros de Queiroz Júnior        	| Guilherme da Fonseca Bites         	|
-| Hotfix Team                    	| Universidade de Brasília - FGA                     	| Laércio Silva de Sousa Júnior   	| Jonathan Henrique Maia de Moraes         	| Fulano                             	|
+| Hotfix Team                    	| Universidade de Brasília - FGA                     	| Laércio Silva de Sousa Júnior   	| Jonathan Henrique Maia de Moraes         	|                              	|
 | O meu teclado ta zuado         	| Universidade de Brasília - FGA                     	| Felipe Osório de Oliveira       	|                                          	|                                    	|
 | BallonField                    	| Pontifícia Universidade Católica de Goias – PUC/GO 	| Ítalo Fernandes                 	| Bruno Almeda                             	| Adolfo Aires                       	|
 | FGAstros                       	| Universidade de Brasília - FGA                     	| Rômulo Vinícius de Souza        	| João Vítor Morandi Lemos                 	| Victor Girão Costa                 	|
@@ -54,4 +54,5 @@ description: "Inscrições homologadas da II Maratona de Programação do IFB"
 | Linux²-Bacon_Blue              	| Centro Universitário IESB                          	| Gabriel Yassunaga               	| Yago Lucas                               	| Pedro Sérgio                       	|
 | Mário Verde                    	| Universidade de Brasília - FGA                     	| Igor Barbosa Duarte             	| Vitor Barbosa de Araujo                  	|                                    	|
 | Eu, Eu Mesmo e Irene           	| Centro Universitário IESB                          	| Bruno de Amorim Campos          	|                                          	|                                    	
+
 
