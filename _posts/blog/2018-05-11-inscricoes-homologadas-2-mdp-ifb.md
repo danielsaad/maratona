@@ -35,21 +35,22 @@ Em caso do não recebimento do e-mail (cheque a caixa de SPAM), envie uma mensag
 | Ahn? Quer namorar comigo? 	| Universidade de Brasília - CIC      	| Mikael Mello                              	| Thiago Veras                                	| Giovanni Guidini                  	|
 | Holy Avengers             	| Instituto Federal de Brasília - IFB 	| Carlos Eduardo Pereira Santana            	| Raquel Pinheiro da Costa                    	| Danyelle da Silva Oliveira Angelo 	|
 | É dificil xover um nome 		| Universidade de Brasília - CIC 		| José Marcos da Silva Leite 					| Luis Felipe Braga Gebrim Silva 				| Rafael Lourenço de Lima Chehab |
-
+| The POGuers                   | Instituto Federal de Brasília - IFB   | Samuel Novaes Sena                            | Leonardo Soares Bastos | Virgilio Stefanin Pacheco dos santos |
+| Seu Fredricksen               | Universidade de Brasília - FGA        | João Robson Santos Martins                    |                        |                                      |
 
 ## Participação Remota
 
 | Nome da Equipe                 	| Instituição                                        	| Nome (participante 1)           	| Nome (participante 2)                    	| Nome (participante 3)              	|
 |--------------------------------	|----------------------------------------------------	|---------------------------------	|------------------------------------------	|------------------------------------	|
 | Catlangos do Cerrado           	| Centro Universitário IESB                          	| Rodrigo Guimarães Araújo        	| Rafael Rodrigues Pereira Araújo          	| Douglas Ammirante da Cunha         	|
-| Linux Bacon Tema Livre         	| Centro Universitário IESB                          	| Luiz Filipe Azevedo de Lima     	| Rodrigo Touriño Machado de Oliveira Lima 	|                            	|
-| LinuX2-Bacon Blue              	| Centro Universitário IESB                          	| Pedro Sérgio Vieira Da Silva    	| Gaybriel Yassunaga                       	|                         	|
+| Linux Bacon Tema Livre         	| Centro Universitário IESB                          	| Luiz Filipe Azevedo de Lima     	| Rodrigo Touriño Machado de Oliveira Lima 	|                            	        |
+| LinuX2-Bacon Blue              	| Centro Universitário IESB                          	| Pedro Sérgio Vieira Da Silva    	| Gaybriel Yassunaga                       	|                         	            |
 | Cvaicomnois                    	| Universidade Federal do Pará - UFPA                	| Carlos Aparecido Serrato Junior 	| Lucas Queiroz Correa                     	| Flavio Mendes de Brito             	|
-| Gabriel Duarte                 	| Universidade Federal Fluminense - UFF              	| Gabriel Duarte                  	|                            				|                     	|
+| Gabriel Duarte                 	| Universidade Federal Fluminense - UFF              	| Gabriel Duarte                  	|                            				|                     	                |
 | Invisibilidade na UFPA lvl 100 	| UFPA                                               	| Felipe Cunha Cardoso            	| Diego Dantas Figueiredo                  	| Marcos Lude da silva ferreira      	|
 | Deep IESB                      	| Centro Universitário IESB                          	| Thiago Santana Pereira          	| Jonas Siqueira Ramos                     	| Lucca Pessoa da Silva Matos        	|
 | LinuX-Bacon Red                	| Centro Universitário IESB                          	| Fernanda Arruda                 	| Valber Medeiros de Queiroz Júnior        	| Guilherme da Fonseca Bites         	|
-| Hotfix Team                    	| Universidade de Brasília - FGA                     	| Laércio Silva de Sousa Júnior   	| Jonathan Henrique Maia de Moraes         	|                              	|
+| Hotfix Team                    	| Universidade de Brasília - FGA                     	| Laércio Silva de Sousa Júnior   	| Jonathan Henrique Maia de Moraes         	|                              	        |
 | O meu teclado ta zuado         	| Universidade de Brasília - FGA                     	| Felipe Osório de Oliveira       	|                                          	|                                    	|
 | BallonField                    	| Pontifícia Universidade Católica de Goias – PUC/GO 	| Ítalo Fernandes                 	| Bruno Almeda                             	| Adolfo Aires                       	|
 | FGAstros                       	| Universidade de Brasília - FGA                     	| Rômulo Vinícius de Souza        	| João Vítor Morandi Lemos                 	| Victor Girão Costa                 	|
@@ -62,9 +63,10 @@ Em caso do não recebimento do e-mail (cheque a caixa de SPAM), envie uma mensag
 | Mário Verde                    	| Universidade de Brasília - FGA                     	| Igor Barbosa Duarte             	| Vitor Barbosa de Araujo                  	|                                    	|
 | Eu, Eu Mesmo e Irene           	| Centro Universitário IESB                          	| Bruno de Amorim Campos          	|                                          	|                                    	|
 | Zezo > Jimi Hendrix				| Universidade de Brasília - FGA                        | Bruna Pinos de Oliveira           | Matheus Miranda Lacerda                   | Luan Guimarães Lacerda                |
-| Mr robots               			| Universidade de Brasília - FGA     					| Eduardo Nunes                     |                          					|                             |
-| Codebusters              			| Centro Universitário IESB           					| Sara Selis                        | Gabriel Rodrigues        					| Sabrina Rolim               |
-| Que Huffman os tambores  			| Universidade de Brasília - FGA      					| Vitor Meireles                    | José Reinaldo            					| Luiza Irina                 |
-| VSBzaGFsbCBub3QgcGFzcw== 			| Universidade Federal de Goiás - UFG 					| Murilo                            |                          					|                             |
-| Chuva seca               			| Universidade de Brasília - FGA     					| Damarcones dos Santos Duque Porto |                          					|                             |
-| BID                      			| Universidade de Brasília - FGA     					| Iuri de Souza Severo Alves        | Douglas Farias de Castro 					| Bruno Henrique Sousa Duarte |
+| Mr robots               			| Universidade de Brasília - FGA     					| Eduardo Nunes                     |                          					|                                       |
+| Codebusters              			| Centro Universitário IESB           					| Sara Selis                        | Gabriel Rodrigues        					| Sabrina Rolim                         |
+| Que Huffman os tambores  			| Universidade de Brasília - FGA      					| Vitor Meireles                    | José Reinaldo            					| Luiza Irina                           |
+| VSBzaGFsbCBub3QgcGFzcw== 			| Universidade Federal de Goiás - UFG 					| Murilo                            |                          					|                                       |
+| Chuva seca               			| Universidade de Brasília - FGA     					| Damarcones dos Santos Duque Porto |                          					|                                       |
+| BID                      			| Universidade de Brasília - FGA     					| Iuri de Souza Severo Alves        | Douglas Farias de Castro 					| Bruno Henrique Sousa Duarte           |
+| Mineirinho solo                   | Universidade de Brasília - FGA                        | Guilherme Augusto Nunes Silva     |                                           |                                       |                     
