@@ -5,7 +5,7 @@ description: Competições anteriores
 ---
 
 
-## 2° Maratona de Programação do IFB (12/05/2018) < a name="2-mdp-ifb"></a>
+## 2° Maratona de Programação do IFB (12/05/2018) <a name="2-mdp-ifb"></a>
 [Scoreboard]({{site.url}}/assets/2-maratona-de-programacao-ifb/scoreboard.pdf)
 
 [Estatísticas]({{site.url}}/assets/2-maratona-de-programacao-ifb/estatisticas.pdf)
