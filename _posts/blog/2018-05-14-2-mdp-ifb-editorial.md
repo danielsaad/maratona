@@ -15,7 +15,7 @@ Seguem anexo os comentários sobre cada problema da **II Maratona de Programaç�
 * [A-Dominó Solitário]()
 * [B-Quebranco a Banca]()
 * [C-Depósito Hospitalar]()
-* [D-Colônia de Bactérias]({{ site.url}}/assets/2-maratona-de-programacao-ifb/editorial)
+* [D-Colônia de Bactérias]({{ site.url}}/assets/2-maratona-de-programacao-ifb/editorial/colonia-de-bacterias.pdf)
 * [E-Dois Irmãos]()
 * [F-Parser Simplificado]()
 * [G-Conexão]()
