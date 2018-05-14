@@ -1,5 +1,5 @@
 ---
-title: "II Maratona de Programção do IFB: Inscrições Homologadas"
+title: "II Maratona de Programação do IFB: Inscrições Homologadas"
 date: 2018-05-11 00:00:00 Z
 layout: post
 categories: blog
