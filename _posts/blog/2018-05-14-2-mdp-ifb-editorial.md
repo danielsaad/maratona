@@ -1,12 +1,12 @@
 ---
 title: "II Maratona de Programação do IFB: Editorial"
-date: 2018-05-14 00:00:00 Z
+date: 2018-05-14 12:00:00 Z
 layout: post
 categories: blog
 status: publish
 comments: true
 image: "2-maratona-de-programacao-ifb/ninja-baloes.png"
-excerpt: "Editorial da II° Maratona de Programação do IFB."
+excerpt: "Editorial da II Maratona de Programação do IFB."
 ---
 
 Olá, pessoal.

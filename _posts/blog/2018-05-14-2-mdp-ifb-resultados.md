@@ -6,7 +6,7 @@ categories: blog
 status: publish
 comments: true
 image: "2-maratona-de-programacao-ifb/ninja-baloes.png"
-excerpt: "Resultados da II° Maratona de Programação do IFB estão disponíveis."
+excerpt: "Resultados da II Maratona de Programação do IFB estão disponíveis."
 ---
 
 
