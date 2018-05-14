@@ -17,7 +17,7 @@ Gostaríamos de agradecer a todas as equipes que participaram da **II Maratona d
 
 Tivemos alguns problemas técnicos no início, mas depois tudo ocorreu bem.
 
-Vocês vão poder encontrar o placar final, caderno de problemas, entradas e saídas e as estatísticas de submissão neste link: [resultado]({{site.url}}/competicoes-anteriores/#2-mdp-de-natal-iesb)
+Vocês vão poder encontrar o placar final, caderno de problemas, entradas e saídas e as estatísticas de submissão neste link: [resultado]({{site.url}}/competicoes-anteriores/#2-mdp-ifb)
 
 Além disso, gostaríamos de agradecer mais uma vez a imensa colaboração dos professores Edson Alves e Matheus Faria da UnB/FGA que ajudaram em todos os aspectos da preparação do contest.
 
