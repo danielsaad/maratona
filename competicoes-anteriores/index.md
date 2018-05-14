@@ -13,10 +13,11 @@ description: Competições anteriores
 
 [Scoreboard Geral]({{site.url}}/assets/2-maratona-de-programacao-ifb/scoreboard.pdf)
 
-
 [Estatísticas]({{site.url}}/assets/2-maratona-de-programacao-ifb/estatisticas.pdf)
 
 [Caderno de Problemas]({{site.url}}/assets/2-maratona-de-programacao-ifb/caderno-de-problemas.pdf)
+
+[Entradas e Saídas](http://200.130.152.84/data/2-mdp-ifb/entradas-e-saidas/)
 
 
 ## 1° Maratona de Programação de Natal do IESB (25/11/2017) <a name="1-mdp-de-natal-iesb"></a>
