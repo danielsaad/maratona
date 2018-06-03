@@ -26,7 +26,7 @@ description: Competições anteriores
 
 [Caderno de Questões]({{site.url}}/assets/1-mdp-de-natal-iesb/problemas.pdf)
 
-[Entradas e Saídas](https://github.com/mestresplinterdf/maratonadenatal2017)
+[Entradas e Saídas](http://200.130.152.84/data/1-mdp-iesb/entradas-e-saidas/)
 
 
 ## V Maratona de Programação da UnB (25/10/2017) <a name="v-mdp-unb"></a>
