@@ -3,6 +3,23 @@ title: Competições Anteriores
 layout: page
 description: Competições anteriores
 ---
+## Seletiva UnB 2018 (14/07/2018) <a name="seletiva-unb-2018"></a>
+
+[Scoreboard Div1]({{site.url}}/assets/seletiva-unb-2018/scoreboard-div1.pdf)
+
+[Scoreboard Div2]({{site.url}}/assets/seletiva-unb-2018/scoreboard-div2.pdf)
+
+[Scoreboard Div3]({{site.url}}/assets/seletiva-unb-2018/scoreboard-div3.pdf)
+
+[Problemas Div1](http://codeforces.com/group/btcK4I5D5f/contest/225479)
+
+[Problemas Div2](http://codeforces.com/group/btcK4I5D5f/contest/225478)
+
+[Problemas Div3](http://codeforces.com/group/btcK4I5D5f/contest/225477)
+
+[Créditos dos Problemas](http://codeforces.com/group/btcK4I5D5f/blog/entry/3288)
+
+[Editorial](http://codeforces.com/group/btcK4I5D5f/blog/entry/3291)
 
 
 ## 2° Maratona de Programação do IFB (12/05/2018) <a name="2-mdp-ifb"></a>
