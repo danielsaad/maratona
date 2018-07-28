@@ -21,7 +21,7 @@ description: Competições anteriores
 
 [Editorial](http://codeforces.com/group/btcK4I5D5f/blog/entry/3291)
 
-## 2° Maratona de Programação do IESB () <a name="2-mdp-iesb"></a>
+## 2° Maratona de Programação do IESB (23/06/2018) <a name="2-mdp-iesb"></a>
 
 [Caderno de Problemas]({{site.url}}/assets/2-mdp-iesb/2-mdp-iesb-caderno-de-problemas.pdf)
 
