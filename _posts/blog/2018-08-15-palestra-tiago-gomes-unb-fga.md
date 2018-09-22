@@ -23,4 +23,3 @@ trajetória.
 O evento está previsto para esta sexta-feira (17/08/2018) às 14h e ocorrerá
 na sala i6 da UnB/FGA.
 
-
