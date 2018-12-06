@@ -1,6 +1,6 @@
 ---
 title: "Certificados da III Maratonas de Programação do IFB"
-date: 2018-08-22 12:00:00 Z
+date: 2018-12-06 12:00:00 Z
 layout: post
 categories: blog
 status: publish
