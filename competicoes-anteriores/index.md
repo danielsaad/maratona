@@ -3,6 +3,40 @@ title: Competições Anteriores
 layout: page
 description: Competições anteriores
 ---
+
+## Retrospectiva 2018 
+
+[Retrospectiva 2018]({{site.url}}/retrospectivas/retrospectiva-2018/index.html)
+
+## III Maratona de Programação do IFB (24/11/2018) <a name="3-mdp-ifb"></a>
+
+[Scoreboard Remoto]({{site.url}}/assets/3-mdp-ifb/scoreboard-cf.pdf)
+
+[Scoreboard Presencial]({{site.url}}/assets/3-mdp-ifb/scoreboard.pdf)
+
+[Problemas]({{site.url}}/assets/3-mdp-ifb/Maratona.pdf)
+
+[Créditos dos Problemas](https://codeforces.com/group/btcK4I5D5f/blog/entry/3713)
+
+[Editorial]({{site.url}}/assets/3-mdp-ifb/Tutoriais.pdf)
+
+## VI Maratona UnB de Programação (24/09/2018) <a name="6-mdp-unb"></a>
+
+[Scoreboard Remoto]({{site.url}}/assets/6-mdp-unb/scoreboard-remoto.pdf)
+
+[Scoreboard Presencial]({{site.url}}/assets/6-mdp-unb/scoreboard-presencial.pdf)
+
+[Problemas](https://codeforces.com/group/btcK4I5D5f/contest/228932)
+
+[Créditos dos Problemas](https://codeforces.com/group/btcK4I5D5f/blog/entry/3440)
+
+[Editorial](https://codeforces.com/group/btcK4I5D5f/blog/entry/3456)
+
+## XXIII Maratona de Programação da SBC: 1° Fase (15/09/2018) <a name="23-mdp-sbc"></a>
+
+[Recursos](http://maratona.ime.usp.br/vagas18.html)
+
+
 ## Seletiva UnB 2018 (14/07/2018) <a name="seletiva-unb-2018"></a>
 
 [Scoreboard Div1]({{site.url}}/assets/seletiva-unb-2018/scoreboard-div1.pdf)
