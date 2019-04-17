@@ -27,7 +27,7 @@ Para realizar a inscrição no evento, os participantes devem entrar no grupo [M
 
 O regulamento da competição está presente abaixo:
 
-- [Regulamento]({{site.url}}/assets/4-mdp-ifb/Regulamento-4-Maratona-IFB)
+- [Regulamento]({{site.url}}/assets/4-mdp-ifb/Regulamento-4-Maratona-IFB.pdf)
 
 Adicionalmente, um grupo na plataforma [Telegram](https://t.me/joinchat/Hiz8ExAi5vqVnW-C3mHM_Q) foi criado para facilitar a comunicação entre a comissão organizadora e as equipes.
 
