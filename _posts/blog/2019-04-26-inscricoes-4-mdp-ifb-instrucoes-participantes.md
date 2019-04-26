@@ -16,6 +16,6 @@ Após a inscrição via o formulário, conforme o [post anterior]({{ site.baseur
 
 A partir da aba *Contest* será possível ingressar na competição a partir das 5h que antecedem a mesma. Haverá duas competições cadastradas, uma para os competidores que participarão remotamente e outra para os que participarão presencialmente em qualquer uma das sedes.
 
-**Importante**: os times que participarão presencialmente deverão inserir uma *tag* antes do nome da equipe com seguinte forma: [Afiliação/Sítio]*Nome da Equipe*, em que Afiliação é a própria afiliação acadêmica da equipe e Sítio corresponde à "UnB", "UnB/FGA" ou "IFB", indicando o local em que a equipe se inscreveu para participar da competição. Isso ajudará a comissão organizadora na entrega dos balões!
+**Importante**: os times que participarão presencialmente deverão inserir uma *tag* antes do nome da equipe com seguinte forma: [Afiliação/Sítio]*Nome da Equipe*, em que Afiliação é a própria afiliação acadêmica da equipe e Sítio corresponde à "UnB", "UnB-FGA" ou "IFB", indicando o local em que a equipe se inscreveu para participar da competição. Isso ajudará a comissão organizadora na entrega dos balões!
 
 Não se esqueçam de entrar no grupo do [Telegram](https://t.me/joinchat/Hiz8ExAi5vqVnW-C3mHM_Q),  criado para facilitar a comunicação entre a comissão organizadora e as  equipes.
