@@ -18,4 +18,5 @@ A partir da aba *Contest* será possível ingressar na competição a partir das
 
 **Importante**: os times que participarão presencialmente deverão inserir uma *tag* antes do nome da equipe com seguinte forma: [Afiliação\|Sítio]*Nome da Equipe*, em que Afiliação é a própria afiliação acadêmica da equipe e Sítio corresponde à "UnB", "UnB-FGA" ou "IFB", indicando o local em que a equipe se inscreveu para participar da competição. Isso ajudará a comissão organizadora na entrega dos balões!
 
+
 Não se esqueçam de entrar no grupo do [Telegram](https://t.me/joinchat/Hiz8ExAi5vqVnW-C3mHM_Q),  criado para facilitar a comunicação entre a comissão organizadora e as  equipes.
