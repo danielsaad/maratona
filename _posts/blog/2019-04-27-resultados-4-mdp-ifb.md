@@ -29,7 +29,7 @@ Abaixo seguem os melhores colocados em cada modalidade, os autores dos problemas
 
 - [IFBP-JP] "Gov's Team: Calebe Oliveira e	Kerven Maciel Monteiro;
 - [UESB] "igorqs": Igor Quadros Silva;
-- [UEA] " Você é fraco, te falta $O(1)$": William Silva e Wesley Rocha;
+- [UEA] " Você é fraco, te falta O(1)": William Silva e Wesley Rocha;
 - "Diogo Chico":  ~deogu e ~fepaf.
 - "pedromichael": ~pedromichael.
 
