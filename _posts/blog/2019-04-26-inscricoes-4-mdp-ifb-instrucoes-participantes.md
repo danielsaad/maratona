@@ -12,7 +12,7 @@ excerpt: "Instruções gerais sobre a plataforma Codeforces e a inscrição no e
 
 Olá, pessoal!
 
-Após a inscrição via o formulário, conforme o [post anterior]({{ site.url }}/inscricoes-4-mdp-ifb) , é importante que todas as equipes ingressem no grupo **Maratonas DF** na plataforma *Codeforces* através deste link: [http://codeforces.com/group/btcK4I5D5f](http://codeforces.com/group/btcK4I5D5f).
+Após a inscrição via o formulário, conforme o [post anterior]({{ site.baseurl }}{% link _posts/blog/2019-04-17-inscricoes-4-mdp-ifb.md %}) , é importante que todas as equipes ingressem no grupo **Maratonas DF** na plataforma *Codeforces* através deste link: [http://codeforces.com/group/btcK4I5D5f](http://codeforces.com/group/btcK4I5D5f).
 
 A partir da aba *Contest* será possível ingressar na competição a partir das 5h que antecedem a mesma. Haverá duas competições cadastradas, uma para os competidores que participarão remotamente e outra para os que participarão presencialmente em qualquer uma das sedes.
 
