@@ -6,15 +6,15 @@ description: Competições anteriores
 
 ## Seletiva UnB 2019 (18/05/2019) <a name="seletiva-unb-2019"></a>
 
-[Caderno de Problemas]({{site.url}}/assets/seletiva-unb-2019/Maratona.pdf);
+[Caderno de Problemas]({{site.url}}/assets/seletiva-unb-2019/Maratona.pdf)
 
-[Editorial]({{site.url}}/assets/seletiva-unb-2019/Tutoriais.pdf);
+[Editorial]({{site.url}}/assets/seletiva-unb-2019/Tutoriais.pdf)
 
-[Scoreboard Presencial]({{site.url}}/assets/seletiva-unb-2019/scoreboard.pdf); 
+[Scoreboard Presencial]({{site.url}}/assets/seletiva-unb-2019/scoreboard.pdf)
 
-[Estatísticas Presencial]({{site.url}}/assets/seletiva-unb-2019/statistics.pdf); 
+[Estatísticas Presencial]({{site.url}}/assets/seletiva-unb-2019/statistics.pdf) 
 
-[Scoreboard Remoto]({{site.url}}/assets/seletiva-unb-2019/scoreboard-cf.pdf).
+[Scoreboard Remoto]({{site.url}}/assets/seletiva-unb-2019/scoreboard-cf.pdf)
 
 [Créditos dos Problemas]({{site.url}}{% link _posts/blog/2019-05-18-resultados-seletiva-unb-2019.md %})
 
