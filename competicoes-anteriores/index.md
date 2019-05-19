@@ -4,6 +4,20 @@ layout: page
 description: Competições anteriores
 ---
 
+## Seletiva UnB 2019 (18/05/2019) <a name="seletiva-unb-2019"></a>
+
+[Caderno de Problemas]({{site.url}}/assets/seletiva-unb-2019/Maratona.pdf);
+
+[Editorial]({{site.url}}/assets/seletiva-unb-2019/Tutoriais.pdf);
+
+[Scoreboard Presencial]({{site.url}}/assets/seletiva-unb-2019/scoreboard.pdf); 
+
+[Estatísticas Presencial]({{site.url}}/assets/seletiva-unb-2019/statistics.pdf); 
+
+[Scoreboard Remoto]({{site.url}}/assets/seletiva-unb-2019/scoreboard-cf.pdf).
+
+[Créditos dos Problemas]({{site.url}}{% link _posts/blog/2019-05-18-resultados-seletiva-unb-2019.md %})
+
 ## IV Maratona de Programação do IFB (27/14/2019) <a name="4-mdp-ifb"></a>
 
 [Scoreboard Presencial]({{site.url}}/assets/4-mdp-ifb/scoreboard-presencial.pdf)
