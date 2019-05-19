@@ -11,7 +11,7 @@ excerpt: " O resultado da Seletiva UnB 2019 juntamente com outros recursos estã
 ---
 Olá, pessoal.
 
-Gostaríamos de agradecer a todos que participaram e contribuiram com o excelente evento.
+Gostaríamos de agradecer a todos que participaram e contribuíram com o excelente evento.
 
 Abaixo seguem os melhores colocados em cada modalidade, os autores dos problemas e recursos como: placares finais, caderno de problemas e tutoriais.
 
@@ -48,5 +48,5 @@ Abaixo seguem os melhores colocados em cada modalidade, os autores dos problemas
 - [Caderno de Problemas]({{site.url}}/assets/seletiva-unb-2019/Maratona.pdf);
 - [Editorial]({{site.url}}/assets/seletiva-unb-2019/Tutoriais.pdf);
 - [Scoreboard Presencial]({{site.url}}/assets/seletiva-unb-2019/scoreboard.pdf); 
-- [Estatísticas Presencial]({{site.url}}/assets/seletiva-unb-2019/scoreboard.pdf); 
+- [Estatísticas Presencial]({{site.url}}/assets/seletiva-unb-2019/statistics.pdf); 
 - [Scoreboard Remoto]({{site.url}}/assets/seletiva-unb-2019/scoreboard-cf.pdf).
