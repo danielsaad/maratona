@@ -18,7 +18,7 @@ description: Competições anteriores
 
 [Créditos dos Problemas]({{site.url}}{% link _posts/blog/2019-05-19-resultados-seletiva-unb-2019.md %})
 
-## IV Maratona de Programação do IFB (27/14/2019) <a name="4-mdp-ifb"></a>
+## IV Maratona de Programação do IFB (27/04/2019) <a name="4-mdp-ifb"></a>
 
 [Scoreboard Presencial]({{site.url}}/assets/4-mdp-ifb/scoreboard-presencial.pdf)
 
