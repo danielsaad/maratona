@@ -17,7 +17,7 @@ Estão abertas as inscrições para a XXIV Maratona SBC de Programação. Ela é
 
 A primeira fase (regional) ocorrerá no dia 14 de setembro no Centro Universitário Instituto de Educação Superior de Brasília (IESB) e as melhores equipes serão classificadas para a segunda fase (nacional), que ocorrerá nos dias 8 e 9 de novembro.
 
-Aos alunos do IFB que quiserem participar do evento, procurem o prof. Daniel Saad para maiores orientações.
+Os alunos do IFB-Taguatinga que quiserem participar do evento, procurem o prof. Daniel Saad para maiores orientações.
 
 Seguem alguns links interessantes:
 - [Regras](http://maratona.ime.usp.br/sobre19.html)
