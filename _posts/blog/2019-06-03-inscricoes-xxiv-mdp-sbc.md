@@ -20,8 +20,6 @@ A primeira fase (regional) ocorrerá no dia 14 de setembro no Centro Universitá
 Os alunos do IFB-Taguatinga que quiserem participar do evento, procurem o prof. Daniel Saad para maiores orientações.
 
 Seguem alguns links interessantes:
+- [Página da Maratona SBC de Programação](http://maratona.ime.usp.br)
 - [Regras](http://maratona.ime.usp.br/sobre19.html)
 - [Datas Importantes](http://maratona.ime.usp.br/datas19.html)
-
-
-
