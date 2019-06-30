@@ -4,6 +4,20 @@ layout: page
 description: Competições anteriores
 ---
 
+## Seletiva UnB 2019 (18/05/2019) <a name="3-mdp-iesb"></a>
+
+[Caderno de Problemas]({{site.url}}/assets/3-mdp-iesb/Maratona.pdf)
+
+[Editorial]({{site.url}}/assets/3-mdp-iesb/Tutoriais.pdf)
+
+[Scoreboard Presencial]({{site.url}}/assets/3-mdp-iesb/scoreboard.pdf)
+
+[Estatísticas Presencial]({{site.url}}/assets/3-mdp-iesb/statistics.pdf) 
+
+[Scoreboard Remoto]({{site.url}}/assets/3-mdp-iesb/scoreboard-cf.pdf)
+
+[Créditos dos Problemas]({{site.url}}{% link _posts/blog/2019-06-29-resultados-3-mdp-iesb.md %})
+
 ## Seletiva UnB 2019 (18/05/2019) <a name="seletiva-unb-2019"></a>
 
 [Caderno de Problemas]({{site.url}}/assets/seletiva-unb-2019/Maratona.pdf)
