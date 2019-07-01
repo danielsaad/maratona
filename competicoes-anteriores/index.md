@@ -4,7 +4,7 @@ layout: page
 description: Competições anteriores
 ---
 
-## Seletiva UnB 2019 (29/06/2019) <a name="3-mdp-iesb"></a>
+## III Maratona IESB de Programação (29/06/2019) <a name="3-mdp-iesb"></a>
 
 [Caderno de Problemas]({{site.url}}/assets/3-mdp-iesb/Maratona.pdf)
 
