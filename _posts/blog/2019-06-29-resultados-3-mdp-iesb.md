@@ -19,11 +19,11 @@ Abaixo seguem os melhores colocados em cada modalidade, os autores dos problemas
 
 ### Presencial
 
-- "[UnB/CiC] ICPC Top 15 Super Team": TBA;
-- "[UnB/FGA] Rails > Flask * Django": TBA; 
-- "[UnB/CiC] Lo and Behold++": TBA;
-- "[UnB/CiC] Scooby Doo: TBA;
-- "[UnB/CiC] Naruto Shipoodle":TBA;
+- "[UnB/CiC] ICPC Top 15 Super Team": Gabriel Oliveira Taumaturgo e Mikael Mello;
+- "[UnB/FGA] Rails > Flask * Django": Renato Britto Araujo e	João Pedro Silva de Carvalho; 
+- "[UnB/CiC] Lo and Behold++": Bruno Giuliani Gomes, Lucas Medeiros Rosa eLeonardo de Araujo Medeiros;
+- "[UnB/CiC] Scooby Doo": Tiago de Souza Fernandes, Vicente Romeiro de Moraes e Alberto Tavares Duarte Neto;
+- "[UnB/CiC] Naruto Shipoodle": Raphael Paula Leite Müller,	Matheus Felizola aferires e Bruno Esteves Dalla Costa Filho;
 
 ### Remoto
 
