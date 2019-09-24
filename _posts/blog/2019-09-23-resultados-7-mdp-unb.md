@@ -35,10 +35,10 @@ Abaixo seguem os melhores colocados em cada modalidade, os autores dos problemas
 
 ## Créditos dos Problemas
 
-- Daniel Saad: Preservando o Cerrado, Quantos Movimentos?, Projetando Iniciadores, Rali de Regularidade, 
-- Edson Alves: Balinhas, Substrings Distintas, Soluções, Soma de Quadrados, Onde está Wally?
+- Daniel Saad: Preservando o Cerrado, Quantos Movimentos?, Projetando Iniciadores e Rali de Regularidade, 
+- Edson Alves: Balinhas, Substrings Distintas, Soluções, Soma de Quadrados e Onde está Wally?
 - Guilherme Ramos: Fizz Busão; 
-- Vinicius Borges: Distribuidora de Bebidas, Postos de Combustível;
+- Vinicius Borges: Distribuidora de Bebidas e Postos de Combustível;
 
 
 ## Recursos 
