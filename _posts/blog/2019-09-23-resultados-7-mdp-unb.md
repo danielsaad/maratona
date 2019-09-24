@@ -20,7 +20,7 @@ Abaixo seguem os melhores colocados em cada modalidade, os autores dos problemas
 ### Presencial
 
 - "[UnB/CiC] ICPC top 46 super team": Gabriel Taumaturgo, Mikael Mello e Leonardo Riether;
-- "[UnB/CiC] Ahn, quer pagodear comigo?": =Luís Felipe Braga Gebrim Silva, Thiago Veras Machado e Giovanni Guidini;
+- "[UnB/CiC] Ahn, quer pagodear comigo?": Luís Felipe Braga Gebrim Silva, Thiago Veras Machado e Giovanni Guidini;
 - "[UnB/CiC] Claudino e seus Teclaudios": Cláudio Segala Filho, Cristiano Krug Brust e Gabriel Levi Gomes;
 - "[UnB/FGA] Gilgamesh Tapa-Buraco Psytrance": Renato Britto Araújo, Gustavo Marques Lima e João Pedro Silva de Carvalho;
 - "[UnB/CiC] Hermanos DELL Ciclón": Caio Brandão, Raphael Soares e Nur Corezzi.
