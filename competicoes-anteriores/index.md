@@ -4,6 +4,21 @@ layout: page
 description: Competições anteriores
 ---
 
+## VII Maratona UnB de Programação <a name="7-mdp-unb"></a>
+
+
+[Caderno de Problemas]({{site.url}}/assets/7-mdp-unb/Maratona.pdf);
+
+[Editorial]({{site.url}}/assets/7-mdp-unb/Tutoriais.pdf);
+
+[Scoreboard Presencial]({{site.url}}/assets/7-mdp-unb/scoreboard.pdf); 
+
+[Estatísticas Presencial]({{site.url}}/assets/7-mdp-unb/statistics.pdf); 
+
+[Scoreboard Remoto]({{site.url}}/assets/7-mdp-unb/scoreboard-cf.pdf).
+
+## XXIV Maratona SBC de Programação
+
 ## III Maratona IESB de Programação (29/06/2019) <a name="3-mdp-iesb"></a>
 
 [Caderno de Problemas]({{site.url}}/assets/3-mdp-iesb/Maratona.pdf)
