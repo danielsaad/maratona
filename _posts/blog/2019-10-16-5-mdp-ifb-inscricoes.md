@@ -20,6 +20,7 @@ O local da competição na modalidade presencial será o *campus* IFB-Taguatinga
 
 Para realizar a inscrição, seja ela na modalidade presencial ou remota, é necessário o preenchimento deste [formulário](https://docs.google.com/forms/d/e/1FAIpQLSceNd-P7_6FqHpLF-6r7E_KrJA6pWgO8n-jPjyrDHVW7GzDmQ/viewform?usp=sf_link). **Os dados coletados neste formulário serão utilizados para a confecção dos certificados**.
 
+A data limite para a realização das inscrições presenciais é dia 24 de outubro.
 
 ## Participação Presencial
 
