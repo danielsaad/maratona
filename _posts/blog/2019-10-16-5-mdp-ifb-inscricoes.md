@@ -11,7 +11,7 @@ excerpt: "Estão abertas as inscrições para a V Maratona de Programação do I
 ---
 Olá, pessoal!
 
-Estão abertas as inscrições para a **V Maratona de Programação do IFB**. Ela ocorrerá no dia 26 de outubro de 2019 (sábado) das 13h às 18h e possibilitará participação do tipo presencial ou remoto.  Como sempre alternamos os níveis das Maratonas de Programação do IFB, esta será um evento voltado para as *equipes iniciantes*.
+Estão abertas as inscrições para a **V Maratona de Programação do IFB**. Ela ocorrerá no dia 26 de outubro de 2019 (sábado) das 13h às 18h e possibilitará participação do tipo presencial ou remoto.  Como sempre alternamos os níveis das Maratonas de Programação do IFB, este será um evento voltado para as *equipes iniciantes*.
 
 
 O local da competição na modalidade presencial será o *campus* IFB-Taguatinga:
