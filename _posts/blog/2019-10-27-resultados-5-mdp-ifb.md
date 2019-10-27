@@ -36,7 +36,7 @@ Abaixo seguem os melhores colocados em cada modalidade, os autores dos problemas
 ## Créditos dos Problemas
 
 - Daniel Saad: *Índice-h*, *Mineirês*, *Extrato Bancário* e *Ao Resgate!*.
-- Edson Alves: *Iluminação Pública*, *Processos*, *Eleições e *Dardos*;
+- Edson Alves: *Iluminação Pública*, *Processos*, *Eleições* e *Dardos*;
 - Guilherme Ramos: *Sem Número* e *Olá Novo Mundo*.
 - Rodrigo Guimarães de Araújo: *Queimada Brasíleira*;
 - Vinicius Borges: *Colonização*, *Sombra* e *Processos*.
