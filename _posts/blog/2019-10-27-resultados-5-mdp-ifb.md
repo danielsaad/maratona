@@ -44,6 +44,7 @@ Abaixo seguem os melhores colocados em cada modalidade, os autores dos problemas
 
 ## Recursos 
 
+- [Fotos](https://www.facebook.com/pg/maratonadf/photos/?tab=album&album_id=1326476460857907&__xts__%5B0%5D=68.ARB0qiC6ZWZigVKH6g14b4j5RuD6GHgX2DG2B0XAjwEVcxV5guHTpKzSiPmlxM63XtdjjdjZSTE2pmPhvTrPtyK8SDa6wqiaFrgjFKdVlo83URtrBaOwmLZZNSlJ0Y7zX3xuFWIJ-GXd7_KIDKR2Nkc1_Cfk4BV-9HuCv-8m4jfS66qXgBLRKVamlb2lHsNkjPt2-Nx3Y0y45L3GykfZbPMniAiNDgGiCEFsR1bEt_4T9lUg8vk9Z60NW1iYjtOmUgYJljM53iLaZc5R4xkWlClSuFjnbIo7fIZ1O_lr-qchl3ABgxRT6OndhQICILsL2Gmx39rbNaHP_QX94wvxg-f9jzcfcspphVVGFfsfuizTmZJf0vjSAOa4kYcOPANeYO0G2PBuLdEWflcneyUo0LBkR_1fML_2lhJus0d14ZaHhnALRh7cAML_A-JjSzR08AqABDXEOl6sLHcXA0YvHnbWeOEFqpAhaf5jYarHxKQvmBX2B9iJCWBRY9TeuVRzd3efgxGqn0eiQ9X5yx0pxmR0TFUCHoM2kp-ovpX53KoJK5Sr&__tn__=-UCH-R)
 - [Caderno de Problemas]({{site.url}}/assets/5-mdp-ifb/Maratona.pdf);
 - [Editorial]({{site.url}}/assets/5-mdp-ifb/Tutoriais.pdf);
 - [Scoreboard Presencial]({{site.url}}/assets/5-mdp-ifb/scoreboard.pdf); 
