@@ -4,6 +4,10 @@ layout: page
 description: Competições anteriores
 ---
 
+## Retrospectiva 2019  <a name="retrospectiva-2019">
+
+[Retrospectiva 2019]({{site.url}}/retrospectivas/retrospectiva-2019/index.html)
+
 ## II Maratona de Natal IESB (07/12/2019) <a name="2-mdp-natal-iesb"></a>
 
 [Fotos](https://www.facebook.com/maratonadf/photos/?tab=album&album_id=1366911910147695);
