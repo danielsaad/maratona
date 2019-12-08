@@ -46,7 +46,7 @@ Revisão das soluções: José Leite.
 
 ## Recursos 
 
-- [Fotos](): **Em breve**;
+- [Fotos](https://www.facebook.com/maratonadf/photos/?tab=album&album_id=1366911910147695);
 - [Caderno de Problemas]({{site.url}}/assets/2-mdp-natal-iesb/Maratona.pdf);
 - [Editorial]({{site.url}}/assets/2-mdp-natal-iesb/Tutoriais.pdf);
 - [Scoreboard Presencial]({{site.url}}/assets/2-mdp-natal-iesb/scoreboard-presencial.pdf); 
