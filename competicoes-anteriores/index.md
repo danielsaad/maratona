@@ -4,6 +4,8 @@ layout: page
 description: Competições anteriores
 ---
 
+{:toc}
+
 ## II Maratona de Natal IESB (07/12/2019) <a name="2-mdp-natal-iesb"></a>
 
 [Fotos]: **Em breve**
