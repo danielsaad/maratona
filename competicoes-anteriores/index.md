@@ -20,7 +20,7 @@ description: Competições anteriores
 
 [Scoreboard Remoto]({{site.url}}/assets/2-mdp-natal-iesb/scoreboard-remoto.pdf).
 
-## XXIV Maratona SBC de Programação: 2° Fase (14/09/2019) <a name=24-mdp-sbc-1-fase></a>
+## XXIV Maratona SBC de Programação: 2° Fase (14/09/2019) <a name="24-mdp-sbc-1-fase"></a>
 
 [Recursos](http://maratona.ime.usp.br/result19.html)
 
@@ -54,7 +54,7 @@ description: Competições anteriores
 
 [Scoreboard Remoto]({{site.url}}/assets/7-mdp-unb/scoreboard-cf.pdf).
 
-## XXIV Maratona SBC de Programação: 1° Fase (14/09/2019) <a name=24-mdp-sbc-1-fase>
+## XXIV Maratona SBC de Programação: 1° Fase (14/09/2019) <a name="24-mdp-sbc-1-fase"></a>
 
 [Recursos](http://maratona.ime.usp.br/primfase19/)
 
