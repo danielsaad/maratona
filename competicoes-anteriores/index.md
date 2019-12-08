@@ -4,7 +4,7 @@ layout: page
 description: Competições anteriores
 ---
 
-## II Maratona de Natal IESB <a name="2-mdp-natal-iesb"></a>
+## II Maratona de Natal IESB (07/12/2019) <a name="2-mdp-natal-iesb"></a>
 
 [Fotos]: **Em breve**
 
@@ -18,7 +18,13 @@ description: Competições anteriores
 
 [Scoreboard Remoto]({{site.url}}/assets/2-mdp-natal-iesb/scoreboard-remoto.pdf).
 
-## V Maratona de Programação do IFB <a name="5-mdp-ifb"></a>
+## XXIV Maratona SBC de Programação: 2° Fase (14/09/2019) <a name=24-mdp-sbc-1-fase>
+
+[Recursos](http://maratona.ime.usp.br/result19.html)
+
+[Fotos](https://www.facebook.com/maratona/photos/?tab=album&album_id=10156999304649118)
+
+## V Maratona de Programação do IFB (26/10/2019) <a name="5-mdp-ifb"></a>
 
 [Fotos](https://www.facebook.com/pg/maratonadf/photos/?tab=album&album_id=1326476460857907&__xts__%5B0%5D=68.ARB0qiC6ZWZigVKH6g14b4j5RuD6GHgX2DG2B0XAjwEVcxV5guHTpKzSiPmlxM63XtdjjdjZSTE2pmPhvTrPtyK8SDa6wqiaFrgjFKdVlo83URtrBaOwmLZZNSlJ0Y7zX3xuFWIJ-GXd7_KIDKR2Nkc1_Cfk4BV-9HuCv-8m4jfS66qXgBLRKVamlb2lHsNkjPt2-Nx3Y0y45L3GykfZbPMniAiNDgGiCEFsR1bEt_4T9lUg8vk9Z60NW1iYjtOmUgYJljM53iLaZc5R4xkWlClSuFjnbIo7fIZ1O_lr-qchl3ABgxRT6OndhQICILsL2Gmx39rbNaHP_QX94wvxg-f9jzcfcspphVVGFfsfuizTmZJf0vjSAOa4kYcOPANeYO0G2PBuLdEWflcneyUo0LBkR_1fML_2lhJus0d14ZaHhnALRh7cAML_A-JjSzR08AqABDXEOl6sLHcXA0YvHnbWeOEFqpAhaf5jYarHxKQvmBX2B9iJCWBRY9TeuVRzd3efgxGqn0eiQ9X5yx0pxmR0TFUCHoM2kp-ovpX53KoJK5Sr&__tn__=-UCH-R)
 
@@ -33,7 +39,7 @@ description: Competições anteriores
 [Scoreboard Remoto]({{site.url}}/assets/5-mdp-ifb/scoreboard-cf.pdf).
 
 
-## VII Maratona UnB de Programação <a name="7-mdp-unb"></a>
+## VII Maratona UnB de Programação  (23/09/2019) <a name="7-mdp-unb"></a>
 
 
 [Caderno de Problemas]({{site.url}}/assets/7-mdp-unb/Maratona.pdf);
@@ -46,7 +52,11 @@ description: Competições anteriores
 
 [Scoreboard Remoto]({{site.url}}/assets/7-mdp-unb/scoreboard-cf.pdf).
 
-## XXIV Maratona SBC de Programação
+## XXIV Maratona SBC de Programação: 1° Fase (14/09/2019) <a name=24-mdp-sbc-1-fase>
+
+[Recursos](http://maratona.ime.usp.br/primfase19/)
+
+[Fotos](https://www.facebook.com/maratona/photos/?tab=album&album_id=10156854097724118)
 
 ## III Maratona IESB de Programação (29/06/2019) <a name="3-mdp-iesb"></a>
 
