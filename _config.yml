@@ -30,6 +30,7 @@ kramdown:
   entity_output: as_char
   toc_levels: 1..2
   enable_coderay: false
+  parse_block_html: true
 
 mathjax: true
 
