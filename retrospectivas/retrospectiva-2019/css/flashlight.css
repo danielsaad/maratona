@@ -11,7 +11,7 @@
     width: 100%;
   }
   .lightrope li {
-    position: relative;
+    position: absolute;
     animation-fill-mode: both;
     animation-iteration-count: infinite;
     list-style: none;
