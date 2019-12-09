@@ -1,12 +1,12 @@
 ---
 title: "Retrospectiva 2018"
-date: 2018-12-16 12:00:00 Z
+date: 2019-12-08 12:00:00 Z
 layout: post
 categories: blog
 status: publish
 comments: true
 image:
-excerpt: "Retrospectiva 2018"
+excerpt: "Retrospectiva 2019"
 
 ---
 
