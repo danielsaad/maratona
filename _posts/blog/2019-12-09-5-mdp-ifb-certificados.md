@@ -1,6 +1,6 @@
 ---
 title: "Retrospectiva 2019"
-date: 2019-12-08 12:00:00 Z
+date: 2019-12-09 00:00:00 Z
 layout: post
 categories: blog
 status: publish
