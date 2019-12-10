@@ -6,7 +6,7 @@ categories: blog
 status: publish
 comments: true
 image:
-excerpt: "Retrospectiva 2019"
+excerpt: "OS certificados de participação da V Maratona de Programação do IFB estão disponíveis."
 
 ---
 
