@@ -6,7 +6,7 @@ categories: blog
 status: publish
 comments: true
 image:
-excerpt: "OS certificados de participação da V Maratona de Programação do IFB estão disponíveis."
+excerpt: "Os certificados de participação da V Maratona de Programação do IFB estão disponíveis."
 
 ---
 
