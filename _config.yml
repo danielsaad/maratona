@@ -12,7 +12,7 @@ timezone: America/Sao_Paulo
 future: true
 # Jekyll configuration
 
-permalink:   /:categories/:title/
+permalink: /:categories/:year/:month/:day/:title:output_ext 
 markdown:    kramdown
 highlighter: rouge
 sass:
