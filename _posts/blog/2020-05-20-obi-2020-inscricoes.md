@@ -1,6 +1,6 @@
 ---
 title: "OBI 2020: Inscrições"
-date: 2020-05-05 12:00:00 Z
+date: 2020-05-20 12:00:00 Z
 layout: post
 categories: blog
 status: publish
