@@ -27,7 +27,7 @@ A Olimpíada Brasileira de Informática (OBI), organizada pela Sociedade Brasile
 - Nível Sênior, para alunos do quarto ano do Ensino Técnico e alunos cursando pela primeira vez o primeiro ano de um curso de graduação.
 
 
-Os alunos do IFB-Taguatinga que se interessarem em participar da competição devem procurar o prof. Daniel Saad através do seguinte [contato](mailto:daniel.nunes@ifb.edu.br)
+Os alunos do IFB-Taguatinga que se interessarem em participar da competição devem procurar o prof. Daniel Saad através do seguinte [contato](mailto:daniel.nunes@ifb.edu.br).
 
 ## Informações Relevantes
 - [Datas das Provas](https://olimpiada.ic.unicamp.br/calendario/datas_importantes)
