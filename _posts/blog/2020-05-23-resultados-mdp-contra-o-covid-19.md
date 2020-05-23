@@ -40,6 +40,7 @@ Abaixo seguem os melhores colocados em cada modalidade, os autores dos problemas
 
 ## Recursos 
 
-- [Caderno de Problemas]({{site.url}}/assets/mdp-contra-o-covid-19/Maratona.pdf);
-- [Editorial]({{site.url}}/assets/mdp-contra-o-covid-19/Tutoriais.pdf);
-- [Scoreboard]({{site.url}}/assets/mdp-contra-o-covid-19/Scoreboard.pdf); 
+- [Caderno de Problemas]({{site.url}}/assets/mdp-contra-o-covid-19/Maratona.pdf).
+- [Editorial]({{site.url}}/assets/mdp-contra-o-covid-19/Tutoriais.pdf).
+- [Scoreboard]({{site.url}}/assets/mdp-contra-o-covid-19/Scoreboard.pdf). 
+- [Upsolving](https://codeforces.com/group/btcK4I5D5f/contest/281278).
