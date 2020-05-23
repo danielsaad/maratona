@@ -19,7 +19,7 @@ Abaixo seguem os melhores colocados em cada modalidade, os autores dos problemas
 
 1. **[UFMG] brunomont**: ~brunomont.
 2. **[UnB] AlbertoTDNeto**: ~AlbertoTDNeto.
-3. **[UnB-FGA] Álcool 70**: ~gustavolima00.
+3. **[UnB/FGA] Álcool 70**: ~gustavolima00.
 4. **[UnB] Teclado esterelizado**: ~Caiogoia
 5. **[UNIFEI] ConvexHull Trick**: ~Juniorandrade.
 
