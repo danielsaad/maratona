@@ -4,7 +4,7 @@ layout: page
 description: Competições anteriores
 ---
 
-## Seletiva UnB 2020 <a name="seletiva-unb-2020">
+## Seletiva UnB 2020 (25/09/2020) <a name="seletiva-unb-2020">
 
 [Caderno de Problemas]({{site.url}}/assets/seletiva-unb-2020/Maratona.pdf)
 
@@ -14,7 +14,7 @@ description: Competições anteriores
 
 [Upsolving](https://codeforces.com/group/btcK4I5D5f/contest/295070)
 
-## Maratona de Programação Contra a COVID-19 <a name="maratona-covid-19">
+## Maratona de Programação Contra a COVID-19 (23/03/2020) <a name="maratona-covid-19">
 
 [Caderno de Problemas]({{site.url}}/assets/mdp-contra-o-covid-19/Maratona.pdf)
 
