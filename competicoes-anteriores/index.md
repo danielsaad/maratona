@@ -4,6 +4,26 @@ layout: page
 description: Competições anteriores
 ---
 
+## Seletiva UnB 2020 <a name="seletiva-unb-2020">
+
+[Caderno de Problemas]({{site.url}}/assets/seletiva-unb-2020/Maratona.pdf)
+
+[Tutoriais]({{site.url}}/assets/seletiva-unb-2020/Tutoriais.pdf)
+
+[Scoreboard]({{site.url}}/assets/seletiva-unb-2020/Scoreboard.pdf) 
+
+[Upsolving](https://codeforces.com/group/btcK4I5D5f/contest/295070)
+
+## Maratona de Programação Contra a COVID-19 <a name="maratona-covid-19">
+
+[Caderno de Problemas]({{site.url}}/assets/mdp-contra-o-covid-19/Maratona.pdf)
+
+[Editorial]({{site.url}}/assets/mdp-contra-o-covid-19/Tutoriais.pdf)
+
+[Scoreboard]({{site.url}}/assets/mdp-contra-o-covid-19/Scoreboard.pdf) 
+
+[Upsolving](https://codeforces.com/group/btcK4I5D5f/contest/281278)
+
 ## Retrospectiva 2019  <a name="retrospectiva-2019">
 
 [Retrospectiva 2019]({{site.url}}/retrospectivas/retrospectiva-2019/index.html)
