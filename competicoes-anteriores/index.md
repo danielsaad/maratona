@@ -6,9 +6,7 @@ description: Competições anteriores
 
 ## XXV Maratona SBC de Programação - 1° Fase (15/11/2020) <a name="mdp-sbc-2020-1-fase">
 
-[Em breve - Caderno de Problemas]()
-
-[Scoreboard]({{site.url}}/assets/25-mdp-sbc/subregional/placar.html) 
+[Recursos]()
 
 
 ## Seletiva UnB 2020 (25/09/2020) <a name="seletiva-unb-2020">
