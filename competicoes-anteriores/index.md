@@ -4,7 +4,7 @@ layout: page
 description: Competições anteriores
 ---
 
-## XXV Maratona SBC de Programação - 1° Fase <a name="mdp-sbc-2020-1-fase>
+## XXV Maratona SBC de Programação - 1° Fase (15/11/2020) <a name="mdp-sbc-2020-1-fase>
 
 [Em breve - Caderno de Problemas]()
 
