@@ -1,6 +1,6 @@
 ---
 title: "VIII Maratona UnB de Programação: Resultados"
-date: 2020-12-19 18:35:00 Z
+date: 2020-12-19 00:00:00 Z
 layout: post
 categories: blog
 status: publish
