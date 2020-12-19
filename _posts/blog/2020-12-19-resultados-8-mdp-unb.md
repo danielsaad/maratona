@@ -25,13 +25,13 @@ Abaixo seguem os melhores colocados, os autores dos problemas e recursos como: p
 
 ## Elaboração e Revisão de Problemas
 
-- Daniel Saad: *A Viagem de Papai Noel*, *Laços Infinitos* e *Observação Estelar*.
-- Edson Alves: *Buracos de Minhoca*, *Cupins vs Tamanduás: A Revanche*, *Helena e os Cheques*, *IMC Aproximado*, *Jankenpon* e *Kaboom* .
-- Guilherme Ramos: *EDs e a Prova Perfeita 2* e *Média Móvel*.
+- Daniel Saad: *A Viagem de Papai Noel*, *Laços Infinitos*,  e *Observação Estelar*.
+- Edson Alves: *Buracos de Minhoca*, *Cupins vs Tamanduás: A Revanche*, *Helena e os Cheques*, *IMC Aproximado*, *Jankenpon*, e *Kaboom* .
+- Guilherme Ramos: *EDs e a Prova Perfeita 2*, e *Média Móvel*.
 - José Leite: *Natal e Árvores*.
 - Lucas Matiolli: *Farejando Arrays Especiais*.
 - Pedro Ferreira: *Gole Perfeito*.
-- Vinicius Borges: *Durval e os Treinos Intensos* e *Pamonhas*.
+- Vinicius Borges: *Durval e os Treinos Intensos*,  e *Pamonhas*.
 
 
 ## Recursos 
