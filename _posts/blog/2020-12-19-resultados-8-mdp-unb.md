@@ -38,5 +38,5 @@ Abaixo seguem os melhores colocados, os autores dos problemas e recursos como: p
 
 - [Caderno de Problemas]({{site.url}}/assets/8-mdp-unb/maratona.pdf).
 - [Tutoriais]({{site.url}}/assets/8-mdp-unb/tutoriais.pdf).
-- [Scoreboard]({{site.url}}/assets/8-mdp-unb/scoreboard). 
+- [Scoreboard]({{site.url}}/assets/8-mdp-unb/scoreboard.pdf). 
 - [Upsolving](https://codeforces.com/group/btcK4I5D5f/contest/308631).
