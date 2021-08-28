@@ -27,7 +27,7 @@ Abaixo seguem os melhores colocados em cada categoria, os créditos da comissão
 - jampa kamikaze: ~Ikusa, ~stefan_, ~Rafaelchaves
 
 
-#### Categoria Speedun (Fechou a Prova com Menos de 2h)
+#### Categoria Speedrun (Fechou a Prova com Menos de 2h)
 <img src="https://thumbs.gfycat.com/FailingScalyGemsbok-size_restricted.gif" width="300" height="300" />
 
 - [UnB/CiC] BAT-LEITE DA TURMA DA MONICA FURRY: Enzo Yoshio Niho (~EYZ), Eduardo Quirino de Oliveira (~cebolinha) e Gabriel Faustino Lima da Rocha (~faustino).
