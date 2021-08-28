@@ -5,7 +5,7 @@ timezone: America/Sao_Paulo
 layout: post
 categories: blog
 status: publish
-published: false
+published: true
 comments: true
 image:
 excerpt: "Seguem os Resultados da VI Maratona de Programação do IFB."
@@ -82,13 +82,13 @@ Abaixo seguem os melhores colocados em cada categoria, os créditos da comissão
 
 <img src="https://c.tenor.com/xJfQQ-t9u3oAAAAM/success-kid-hells-yes.gif" width="300" height="300" />
 
-[IFB/CTAG] Corvinal: Caio Padilha Aguiar (~caio_p.aguiar),  Leonam Knupp (~LKnupp) e Matheus Loiola Pinto Curado Silva (~Matheus_Loiola).
+- [IFB/CTAG] Corvinal: Caio Padilha Aguiar (~caio_p.aguiar),  Leonam Knupp (~LKnupp) e Matheus Loiola Pinto Curado Silva (~Matheus_Loiola).
 
 #### Categoria Água Mole Pedra Dura (Mais Tentativas até Obter o AC)
 
 <img src="https://c.tenor.com/0DOOPClW1xsAAAAC/brazilian-brazilian-pride.gif" width="300" height="300" />
 
-[IFB/CTAG] Corvinal: Caio Padilha Aguiar (~caio_p.aguiar),  Leonam Knupp (~LKnupp) e Matheus Loiola Pinto Curado Silva (~Matheus_Loiola).
+- [IFB/CTAG] Corvinal: Caio Padilha Aguiar (~caio_p.aguiar),  Leonam Knupp (~LKnupp) e Matheus Loiola Pinto Curado Silva (~Matheus_Loiola).
 
 
 #### Categoria Taumaturgo Solitário (Participação Individual Destaque)
