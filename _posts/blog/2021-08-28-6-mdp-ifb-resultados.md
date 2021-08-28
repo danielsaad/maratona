@@ -4,7 +4,8 @@ date: 2021-08-28 18:00
 timezone: America/Sao_Paulo
 layout: post
 categories: blog
-status: unpublished
+status: publish
+published: false
 comments: true
 image:
 excerpt: "Seguem os Resultados da VI Maratona de Programação do IFB."
