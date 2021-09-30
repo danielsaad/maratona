@@ -80,21 +80,21 @@ Abaixo seguem os melhores colocados em cada categoria, os créditos da comissão
 
 ## Elaboração e Revisão de Problemas
 
-A) Angariando Padrões: Daniel Saad
-B) Buracos de Coruja: Vinícius Borges
-C) Carma, Polícia!: Guilherme Ramos
-D) Dick Vigarista e a Corrida Maluca: Edson Alves
-E) Elocoin: Jeremias Gomes
-F) Fermentação de Pães: Vinicius Borges
-G) Grupos de Controle: Edson Alves
-H) Hagar.io: Jeremias Gomes
-I) Internacional: Leonardo Riether
-J) Já apaguei!: Daniel Saad
-K) Karen e os dados: José Leite
-L) Laser do Leo: Tiago Fernandes
-M) Melhor Classificação Final: 	Edson Alves
-N) Nario Party: Alberto Tavares
-O) Obtendo Informações: Daniel Saad
+- A) Angariando Padrões: Daniel Saad
+- B) Buracos de Coruja: Vinícius Borges
+- C) Carma, Polícia!: Guilherme Ramos
+- D) Dick Vigarista e a Corrida Maluca: Edson Alves
+- E) Elocoin: Jeremias Gomes
+- F) Fermentação de Pães: Vinicius Borges
+- G) Grupos de Controle: Edson Alves
+- H) Hagar.io: Jeremias Gomes
+- I) Internacional: Leonardo Riether
+- J) Já apaguei!: Daniel Saad
+- K) Karen e os dados: José Leite
+- L) Laser do Leo: Tiago Fernandes
+- M) Melhor Classificação Final: 	Edson Alves
+- N) Nario Party: Alberto Tavares
+- O) Obtendo Informações: Daniel Saad
 
 
 ## Recursos
@@ -102,4 +102,4 @@ O) Obtendo Informações: Daniel Saad
 - [Caderno de Problemas]({{site.url}}/assets/9-mdp-unb/maratona.pdf)
 - [Tutoriais]({{site.url}}/assets/9-mdp-unb/tutoriais.pdf)
 - [Scoreboard]({{site.url}}/assets/9-mdp-unb/scoreboard.pdf)
-- [Upsolving](https://codeforces.com/group/btcK4I5D5f/contest/346791/)
+- [Upsolving](https://codeforces.com/group/btcK4I5D5f/contest/346791/) 
