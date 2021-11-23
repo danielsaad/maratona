@@ -1,5 +1,5 @@
 ---
-title: "VI Maratona de Programação do IFB: Resultados"
+title: "VI Maratona de Programação do IFB: Certificados"
 date: 2021-09-29 18:00
 timezone: America/Sao_Paulo
 layout: post
