@@ -53,6 +53,7 @@ Abaixo seguem os mais bem colocados, os créditos da comissão organizadora e re
 
 ## Recursos
 
+- [Fotos](https://drive.google.com/drive/folders/1c8UY49nprZ3CHuEu1A5GqYvcQpwAl59P?usp=sharing)
 - [Caderno de Problemas]({{site.url}}/assets/10-mdp-unb/maratona.pdf)
 - [Tutoriais]({{site.url}}/assets/10-mdp-unb/tutoriais.pdf)
 - [Scoreboard]({{site.url}}/assets/10-mdp-unb/scoreboard.pdf)
