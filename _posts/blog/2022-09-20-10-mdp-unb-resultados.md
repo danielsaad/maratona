@@ -1,6 +1,6 @@
 ---
 title: "X Maratona UnB de Programação: Resultados"
-date: 2021-09-20 00:00
+date: 2022-09-20 00:00
 timezone: America/Sao_Paulo
 layout: post
 categories: blog
