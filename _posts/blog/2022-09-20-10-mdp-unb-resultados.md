@@ -57,4 +57,5 @@ Abaixo seguem os mais bem colocados, os créditos da comissão organizadora e re
 - [Caderno de Problemas]({{site.url}}/assets/10-mdp-unb/maratona.pdf)
 - [Tutoriais]({{site.url}}/assets/10-mdp-unb/tutoriais.pdf)
 - [Scoreboard]({{site.url}}/assets/10-mdp-unb/scoreboard.pdf)
+- [Estatísticas]({{site.url}}/assets/10-mdp-unb/estatisticas.pdf)
 - [Upsolving](https://codeforces.com/group/btcK4I5D5f/contest/396683) 
