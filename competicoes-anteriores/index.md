@@ -4,6 +4,14 @@ layout: page
 description: Competições anteriores
 ---
 
+## VII Maratona de Programação do IFB (19/11/2022) <a name="7-mdp-unb">
+
+- [Caderno de Problemas]({{site.url}}/assets/7-mdp-unb/maratona.pdf)
+- [Tutoriais]({{site.url}}/assets/7-mdp-unb/tutoriais.pdf)
+- [Scoreboard]({{site.url}}/assets/7-mdp-unb/scoreboard.pdf)
+- [Estatísticas]({{site.url}}/assets/7-mdp-unb/estatisticas.pdf)
+- [Upsolving](https://codeforces.com/group/btcK4I5D5f/contest/411199) 
+
 ## X Maratona UnB de Programação (31/08/2022) <a name="10-mdp-unb">
 
 - [Fotos](https://drive.google.com/drive/folders/1c8UY49nprZ3CHuEu1A5GqYvcQpwAl59P?usp=sharing)
