@@ -61,4 +61,5 @@ Abaixo seguem os mais bem colocados, os créditos da comissão organizadora e re
 - [Tutoriais]({{site.url}}/assets/7-mdp-ifb/tutoriais.pdf)
 - [Scoreboard]({{site.url}}/assets/7-mdp-ifb/scoreboard.pdf)
 - [Estatísticas]({{site.url}}/assets/7-mdp-ifb/estatisticas.pdf)
+- [Scoreboard Remoto]({{site.url}}/assets/7-mdp-ifb/scoreboard-codeforces.pdf)
 - [Upsolving](https://codeforces.com/group/btcK4I5D5f/contest/411199) 
