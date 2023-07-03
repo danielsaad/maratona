@@ -4,6 +4,14 @@ layout: page
 description: Competições anteriores
 ---
 
+## Seletiva UnB 2023 (01/07/2023) <a name="seletiva-unb-2023">
+
+- [Caderno de Problemas]({{site.url}}/assets/seletiva-unb-2023/maratona.pdf)
+- [Tutoriais]({{site.url}}/assets/seletiva-unb-2023/tutoriais.pdf)
+- [Scoreboard]({{site.url}}/assets/seletiva-unb-2023/scoreboard.pdf)
+- [Estatísticas]({{site.url}}/assets/seletiva-unb-2023/estatisticas.pdf)
+- [Upsolving](https://codeforces.com/group/btcK4I5D5f/contest/451372)
+
 ## VII Maratona de Programação do IFB (19/11/2022) <a name="7-mdp-unb">
 
 - [Caderno de Problemas]({{site.url}}/assets/7-mdp-unb/maratona.pdf)
