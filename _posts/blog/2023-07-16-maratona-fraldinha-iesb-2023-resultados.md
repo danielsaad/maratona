@@ -1,5 +1,5 @@
 ---
-title: "Maratona Fraldinha IESB de Programação 2023: Resultados"
+title: "Maratona Fraldinha de Programação IESB 2023: Resultados"
 date: 2023-07-16 00:00
 timezone: America/Sao_Paulo
 layout: post
@@ -8,7 +8,7 @@ status: publish
 published: true
 comments: true
 image:
-excerpt: "Seguem os Resultados da Maratona Fraldinha IESB de Programação 2023."
+excerpt: "Seguem os Resultados da Maratona Fraldinha de Programação IESB 2023."
 
 ---
 
