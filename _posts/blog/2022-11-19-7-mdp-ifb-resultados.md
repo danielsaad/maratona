@@ -29,7 +29,7 @@ Abaixo seguem os mais bem colocados, os créditos da comissão organizadora e re
 #### Cinco Melhores (Remoto)
 
 1. **[IFB/Darcy] as meninas do bairro das pitangueiras**: Maria Eduarda Holanda (~dudaholandah), Maria Eduarda Carvalho (~auntduda)	e Nathália Pereira (~liaoli).
-2. **[IFB] LKnupp**: Leonam Knupp (~LKnupp).1
+2. **[IFB] LKnupp**: Leonam Knupp (~LKnupp).
 3. **[UnB/FGA] FGA - GGB**: ~Mexazonic e ~GustavoNr.
 4. **[UFU/FEELT] - Runtime Terror**: Guilherme Gabriel Ferreira Souza (~GuilhermeGabriel), Bruno Boreli  Fernandes (~BrunoBoreli) e Renzo Prats Silva Souza (~renzop).
 5. **r4yr4yr4y**: ~r4yr4yr4y
