@@ -1,5 +1,5 @@
 ---
-title: "VIII Maratona de Programação do IFB"
+title: "VIII maratona de programação do IFB: confirmação das inscrições presenciais"
 date: 2023-10-11 00:00:00 Z
 layout: post
 categories: blog
