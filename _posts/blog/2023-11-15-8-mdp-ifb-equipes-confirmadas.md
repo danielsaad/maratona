@@ -15,7 +15,7 @@ Olá, pessoal!
 Informamos que as inscrições para a VIII Maratona de Programação do IFB na modalidade **participação presencial** estão encerradas.
 
 Segue a relação das equipes confirmadas:
-|                            **Equipe**                            |            **Integrante 1**            |          **Integrante 2**         |             **Integrante 3**            |
+|                              Equipe                              |              Integrante 1              |            Integrante 2           |               Integrante 3              |
 |:----------------------------------------------------------------:|:--------------------------------------:|:---------------------------------:|:---------------------------------------:|
 | Anões do WA                                                      | Caio Felipe Rocha Rodrigues            | Henrique Camelo Quenino           | Mateus Vieira Rocha Da Silva            |
 | Nossa como programa                                              | Arthur Andrade D’olival                | Giovanni Lucas Oliveira da Silva  | Gabriel Cesar Silvino Xavier            |
