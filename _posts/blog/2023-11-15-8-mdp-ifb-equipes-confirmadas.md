@@ -28,7 +28,7 @@ Segue a relação das equipes confirmadas:
 | ERREI, FUI MLK                                                   | Adrielly Vitória Costa de Lima         | Lucas Issamu Hashimoto            | Beatriz Alves Freire                    |
 | Ninguém sabe como ta a mente do palhasso...                      | Ana Luísa de Souza Paraguassu          | Arthur da Silva Pereira Bispo     | João Carlos Gonçalves de Oliveira Filho |
 | Atlético-PR não tem mundial                                      | Pedro Braga Reis de Sousa              | Fabio Lucas Barbosa Parra         | Yuri Andrade Oliveira Gomes             |
-| Quem faz o dev rir? 🤡                                            | Arthur Taylor de Jesus Popov           | Gabrielle Ribeiro Gomes           | Thiago Oliveira Cunha                   |
+| Quem faz o dev rir? 🤡                                           | Arthur Taylor de Jesus Popov           | Gabrielle Ribeiro Gomes           | Thiago Oliveira Cunha                   |
 | Tur-TLE                                                          | Gabriel Moretti de Souza               | Caio Vitor Carneiro de Oliveira   | Rodrigo Carvalho dos Santos             |
 | Gteam                                                            | GABRIEL REIS SCHEIDT PAULINO           |                                   |                                         |
 | antes da calvície                                                | Ciro Moraes Rocha                      | Igor de Oliveira Moura            | Cássio dos Santos Rodrigues             |
