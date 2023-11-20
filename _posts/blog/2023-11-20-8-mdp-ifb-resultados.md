@@ -48,6 +48,7 @@ Abaixo seguem os mais bem colocados, os créditos da comissão organizadora e re
 - Alberto Tavares Neto
 - Bruno Vargas de Souza
 - Enzo Yoshio
+  
 ### Agradecimentos Especiais
 
 - Bruno Ribas, pelo suporte com o Maratona Linux.
