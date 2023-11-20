@@ -4,7 +4,7 @@ layout: page
 description: Competições anteriores
 ---
 
-## [VIII Maratona de Programação do IFB (18/11/2023)](maratona{% link _posts/blog/2023-11-20-8-mdp-ifb-resultados.md %}) 
+## [VIII Maratona de Programação do IFB (18/11/2023)]({{site.url}}{% link _posts/blog/2023-11-20-8-mdp-ifb-resultados.md %})
 
 ## XI Maratona UnB de Programação (27/09/2023) <a name="11-mdp-unb">
 
