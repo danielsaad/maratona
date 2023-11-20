@@ -47,6 +47,12 @@ Abaixo seguem os mais bem colocados, os créditos da comissão organizadora e re
 
 - Alberto Tavares Neto
 - Bruno Vargas de Souza
+
+### Agradecimentos Especiais
+
+- Bruno Ribas, pelo suporte com o Maratona Linux.
+- Ramos Estudantil IEEE, pelo apoio ao coffee break.
+- Carolina Saad, pela ajuda na logística da competição.
   
 ## Recursos
 
