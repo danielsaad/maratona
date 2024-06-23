@@ -48,10 +48,11 @@ Abaixo seguem os mais bem colocados, os créditos da comissão organizadora e re
 ### Revisores
 
 - Eduardo Quirino
-  
+- Wilson Guimarães
+
 ### Agradecimentos Especiais
 
-- Bruno Ribas, pelo suporte com o Maratona Linux.
+- Bruno Ribas, pelo suporte com o Maratona Linux e Boca.
 - Staff da competição.
   
 ## Recursos
