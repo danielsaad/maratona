@@ -79,5 +79,5 @@ Abaixo seguem os mais bem colocados, os créditos da comissão organizadora e re
 - [Scoreboard]({{site.url}}/assets/v-escola-de-inverno-da-maratona-de-programacao/scoreboard.html)
 - [Estatísticas]({{site.url}}/assets/v-escola-de-inverno-da-maratona-de-programacao/statistics.html)
 - [Aula Upsolving]({{site.url}}/assets/v-escola-de-inverno-da-maratona-de-programacao/maratona-de-inverno-csbc-2024-upsolving-presentation.pdf)
-- [Upsolving MOJ](https://codeforces.com/group/btcK4I5D5f/contest/537349)
+- [Upsolving MOJ](https://moj.naquadah.com.br/cgi-bin/tag.sh/v_maratona_de_inverno_2024)
 - [Upsolving Codeforces](https://codeforces.com/group/btcK4I5D5f/contest/537349)
