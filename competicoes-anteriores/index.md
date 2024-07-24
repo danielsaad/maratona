@@ -4,6 +4,9 @@ layout: page
 description: Competições anteriores
 ---
 
+## [V Escola de Inverno da Maratona de Programação]({{site.url}}{% link _posts/blog/2024-07-23-v-escola-de-inverno-da-maratona-de-programacao-resultados.md %})
+
+
 ## [Seletiva UnB 2024 (22/06/2024)]({{site.url}}{% link _posts/blog/2024-16-22-seletiva-unb-2024-resultados.md %})
 
 
