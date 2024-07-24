@@ -74,7 +74,7 @@ Abaixo seguem os mais bem colocados, os créditos da comissão organizadora e re
 
 ## Recursos
 
-- [Caderno de Problemas]({{site.url}}/assets/v-escola-de-inverno-da-maratona-de-programacao/caderno-v-escola-de-inverno-da-maratona-de-programacao.pdf)
+- [Caderno de Problemas]({{site.url}}/assets/v-escola-de-inverno-da-maratona-de-programacao/caderno-v-escola-de-inverno-maratona-de-programacao.pdf)
 - [Tutoriais]({{site.url}}/assets/v-escola-de-inverno-da-maratona-de-programacao/tutoriais.pdf)
 - [Scoreboard]({{site.url}}/assets/v-escola-de-inverno-da-maratona-de-programacao/scoreboard.html)
 - [Estatísticas]({{site.url}}/assets/v-escola-de-inverno-da-maratona-de-programacao/statistics.html)
