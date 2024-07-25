@@ -43,3 +43,7 @@ description: Equipe
 # Organizações parceiras
 
 - Ramo estudantil IEEE do IFB
+
+# Esquecemos alguém?
+
+Contacte o prof. Daniel Saad
