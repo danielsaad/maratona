@@ -23,7 +23,7 @@ description: Equipe
 - Caleb Martim de Oliveira
 - [Eduardo Quirino](https://www.linkedin.com/in/eduardo-quirino-a3077ba0/)
 - [Enzo Yoshio Niho](https://www.linkedin.com/in/enzo-yoshio-niho-9bb571108/) 
-- Felipe Duerno do Couto Almeida
+- [Felipe Duerno do Couto Almeida](https://www.linkedin.com/in/duerno/)
 - Henrique de Oliveira Ramos
 - [José Marcos da Silva Leite](https://www.linkedin.com/in/jose-marcos-leite/)
 - [Leonardo Riether](https://www.linkedin.com/in/leoriether/)
