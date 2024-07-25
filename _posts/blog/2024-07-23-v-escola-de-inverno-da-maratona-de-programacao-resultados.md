@@ -71,6 +71,7 @@ Abaixo seguem os mais bem colocados, os créditos da comissão organizadora e re
 ### Agradecimentos
 
 - Emilio Wuerges, pelo apoio com o Animeitor.
+- Leonardo Deliyannis, pela transmissão do evento.
 
 ## Recursos
 
