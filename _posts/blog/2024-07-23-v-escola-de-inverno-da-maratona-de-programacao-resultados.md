@@ -51,6 +51,11 @@ Abaixo seguem os mais bem colocados, os créditos da comissão organizadora e re
 - Edson Alves da Costa Júnior
 - Gustavo Machado Leal
 
+### Aulas
+
+- Gustavo Machado Leal
+- Henrique de Oliveira Ramos
+
 ### Sistemas
 
 - Bruno César Ribas
@@ -79,6 +84,9 @@ Abaixo seguem os mais bem colocados, os créditos da comissão organizadora e re
 - [Tutoriais]({{site.url}}/assets/v-escola-de-inverno-da-maratona-de-programacao/tutoriais.pdf)
 - [Scoreboard]({{site.url}}/assets/v-escola-de-inverno-da-maratona-de-programacao/scoreboard.html)
 - [Estatísticas]({{site.url}}/assets/v-escola-de-inverno-da-maratona-de-programacao/statistics.html)
+- [Aula Grafos (Prof. Gustavo Leal)]({{site.url}}/assets/v-escola-de-inverno-da-maratona-de-programacao/material-gustavo-leal.zip)
+- [Contest de Grafos](https://codeforces.com/group/Nk6nlzlAVS)
+- [Aula Programação Dinâmica (Prof. Henrique Ramos)](({{site.url}}/assets/v-escola-de-inverno-da-maratona-de-programacao/material-henrique-ramos.pdf))
 - [Aula Upsolving]({{site.url}}/assets/v-escola-de-inverno-da-maratona-de-programacao/maratona-de-inverno-csbc-2024-upsolving-presentation.pdf)
 - [Upsolving MOJ](https://moj.naquadah.com.br/cgi-bin/tag.sh/v_maratona_de_inverno_2024)
 - [Upsolving Codeforces](https://codeforces.com/group/btcK4I5D5f/contest/537349)
