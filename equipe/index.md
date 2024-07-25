@@ -13,7 +13,7 @@ description: Equipe
 - Prof. Guilherme Ramos (UnB)
 - Prof. John Lennon Gardenghi (UnB/FGA)
 - Profa. Patricia Moscariello (IESB)
-- Prof. Vinicius Ruela Pereira Borges
+- Prof. Vinicius Ruela Pereira Borges (UnB)
 
 # Alunos e Alumni
 
