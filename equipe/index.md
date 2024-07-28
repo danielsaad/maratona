@@ -7,7 +7,7 @@ description: Equipe
 # Docentes
 
 - Prof. Bruno Ribas (UnB/FGA)
-- Prof. Daniel Saad (UnB)
+- Prof. Daniel Saad (IFB)
 - Prof. Daniel Porto (UnB)
 - Prof. Edson Alves  (UnB/FGA)
 - Prof. Guilherme Ramos (UnB)
