@@ -44,7 +44,7 @@ Abaixo seguem os mais bem colocados, os créditos da comissão organizadora e re
 - C) *Cinuca Olímpica*: Jeremias Gomes
 - D) *Dupla de dois*: Daniel Saad
 - E) *Encontros*: Jeremias Gomes
-- F) *Flores do Jardim*: Flores do Jardim
+- F) *Flores do Jardim*: Caleb Martim
 - G) *Guloso da Cidade*: Bruno Vargas
 - H) *Homiranho*: Guilherme Ramos
 - I) *Inversões Mágicas de Botelho*: Alberto Tavares Neto
