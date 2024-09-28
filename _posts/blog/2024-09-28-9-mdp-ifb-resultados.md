@@ -28,7 +28,6 @@ Abaixo seguem os mais bem colocados, os créditos da comissão organizadora e re
 4. **[UnB/FGA] Prisioneiras de WAzkaban**: Ana Luiza Komatsu Aroeira, Karla Chaiane da Silva Feliciano e Adne Moretti Moreira
 5. **[IFB/CTAG] Nossa como programa**: Arthur Andrade D’olival, Giovanni Lucas Oliveira da Silva, Gabriel Cesar Silvino Xavier
 
-
 #### Cinco Melhores (Remoto)
 
 1. **[IFPB] WACCOMPILATIONERRORUNTIMERRORUNTIME...**: João Pedro Oliveira Santos
