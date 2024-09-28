@@ -3,6 +3,8 @@ title: Competições Anteriores
 layout: page
 description: Competições anteriores
 ---
+## [IX Maratona de Programação do IFB]({{site.url}}{% link _posts/blog/2024-09-28-9-mdp-ifb-resultados %})
+
 
 ## [V Escola de Inverno da Maratona de Programação]({{site.url}}{% link _posts/blog/2024-07-23-v-escola-de-inverno-da-maratona-de-programacao-resultados.md %})
 
