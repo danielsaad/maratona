@@ -55,7 +55,7 @@ Abaixo seguem os mais bem colocados, os créditos da comissão organizadora e re
 
 ### Agradecimentos
 
-- Bruno Ribas pelo suporte com o \textit{Maratona Linux}.
+- Bruno Ribas pelo suporte com o *Maratona Linux*.
 - Alessandra Kreutz e comissão, pela organização e suporte da Semana Integrada do IFB, \textit{campus} Taguatinga.
 
 ### Staff
