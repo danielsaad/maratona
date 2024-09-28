@@ -33,7 +33,7 @@ Abaixo seguem os mais bem colocados, os créditos da comissão organizadora e re
 
 1. **[IFPB] WACCOMPILATIONERRORUNTIMERRORUNTIME...**: João Pedro Oliveira Santos
 2. **[UNI-FC] NoTraining**: Joel Jhotan Chavez Chico, Angello Jamir Pisfil Puicon e Jose Manuel Ravichagua Marin
-3. **[UFAM] Nlogenses**: Ana Carla de Araújo Fernandes, Luan Gabriel Souza dos Santos eRebeca Madi Oliveira
+3. **[UFAM] Nlogenses**: Ana Carla de Araújo Fernandes, Luan Gabriel Souza dos Santos e Rebeca Madi Oliveira
 4. **[UFMG] Cagnus Marlsen**: Iago Zagnoli Albergaria, Caroline Campos Carvalho e Manuel Junio Ferraz Cardoso
 5. **[UFAM] meia noite te conto**: Felipe Rocha Spitale e Ricardo Nogueira Miranda Filho
 
