@@ -72,6 +72,6 @@ Abaixo seguem os mais bem colocados, os créditos da comissão organizadora e re
 - [Tutoriais]({{site.url}}/assets/9-mdp-ifb/tutoriais.pdf)
 - [Scoreboard]({{site.url}}/assets/9-mdp-ifb/scoreboard.html)
 - [Estatísticas]({{site.url}}/assets/9-mdp-ifb/estatisticas.html)
-- [Upsolving MOJ (Muito em breve)](https://moj.naquadah.com.br/cgi-bin/index.sh)
+- [Upsolving MOJ](https://moj.naquadah.com.br/cgi-bin/tag.sh/ix_maratona_de_programa%C3%A7%C3%A3o_do_ifb)
 - [Upsolving Codeforces](https://codeforces.com/group/btcK4I5D5f/contest/553853)
 - [Fotos](https://drive.google.com/drive/folders/1aqJK25dqzMjEDQdQbgvwT_PiemMSxuuG?usp=sharing)
