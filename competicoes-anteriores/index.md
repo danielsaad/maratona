@@ -4,12 +4,12 @@ layout: page
 description: Competições anteriores
 ---
 
-## [XII Maratona UnB de Programação do IFB]({{site.url}}{% link _posts/blog/2024-11-04-12-mdp-unb-resultados.md %})
+## [XII Maratona UnB de Programação do IFB (04/11/2024)]({{site.url}}{% link _posts/blog/2024-11-04-12-mdp-unb-resultados.md %})
 
-## [IX Maratona de Programação do IFB]({{site.url}}{% link _posts/blog/2024-09-28-9-mdp-ifb-resultados.md %})
+## [IX Maratona de Programação do IFB (27/11/2024)]({{site.url}}{% link _posts/blog/2024-09-28-9-mdp-ifb-resultados.md %})
 
 
-## [V Escola de Inverno da Maratona de Programação]({{site.url}}{% link _posts/blog/2024-07-23-v-escola-de-inverno-da-maratona-de-programacao-resultados.md %})
+## [V Escola de Inverno da Maratona de Programação (23/07/2024)]({{site.url}}{% link _posts/blog/2024-07-23-v-escola-de-inverno-da-maratona-de-programacao-resultados.md %})
 
 
 ## [Seletiva UnB 2024 (22/06/2024)]({{site.url}}{% link _posts/blog/2024-06-22-seletiva-unb-2024-resultados.md %})
