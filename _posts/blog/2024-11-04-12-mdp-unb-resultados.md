@@ -61,6 +61,10 @@ Abaixo seguem os mais bem colocados, os créditos da comissão organizadora e re
 - N) *Nave Extraterrestre*: Vinicius Borges
 - O) *O Jogo Aleatório*: Arthur Botelho
 
+### Revisão
+
+- Eduardo Quirino
+
 ### Sistemas
 
 - Bruno Ribas
