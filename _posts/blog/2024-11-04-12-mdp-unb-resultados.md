@@ -21,7 +21,7 @@ em nosso grupo do [Telegram](https://t.me/maratonasdf)🔥.
 
 Abaixo seguem os mais bem colocados, os créditos da comissão organizadora e recursos como: placar final, caderno de problemas e tutoriais.
 
-#### Cinco Melhores
+## Cinco Melhores
 
 1. **[UnB/CIC] Charlie Brown Junior**: Henrique de Oliveira Ramos, Luiz Eduardo Pereira dos Reis e Henrique Quirino de Oliveira
 2. **[PUC-GO] #define IAGO_SUPREMO**: João Guilherme Guimarães e Silva e Ricardo
@@ -33,12 +33,12 @@ Abaixo seguem os mais bem colocados, os créditos da comissão organizadora e re
 5. **[UFU/FACOM] Aoooo Pow(tencia)**: Leandro Elias Fontes Carrijo, Luis Augusto
    e Queiroz Martins Leandro Silva Pina de Campos
 
-#### Melhor Equipe Feminina
+## Melhor Equipe Feminina
 
 - **[UnB/CIC] Camelas escaladoras em busca da casa automática**: Iasmim de
   Queiroz Freitas, Adrielly Medeiros Nunes e Nikolle dos Santos Licá
 
-#### Equipe Revelação
+## Equipe Revelação
 
 - **[Pódion/Leonardo_da_Vinci] CF-OBI B)**: Mayara Sampaio Martins, Ana Júlia
   Quirino de Oliveira e Estela Baron Nakamura
