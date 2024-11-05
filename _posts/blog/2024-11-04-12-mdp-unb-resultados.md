@@ -24,10 +24,12 @@ Abaixo seguem os mais bem colocados, os créditos da comissão organizadora e re
 #### Cinco Melhores
 
 1. **[UnB/CIC] Charlie Brown Junior**: Henrique de Oliveira Ramos, Luiz Eduardo Pereira dos Reis e Henrique Quirino de Oliveira
-2. **[PUC-GO] #define IAGO_SUPREMO**: João Guilherme Guimarães e Silva, Ricardo
+2. **[PUC-GO] #define IAGO_SUPREMO**: João Guilherme Guimarães e Silva e Ricardo
    Vieira Chagas de Oliveira e Iago de Souza Lopes
-3. **[UFU/FACOM] Pinguins de Madagascar**: Guilherme Cabral de Menezes, Carlos Cabral de Menezes Filho, Maria Eduarda Gomes Kuhn
-4. **[UnB/FGA] Teclado lindinho**: Iago Rocha Santos Marques, Thalisson Alves de Jesus, André Macedo Alves
+3. **[UFU/FACOM] Pinguins de Madagascar**: Guilherme Cabral de Menezes, Carlos
+   Cabral de Menezes Filho e Maria Eduarda Gomes Kuhn
+4. **[UnB/FGA] Teclado lindinho**: Iago Rocha Santos Marques, Thalisson Alves de
+   Jesus e André Macedo Alves
 5. **[UFU/FACOM] Aoooo Pow(tencia)**: Leandro Elias Fontes Carrijo, Luis Augusto
    e Queiroz Martins Leandro Silva Pina de Campos
 
