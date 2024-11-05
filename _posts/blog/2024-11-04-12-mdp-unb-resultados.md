@@ -74,7 +74,7 @@ Abaixo seguem os mais bem colocados, os créditos da comissão organizadora e re
 
 ## Recursos
 
-- [Caderno de Problemas]({{site.url}}/assets/12-mdp-unb/caderno-12-mdp-ifb.pdf)
+- [Caderno de Problemas]({{site.url}}/assets/12-mdp-unb/caderno-12-mdp-unb.pdf)
 - [Tutoriais]({{site.url}}/assets/12-mdp-unb/tutoriais.pdf)
 - [Scoreboard]({{site.url}}/assets/12-mdp-unb/scoreboard.html)
 - [Estatísticas]({{site.url}}/assets/12-mdp-unb/estatisticas.html)
