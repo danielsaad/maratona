@@ -76,7 +76,14 @@ Abaixo seguem os mais bem colocados, os créditos da comissão organizadora e re
 ### Staff
 
 - Luís Antônio
-- Em breve os demais
+- Bruno Bernardes Duarte
+- Davi Gonçalves Akegawa Pierre
+- Eduardo Ferreira Marques Cavalcante
+- Eduardo Quirino de Oliveira
+- Erick Levy Barbosa dos Santos
+- Maria Clara Sena de Lima
+- Maria Eduarda Machado de Holanda
+- Raphaela Guimaraes de Araujo dos Santos
 
 ## Recursos
 
