@@ -3,6 +3,9 @@ title: Competições Anteriores
 layout: page
 description: Competições anteriores
 ---
+
+## [XII Maratona UnB de Programação do IFB]({{site.url}}{% link _posts/blog/2024-11-04-12-mdp-unb-resultados.md %})
+
 ## [IX Maratona de Programação do IFB]({{site.url}}{% link _posts/blog/2024-09-28-9-mdp-ifb-resultados.md %})
 
 
