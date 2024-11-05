@@ -65,7 +65,7 @@ Abaixo seguem os mais bem colocados, os créditos da comissão organizadora e re
 
 - Bruno Ribas
 - Daniel Saad
-- Gabriel (UFU)
+- Gabriel Bernardi
 
 ### Staff
 
@@ -79,6 +79,6 @@ Abaixo seguem os mais bem colocados, os créditos da comissão organizadora e re
 - [Scoreboard]({{site.url}}/assets/12-mdp-unb/scoreboard.html)
 - [Estatísticas]({{site.url}}/assets/12-mdp-unb/estatisticas.html)
 - [Run list]({{site.url}}/assets/12-mdp-unb/runlist.html)
-- [Upsolving MOJ (em breve)]()
-- [Upsolving Codeforces](https://codeforces.com/group/btcK4I5D5f/contest/)
-- [Fotos (em breve)]()
+- [Upsolving MOJ (em breve)](https://moj.naquadah.com.br/cgi-bin/index.sh)
+- [Upsolving Codeforces](https://codeforces.com/group/btcK4I5D5f/contest/564296)
+- [Fotos](https://tinyurl.com/xiimdpunb)
