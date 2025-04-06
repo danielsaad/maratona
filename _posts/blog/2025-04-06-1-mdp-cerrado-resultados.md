@@ -87,8 +87,6 @@ Abaixo seguem os mais bem colocados, os créditos da comissão organizadora e re
 - [Tutoriais (Aquecimento)]({{site.url}}/assets/1-mdp-cerrado/tutoriais-1-mdp-cerrado-aquecimento.pdf)
 - [Tutoriais]({{site.url}}/assets/1-mdp-cerrado/tutoriais-1-mdp-cerrado.pdf)
 - [Scoreboard]({{site.url}}/assets/1-mdp-cerrado/scoreboard-oficial.html)
-- [Scoreboard CCL]({{site.url}}/assets/1-mdp-cerrado/scoreboard-ccl.html)
-- [Scoreboard + CCL]({{site.url}}/assets/1-mdp-cerrado/scoreboard-todos.html)
 - [Estatísticas]({{site.url}}/assets/1-mdp-cerrado/estatisticas.html)
 - [Clarifications]({{site.url}}/assets/1-mdp-cerrado/clarifications.html)
 - [Run list]({{site.url}}/assets/12-mdp-unb/runlist.html)
