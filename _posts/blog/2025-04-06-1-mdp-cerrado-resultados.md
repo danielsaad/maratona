@@ -88,5 +88,5 @@ Abaixo seguem os mais bem colocados, os créditos da comissão organizadora e re
 - [Scoreboard]({{site.url}}/assets/1-mdp-cerrado/scoreboard-oficial.html)
 - [Estatísticas]({{site.url}}/assets/1-mdp-cerrado/estatisticas.html)
 - [Clarifications]({{site.url}}/assets/1-mdp-cerrado/clarifications.html)
-- [Run list]({{site.url}}/assets/12-mdp-unb/runlist.html)
+- [Run list]({{site.url}}/assets/1-mdp-cerrado/runlist.html)
 - [Upsolving Codeforces](https://codeforces.com/group/btcK4I5D5f/contest/601720)
