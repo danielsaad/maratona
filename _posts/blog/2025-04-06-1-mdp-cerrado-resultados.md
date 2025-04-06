@@ -25,7 +25,6 @@ Abaixo seguem os mais bem colocados, os créditos da comissão organizadora e re
 
 1. **[UnB/Darcy Ribeiro] É só fazer**: Arthur Menezes Botelho, Ruan Petrus Alves Leite e Eduardo Freire dos Santos.
 2. **[UFG] Monkeys: Dafene**: Felipe do Espírito Santo Sabino, Nelsi de sousa Barbosa Junior e  Danilo Lourenço Macedo Dias.
-   Vieira Chagas de Oliveira e Iago de Souza Lopes
 3. **[UFU/Campus Santa Mônica] Os Betinha**: Carlos Cabral de Menezes Filho, Guilherme Cabral de Menezes e Victor Sisterolli Neto.
 4. **[PUC-GO] While(tadala) { sobe(); }**: João Guilherme Guimarães e Silva, Ricardo Vieira Chagas de Oliveira e Matheus Henrique de Campos. 
 5. **[UFU/Campus Santa Mônica] Sobra nada pros betinha**: Leandro Elias Fontes Carrijo, Leandro Silva Pina de Campos e Luís Augusto Queiroz Martins. 
