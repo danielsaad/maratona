@@ -67,7 +67,7 @@ Abaixo seguem os mais bem colocados, os créditos da comissão organizadora e re
 - M) *Mangabas*: Edson Alves
 - N) *Não é permitido erros!*: Alberto Neto
 
-### Revisão
+#### Revisão
 
 - Eduardo Quirino
 - Jeremias Moreira Gomes
