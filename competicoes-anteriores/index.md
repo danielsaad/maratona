@@ -4,6 +4,8 @@ layout: page
 description: Competições anteriores
 ---
 
+## [I Maratona SBC de Progrmaação do Cerrado]({{site.url}}{% link _posts/blog/2025-04-06-1-mdp-cerrado-resultados.md %})
+
 ## [XII Maratona UnB de Programação do IFB (04/11/2024)]({{site.url}}{% link _posts/blog/2024-11-04-12-mdp-unb-resultados.md %})
 
 ## [IX Maratona de Programação do IFB (27/11/2024)]({{site.url}}{% link _posts/blog/2024-09-28-9-mdp-ifb-resultados.md %})
