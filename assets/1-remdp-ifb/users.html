@@ -1,0 +1,422 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- BOCA boca-1.5.17. Copyright (c) 2003-2023 Cassio Polpo de Campos -->
+<!-- http://www.ime.usp.br/~cassio/boca                                  -->
+<!-- This program is free software: you can redistribute it and/or modify  -->
+<!-- it under the terms of the GNU General Public License as published by -->
+<!-- the Free Software Foundation, either version 3 of the License, or -->
+<!-- (at your option) any later version. A copy of the  -->
+<!-- license can be found with this software or at http://www.gnu.org/licenses/ -->
+<html><head><title>Admin's Page</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="users_files/Css.php" type="text/css">
+</head><body id="body"><table border="1" width="100%">
+<tbody><tr><td nowrap="nowrap" bgcolor="eeee00" align="center"><img src="users_files/smallballoontransp.png" alt=""><font color="#000000">BOCA</font></td><td bgcolor="#eeee00" width="99%">
+Username: Administrator (site=1)<br>
+</td><td bgcolor="#eeee00" align="center" nowrap="nowrap">&nbsp;contest not running&nbsp;</td></tr>
+</tbody></table>
+<table border="0" width="100%" align="center">
+ <tbody><tr>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://boca.danielsaad.com/boca/admin/run.php">Runs</a></td>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://boca.danielsaad.com/boca/admin/score.php">Score</a></td>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://boca.danielsaad.com/boca/admin/clar.php">Clarifications</a></td>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://boca.danielsaad.com/boca/admin/user.php">Users</a></td>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://boca.danielsaad.com/boca/admin/problem.php">Problems</a></td>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://boca.danielsaad.com/boca/admin/language.php">Languages</a></td>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://boca.danielsaad.com/boca/admin/answer.php">Answers</a></td>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://boca.danielsaad.com/boca/admin/misc.php">Misc</a></td>
+ </tr><tr>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://boca.danielsaad.com/boca/admin/task.php">Tasks</a></td>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://boca.danielsaad.com/boca/admin/site.php">Site</a></td>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://boca.danielsaad.com/boca/admin/contest.php">Contest</a></td>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://boca.danielsaad.com/boca/admin/log.php">Logs</a></td>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://boca.danielsaad.com/boca/admin/report.php">Reports</a></td>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://boca.danielsaad.com/boca/admin/files.php">Backups</a></td>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://boca.danielsaad.com/boca/admin/option.php">Options</a></td>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://boca.danielsaad.com/boca/index.php">Logout</a></td>
+ </tr>
+</tbody></table>
+
+  <script language="javascript">
+    function conf2(url) {
+      if (confirm("Are you sure?")) {
+        document.location=url;
+      } else {
+        document.location='user.php';
+      }
+    }
+  </script>
+<br>
+<table width="100%" border="1">
+ <tbody><tr>
+  <td nowrap="nowrap"><b>User #</b></td>
+  <td><b>Site</b></td>
+  <td><b>Username</b></td>
+  <td><b>ICPC ID</b></td>
+  <td><b>Type</b></td>
+  <td><b>IP</b></td>
+  <td><b>LastLogin</b></td>
+  <td><b>LastLogout</b></td>
+  <td><b>Enabled</b></td>
+  <td><b>Multi</b></td>
+  <td><b>Fullname</b></td>
+  <td><b>Description</b></td>
+ </tr>
+ <tr>
+  <td nowrap="nowrap">1000</td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">admin&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">admin&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">13:20:42 -03 - 14/Apr/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=1000')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Administrator&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.danielsaad.com/boca/admin/user.php?site=1&amp;user=2001">2001</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team2001&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">14:08:30 -03 - 07/Dec/2024</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=2001')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[IFB/CTAG] Nossa como programa&nbsp;</td>
+  <td nowrap="nowrap">Giovanni Lucas Oliveira da Silva, Gabriel Cesar Silvino Xavier, Arthur Andrade D’olival&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.danielsaad.com/boca/admin/user.php?site=1&amp;user=2002">2002</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team2002&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">14:15:31 -03 - 07/Dec/2024</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=2002')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[IFB/CTAG] Alpha Team&nbsp;</td>
+  <td nowrap="nowrap">Caio Lauro de Lima, Renato Santos Soares, Yuri Daniel Moreira Gomes&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.danielsaad.com/boca/admin/user.php?site=1&amp;user=2003">2003</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team2003&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">16:42:44 -03 - 07/Dec/2024</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=2003')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[IFB/CBSB] Argus&nbsp;</td>
+  <td nowrap="nowrap">Andrey Gabriel Ferreira Gonçalves, Caio Charles Batista Louzeiro de Miranda, Gabriel dos Santos Mota Rodrigues&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.danielsaad.com/boca/admin/user.php?site=1&amp;user=2004">2004</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team2004&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">14:10:14 -03 - 07/Dec/2024</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=2004')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[IFB/CTAG] Três variáveis&nbsp;</td>
+  <td nowrap="nowrap">Luma da Silva Bergmann , Raika Brasileiro de Paula, Ydilla da Silva Barbosa&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.danielsaad.com/boca/admin/user.php?site=1&amp;user=2005">2005</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team2005&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[IFB/CTAG] Beatriz de souza nery,Alany de souza nery&nbsp;</td>
+  <td nowrap="nowrap">Beatriz de souza nery, Alany,&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.danielsaad.com/boca/admin/user.php?site=1&amp;user=2006">2006</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team2006&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">17:31:18 -03 - 07/Dec/2024</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=2006')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[IFB/CTAG] $zero&nbsp;</td>
+  <td nowrap="nowrap">Guilherme Oliveira de Souza, Cauan da Silva Soares , Igor Sousa Santos&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.danielsaad.com/boca/admin/user.php?site=1&amp;user=2007">2007</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team2007&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">15:08:35 -03 - 07/Dec/2024</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=2007')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[IFB/CTAG] Dupla Maratona&nbsp;</td>
+  <td nowrap="nowrap">Ingrid Brites Sousa Oliveira , Maria Luiza Sena Carvalho,&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.danielsaad.com/boca/admin/user.php?site=1&amp;user=3001">3001</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3001&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">15:41:21 -03 - 07/Dec/2024</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3001')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[IFB/CBSB] Nexmi&nbsp;</td>
+  <td nowrap="nowrap">Henrique Prates Cardoso, ,&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.danielsaad.com/boca/admin/user.php?site=1&amp;user=3002">3002</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3002&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">14:23:05 -03 - 07/Dec/2024</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3002')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[USP/São Carlos] cubic.pillars&nbsp;</td>
+  <td nowrap="nowrap">Joel Dutra Lima, Kelwin Zhao Xu, Santiago Jose Villarroel Torrealba&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.danielsaad.com/boca/admin/user.php?site=1&amp;user=3003">3003</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3003&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[IFB/CTAG] Os mais mais&nbsp;</td>
+  <td nowrap="nowrap">Vanessa Vieira dos Santos , Catharina Napoleão de Carvalho , Mateus Cainan Vieira Leite&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.danielsaad.com/boca/admin/user.php?site=1&amp;user=3004">3004</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3004&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB/FCTE] Code Atreides&nbsp;</td>
+  <td nowrap="nowrap">Yan Santos Rodrigues, ,&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.danielsaad.com/boca/admin/user.php?site=1&amp;user=8000">8000</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">judgesaad&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">judge&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">14:43:09 -03 - 07/Dec/2024</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=8000')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Saad&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.danielsaad.com/boca/admin/user.php?site=1&amp;user=9001">9001</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">staff&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">staff&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">17:02:58 -03 - 07/Dec/2024</td>
+  <td nowrap="nowrap">17:43:55 -03 - 07/Dec/2024</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Staff&nbsp;</td>
+  <td nowrap="nowrap">Staff&nbsp;</td>
+</tr></tbody></table>
+<script language="JavaScript" src="users_files/sha256.js"></script>
+<script language="JavaScript" src="users_files/hex.js"></script>
+<script language="JavaScript">
+function computeHASH()
+{
+	document.form3.passwordn1.value = bighexsoma(js_myhash(document.form3.passwordn1.value),js_myhash(document.form3.passwordo.value));
+	document.form3.passwordn2.value = bighexsoma(js_myhash(document.form3.passwordn2.value),js_myhash(document.form3.passwordo.value));
+	document.form3.passwordo.value = js_myhash(js_myhash(document.form3.passwordo.value)+'ou6foi2fenfs5ubt4fqrib73vc');
+//	document.form3.passwordn1.value = js_myhash(document.form3.passwordn1.value);
+//	document.form3.passwordn2.value = js_myhash(document.form3.passwordn2.value);
+}
+</script>
+
+<br><br><center><b>Clicking on a user number will bring the user data for edition.<br>
+To import the users, just fill in the import file field.<br>
+The file must be in the format defined in the admin's manual.</b></center>
+
+<form name="form1" enctype="multipart/form-data" method="post" action="user.php">
+  <input type="hidden" name="confirmation" value="noconfirm">
+  <center>
+    <table border="0">
+      <tbody><tr>
+        <td width="25%" align="right">Import file:</td>
+        <td width="75%">
+          <input type="file" name="importfile" size="40">
+        </td>
+      </tr>
+    </tbody></table>
+  </center>
+  <script language="javascript">
+    function conf() {
+      if (confirm("Confirm?")) {
+        document.form1.confirmation.value='confirm';
+      }
+    }
+  </script>
+  <center>
+      <input type="submit" name="Submit" value="Import" onclick="conf()">
+      <input type="reset" name="Submit2" value="Clear">
+  </center>
+</form>
+
+  <br><br>
+  <center>
+<b>To create/edit one user, enter the data below.<br>
+Note that any changes will overwrite the already defined data.<br>
+(Specially care if you use a user number that is already existent.)<br>
+<br>
+</b>
+    <center>
+    </center><table border="0">
+<form name="form3" action="user.php" method="post"></form>
+  <input type="hidden" name="confirmation" value="noconfirm">
+  <script language="javascript">
+    function conf3() {
+      computeHASH();
+      if (confirm("Confirm?")) {
+        document.form3.confirmation.value='confirm';
+      }
+    }
+    function conf5() {
+      document.form3.confirmation.value='noconfirm';
+    }
+  </script>
+   </table><table border="0">
+      <tbody><tr> 
+        <td width="35%" align="right">User Site Number:</td>
+        <td width="65%">
+	  <input type="text" name="usersitenumber" value="1" size="20" maxlength="20">
+        </td>
+      </tr>
+      <tr> 
+        <td width="35%" align="right">User Number:</td>
+        <td width="65%">
+	  <input type="text" name="usernumber" size="20" maxlength="20">
+        </td>
+      </tr>
+      <tr> 
+        <td width="35%" align="right">Username:</td>
+        <td width="65%">
+	  <input type="text" name="username" size="20" maxlength="20">
+        </td>
+      </tr>
+      <tr> 
+        <td width="35%" align="right">ICPC ID:</td>
+        <td width="65%">
+	  <input type="text" name="usericpcid" size="20" maxlength="50">
+        </td>
+      </tr>
+      <tr> 
+        <td width="35%" align="right">Type:</td>
+        <td width="65%">
+		<select name="usertype">
+		<option selected="selected" value="team">Team</option>
+		<option value="judge">Judge</option>
+		<option value="admin">Admin</option>
+		<option value="staff">Staff</option>
+		<option value="score">Score</option>
+		        <option value="site">Site</option>
+        		</select>
+        </td>
+      </tr>
+      <tr> 
+        <td width="35%" align="right">Enabled:</td>
+        <td width="65%">
+		<select name="userenabled">
+		<option selected="selected" value="t">Yes</option>
+		<option value="f">No</option>
+		</select>
+        </td>
+      </tr>
+      <tr> 
+        <td width="35%" align="right">MultiLogins (local teams should be set to <b>No</b>):</td>
+        <td width="65%">
+		<select name="usermultilogin">
+		<option value="t">Yes</option>
+		<option selected="selected" value="f">No</option>
+		</select>
+        </td>
+      </tr>
+      <tr> 
+        <td width="35%" align="right">User Full Name:</td>
+        <td width="65%">
+	  <input type="text" name="userfullname" size="50" maxlength="200">
+        </td>
+      </tr>
+      <tr> 
+        <td width="35%" align="right">User Description:</td>
+        <td width="65%">
+	  <input type="text" name="userdesc" size="50" maxlength="300">
+        </td>
+      </tr>
+      <tr> 
+        <td width="35%" align="right">User IP:</td>
+        <td width="65%">
+	  <input type="text" name="userip" size="20" maxlength="20">
+        </td>
+      </tr>
+      <tr> 
+        <td width="35%" align="right">Password:</td>
+        <td width="65%">
+	  <input type="password" name="passwordn1" value="" size="20" maxlength="200">
+        </td>
+      </tr>
+      <tr> 
+        <td width="35%" align="right">Retype Password:</td>
+        <td width="65%">
+	  <input type="password" name="passwordn2" value="" size="20" maxlength="200">
+        </td>
+      </tr>
+      <tr> 
+        <td width="35%" align="right">Allow password change:</td>
+        <td width="65%">
+		<select name="changepass">
+		<option value="t">Yes</option>
+		<option selected="selected" value="f">No</option>
+		</select>
+        </td>
+      </tr>
+      <tr> 
+        <td width="35%" align="right">Admin (this user) Password:</td>
+        <td width="65%">
+	  <input type="password" name="passwordo" value="" size="20" maxlength="200">
+        </td>
+      </tr>
+    </tbody></table>
+  </center>
+  <center>
+      <input type="submit" name="Submit" value="Send" onclick="conf3()">
+      <input type="submit" name="Cancel" value="Cancel" onclick="conf5()">
+  </center>
+
+
+
+
+</body></html>
