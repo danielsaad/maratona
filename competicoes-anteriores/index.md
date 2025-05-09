@@ -4,7 +4,7 @@ layout: page
 description: Competições anteriores
 ---
 
-## [I Maratona SBC de Progrmaação do Cerrado (05/04/2025)]({{site.url}}{% link _posts/blog/2025-04-06-1-mdp-cerrado-resultados.md %})
+## [I Maratona SBC de Programação do Cerrado (05/04/2025)]({{site.url}}{% link _posts/blog/2025-04-06-1-mdp-cerrado-resultados.md %})
 
 ## [I Remaratona de Programação do IFB (07/12/2024)]({{site.url}}{% link _posts/blog/2024-12-07-1-remdp-ifb-resultados.md %})
 
