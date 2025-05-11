@@ -1,0 +1,1618 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- BOCA boca-1.5.17. Copyright (c) 2003-2023 Cassio Polpo de Campos -->
+<!-- http://www.ime.usp.br/~cassio/boca                                  -->
+<!-- This program is free software: you can redistribute it and/or modify  -->
+<!-- it under the terms of the GNU General Public License as published by -->
+<!-- the Free Software Foundation, either version 3 of the License, or -->
+<!-- (at your option) any later version. A copy of the  -->
+<!-- license can be found with this software or at http://www.gnu.org/licenses/ -->
+<html><head><title>Admin's Page</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="users_files/Css.php" type="text/css">
+</head><body id="body"><table border="1" width="100%">
+<tbody><tr><td nowrap="nowrap" bgcolor="eeee00" align="center"><img src="users_files/smallballoontransp.png" alt=""><font color="#000000">BOCA</font></td><td bgcolor="#eeee00" width="99%">
+Username: Administrator (site=1)<br>
+</td><td bgcolor="#eeee00" align="center" nowrap="nowrap">&nbsp;contest not running&nbsp;</td></tr>
+</tbody></table>
+<table border="0" width="100%" align="center">
+ <tbody><tr>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://boca.maratonasdf.com.br/boca/admin/run.php">Runs</a></td>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://boca.maratonasdf.com.br/boca/admin/score.php">Score</a></td>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://boca.maratonasdf.com.br/boca/admin/clar.php">Clarifications</a></td>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://boca.maratonasdf.com.br/boca/admin/user.php">Users</a></td>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://boca.maratonasdf.com.br/boca/admin/problem.php">Problems</a></td>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://boca.maratonasdf.com.br/boca/admin/language.php">Languages</a></td>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://boca.maratonasdf.com.br/boca/admin/answer.php">Answers</a></td>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://boca.maratonasdf.com.br/boca/admin/misc.php">Misc</a></td>
+ </tr><tr>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://boca.maratonasdf.com.br/boca/admin/task.php">Tasks</a></td>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://boca.maratonasdf.com.br/boca/admin/site.php">Site</a></td>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://boca.maratonasdf.com.br/boca/admin/contest.php">Contest</a></td>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://boca.maratonasdf.com.br/boca/admin/log.php">Logs</a></td>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://boca.maratonasdf.com.br/boca/admin/report.php">Reports</a></td>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://boca.maratonasdf.com.br/boca/admin/files.php">Backups</a></td>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://boca.maratonasdf.com.br/boca/admin/option.php">Options</a></td>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://boca.maratonasdf.com.br/boca/index.php">Logout</a></td>
+ </tr>
+</tbody></table>
+
+  <script language="javascript">
+    function conf2(url) {
+      if (confirm("Are you sure?")) {
+        document.location=url;
+      } else {
+        document.location='user.php';
+      }
+    }
+  </script>
+<br>
+<table width="100%" border="1">
+ <tbody><tr>
+  <td nowrap="nowrap"><b>User #</b></td>
+  <td><b>Site</b></td>
+  <td><b>Username</b></td>
+  <td><b>ICPC ID</b></td>
+  <td><b>Type</b></td>
+  <td><b>IP</b></td>
+  <td><b>LastLogin</b></td>
+  <td><b>LastLogout</b></td>
+  <td><b>Enabled</b></td>
+  <td><b>Multi</b></td>
+  <td><b>Fullname</b></td>
+  <td><b>Description</b></td>
+ </tr>
+ <tr>
+  <td nowrap="nowrap">1000</td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">admin&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">admin&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">08:25:21 -03 - 11/May/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=1000')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Administrator&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=2001">2001</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team2001&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[IFB/CTAG] Javamigos&nbsp;</td>
+  <td nowrap="nowrap">Gustavo Rocha de Azevedo, Ana Beatriz Almeida Gonçalves, Miguel Yohan Vieira Marques Silva&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=2002">2002</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team2002&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[IFB/CTAG] BerserkBytes&nbsp;</td>
+  <td nowrap="nowrap">Gabriel Rodrigues Haberman&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=2003">2003</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team2003&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">15:22:30 -03 - 10/May/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=2003')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB/Darcy] Codar Edifício&nbsp;</td>
+  <td nowrap="nowrap">Pedro Guimarães Batista, Laura de Oliveira Romão&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=2004">2004</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team2004&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">19:28:30 -03 - 10/May/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=2004')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[IFB/CTAG] Alpha Team&nbsp;</td>
+  <td nowrap="nowrap">Caio Lauro de Lima, Renato Santos Soares , Yuri Daniel Moreira Gomes&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=2005">2005</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team2005&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB/Darcy] Zeka, zika e zuka&nbsp;</td>
+  <td nowrap="nowrap">Caio dias fleury, Kaio Santos araujo, Enzo Cardoso Martins&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=2006">2006</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team2006&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">23:38:42 -03 - 10/May/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=2006')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB/FCTE] Runtime Terrors&nbsp;</td>
+  <td nowrap="nowrap">Caio Ferreira Duarte, Ludmila Aysha Oliveira Nunes, Marina Agostini Galdi&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=2007">2007</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team2007&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">17:16:36 -03 - 10/May/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=2007')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB/Darcy] jão e amigos&nbsp;</td>
+  <td nowrap="nowrap">João Vitor Fonseca Pimenta, Gabriel Pinto Rodrigues, Arthur Gomes Oliveira&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=2008">2008</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team2008&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">21:06:41 -03 - 10/May/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=2008')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[IFB/CTAG] Coffe and Tea by Duolingo&nbsp;</td>
+  <td nowrap="nowrap">Diego Fernandes de Oliveira Pinto, Luma da Silva Bergmann, Gustavo Ferraz Mota&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=2009">2009</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team2009&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">20:37:01 -03 - 10/May/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=2009')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[IFB/CTAG] Malu e Ingrid&nbsp;</td>
+  <td nowrap="nowrap">Maria Luiza Sena Carvalho , Ingrid Brites Sousa Oliveira&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=2010">2010</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team2010&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">13:58:44 -03 - 10/May/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=2010')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB/Darcy] py.Sandu&nbsp;</td>
+  <td nowrap="nowrap">Élvis Corrêa Miranda Júnior, Leonardo Mileo Moreira Krauss Guimarães, Tauã Valentim de Albuquerque Martins Frade&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=2011">2011</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team2011&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">14:01:16 -03 - 10/May/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=2011')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[IFB/CTAG] Nossa como programa&nbsp;</td>
+  <td nowrap="nowrap">Arthur Andrade Dolival, Giovanni Lucas Oliveira da Silva, Gabriel Cesar Silvino Xavier&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=2012">2012</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team2012&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">15:12:46 -03 - 10/May/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=2012')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB/FCTE] APC - Aprendendo a Programar Competitivamente&nbsp;</td>
+  <td nowrap="nowrap">Bruno Campos Ribeiro, Igor e Silva Penha, Leonardo Gonçalves Machado&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=2013">2013</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team2013&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">23:01:28 -03 - 10/May/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=2013')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB/Darcy] Binários&nbsp;</td>
+  <td nowrap="nowrap">Theo de Carvalho Marques Varão Ribeiro, Guilherme Souza Sisnando de Araujo, João Pedro de Oliveira Angoti&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=2014">2014</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team2014&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">23:24:10 -03 - 10/May/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=2014')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB/Darcy] silva.cpp&nbsp;</td>
+  <td nowrap="nowrap">Leandro Souza da Silva, BRUNO TARQUINIO SILVA, Daniel Silva Laser&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=2015">2015</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team2015&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[IFB/CBRA] Terabyte&nbsp;</td>
+  <td nowrap="nowrap">Edilson Nery Barbosa&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=2016">2016</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team2016&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">21:09:09 -03 - 10/May/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=2016')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB/Darcy] União IE feat. Bowie, Demi &amp; Gal Costa&nbsp;</td>
+  <td nowrap="nowrap">Adrielly Medeiros Nunes, Nikolle dos Santos Licá, Luisa Ribeiro de Oliveira&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=2017">2017</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team2017&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB/Darcy] Codar quentinho&nbsp;</td>
+  <td nowrap="nowrap">Inácio Leal do Rosario, Lucas Issamu Hashimoto, Leandro Coelho da Silva&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=2018">2018</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team2018&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB/Darcy] Parcelas do Meu Carro&nbsp;</td>
+  <td nowrap="nowrap">Guilherme Silva Cavalcante, Guilherme Monteiro Pereira, Rafael Mileo Moreira Krauss Guimarães&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=2019">2019</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team2019&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">18:01:01 -03 - 10/May/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=2019')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[IFB/CTAG] Paçoca&nbsp;</td>
+  <td nowrap="nowrap">Danilo Moraes Borges Piquiá, Arthur Daniel Ribeiro Pereira Dantas Lourenço, Matheus Oliveira Gouveia Campos&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=2020">2020</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team2020&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB/FCTE] Marrinchas&nbsp;</td>
+  <td nowrap="nowrap">Luis Eduardo Castro Mendes de Lima, Márcio Henrique de Sousa Costa, Bruno Bragança dos Reis&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3001">3001</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3001&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UFAM] Em busca da Nlogonia&nbsp;</td>
+  <td nowrap="nowrap">Luan Gabriel Souza dos Santos, Ana Carla de Araújo Fernandes&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3002">3002</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3002&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[IFTM/UPT] Gambiarra Técnica&nbsp;</td>
+  <td nowrap="nowrap">Erick Silva de Andrade, Pedro Henrique Candido Silva, Samuel José Alcântara de Figueiredo&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3003">3003</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3003&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">19:14:05 -03 - 10/May/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3003')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UFAM] Maior de 3&nbsp;</td>
+  <td nowrap="nowrap">Alexandre Pereira de Souza Junior, Benjamim Isaac Ribeiro Lima, Leonardo Brandão do Amarante&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3004">3004</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3004&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">13:55:39 -03 - 10/May/2025</td>
+  <td nowrap="nowrap">15:08:36 -03 - 10/May/2025</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UFAM] Lima&nbsp;</td>
+  <td nowrap="nowrap">Aline Ramos Lima&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3005">3005</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3005&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">00:03:09 -03 - 11/May/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3005')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[FEI] "bernado, eu tenho uma função muito boa chamada ""has cycle"" 🤓👆"&nbsp;</td>
+  <td nowrap="nowrap">Bernardo Norberto Castaldelli , Alexandre Domiciano Pierri, Gabriel Albertini Pinheiro&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3006">3006</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3006&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">21:44:10 -03 - 10/May/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3006')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UFAM | UEA/Manaus] Equestria Girls&nbsp;</td>
+  <td nowrap="nowrap">Giovanna Bembom da Silva Bandeira, Isabela Cunha Sevalho, Muskaan Ramchandani&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3007">3007</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3007&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UFU/Monte Carmelo] Suprassumo&nbsp;</td>
+  <td nowrap="nowrap">Júlia Akemi Koba, Guilherme Rodrigues Martins, Rhuan Flores Cunha Fernandes&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3008">3008</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3008&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UFU] PowerSS&nbsp;</td>
+  <td nowrap="nowrap">Flávio Luciano da Silva Santos Filho&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3009">3009</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3009&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">13:03:55 -03 - 10/May/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3009')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UFFS] Oráculo Python&nbsp;</td>
+  <td nowrap="nowrap">Wagner Rech Neto&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3010">3010</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3010&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB/Darcy] ram(en)&nbsp;</td>
+  <td nowrap="nowrap">Natã Bento Silva de Andrade&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3011">3011</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3011&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">23:39:47 -03 - 10/May/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3011')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB/FCTE] WAkanda&nbsp;</td>
+  <td nowrap="nowrap">Gustavo Gontijo Lima, Kaua Vale Leao&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3012">3012</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3012&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB/FCTE] Dick Vigarista&nbsp;</td>
+  <td nowrap="nowrap">Diego Israel Aragão De Matos&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3013">3013</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3013&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">14:51:39 -03 - 10/May/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3013')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[IFAM/Manaus Zona Leste] lindas &amp;&amp; abs()lutas&nbsp;</td>
+  <td nowrap="nowrap">Arlana Braga da Silva, Bianca Monique Moreira de Araújo, Sabrina da Silva Frazão&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3014">3014</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3014&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">17:28:23 -03 - 10/May/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3014')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UFU] Shreks programadores&nbsp;</td>
+  <td nowrap="nowrap">Arthur Milander de Oliveira Freitas, Alejandro Acelino Calábria, Vitória Sophia Brígido Carvalho Neves&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3015">3015</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3015&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UNINTER] Eu&nbsp;</td>
+  <td nowrap="nowrap">Antonio Rêgo da Silva Júnior&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3016">3016</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3016&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">17:07:02 -03 - 10/May/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3016')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB/Darcy] scs coders&nbsp;</td>
+  <td nowrap="nowrap">Sarah Cristina Lopes Silva , Catarina Yasmin De Freitas Silva, Samira Gabriela Laquiz&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3017">3017</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3017&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">20:53:56 -03 - 10/May/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3017')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[IFTM/UPT] function Winner&nbsp;</td>
+  <td nowrap="nowrap">Otávio Henrique Souza Oliveira, Gleidson Gabriel Silva Moraes, João Pedro de Oliveira Leal&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3018">3018</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3018&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UFU] As De Código&nbsp;</td>
+  <td nowrap="nowrap">Rutenele Silveira dos Santos, Ketlyn Laury Freitas de Paiva, Lara Machado Barbosa&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3019">3019</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3019&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">22:08:52 -03 - 10/May/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3019')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB/FCTE] Dividir e Desistir&nbsp;</td>
+  <td nowrap="nowrap">Gustavo Roberto Silva de Melo&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3020">3020</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3020&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">13:56:30 -03 - 10/May/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3020')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[IFSULDEMINAS/Muzambinho] Ygor Ribeiro&nbsp;</td>
+  <td nowrap="nowrap">Ygor Ribeiro Costa&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3021">3021</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3021&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">20:02:19 -03 - 10/May/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3021')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UNIOESTE] modulo zapzap&nbsp;</td>
+  <td nowrap="nowrap">Eduarda Gonçalves da Cunha, Paula Regina Nascimento Korber, Julia Davies&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3022">3022</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3022&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">12:54:52 -03 - 10/May/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3022')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[IFSULDEMINAS/Muzambinho] SóOsLoucosSabem&nbsp;</td>
+  <td nowrap="nowrap">Enzo Pierry Sanches Kavazoi, Lucas Tomaz Nunes&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3023">3023</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3023&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">18:06:30 -03 - 10/May/2025</td>
+  <td nowrap="nowrap">18:06:57 -03 - 10/May/2025</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[Ensino Médio] Cyberchick&nbsp;</td>
+  <td nowrap="nowrap">Ana Julya Teodoro Domingues&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3024">3024</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3024&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">14:00:38 -03 - 10/May/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3024')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UNICAMP] DV-46&nbsp;</td>
+  <td nowrap="nowrap">Talita Ribeiro de Rezende&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3025">3025</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3025&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">21:50:59 -03 - 10/May/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3025')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UFRN] eu sabo&nbsp;</td>
+  <td nowrap="nowrap">Ian Gabriel Silva Dias, Paulo Vitor Lima Borges, Henrique Lopes Fouquet&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3026">3026</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3026&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[IFB/CBRA] Cem Bugs&nbsp;</td>
+  <td nowrap="nowrap">Ellizabeth Severo da Silva , Guilherme Kauã Gonçalves Souza, Vitor de Oliveira Colombelli&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3027">3027</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3027&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">00:57:56 -03 - 11/May/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3027')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UFRN] Debug No Jutsu&nbsp;</td>
+  <td nowrap="nowrap">Elielson Urbano Aires da&nbsp;Silva, Felipe Augusto de Lima Duarte, Gabriel Alves Nebot&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3028">3028</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3028&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">22:08:45 -03 - 10/May/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3028')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[URI/Erechim] coURIngados&nbsp;</td>
+  <td nowrap="nowrap">Lucas Blanger&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3029">3029</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3029&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UFSJ] Hackeando Risadas&nbsp;</td>
+  <td nowrap="nowrap">Lucas Henrique Valentim Rocha, Isabelle Cristine do Carmo Matos, Igor Augusto de Serpa e Cunha&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3030">3030</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3030&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">14:12:24 -03 - 10/May/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3030')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UFMG] Amanda's Team&nbsp;</td>
+  <td nowrap="nowrap">Amanda Fernandes Alves&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3031">3031</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3031&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">13:22:53 -03 - 10/May/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3031')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UFU] Mar, Céu e Lua&nbsp;</td>
+  <td nowrap="nowrap">Marcelo Henrique Viana Santos&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3032">3032</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3032&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">17:51:24 -03 - 10/May/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3032')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[IFTM/UPT] RAMDon Access&nbsp;</td>
+  <td nowrap="nowrap">Helena Harumi Da Silva Mukai, Kauê Crozara da Silva, Maria Eduarda Borges de Souza&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3033">3033</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3033&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">06:33:38 -03 - 11/May/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3033')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[IFB/CBRA] Nebula Stream&nbsp;</td>
+  <td nowrap="nowrap">Leandro Gaudio Rosa&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3034">3034</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3034&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">22:45:51 -03 - 10/May/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3034')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB/FCTE] Project MC²&nbsp;</td>
+  <td nowrap="nowrap">Mylena Trindade de Mendonça , Maria Clara Sena de Lima, Cibelly Lourenço Ferreira&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3035">3035</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3035&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[IFSULDEMINAS] ByteGirl&nbsp;</td>
+  <td nowrap="nowrap">Rafaela Alves Magalhães&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3036">3036</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3036&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UFFS] Codeadoras&nbsp;</td>
+  <td nowrap="nowrap">Danieli do Nascimento Dalla Vecchia, Daniela do Nascimento Dalla Vecchia&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3037">3037</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3037&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">14:27:18 -03 - 10/May/2025</td>
+  <td nowrap="nowrap">17:58:10 -03 - 10/May/2025</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UFU] Byte Caverna&nbsp;</td>
+  <td nowrap="nowrap">Felipe Fernandes Teixeira, Luis Felipe Eik Borges, Wilson Ribeiro de Andrade Filho&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3038">3038</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3038&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">18:05:07 -03 - 10/May/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3038')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[IFB/CTAG] Valhalla Coders&nbsp;</td>
+  <td nowrap="nowrap">Gabriel Rodrigues Haberman&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3039">3039</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3039&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">17:21:02 -03 - 10/May/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3039')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[IFSULDEMINAS/Muzambinho] Veneninho&nbsp;</td>
+  <td nowrap="nowrap">Gabriel Ribeiro Rodrigues, Jean Ferreira Dias, Yasmin Pereira Pasqua&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3040">3040</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3040&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">22:08:03 -03 - 10/May/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3040')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB/FCTE] TLE Running&nbsp;</td>
+  <td nowrap="nowrap">Rodrigo Sousa Alves Ferreira, Renato Araújo Gameiro, Marcos Vinícius Monteiro&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3041">3041</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3041&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[Estácio | UnB/Darcy] Goretes Tech&nbsp;</td>
+  <td nowrap="nowrap">Allyson Vangel Nunes e Silva, Guilherme Batatinha Calazans&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3042">3042</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3042&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">14:44:05 -03 - 10/May/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3042')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[IFB/CTAG] Os primos do programa&nbsp;</td>
+  <td nowrap="nowrap">Rafael Henrique Carvalho da Silva , Arthur Gabriel Santana Silva&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3043">3043</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3043&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UCB] Raio S&nbsp;</td>
+  <td nowrap="nowrap">Saymon Pires Trajano&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3044">3044</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3044&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">15:40:28 -03 - 10/May/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3044')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UFSM] É o Grêmio&nbsp;</td>
+  <td nowrap="nowrap">Bernardo Trentin Bottega, Artur Trentin Bottega&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3045">3045</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3045&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">19:18:27 -03 - 10/May/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3045')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[PUC-GO] O Terror do ;&nbsp;</td>
+  <td nowrap="nowrap">Anna Beatriz Araújo Cardoso, Yasmin Montes Do Carmo, Luiz Felipe Fernandes Lima&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3046">3046</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3046&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">18:02:43 -03 - 10/May/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3046')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UDF | UNIP] Naves Studio&nbsp;</td>
+  <td nowrap="nowrap">Lucas Matias Fontoura , Davi de Sousa Naves, Kauan Ferreira Guimarães&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3047">3047</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3047&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">17:37:13 -03 - 10/May/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3047')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UFG] brut[force]al&nbsp;</td>
+  <td nowrap="nowrap">Marco Antonio Martins Fernandes, Gustavo Bittencourt Ribeiro, Rafael Mattos de Lima Couto&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3048">3048</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3048&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[IFB | IESB] Nexomi&nbsp;</td>
+  <td nowrap="nowrap">Arthur da Mata Rabelo, Henrique Prates Cardoso&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3049">3049</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3049&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">14:55:34 -03 - 10/May/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3049')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[IFTM/UPT] Discípulos de Turing&nbsp;</td>
+  <td nowrap="nowrap">João Gabriel Rodrigues Caetano, Diogo Antunes Rocha Ribeiro, Piter Inácio Miranda&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3050">3050</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3050&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">19:23:18 -03 - 10/May/2025</td>
+  <td nowrap="nowrap">19:25:15 -03 - 10/May/2025</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UFRRJ] coda fofo&nbsp;</td>
+  <td nowrap="nowrap">Gabriel Expedito Siqueira Silva, Pedro Vitor de Souza Dantas, Cristyan Alves das Neves Galdino de Luna&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3051">3051</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3051&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB/FCTE] Dividir e Desistir&nbsp;</td>
+  <td nowrap="nowrap">Gustavo Roberto Silva de Melo&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3052">3052</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3052&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">19:11:30 -03 - 10/May/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3052')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB/Darcy] manda o coffee por uber flash&nbsp;</td>
+  <td nowrap="nowrap">João Carlos Gonçalves de Oliveira Filho, Ana Luísa de Sousa Paraguassú, Iasmim de Queiroz Freitas&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3053">3053</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3053&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">14:00:18 -03 - 10/May/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3053')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UFRN] Potiguares Peanistas&nbsp;</td>
+  <td nowrap="nowrap">Arthur Ronald Pinheiro de Morais, Pedro Guedes Dantas Teixeira de Souza, Thales Justino Dantas da Costa&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3054">3054</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3054&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">21:46:09 -03 - 10/May/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3054')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[PUC-GO] while(pedra != topo) sisifo_empurra++;&nbsp;</td>
+  <td nowrap="nowrap">Marcus Vinicius Santos da Silva&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3055">3055</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3055&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">19:37:02 -03 - 10/May/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3055')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[IFB/CBRA] CodeStorm&nbsp;</td>
+  <td nowrap="nowrap">Lucas Moreira , Agatha Dantas, Kauan Menezes&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3056">3056</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3056&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB/Darcy] Codebusters&nbsp;</td>
+  <td nowrap="nowrap">Gustavo Ramos Simões da Conceição, Gustavo Nascimento Pavanelli, Marcel Capistrano Almeida Rodrigues&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3057">3057</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3057&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">08:21:33 -03 - 11/May/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3057')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB/Darcy] Compilou, rodou!&nbsp;</td>
+  <td nowrap="nowrap">Kamily Silva Andrade Crispim , Luis Henrique da Silva , Márcio Vinícius da Silva Guimarães&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3058">3058</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3058&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">14:02:23 -03 - 10/May/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3058')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB/FCTE] teste.py&nbsp;</td>
+  <td nowrap="nowrap">Isaac Menezes Pereira&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3059">3059</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3059&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">19:18:17 -03 - 10/May/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3059')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UFRN/EAJ] Sisus extraídos&nbsp;</td>
+  <td nowrap="nowrap">Vitor Carvalho Silva, Fellipe Patrick Lima de Brito, João Vitor Gomes Vieira&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3060">3060</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3060&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">14:00:45 -03 - 10/May/2025</td>
+  <td nowrap="nowrap">18:04:24 -03 - 10/May/2025</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB/FCTE] Cascata de Falhas&nbsp;</td>
+  <td nowrap="nowrap">Raphael Mendes da Silva, André João Cordeiro Gomes, Vinícius dos Santos Evangelista Dias&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3061">3061</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3061&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">16:51:02 -03 - 10/May/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3061')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UFRN] Pink Pony Club&nbsp;</td>
+  <td nowrap="nowrap">Thuanny Carvalho Rolim de Albuquerque, Esther Maria da Silveira Wanderley, Carolina Nunes de Carvalho&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3062">3062</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3062&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">21:03:18 -03 - 10/May/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3062')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[IFTM/UPT] Me deixa, tô debugando!&nbsp;</td>
+  <td nowrap="nowrap">Marcos Vinício Araújo Lima, Maria Eduarda Rodrigues Silva, Amanda dos santos silva&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3063">3063</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3063&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[IFB/CTAG] Time x&nbsp;</td>
+  <td nowrap="nowrap">Fabricio Nascimento Oliveira&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3064">3064</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3064&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">16:19:47 -03 - 10/May/2025</td>
+  <td nowrap="nowrap">18:00:07 -03 - 10/May/2025</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UFRN] Uma Diva Só&nbsp;</td>
+  <td nowrap="nowrap">Sabrina Bezerra da Silva&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3065">3065</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3065&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">22:30:22 -03 - 10/May/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3065')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB/FCTE] Bitbruxo&nbsp;</td>
+  <td nowrap="nowrap">Giovanni Alvissus Camargo Giampauli&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3066">3066</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3066&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">14:41:29 -03 - 10/May/2025</td>
+  <td nowrap="nowrap">16:09:02 -03 - 10/May/2025</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[IFB/CBRA] Brás Cubas&nbsp;</td>
+  <td nowrap="nowrap">Caio Charles Batista Louzeiro de Miranda&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3067">3067</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3067&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">00:46:31 -03 - 11/May/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3067')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[PUC-GO] Runtime Terror&nbsp;</td>
+  <td nowrap="nowrap">Clara Morais Jorge Ribeiro, Lucas de Oliveira do Amaral, Gustavo Barros Fialho&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3068">3068</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3068&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">19:13:49 -03 - 10/May/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3068')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[IFB/CTAG] Equipe Rocket&nbsp;</td>
+  <td nowrap="nowrap">Marconny Marques Di Girolamo , Fabrício nascimento oliveira , Hugo Francisco Rodrigues del monges rodrigues&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3069">3069</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3069&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">15:05:49 -03 - 10/May/2025</td>
+  <td nowrap="nowrap">17:41:17 -03 - 10/May/2025</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UFSM/Santa Maria] Gnomeboreanos&nbsp;</td>
+  <td nowrap="nowrap">Leonardo Groos Lago, Murilo Zandoná da Rosa, Lenno Caubi Rhoden&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3070">3070</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3070&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">15:24:35 -03 - 10/May/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3070')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB/Darcy] Paçoca que perdeu o Chico Bento e o Mel pro futebol&nbsp;</td>
+  <td nowrap="nowrap">Pedro Avila Beneveli&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3071">3071</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3071&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">20:15:33 -03 - 10/May/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3071')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB/Darcy] printf(“confia”);&nbsp;</td>
+  <td nowrap="nowrap">Jean Bueno Karia, João Pedro de Sousa Soares Martins, Eduardo Marciano De Melo Meneses&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3072">3072</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3072&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">20:05:52 -03 - 10/May/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3072')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[IFSULDEMINAS/Muzambinho] Fazemos Programa&nbsp;</td>
+  <td nowrap="nowrap">Eliandro de Souza Júnior, Caio Eduardo Tomaz Ferreira, Tiago Fernandes Moraes&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3073">3073</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3073&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">22:27:08 -03 - 10/May/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3073')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UFRN/Natal] Zóio de NlogN&nbsp;</td>
+  <td nowrap="nowrap">Arthur José Arruda Skeete, Osvaldo Heitor de Andrade Tavares de Souza&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=9000">9000</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">judgealberto&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">judge&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">19:02:22 -03 - 10/May/2025</td>
+  <td nowrap="nowrap">19:03:05 -03 - 10/May/2025</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">judgealberto&nbsp;</td>
+  <td nowrap="nowrap">judgealberto&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=9001">9001</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">judgecaleb&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">judge&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">19:00:32 -03 - 10/May/2025</td>
+  <td nowrap="nowrap">19:01:50 -03 - 10/May/2025</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">judgecaleb&nbsp;</td>
+  <td nowrap="nowrap">judgecaleb&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=9002">9002</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">judgeedson&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">judge&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">19:03:21 -03 - 10/May/2025</td>
+  <td nowrap="nowrap">19:24:39 -03 - 10/May/2025</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">judgeedson&nbsp;</td>
+  <td nowrap="nowrap">judgeedson&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=9003">9003</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">judgeenzo&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">judge&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">14:46:47 -03 - 10/May/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=9003')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">judgeenzo&nbsp;</td>
+  <td nowrap="nowrap">judgeenzo&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=9004">9004</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">judgegnramos&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">judge&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">judgegnramos&nbsp;</td>
+  <td nowrap="nowrap">judgegnramos&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=9005">9005</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">judgej3r3&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">judge&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">14:53:28 -03 - 10/May/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=9005')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">judgej3r3&nbsp;</td>
+  <td nowrap="nowrap">judgej3r3&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=9006">9006</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">judgelouza&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">judge&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">18:01:21 -03 - 10/May/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=9006')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">judgelouza&nbsp;</td>
+  <td nowrap="nowrap">judgelouza&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=9007">9007</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">judgemaxwell&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">judge&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">17:58:08 -03 - 10/May/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=9007')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">judgemaxwell&nbsp;</td>
+  <td nowrap="nowrap">judgemaxwell&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=9008">9008</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">judgesaad&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">judge&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">12:54:05 -03 - 10/May/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=9008')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">judgesaad&nbsp;</td>
+  <td nowrap="nowrap">judgesaad&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=10000">10000</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">adminedson&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">admin&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">15:18:39 -03 - 10/May/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=10000')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">adminedson&nbsp;</td>
+  <td nowrap="nowrap">adminedson&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=10001">10001</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">adminsaad&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">admin&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">20:18:30 -03 - 10/May/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=10001')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">adminsaad&nbsp;</td>
+  <td nowrap="nowrap">adminsaad&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=12000">12000</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">score&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">score&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">21:22:23 -03 - 10/May/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=12000')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">score&nbsp;</td>
+  <td nowrap="nowrap">score&nbsp;</td>
+</tr></tbody></table>
+<script language="JavaScript" src="users_files/sha256.js"></script>
+<script language="JavaScript" src="users_files/hex.js"></script>
+<script language="JavaScript">
+function computeHASH()
+{
+	document.form3.passwordn1.value = bighexsoma(js_myhash(document.form3.passwordn1.value),js_myhash(document.form3.passwordo.value));
+	document.form3.passwordn2.value = bighexsoma(js_myhash(document.form3.passwordn2.value),js_myhash(document.form3.passwordo.value));
+	document.form3.passwordo.value = js_myhash(js_myhash(document.form3.passwordo.value)+'ajdsq9ums1ri4d8vegv8gsjkqg');
+//	document.form3.passwordn1.value = js_myhash(document.form3.passwordn1.value);
+//	document.form3.passwordn2.value = js_myhash(document.form3.passwordn2.value);
+}
+</script>
+
+<br><br><center><b>Clicking on a user number will bring the user data for edition.<br>
+To import the users, just fill in the import file field.<br>
+The file must be in the format defined in the admin's manual.</b></center>
+
+<form name="form1" enctype="multipart/form-data" method="post" action="user.php">
+  <input type="hidden" name="confirmation" value="noconfirm">
+  <center>
+    <table border="0">
+      <tbody><tr>
+        <td width="25%" align="right">Import file:</td>
+        <td width="75%">
+          <input type="file" name="importfile" size="40">
+        </td>
+      </tr>
+    </tbody></table>
+  </center>
+  <script language="javascript">
+    function conf() {
+      if (confirm("Confirm?")) {
+        document.form1.confirmation.value='confirm';
+      }
+    }
+  </script>
+  <center>
+      <input type="submit" name="Submit" value="Import" onclick="conf()">
+      <input type="reset" name="Submit2" value="Clear">
+  </center>
+</form>
+
+  <br><br>
+  <center>
+<b>To create/edit one user, enter the data below.<br>
+Note that any changes will overwrite the already defined data.<br>
+(Specially care if you use a user number that is already existent.)<br>
+<br>
+</b>
+    <center>
+    </center><table border="0">
+<form name="form3" action="user.php" method="post"></form>
+  <input type="hidden" name="confirmation" value="noconfirm">
+  <script language="javascript">
+    function conf3() {
+      computeHASH();
+      if (confirm("Confirm?")) {
+        document.form3.confirmation.value='confirm';
+      }
+    }
+    function conf5() {
+      document.form3.confirmation.value='noconfirm';
+    }
+  </script>
+   </table><table border="0">
+      <tbody><tr> 
+        <td width="35%" align="right">User Site Number:</td>
+        <td width="65%">
+	  <input type="text" name="usersitenumber" value="1" size="20" maxlength="20">
+        </td>
+      </tr>
+      <tr> 
+        <td width="35%" align="right">User Number:</td>
+        <td width="65%">
+	  <input type="text" name="usernumber" size="20" maxlength="20">
+        </td>
+      </tr>
+      <tr> 
+        <td width="35%" align="right">Username:</td>
+        <td width="65%">
+	  <input type="text" name="username" size="20" maxlength="20">
+        </td>
+      </tr>
+      <tr> 
+        <td width="35%" align="right">ICPC ID:</td>
+        <td width="65%">
+	  <input type="text" name="usericpcid" size="20" maxlength="50">
+        </td>
+      </tr>
+      <tr> 
+        <td width="35%" align="right">Type:</td>
+        <td width="65%">
+		<select name="usertype">
+		<option selected="selected" value="team">Team</option>
+		<option value="judge">Judge</option>
+		<option value="admin">Admin</option>
+		<option value="staff">Staff</option>
+		<option value="score">Score</option>
+		        <option value="site">Site</option>
+        		</select>
+        </td>
+      </tr>
+      <tr> 
+        <td width="35%" align="right">Enabled:</td>
+        <td width="65%">
+		<select name="userenabled">
+		<option selected="selected" value="t">Yes</option>
+		<option value="f">No</option>
+		</select>
+        </td>
+      </tr>
+      <tr> 
+        <td width="35%" align="right">MultiLogins (local teams should be set to <b>No</b>):</td>
+        <td width="65%">
+		<select name="usermultilogin">
+		<option value="t">Yes</option>
+		<option selected="selected" value="f">No</option>
+		</select>
+        </td>
+      </tr>
+      <tr> 
+        <td width="35%" align="right">User Full Name:</td>
+        <td width="65%">
+	  <input type="text" name="userfullname" size="50" maxlength="200">
+        </td>
+      </tr>
+      <tr> 
+        <td width="35%" align="right">User Description:</td>
+        <td width="65%">
+	  <input type="text" name="userdesc" size="50" maxlength="300">
+        </td>
+      </tr>
+      <tr> 
+        <td width="35%" align="right">User IP:</td>
+        <td width="65%">
+	  <input type="text" name="userip" size="20" maxlength="20">
+        </td>
+      </tr>
+      <tr> 
+        <td width="35%" align="right">Password:</td>
+        <td width="65%">
+	  <input type="password" name="passwordn1" value="" size="20" maxlength="200">
+        </td>
+      </tr>
+      <tr> 
+        <td width="35%" align="right">Retype Password:</td>
+        <td width="65%">
+	  <input type="password" name="passwordn2" value="" size="20" maxlength="200">
+        </td>
+      </tr>
+      <tr> 
+        <td width="35%" align="right">Allow password change:</td>
+        <td width="65%">
+		<select name="changepass">
+		<option value="t">Yes</option>
+		<option selected="selected" value="f">No</option>
+		</select>
+        </td>
+      </tr>
+      <tr> 
+        <td width="35%" align="right">Admin (this user) Password:</td>
+        <td width="65%">
+	  <input type="password" name="passwordo" value="" size="20" maxlength="200">
+        </td>
+      </tr>
+    </tbody></table>
+  </center>
+  <center>
+      <input type="submit" name="Submit" value="Send" onclick="conf3()">
+      <input type="submit" name="Cancel" value="Cancel" onclick="conf5()">
+  </center>
+
+
+
+
+</body></html>
