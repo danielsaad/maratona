@@ -35,7 +35,8 @@ Abaixo seguem os mais bem colocados, os créditos da comissão organizadora e re
 
 ## Melhor Nome
 
-**[PUC-GO] while(pedra != topo) sisifo_empurra++;**
+**[PUC-GO] while(pedra != topo) sisifo_empurra++;**: Marcus Vinicius Santos da Silva 
+
 
 ![Sisifo](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExcmhiZDgydnRzNTR3MzZlNHVqdzI1OXZjMGpiZ29keW1sd2MxcTlsYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l1J9NSnTNbdyaOZag/giphy.gif)
 
