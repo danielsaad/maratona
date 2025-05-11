@@ -27,11 +27,11 @@ Abaixo seguem os mais bem colocados, os créditos da comissão organizadora e re
 2. **[UFU] Shreks programadores**: Arthur Milander de Oliveira Freitas, Alejandro Acelino Calábria e Vitória Sophia Brígido Carvalho Neves.
 3. **[UnB/Darcy] manda o coffee por uber flash**: João Carlos Gonçalves de Oliveira Filho, Ana Luísa de Sousa Paraguassú e Iasmim de Queiroz Freitas.
 4. **[FEI] "bernado, eu tenho uma função muito boa chamada ""has cycle"" 🤓👆"**: Bernardo Norberto Castaldelli , Alexandre Domiciano Pierri, Gabriel Albertini Pinheiro.
-5. **[UFAM | UEA/Manaus] Equestria Girls**: Giovanna Bembom da Silva Bandeira, Isabela Cunha Sevalho, Muskaan Ramchandani.
+5. **[UFAM/UEA/Manaus] Equestria Girls**: Giovanna Bembom da Silva Bandeira, Isabela Cunha Sevalho, Muskaan Ramchandani.
 
 ## Melhor Equipe Feminina
 
-- **[UFAM | UEA/Manaus] Equestria Girls**: Giovanna Bembom da Silva Bandeira, Isabela Cunha Sevalho, Muskaan Ramchandani.
+- **[UFAM/UEA/Manaus] Equestria Girls**: Giovanna Bembom da Silva Bandeira, Isabela Cunha Sevalho, Muskaan Ramchandani.
 
 ## Melhor Nome
 
@@ -67,6 +67,5 @@ Abaixo seguem os mais bem colocados, os créditos da comissão organizadora e re
 - [Tutoriais]({{site.url}}/assets/10-mdp-ifb/tutoriais-10-mdp-ifb.pdf)
 - [Scoreboard]({{site.url}}/assets/10-mdp-ifb/scoreboard.html)
 - [Estatísticas]({{site.url}}/assets/10-mdp-ifb/statistics.html)
-- [Clarifications]({{site.url}}/assets/10-mdp-ifb/clarifications.html)
 - [Run list]({{site.url}}/assets/10-mdp-ifb/runlist.html)
 - [Upsolving Codeforces](https://codeforces.com/group/btcK4I5D5f/contest/609460)
