@@ -1,0 +1,537 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- BOCA boca-1.5.21. Copyright (c) 2003-2024 Cassio Polpo de Campos -->
+<!-- http://www.ime.usp.br/~cassio/boca                                  -->
+<!-- This program is free software: you can redistribute it and/or modify  -->
+<!-- it under the terms of the GNU General Public License as published by -->
+<!-- the Free Software Foundation, either version 3 of the License, or -->
+<!-- (at your option) any later version. A copy of the  -->
+<!-- license can be found with this software or at http://www.gnu.org/licenses/ -->
+<html><head><title>Admin's Page</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="logs_files/Css.php" type="text/css">
+</head><body id="body"><table border="1" width="100%">
+<tbody><tr><td nowrap="nowrap" bgcolor="eeee00" align="center"><img src="logs_files/smallballoontransp.png" alt=""><font color="#000000">BOCA</font></td><td bgcolor="#eeee00" width="99%">
+Username: Administrator (site=1)<br>
+</td><td bgcolor="#eeee00" align="center" nowrap="nowrap">&nbsp;contest not running&nbsp;</td></tr>
+</tbody></table>
+<table border="0" width="100%" align="center">
+ <tbody><tr>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://mfpunb.maratonasdf.com.br/boca/admin/run.php">Runs</a></td>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://mfpunb.maratonasdf.com.br/boca/admin/score.php">Score</a></td>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://mfpunb.maratonasdf.com.br/boca/admin/clar.php">Clarifications</a></td>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://mfpunb.maratonasdf.com.br/boca/admin/user.php">Users</a></td>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://mfpunb.maratonasdf.com.br/boca/admin/problem.php">Problems</a></td>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://mfpunb.maratonasdf.com.br/boca/admin/language.php">Languages</a></td>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://mfpunb.maratonasdf.com.br/boca/admin/answer.php">Answers</a></td>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://mfpunb.maratonasdf.com.br/boca/admin/misc.php">Misc</a></td>
+ </tr><tr>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://mfpunb.maratonasdf.com.br/boca/admin/task.php">Tasks</a></td>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://mfpunb.maratonasdf.com.br/boca/admin/site.php">Site</a></td>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://mfpunb.maratonasdf.com.br/boca/admin/contest.php">Contest</a></td>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php">Logs</a></td>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://mfpunb.maratonasdf.com.br/boca/admin/report.php">Reports</a></td>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://mfpunb.maratonasdf.com.br/boca/admin/files.php">Backups</a></td>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://mfpunb.maratonasdf.com.br/boca/admin/option.php">Options</a></td>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://mfpunb.maratonasdf.com.br/boca/index.php">Logout</a></td>
+ </tr>
+</tbody></table>
+<br>
+<table width="100%" border="1">
+ <tbody><tr>
+  <td><b><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?order=site&amp;limit=50">Site</a></b></td>
+  <td nowrap="nowrap"><b><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?order=user&amp;limit=50">User #</a></b></td>
+  <td><b><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?order=ip&amp;limit=50">IP</a></b></td>
+  <td><b><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?order=type&amp;limit=50">Type</a></b></td>
+  <td><b>Date</b></td>
+  <td><b>Description</b></td>
+  <td><b>Status</b></td>
+ </tr>
+ <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?site=1&amp;limit=50">1</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?user=1000&amp;limit=50">1000</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?ip=177.18.22.80&amp;limit=50">177.18.22.80</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?type=info&amp;limit=50">info</a></td>
+  <td nowrap="nowrap">10:22:51 -03 - 30/Jun/2025</td>
+  <td nowrap="nowrap">User admin authenticated (177.18.22.80)</td>
+  <td nowrap="nowrap"></td>
+</tr>
+ <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?site=1&amp;limit=50">1</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?user=1000&amp;limit=50">1000</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?ip=177.18.22.80&amp;limit=50">177.18.22.80</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?type=warn&amp;limit=50">warn</a></td>
+  <td nowrap="nowrap">10:22:34 -03 - 30/Jun/2025</td>
+  <td nowrap="nowrap">User admin is using two different IPs: 164.41.179.4(13:21:48 -03 - 28/Jun/2025) and 177.18.22.80</td>
+  <td nowrap="nowrap"></td>
+</tr>
+ <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?site=1&amp;limit=50">1</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?user=1000&amp;limit=50">1000</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?ip=177.18.22.80&amp;limit=50">177.18.22.80</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?type=info&amp;limit=50">info</a></td>
+  <td nowrap="nowrap">10:22:34 -03 - 30/Jun/2025</td>
+  <td nowrap="nowrap">User admin authenticated (177.18.22.80)</td>
+  <td nowrap="nowrap"></td>
+</tr>
+ <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?site=1&amp;limit=50">1</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?user=10000&amp;limit=50">10000</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?ip=177.174.219.170&amp;limit=50">177.174.219.170</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?type=warn&amp;limit=50">warn</a></td>
+  <td nowrap="nowrap">17:10:04 -03 - 28/Jun/2025</td>
+  <td nowrap="nowrap">User adminisa is using two different IPs: 164.41.179.11(14:50:39 -03 - 28/Jun/2025) and 177.174.219.170</td>
+  <td nowrap="nowrap"></td>
+</tr>
+ <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?site=1&amp;limit=50">1</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?user=10000&amp;limit=50">10000</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?ip=177.174.219.170&amp;limit=50">177.174.219.170</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?type=info&amp;limit=50">info</a></td>
+  <td nowrap="nowrap">17:10:04 -03 - 28/Jun/2025</td>
+  <td nowrap="nowrap">User adminisa authenticated (177.174.219.170)</td>
+  <td nowrap="nowrap"></td>
+</tr>
+ <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?site=1&amp;limit=50">1</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?user=3021&amp;limit=50">3021</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?ip=164.41.179.133&amp;limit=50">164.41.179.133</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?type=info&amp;limit=50">info</a></td>
+  <td nowrap="nowrap">16:31:25 -03 - 28/Jun/2025</td>
+  <td nowrap="nowrap">User 3021 (contest=1,site=1) logged out.</td>
+  <td nowrap="nowrap"></td>
+</tr>
+ <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?site=1&amp;limit=50">1</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?user=3038&amp;limit=50">3038</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?ip=164.41.178.111&amp;limit=50">164.41.178.111</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?type=info&amp;limit=50">info</a></td>
+  <td nowrap="nowrap">16:29:56 -03 - 28/Jun/2025</td>
+  <td nowrap="nowrap">User 3038 submitted a run (#389964437) on site #1 
+(problem=5,filename=e.py,lang=5,contest=1,date=1751138996,datedif=10796,oid=42870).</td>
+  <td nowrap="nowrap"></td>
+</tr>
+ <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?site=1&amp;limit=50">1</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?user=3042&amp;limit=50">3042</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?ip=164.41.178.118&amp;limit=50">164.41.178.118</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?type=info&amp;limit=50">info</a></td>
+  <td nowrap="nowrap">16:28:53 -03 - 28/Jun/2025</td>
+  <td nowrap="nowrap">User 3042 submitted a run (#389332836) on site #1 
+(problem=6,filename=sol.c,lang=1,contest=1,date=1751138933,datedif=10733,oid=42867).</td>
+  <td nowrap="nowrap"></td>
+</tr>
+ <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?site=1&amp;limit=50">1</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?user=3035&amp;limit=50">3035</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?ip=164.41.178.112&amp;limit=50">164.41.178.112</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?type=info&amp;limit=50">info</a></td>
+  <td nowrap="nowrap">16:27:43 -03 - 28/Jun/2025</td>
+  <td nowrap="nowrap">User 3035 submitted a run (#388636935) on site #1 
+(problem=6,filename=f.c,lang=1,contest=1,date=1751138863,datedif=10663,oid=42864).</td>
+  <td nowrap="nowrap"></td>
+</tr>
+ <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?site=1&amp;limit=50">1</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?user=3014&amp;limit=50">3014</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?ip=164.41.179.248&amp;limit=50">164.41.179.248</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?type=info&amp;limit=50">info</a></td>
+  <td nowrap="nowrap">16:27:37 -03 - 28/Jun/2025</td>
+  <td nowrap="nowrap">User 3014 (contest=1,site=1) logged out.</td>
+  <td nowrap="nowrap"></td>
+</tr>
+ <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?site=1&amp;limit=50">1</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?user=3040&amp;limit=50">3040</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?ip=164.41.178.95&amp;limit=50">164.41.178.95</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?type=info&amp;limit=50">info</a></td>
+  <td nowrap="nowrap">16:26:42 -03 - 28/Jun/2025</td>
+  <td nowrap="nowrap">User 3040 submitted a run (#388028034) on site #1 
+(problem=5,filename=problema_E.py,lang=5,contest=1,date=1751138802,datedif=10602,oid=42861).</td>
+  <td nowrap="nowrap"></td>
+</tr>
+ <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?site=1&amp;limit=50">1</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?user=2004&amp;limit=50">2004</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?ip=164.41.179.114&amp;limit=50">164.41.179.114</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?type=info&amp;limit=50">info</a></td>
+  <td nowrap="nowrap">16:26:22 -03 - 28/Jun/2025</td>
+  <td nowrap="nowrap">User 2004 submitted a run (#387825533) on site #1 
+(problem=2,filename=atividade.py,lang=5,contest=1,date=1751138782,datedif=10582,oid=42858).</td>
+  <td nowrap="nowrap"></td>
+</tr>
+ <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?site=1&amp;limit=50">1</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?user=3042&amp;limit=50">3042</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?ip=164.41.178.118&amp;limit=50">164.41.178.118</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?type=info&amp;limit=50">info</a></td>
+  <td nowrap="nowrap">16:24:13 -03 - 28/Jun/2025</td>
+  <td nowrap="nowrap">User 3042 submitted a run (#386536932) on site #1 
+(problem=6,filename=sol.c,lang=1,contest=1,date=1751138653,datedif=10453,oid=42855).</td>
+  <td nowrap="nowrap"></td>
+</tr>
+ <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?site=1&amp;limit=50">1</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?user=3035&amp;limit=50">3035</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?ip=164.41.178.112&amp;limit=50">164.41.178.112</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?type=info&amp;limit=50">info</a></td>
+  <td nowrap="nowrap">16:22:56 -03 - 28/Jun/2025</td>
+  <td nowrap="nowrap">User 3035 submitted a run (#385765031) on site #1 
+(problem=6,filename=f.c,lang=2,contest=1,date=1751138576,datedif=10376,oid=42852).</td>
+  <td nowrap="nowrap"></td>
+</tr>
+ <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?site=1&amp;limit=50">1</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?user=2005&amp;limit=50">2005</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?ip=164.41.179.77&amp;limit=50">164.41.179.77</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?type=info&amp;limit=50">info</a></td>
+  <td nowrap="nowrap">16:21:38 -03 - 28/Jun/2025</td>
+  <td nowrap="nowrap">User 2005 submitted a run (#384988830) on site #1 
+(problem=2,filename=questao2.py,lang=5,contest=1,date=1751138498,datedif=10298,oid=42848).</td>
+  <td nowrap="nowrap"></td>
+</tr>
+ <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?site=1&amp;limit=50">1</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?user=3038&amp;limit=50">3038</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?ip=164.41.178.111&amp;limit=50">164.41.178.111</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?type=info&amp;limit=50">info</a></td>
+  <td nowrap="nowrap">16:21:24 -03 - 28/Jun/2025</td>
+  <td nowrap="nowrap">User 3038 submitted a run (#384841829) on site #1 
+(problem=5,filename=e.py,lang=5,contest=1,date=1751138484,datedif=10284,oid=42843).</td>
+  <td nowrap="nowrap"></td>
+</tr>
+ <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?site=1&amp;limit=50">1</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?user=2013&amp;limit=50">2013</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?ip=164.41.179.124&amp;limit=50">164.41.179.124</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?type=info&amp;limit=50">info</a></td>
+  <td nowrap="nowrap">16:21:20 -03 - 28/Jun/2025</td>
+  <td nowrap="nowrap">User 2013 submitted a run (#384808428) on site #1 
+(problem=3,filename=c.py,lang=5,contest=1,date=1751138480,datedif=10280,oid=42842).</td>
+  <td nowrap="nowrap"></td>
+</tr>
+ <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?site=1&amp;limit=50">1</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?user=2005&amp;limit=50">2005</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?ip=164.41.179.77&amp;limit=50">164.41.179.77</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?type=info&amp;limit=50">info</a></td>
+  <td nowrap="nowrap">16:21:04 -03 - 28/Jun/2025</td>
+  <td nowrap="nowrap">User team2005 authenticated (164.41.179.77)</td>
+  <td nowrap="nowrap"></td>
+</tr>
+ <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?site=1&amp;limit=50">1</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?user=2005&amp;limit=50">2005</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?ip=164.41.179.77&amp;limit=50">164.41.179.77</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?type=info&amp;limit=50">info</a></td>
+  <td nowrap="nowrap">16:20:46 -03 - 28/Jun/2025</td>
+  <td nowrap="nowrap">User team2005 tried to log in contest 1 but password was incorrect.</td>
+  <td nowrap="nowrap"></td>
+</tr>
+ <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?site=1&amp;limit=50">1</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?user=3031&amp;limit=50">3031</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?ip=164.41.179.183&amp;limit=50">164.41.179.183</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?type=info&amp;limit=50">info</a></td>
+  <td nowrap="nowrap">16:20:17 -03 - 28/Jun/2025</td>
+  <td nowrap="nowrap">User team3031 authenticated (164.41.179.183)</td>
+  <td nowrap="nowrap"></td>
+</tr>
+ <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?site=1&amp;limit=50">1</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?user=3031&amp;limit=50">3031</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?ip=164.41.179.183&amp;limit=50">164.41.179.183</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?type=info&amp;limit=50">info</a></td>
+  <td nowrap="nowrap">16:19:57 -03 - 28/Jun/2025</td>
+  <td nowrap="nowrap">User 3031 (contest=1,site=1) logged out.</td>
+  <td nowrap="nowrap"></td>
+</tr>
+ <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?site=1&amp;limit=50">1</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?user=3036&amp;limit=50">3036</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?ip=164.41.178.89&amp;limit=50">164.41.178.89</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?type=info&amp;limit=50">info</a></td>
+  <td nowrap="nowrap">16:18:15 -03 - 28/Jun/2025</td>
+  <td nowrap="nowrap">User 3036 submitted a run (#382949927) on site #1 
+(problem=8,filename=h.cpp,lang=2,contest=1,date=1751138294,datedif=10094,oid=42839).</td>
+  <td nowrap="nowrap"></td>
+</tr>
+ <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?site=1&amp;limit=50">1</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?user=3035&amp;limit=50">3035</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?ip=164.41.178.112&amp;limit=50">164.41.178.112</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?type=info&amp;limit=50">info</a></td>
+  <td nowrap="nowrap">16:16:19 -03 - 28/Jun/2025</td>
+  <td nowrap="nowrap">User 3035 submitted a run (#381799226) on site #1 
+(problem=6,filename=f.c,lang=1,contest=1,date=1751138179,datedif=9979,oid=42836).</td>
+  <td nowrap="nowrap"></td>
+</tr>
+ <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?site=1&amp;limit=50">1</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?user=3006&amp;limit=50">3006</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?ip=164.41.179.246&amp;limit=50">164.41.179.246</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?type=info&amp;limit=50">info</a></td>
+  <td nowrap="nowrap">16:15:16 -03 - 28/Jun/2025</td>
+  <td nowrap="nowrap">User 3006 submitted a run (#381166725) on site #1 
+(problem=6,filename=F.cpp,lang=2,contest=1,date=1751138116,datedif=9916,oid=42833).</td>
+  <td nowrap="nowrap"></td>
+</tr>
+ <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?site=1&amp;limit=50">1</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?user=3020&amp;limit=50">3020</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?ip=164.41.179.155&amp;limit=50">164.41.179.155</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?type=info&amp;limit=50">info</a></td>
+  <td nowrap="nowrap">16:14:54 -03 - 28/Jun/2025</td>
+  <td nowrap="nowrap">User 3020 submitted a run (#380947224) on site #1 
+(problem=3,filename=C.py,lang=5,contest=1,date=1751138094,datedif=9894,oid=42829).</td>
+  <td nowrap="nowrap"></td>
+</tr>
+ <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?site=1&amp;limit=50">1</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?user=3044&amp;limit=50">3044</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?ip=164.41.178.114&amp;limit=50">164.41.178.114</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?type=info&amp;limit=50">info</a></td>
+  <td nowrap="nowrap">16:14:48 -03 - 28/Jun/2025</td>
+  <td nowrap="nowrap">User 3044 (contest=1,site=1) logged out.</td>
+  <td nowrap="nowrap"></td>
+</tr>
+ <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?site=1&amp;limit=50">1</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?user=3045&amp;limit=50">3045</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?ip=164.41.178.84&amp;limit=50">164.41.178.84</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?type=info&amp;limit=50">info</a></td>
+  <td nowrap="nowrap">16:14:47 -03 - 28/Jun/2025</td>
+  <td nowrap="nowrap">User 3045 (contest=1,site=1) logged out.</td>
+  <td nowrap="nowrap"></td>
+</tr>
+ <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?site=1&amp;limit=50">1</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?user=3045&amp;limit=50">3045</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?ip=164.41.178.84&amp;limit=50">164.41.178.84</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?type=info&amp;limit=50">info</a></td>
+  <td nowrap="nowrap">16:14:00 -03 - 28/Jun/2025</td>
+  <td nowrap="nowrap">User 3045 submitted a run (#380404023) on site #1 
+(problem=6,filename=fim.c,lang=1,contest=1,date=1751138040,datedif=9840,oid=42826).</td>
+  <td nowrap="nowrap"></td>
+</tr>
+ <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?site=1&amp;limit=50">1</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?user=3035&amp;limit=50">3035</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?ip=164.41.178.112&amp;limit=50">164.41.178.112</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?type=info&amp;limit=50">info</a></td>
+  <td nowrap="nowrap">16:13:39 -03 - 28/Jun/2025</td>
+  <td nowrap="nowrap">User 3035 submitted a run (#380195422) on site #1 
+(problem=5,filename=e.cpp,lang=2,contest=1,date=1751138019,datedif=9819,oid=42823).</td>
+  <td nowrap="nowrap"></td>
+</tr>
+ <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?site=1&amp;limit=50">1</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?user=3035&amp;limit=50">3035</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?ip=164.41.178.112&amp;limit=50">164.41.178.112</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?type=info&amp;limit=50">info</a></td>
+  <td nowrap="nowrap">16:12:58 -03 - 28/Jun/2025</td>
+  <td nowrap="nowrap">User 3035 submitted a run (#379785021) on site #1 
+(problem=6,filename=f.c,lang=1,contest=1,date=1751137978,datedif=9778,oid=42820).</td>
+  <td nowrap="nowrap"></td>
+</tr>
+ <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?site=1&amp;limit=50">1</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?user=3045&amp;limit=50">3045</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?ip=164.41.178.84&amp;limit=50">164.41.178.84</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?type=info&amp;limit=50">info</a></td>
+  <td nowrap="nowrap">16:11:01 -03 - 28/Jun/2025</td>
+  <td nowrap="nowrap">User 3045 submitted a run (#378613120) on site #1 
+(problem=6,filename=fim.c,lang=1,contest=1,date=1751137861,datedif=9661,oid=42817).</td>
+  <td nowrap="nowrap"></td>
+</tr>
+ <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?site=1&amp;limit=50">1</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?user=3036&amp;limit=50">3036</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?ip=164.41.178.89&amp;limit=50">164.41.178.89</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?type=info&amp;limit=50">info</a></td>
+  <td nowrap="nowrap">16:10:39 -03 - 28/Jun/2025</td>
+  <td nowrap="nowrap">User 3036 submitted a run (#378390819) on site #1 
+(problem=4,filename=d.cpp,lang=2,contest=1,date=1751137839,datedif=9639,oid=42812).</td>
+  <td nowrap="nowrap"></td>
+</tr>
+ <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?site=1&amp;limit=50">1</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?user=3038&amp;limit=50">3038</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?ip=164.41.178.111&amp;limit=50">164.41.178.111</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?type=info&amp;limit=50">info</a></td>
+  <td nowrap="nowrap">16:10:31 -03 - 28/Jun/2025</td>
+  <td nowrap="nowrap">User 3038 submitted a run (#378311518) on site #1 
+(problem=5,filename=e.py,lang=5,contest=1,date=1751137831,datedif=9631,oid=42811).</td>
+  <td nowrap="nowrap"></td>
+</tr>
+ <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?site=1&amp;limit=50">1</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?user=3025&amp;limit=50">3025</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?ip=164.41.179.210&amp;limit=50">164.41.179.210</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?type=info&amp;limit=50">info</a></td>
+  <td nowrap="nowrap">16:08:05 -03 - 28/Jun/2025</td>
+  <td nowrap="nowrap">User 3025 submitted a run (#376857617) on site #1 
+(problem=6,filename=f.cpp,lang=2,contest=1,date=1751137685,datedif=9485,oid=42808).</td>
+  <td nowrap="nowrap"></td>
+</tr>
+ <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?site=1&amp;limit=50">1</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?user=2004&amp;limit=50">2004</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?ip=164.41.179.114&amp;limit=50">164.41.179.114</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?type=info&amp;limit=50">info</a></td>
+  <td nowrap="nowrap">16:07:41 -03 - 28/Jun/2025</td>
+  <td nowrap="nowrap">User 2004 submitted a run (#376613216) on site #1 
+(problem=2,filename=atividade.py,lang=5,contest=1,date=1751137661,datedif=9461,oid=42805).</td>
+  <td nowrap="nowrap"></td>
+</tr>
+ <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?site=1&amp;limit=50">1</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?user=12000&amp;limit=50">12000</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?ip=164.41.179.45&amp;limit=50">164.41.179.45</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?type=info&amp;limit=50">info</a></td>
+  <td nowrap="nowrap">16:07:00 -03 - 28/Jun/2025</td>
+  <td nowrap="nowrap">User score authenticated (164.41.179.45)</td>
+  <td nowrap="nowrap"></td>
+</tr>
+ <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?site=1&amp;limit=50">1</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?user=9005&amp;limit=50">9005</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?ip=164.41.179.45&amp;limit=50">164.41.179.45</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?type=info&amp;limit=50">info</a></td>
+  <td nowrap="nowrap">16:06:53 -03 - 28/Jun/2025</td>
+  <td nowrap="nowrap">User 9005 (contest=1,site=1) logged out.</td>
+  <td nowrap="nowrap"></td>
+</tr>
+ <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?site=1&amp;limit=50">1</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?user=3044&amp;limit=50">3044</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?ip=164.41.178.114&amp;limit=50">164.41.178.114</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?type=info&amp;limit=50">info</a></td>
+  <td nowrap="nowrap">16:05:49 -03 - 28/Jun/2025</td>
+  <td nowrap="nowrap">User 3044 submitted a run (#375490115) on site #1 
+(problem=6,filename=f.c,lang=1,contest=1,date=1751137549,datedif=9349,oid=42799).</td>
+  <td nowrap="nowrap"></td>
+</tr>
+ <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?site=1&amp;limit=50">1</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?user=3029&amp;limit=50">3029</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?ip=164.41.178.68&amp;limit=50">164.41.178.68</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?type=info&amp;limit=50">info</a></td>
+  <td nowrap="nowrap">16:05:43 -03 - 28/Jun/2025</td>
+  <td nowrap="nowrap">User 3029 submitted a run (#375430314) on site #1 
+(problem=7,filename=e1.cpp,lang=2,contest=1,date=1751137543,datedif=9343,oid=42798).</td>
+  <td nowrap="nowrap"></td>
+</tr>
+ <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?site=1&amp;limit=50">1</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?user=3038&amp;limit=50">3038</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?ip=164.41.178.111&amp;limit=50">164.41.178.111</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?type=info&amp;limit=50">info</a></td>
+  <td nowrap="nowrap">16:05:06 -03 - 28/Jun/2025</td>
+  <td nowrap="nowrap">User 3038 submitted a run (#375061113) on site #1 
+(problem=5,filename=e.py,lang=5,contest=1,date=1751137506,datedif=9306,oid=42793).</td>
+  <td nowrap="nowrap"></td>
+</tr>
+ <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?site=1&amp;limit=50">1</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?user=3025&amp;limit=50">3025</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?ip=164.41.179.210&amp;limit=50">164.41.179.210</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?type=info&amp;limit=50">info</a></td>
+  <td nowrap="nowrap">16:05:02 -03 - 28/Jun/2025</td>
+  <td nowrap="nowrap">User 3025 submitted a run (#375025712) on site #1 
+(problem=7,filename=g.cpp,lang=2,contest=1,date=1751137502,datedif=9302,oid=42792).</td>
+  <td nowrap="nowrap"></td>
+</tr>
+ <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?site=1&amp;limit=50">1</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?user=3021&amp;limit=50">3021</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?ip=164.41.179.133&amp;limit=50">164.41.179.133</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?type=info&amp;limit=50">info</a></td>
+  <td nowrap="nowrap">16:04:17 -03 - 28/Jun/2025</td>
+  <td nowrap="nowrap">User 3021 submitted a run (#374574311) on site #1 
+(problem=7,filename=a.c,lang=1,contest=1,date=1751137457,datedif=9257,oid=42789).</td>
+  <td nowrap="nowrap"></td>
+</tr>
+ <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?site=1&amp;limit=50">1</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?user=9005&amp;limit=50">9005</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?ip=164.41.179.45&amp;limit=50">164.41.179.45</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?type=info&amp;limit=50">info</a></td>
+  <td nowrap="nowrap">16:02:08 -03 - 28/Jun/2025</td>
+  <td nowrap="nowrap">User judgelucas authenticated (164.41.179.45)</td>
+  <td nowrap="nowrap"></td>
+</tr>
+ <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?site=1&amp;limit=50">1</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?user=11000&amp;limit=50">11000</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?ip=164.41.179.49&amp;limit=50">164.41.179.49</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?type=debug&amp;limit=50">debug</a></td>
+  <td nowrap="nowrap">16:00:32 -03 - 28/Jun/2025</td>
+  <td nowrap="nowrap">Task updated (task=370804944, site=1, contest=1, user=11000(site=1), status=done).</td>
+  <td nowrap="nowrap"></td>
+</tr>
+ <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?site=1&amp;limit=50">1</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?user=11000&amp;limit=50">11000</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?ip=164.41.179.49&amp;limit=50">164.41.179.49</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?type=debug&amp;limit=50">debug</a></td>
+  <td nowrap="nowrap">16:00:23 -03 - 28/Jun/2025</td>
+  <td nowrap="nowrap">Task updated (task=370475644, site=1, contest=1, user=11000(site=1), status=done).</td>
+  <td nowrap="nowrap"></td>
+</tr>
+ <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?site=1&amp;limit=50">1</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?user=11000&amp;limit=50">11000</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?ip=164.41.179.49&amp;limit=50">164.41.179.49</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?type=debug&amp;limit=50">debug</a></td>
+  <td nowrap="nowrap">15:59:26 -03 - 28/Jun/2025</td>
+  <td nowrap="nowrap">Task updated (task=368903642, site=1, contest=1, user=11000(site=1), status=done).</td>
+  <td nowrap="nowrap"></td>
+</tr>
+ <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?site=1&amp;limit=50">1</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?user=11000&amp;limit=50">11000</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?ip=164.41.179.49&amp;limit=50">164.41.179.49</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?type=debug&amp;limit=50">debug</a></td>
+  <td nowrap="nowrap">15:59:22 -03 - 28/Jun/2025</td>
+  <td nowrap="nowrap">User got a task (task=370804944, site=1, contest=1, user=11000(1)).</td>
+  <td nowrap="nowrap"></td>
+</tr>
+ <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?site=1&amp;limit=50">1</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?user=11000&amp;limit=50">11000</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?ip=164.41.179.49&amp;limit=50">164.41.179.49</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?type=debug&amp;limit=50">debug</a></td>
+  <td nowrap="nowrap">15:58:41 -03 - 28/Jun/2025</td>
+  <td nowrap="nowrap">User got a task (task=370475644, site=1, contest=1, user=11000(1)).</td>
+  <td nowrap="nowrap"></td>
+</tr>
+ <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?site=1&amp;limit=50">1</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?user=3015&amp;limit=50">3015</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?ip=164.41.179.232&amp;limit=50">164.41.179.232</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?type=info&amp;limit=50">info</a></td>
+  <td nowrap="nowrap">15:57:53 -03 - 28/Jun/2025</td>
+  <td nowrap="nowrap">User 3015 submitted a run (#370739410) on site #1 
+(problem=5,filename=c.c,lang=1,contest=1,date=1751137073,datedif=8873,oid=42786).</td>
+  <td nowrap="nowrap"></td>
+</tr>
+ <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?site=1&amp;limit=50">1</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?user=3004&amp;limit=50">3004</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?ip=164.41.179.186&amp;limit=50">164.41.179.186</a></td>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?type=info&amp;limit=50">info</a></td>
+  <td nowrap="nowrap">15:57:20 -03 - 28/Jun/2025</td>
+  <td nowrap="nowrap">User 3004 submitted a run (#370407309) on site #1 
+(problem=5,filename=e.py,lang=5,contest=1,date=1751137040,datedif=8840,oid=42783).</td>
+  <td nowrap="nowrap"></td>
+</tr>
+</tbody></table>
+<br>
+<center>
+<a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?limit=50&amp;order=&amp;user=&amp;site=&amp;type=&amp;ip=">50</a>
+<a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?limit=200&amp;order=&amp;user=&amp;site=&amp;type=&amp;ip=">200</a>
+<a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?limit=1000&amp;order=&amp;user=&amp;site=&amp;type=&amp;ip=">1000</a>
+<a href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php?limit=1000000&amp;order=&amp;user=&amp;site=&amp;type=&amp;ip=">no limit</a>
+
+
+</center></body></html>

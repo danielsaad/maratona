@@ -1,0 +1,3780 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- BOCA boca-1.5.21. Copyright (c) 2003-2024 Cassio Polpo de Campos -->
+<!-- http://www.ime.usp.br/~cassio/boca                                  -->
+<!-- This program is free software: you can redistribute it and/or modify  -->
+<!-- it under the terms of the GNU General Public License as published by -->
+<!-- the Free Software Foundation, either version 3 of the License, or -->
+<!-- (at your option) any later version. A copy of the  -->
+<!-- license can be found with this software or at http://www.gnu.org/licenses/ -->
+<html><head><title>Admin's Page</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="runlist_files/Css.php" type="text/css">
+</head><body id="body"><table border="1" width="100%">
+<tbody><tr><td nowrap="nowrap" bgcolor="eeee00" align="center"><img src="runlist_files/smallballoontransp.png" alt=""><font color="#000000">BOCA</font></td><td bgcolor="#eeee00" width="99%">
+Username: Administrator (site=1)<br>
+</td><td bgcolor="#eeee00" align="center" nowrap="nowrap">&nbsp;contest not running&nbsp;</td></tr>
+</tbody></table>
+<table border="0" width="100%" align="center">
+ <tbody><tr>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://mfpunb.maratonasdf.com.br/boca/admin/run.php">Runs</a></td>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://mfpunb.maratonasdf.com.br/boca/admin/score.php">Score</a></td>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://mfpunb.maratonasdf.com.br/boca/admin/clar.php">Clarifications</a></td>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://mfpunb.maratonasdf.com.br/boca/admin/user.php">Users</a></td>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://mfpunb.maratonasdf.com.br/boca/admin/problem.php">Problems</a></td>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://mfpunb.maratonasdf.com.br/boca/admin/language.php">Languages</a></td>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://mfpunb.maratonasdf.com.br/boca/admin/answer.php">Answers</a></td>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://mfpunb.maratonasdf.com.br/boca/admin/misc.php">Misc</a></td>
+ </tr><tr>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://mfpunb.maratonasdf.com.br/boca/admin/task.php">Tasks</a></td>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://mfpunb.maratonasdf.com.br/boca/admin/site.php">Site</a></td>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://mfpunb.maratonasdf.com.br/boca/admin/contest.php">Contest</a></td>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php">Logs</a></td>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://mfpunb.maratonasdf.com.br/boca/admin/report.php">Reports</a></td>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://mfpunb.maratonasdf.com.br/boca/admin/files.php">Backups</a></td>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://mfpunb.maratonasdf.com.br/boca/admin/option.php">Options</a></td>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://mfpunb.maratonasdf.com.br/boca/index.php">Logout</a></td>
+ </tr>
+</tbody></table>
+
+<form name="form1" method="post" action="run.php">
+  <input type="hidden" name="confirmation" value="noconfirm">
+<br>
+<table width="100%" border="1">
+ <tbody><tr>
+  <td><b><a href="https://mfpunb.maratonasdf.com.br/boca/admin/run.php?order=run">Run #</a></b></td>
+  <td><b><a href="https://mfpunb.maratonasdf.com.br/boca/admin/run.php?order=site">Site</a></b></td>
+  <td><b><a href="https://mfpunb.maratonasdf.com.br/boca/admin/run.php?order=user">User</a></b></td>
+  <td><b>Time</b></td>
+  <td><b><a href="https://mfpunb.maratonasdf.com.br/boca/admin/run.php?order=problem">Problem</a></b></td>
+  <td><b><a href="https://mfpunb.maratonasdf.com.br/boca/admin/run.php?order=language">Language</a></b></td>
+<!--  <td><b>Filename</b></td> -->
+  <td><b><a href="https://mfpunb.maratonasdf.com.br/boca/admin/run.php?order=status">Status</a></b></td>
+  <td><b><a href="https://mfpunb.maratonasdf.com.br/boca/admin/run.php?order=judge">Judge (Site)</a></b></td>
+  <td><b>AJ</b></td>
+  <td><b><a href="https://mfpunb.maratonasdf.com.br/boca/admin/run.php?order=answer">Answer</a></b></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_389964437_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=389964437&amp;runsitenumber=1">389964437</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3038</td>
+  <td nowrap="nowrap">179</td>
+  <td nowrap="nowrap">E</td>
+  <td nowrap="nowrap">Python3</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3038 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_389332836_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=389332836&amp;runsitenumber=1">389332836</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3042</td>
+  <td nowrap="nowrap">178</td>
+  <td nowrap="nowrap">F</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3042 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Runtime error</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_388636935_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=388636935&amp;runsitenumber=1">388636935</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3035</td>
+  <td nowrap="nowrap">177</td>
+  <td nowrap="nowrap">F</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3035 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_388028034_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=388028034&amp;runsitenumber=1">388028034</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3040</td>
+  <td nowrap="nowrap">176</td>
+  <td nowrap="nowrap">E</td>
+  <td nowrap="nowrap">Python3</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3040 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_387825533_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=387825533&amp;runsitenumber=1">387825533</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team2004</td>
+  <td nowrap="nowrap">176</td>
+  <td nowrap="nowrap">B</td>
+  <td nowrap="nowrap">Python3</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team2004 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Lilás" width="10" src="runlist_files/9b33668ee392f9e16ebaf9e36c3a5e97.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_386536932_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=386536932&amp;runsitenumber=1">386536932</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3042</td>
+  <td nowrap="nowrap">174</td>
+  <td nowrap="nowrap">F</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3042 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Runtime error</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_385765031_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=385765031&amp;runsitenumber=1">385765031</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3035</td>
+  <td nowrap="nowrap">172</td>
+  <td nowrap="nowrap">F</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3035 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_384988830_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=384988830&amp;runsitenumber=1">384988830</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team2005</td>
+  <td nowrap="nowrap">171</td>
+  <td nowrap="nowrap">B</td>
+  <td nowrap="nowrap">Python3</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team2005 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Lilás" width="10" src="runlist_files/9b33668ee392f9e16ebaf9e36c3a5e97.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_384841829_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=384841829&amp;runsitenumber=1">384841829</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3038</td>
+  <td nowrap="nowrap">171</td>
+  <td nowrap="nowrap">E</td>
+  <td nowrap="nowrap">Python3</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3038 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_384808428_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=384808428&amp;runsitenumber=1">384808428</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team2013</td>
+  <td nowrap="nowrap">171</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap">Python3</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team2013 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_382949927_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=382949927&amp;runsitenumber=1">382949927</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3036</td>
+  <td nowrap="nowrap">168</td>
+  <td nowrap="nowrap">H</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3036 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_381799226_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=381799226&amp;runsitenumber=1">381799226</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3035</td>
+  <td nowrap="nowrap">166</td>
+  <td nowrap="nowrap">F</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3035 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_381166725_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=381166725&amp;runsitenumber=1">381166725</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3006</td>
+  <td nowrap="nowrap">165</td>
+  <td nowrap="nowrap">F</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3006 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_380947224_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=380947224&amp;runsitenumber=1">380947224</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3020</td>
+  <td nowrap="nowrap">164</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap">Python3</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3020 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Runtime error</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_380404023_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=380404023&amp;runsitenumber=1">380404023</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3045</td>
+  <td nowrap="nowrap">164</td>
+  <td nowrap="nowrap">F</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3045 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Compilation error</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_380195422_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=380195422&amp;runsitenumber=1">380195422</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3035</td>
+  <td nowrap="nowrap">163</td>
+  <td nowrap="nowrap">E</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3035 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_379785021_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=379785021&amp;runsitenumber=1">379785021</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3035</td>
+  <td nowrap="nowrap">162</td>
+  <td nowrap="nowrap">F</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3035 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_378613120_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=378613120&amp;runsitenumber=1">378613120</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3045</td>
+  <td nowrap="nowrap">161</td>
+  <td nowrap="nowrap">F</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3045 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Compilation error</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_378390819_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=378390819&amp;runsitenumber=1">378390819</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3036</td>
+  <td nowrap="nowrap">160</td>
+  <td nowrap="nowrap">D</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3036 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Preto" width="10" src="runlist_files/670b14728ad9902aecba32e22fa4f6bd.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_378311518_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=378311518&amp;runsitenumber=1">378311518</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3038</td>
+  <td nowrap="nowrap">160</td>
+  <td nowrap="nowrap">E</td>
+  <td nowrap="nowrap">Python3</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3038 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_376857617_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=376857617&amp;runsitenumber=1">376857617</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3025</td>
+  <td nowrap="nowrap">158</td>
+  <td nowrap="nowrap">F</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3025 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Runtime error</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_376613216_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=376613216&amp;runsitenumber=1">376613216</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team2004</td>
+  <td nowrap="nowrap">157</td>
+  <td nowrap="nowrap">B</td>
+  <td nowrap="nowrap">Python3</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team2004 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_375490115_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=375490115&amp;runsitenumber=1">375490115</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3044</td>
+  <td nowrap="nowrap">155</td>
+  <td nowrap="nowrap">F</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3044 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_375430314_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=375430314&amp;runsitenumber=1">375430314</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3029</td>
+  <td nowrap="nowrap">155</td>
+  <td nowrap="nowrap">G</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3029 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_375061113_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=375061113&amp;runsitenumber=1">375061113</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3038</td>
+  <td nowrap="nowrap">155</td>
+  <td nowrap="nowrap">E</td>
+  <td nowrap="nowrap">Python3</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3038 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_375025712_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=375025712&amp;runsitenumber=1">375025712</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3025</td>
+  <td nowrap="nowrap">155</td>
+  <td nowrap="nowrap">G</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3025 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Azul" width="10" src="runlist_files/d5eed37f81ea68725d42553724bef434.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_374574311_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=374574311&amp;runsitenumber=1">374574311</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3021</td>
+  <td nowrap="nowrap">154</td>
+  <td nowrap="nowrap">G</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3021 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Time limit exceeded</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_370739410_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=370739410&amp;runsitenumber=1">370739410</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3015</td>
+  <td nowrap="nowrap">147</td>
+  <td nowrap="nowrap">E</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3015 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Amarelo" width="10" src="runlist_files/f5c58ff0a6fb5a8a3f7377eca49800f1.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_370407309_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=370407309&amp;runsitenumber=1">370407309</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3004</td>
+  <td nowrap="nowrap">147</td>
+  <td nowrap="nowrap">E</td>
+  <td nowrap="nowrap">Python3</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3004 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Amarelo" width="10" src="runlist_files/f5c58ff0a6fb5a8a3f7377eca49800f1.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_370175508_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=370175508&amp;runsitenumber=1">370175508</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3021</td>
+  <td nowrap="nowrap">146</td>
+  <td nowrap="nowrap">G</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3021 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_368882107_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=368882107&amp;runsitenumber=1">368882107</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3035</td>
+  <td nowrap="nowrap">144</td>
+  <td nowrap="nowrap">F</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3035 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_368695906_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=368695906&amp;runsitenumber=1">368695906</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3046</td>
+  <td nowrap="nowrap">144</td>
+  <td nowrap="nowrap">E</td>
+  <td nowrap="nowrap">Java</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3046 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Amarelo" width="10" src="runlist_files/f5c58ff0a6fb5a8a3f7377eca49800f1.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_367919705_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=367919705&amp;runsitenumber=1">367919705</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3036</td>
+  <td nowrap="nowrap">143</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3036 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Branco" width="10" src="runlist_files/f59b7efafd800e27b47a488d30615c73.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_367619904_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=367619904&amp;runsitenumber=1">367619904</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3047</td>
+  <td nowrap="nowrap">142</td>
+  <td nowrap="nowrap">F</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3047 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Verde-água" width="10" src="runlist_files/a03c5d4a8911e08d07b600653617a05b.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_367561703_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=367561703&amp;runsitenumber=1">367561703</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3035</td>
+  <td nowrap="nowrap">142</td>
+  <td nowrap="nowrap">E</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3035 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_366482002_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=366482002&amp;runsitenumber=1">366482002</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3008</td>
+  <td nowrap="nowrap">140</td>
+  <td nowrap="nowrap">F</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3008 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Verde-água" width="10" src="runlist_files/a03c5d4a8911e08d07b600653617a05b.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_365474501_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=365474501&amp;runsitenumber=1">365474501</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3035</td>
+  <td nowrap="nowrap">139</td>
+  <td nowrap="nowrap">E</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3035 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_365163500_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=365163500&amp;runsitenumber=1">365163500</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3046</td>
+  <td nowrap="nowrap">138</td>
+  <td nowrap="nowrap">E</td>
+  <td nowrap="nowrap">Java</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3046 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_364326699_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=364326699&amp;runsitenumber=1">364326699</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3008</td>
+  <td nowrap="nowrap">137</td>
+  <td nowrap="nowrap">F</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3008 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_363589698_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=363589698&amp;runsitenumber=1">363589698</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3035</td>
+  <td nowrap="nowrap">135</td>
+  <td nowrap="nowrap">F</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3035 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_363305797_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=363305797&amp;runsitenumber=1">363305797</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3035</td>
+  <td nowrap="nowrap">135</td>
+  <td nowrap="nowrap">E</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3035 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_363136496_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=363136496&amp;runsitenumber=1">363136496</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3021</td>
+  <td nowrap="nowrap">135</td>
+  <td nowrap="nowrap">G</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3021 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_362653495_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=362653495&amp;runsitenumber=1">362653495</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3021</td>
+  <td nowrap="nowrap">134</td>
+  <td nowrap="nowrap">G</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3021 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_362593594_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=362593594&amp;runsitenumber=1">362593594</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3046</td>
+  <td nowrap="nowrap">134</td>
+  <td nowrap="nowrap">E</td>
+  <td nowrap="nowrap">Java</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3046 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_362190593_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=362190593&amp;runsitenumber=1">362190593</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3047</td>
+  <td nowrap="nowrap">133</td>
+  <td nowrap="nowrap">F</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3047 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_361442792_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=361442792&amp;runsitenumber=1">361442792</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3021</td>
+  <td nowrap="nowrap">132</td>
+  <td nowrap="nowrap">G</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3021 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_360973091_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=360973091&amp;runsitenumber=1">360973091</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3046</td>
+  <td nowrap="nowrap">131</td>
+  <td nowrap="nowrap">E</td>
+  <td nowrap="nowrap">Java</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3046 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_359919690_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=359919690&amp;runsitenumber=1">359919690</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3025</td>
+  <td nowrap="nowrap">129</td>
+  <td nowrap="nowrap">E</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3025 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Amarelo" width="10" src="runlist_files/f5c58ff0a6fb5a8a3f7377eca49800f1.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_359300589_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=359300589&amp;runsitenumber=1">359300589</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3044</td>
+  <td nowrap="nowrap">128</td>
+  <td nowrap="nowrap">F</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3044 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_359195388_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=359195388&amp;runsitenumber=1">359195388</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3047</td>
+  <td nowrap="nowrap">128</td>
+  <td nowrap="nowrap">F</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3047 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Runtime error</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_358367187_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=358367187&amp;runsitenumber=1">358367187</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team2004</td>
+  <td nowrap="nowrap">127</td>
+  <td nowrap="nowrap">B</td>
+  <td nowrap="nowrap">Python3</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team2004 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_357971986_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=357971986&amp;runsitenumber=1">357971986</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3045</td>
+  <td nowrap="nowrap">126</td>
+  <td nowrap="nowrap">F</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3045 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Runtime error</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_356325985_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=356325985&amp;runsitenumber=1">356325985</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3036</td>
+  <td nowrap="nowrap">123</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3036 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_355250884_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=355250884&amp;runsitenumber=1">355250884</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3034</td>
+  <td nowrap="nowrap">122</td>
+  <td nowrap="nowrap">D</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3034 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Preto" width="10" src="runlist_files/670b14728ad9902aecba32e22fa4f6bd.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_354880883_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=354880883&amp;runsitenumber=1">354880883</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3020</td>
+  <td nowrap="nowrap">121</td>
+  <td nowrap="nowrap">A</td>
+  <td nowrap="nowrap">Python3</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3020 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Rosa" width="10" src="runlist_files/765a37a25bf76cd5064a577cd7a9e3c0.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_353926682_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=353926682&amp;runsitenumber=1">353926682</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3035</td>
+  <td nowrap="nowrap">119</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3035 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_353642081_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=353642081&amp;runsitenumber=1">353642081</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3034</td>
+  <td nowrap="nowrap">119</td>
+  <td nowrap="nowrap">D</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3034 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_353442080_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=353442080&amp;runsitenumber=1">353442080</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3001</td>
+  <td nowrap="nowrap">119</td>
+  <td nowrap="nowrap">F</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3001 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_353281579_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=353281579&amp;runsitenumber=1">353281579</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3021</td>
+  <td nowrap="nowrap">118</td>
+  <td nowrap="nowrap">G</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3021 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_353010078_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=353010078&amp;runsitenumber=1">353010078</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3008</td>
+  <td nowrap="nowrap">118</td>
+  <td nowrap="nowrap">G</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3008 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Azul" width="10" src="runlist_files/d5eed37f81ea68725d42553724bef434.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_352710477_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=352710477&amp;runsitenumber=1">352710477</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team2002</td>
+  <td nowrap="nowrap">117</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap">Python3</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team2002 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Branco" width="10" src="runlist_files/f59b7efafd800e27b47a488d30615c73.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_352286376_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=352286376&amp;runsitenumber=1">352286376</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3042</td>
+  <td nowrap="nowrap">117</td>
+  <td nowrap="nowrap">F</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3042 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_352191875_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=352191875&amp;runsitenumber=1">352191875</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3045</td>
+  <td nowrap="nowrap">116</td>
+  <td nowrap="nowrap">F</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3045 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Runtime error</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_352036474_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=352036474&amp;runsitenumber=1">352036474</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3021</td>
+  <td nowrap="nowrap">116</td>
+  <td nowrap="nowrap">G</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3021 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_350856873_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=350856873&amp;runsitenumber=1">350856873</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team2004</td>
+  <td nowrap="nowrap">114</td>
+  <td nowrap="nowrap">A</td>
+  <td nowrap="nowrap">Python3</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team2004 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_350815772_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=350815772&amp;runsitenumber=1">350815772</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3035</td>
+  <td nowrap="nowrap">114</td>
+  <td nowrap="nowrap">F</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3035 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Runtime error</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_350398871_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=350398871&amp;runsitenumber=1">350398871</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3036</td>
+  <td nowrap="nowrap">113</td>
+  <td nowrap="nowrap">D</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3036 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_349931469_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=349931469&amp;runsitenumber=1">349931469</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3035</td>
+  <td nowrap="nowrap">113</td>
+  <td nowrap="nowrap">F</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3035 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Runtime error</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_349937270_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=349937270&amp;runsitenumber=1">349937270</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3044</td>
+  <td nowrap="nowrap">113</td>
+  <td nowrap="nowrap">E</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3044 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Amarelo" width="10" src="runlist_files/f5c58ff0a6fb5a8a3f7377eca49800f1.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_349793868_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=349793868&amp;runsitenumber=1">349793868</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3047</td>
+  <td nowrap="nowrap">112</td>
+  <td nowrap="nowrap">G</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3047 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Azul" width="10" src="runlist_files/d5eed37f81ea68725d42553724bef434.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_349631167_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=349631167&amp;runsitenumber=1">349631167</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team2013</td>
+  <td nowrap="nowrap">112</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap">Python3</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team2013 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Runtime error</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_349318466_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=349318466&amp;runsitenumber=1">349318466</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3040</td>
+  <td nowrap="nowrap">112</td>
+  <td nowrap="nowrap">E</td>
+  <td nowrap="nowrap">Python3</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3040 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Runtime error</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_348858765_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=348858765&amp;runsitenumber=1">348858765</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3020</td>
+  <td nowrap="nowrap">111</td>
+  <td nowrap="nowrap">B</td>
+  <td nowrap="nowrap">Python3</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3020 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Lilás" width="10" src="runlist_files/9b33668ee392f9e16ebaf9e36c3a5e97.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_348276364_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=348276364&amp;runsitenumber=1">348276364</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3001</td>
+  <td nowrap="nowrap">110</td>
+  <td nowrap="nowrap">F</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3001 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_347992563_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=347992563&amp;runsitenumber=1">347992563</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3006</td>
+  <td nowrap="nowrap">109</td>
+  <td nowrap="nowrap">F</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3006 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_347520762_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=347520762&amp;runsitenumber=1">347520762</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3038</td>
+  <td nowrap="nowrap">109</td>
+  <td nowrap="nowrap">D</td>
+  <td nowrap="nowrap">Python3</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3038 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Preto" width="10" src="runlist_files/670b14728ad9902aecba32e22fa4f6bd.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_347403561_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=347403561&amp;runsitenumber=1">347403561</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3042</td>
+  <td nowrap="nowrap">109</td>
+  <td nowrap="nowrap">F</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3042 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Runtime error</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_347321760_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=347321760&amp;runsitenumber=1">347321760</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3004</td>
+  <td nowrap="nowrap">108</td>
+  <td nowrap="nowrap">F</td>
+  <td nowrap="nowrap">Python3</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3004 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Runtime error</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_346573159_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=346573159&amp;runsitenumber=1">346573159</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team2012</td>
+  <td nowrap="nowrap">107</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap">Python3</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team2012 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_346004858_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=346004858&amp;runsitenumber=1">346004858</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team2008</td>
+  <td nowrap="nowrap">106</td>
+  <td nowrap="nowrap">A</td>
+  <td nowrap="nowrap">Python3</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team2008 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_345059857_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=345059857&amp;runsitenumber=1">345059857</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3045</td>
+  <td nowrap="nowrap">105</td>
+  <td nowrap="nowrap">E</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3045 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Amarelo" width="10" src="runlist_files/f5c58ff0a6fb5a8a3f7377eca49800f1.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_344882956_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=344882956&amp;runsitenumber=1">344882956</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team2012</td>
+  <td nowrap="nowrap">104</td>
+  <td nowrap="nowrap">A</td>
+  <td nowrap="nowrap">Python3</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team2012 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Rosa" width="10" src="runlist_files/765a37a25bf76cd5064a577cd7a9e3c0.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_344108855_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=344108855&amp;runsitenumber=1">344108855</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3024</td>
+  <td nowrap="nowrap">103</td>
+  <td nowrap="nowrap">F</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3024 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Runtime error</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_343703354_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=343703354&amp;runsitenumber=1">343703354</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3042</td>
+  <td nowrap="nowrap">102</td>
+  <td nowrap="nowrap">F</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3042 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Runtime error</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_343598253_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=343598253&amp;runsitenumber=1">343598253</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3045</td>
+  <td nowrap="nowrap">102</td>
+  <td nowrap="nowrap">F</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3045 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Runtime error</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_343423452_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=343423452&amp;runsitenumber=1">343423452</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3024</td>
+  <td nowrap="nowrap">102</td>
+  <td nowrap="nowrap">F</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3024 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Runtime error</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_343270651_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=343270651&amp;runsitenumber=1">343270651</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3020</td>
+  <td nowrap="nowrap">102</td>
+  <td nowrap="nowrap">B</td>
+  <td nowrap="nowrap">Python3</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3020 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_342392550_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=342392550&amp;runsitenumber=1">342392550</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3024</td>
+  <td nowrap="nowrap">100</td>
+  <td nowrap="nowrap">F</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3024 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Compilation error</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_341607249_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=341607249&amp;runsitenumber=1">341607249</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3024</td>
+  <td nowrap="nowrap">99</td>
+  <td nowrap="nowrap">F</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3024 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Runtime error</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_341294148_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=341294148&amp;runsitenumber=1">341294148</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3020</td>
+  <td nowrap="nowrap">98</td>
+  <td nowrap="nowrap">B</td>
+  <td nowrap="nowrap">Python3</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3020 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Runtime error</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_340831247_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=340831247&amp;runsitenumber=1">340831247</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3042</td>
+  <td nowrap="nowrap">98</td>
+  <td nowrap="nowrap">F</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3042 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Runtime error</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_339959446_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=339959446&amp;runsitenumber=1">339959446</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3020</td>
+  <td nowrap="nowrap">96</td>
+  <td nowrap="nowrap">B</td>
+  <td nowrap="nowrap">Python3</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3020 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_339587345_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=339587345&amp;runsitenumber=1">339587345</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3031</td>
+  <td nowrap="nowrap">95</td>
+  <td nowrap="nowrap">E</td>
+  <td nowrap="nowrap">Python3</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3031 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_339080444_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=339080444&amp;runsitenumber=1">339080444</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3031</td>
+  <td nowrap="nowrap">95</td>
+  <td nowrap="nowrap">E</td>
+  <td nowrap="nowrap">Python3</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3031 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_338939343_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=338939343&amp;runsitenumber=1">338939343</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3037</td>
+  <td nowrap="nowrap">94</td>
+  <td nowrap="nowrap">F</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3037 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Runtime error</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_338374442_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=338374442&amp;runsitenumber=1">338374442</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team2017</td>
+  <td nowrap="nowrap">93</td>
+  <td nowrap="nowrap">A</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team2017 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Rosa" width="10" src="runlist_files/765a37a25bf76cd5064a577cd7a9e3c0.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_335466341_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=335466341&amp;runsitenumber=1">335466341</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team2013</td>
+  <td nowrap="nowrap">89</td>
+  <td nowrap="nowrap">B</td>
+  <td nowrap="nowrap">Python3</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team2013 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Lilás" width="10" src="runlist_files/9b33668ee392f9e16ebaf9e36c3a5e97.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_334997740_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=334997740&amp;runsitenumber=1">334997740</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3015</td>
+  <td nowrap="nowrap">88</td>
+  <td nowrap="nowrap">D</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3015 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Preto" width="10" src="runlist_files/670b14728ad9902aecba32e22fa4f6bd.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_334687839_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=334687839&amp;runsitenumber=1">334687839</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3037</td>
+  <td nowrap="nowrap">87</td>
+  <td nowrap="nowrap">F</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3037 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_333505138_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=333505138&amp;runsitenumber=1">333505138</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3005</td>
+  <td nowrap="nowrap">85</td>
+  <td nowrap="nowrap">A</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3005 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Rosa" width="10" src="runlist_files/765a37a25bf76cd5064a577cd7a9e3c0.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_331759737_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=331759737&amp;runsitenumber=1">331759737</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3005</td>
+  <td nowrap="nowrap">82</td>
+  <td nowrap="nowrap">D</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3005 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Preto" width="10" src="runlist_files/670b14728ad9902aecba32e22fa4f6bd.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_331676736_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=331676736&amp;runsitenumber=1">331676736</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3034</td>
+  <td nowrap="nowrap">82</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3034 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Branco" width="10" src="runlist_files/f59b7efafd800e27b47a488d30615c73.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_331538135_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=331538135&amp;runsitenumber=1">331538135</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team2012</td>
+  <td nowrap="nowrap">82</td>
+  <td nowrap="nowrap">B</td>
+  <td nowrap="nowrap">Python3</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team2012 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Lilás" width="10" src="runlist_files/9b33668ee392f9e16ebaf9e36c3a5e97.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_331029634_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=331029634&amp;runsitenumber=1">331029634</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3029</td>
+  <td nowrap="nowrap">81</td>
+  <td nowrap="nowrap">E</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3029 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_330900633_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=330900633&amp;runsitenumber=1">330900633</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3008</td>
+  <td nowrap="nowrap">81</td>
+  <td nowrap="nowrap">F</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3008 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_330758332_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=330758332&amp;runsitenumber=1">330758332</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3001</td>
+  <td nowrap="nowrap">81</td>
+  <td nowrap="nowrap">F</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3001 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_330728931_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=330728931&amp;runsitenumber=1">330728931</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team2002</td>
+  <td nowrap="nowrap">81</td>
+  <td nowrap="nowrap">B</td>
+  <td nowrap="nowrap">Python3</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team2002 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Lilás" width="10" src="runlist_files/9b33668ee392f9e16ebaf9e36c3a5e97.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_330553330_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=330553330&amp;runsitenumber=1">330553330</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team2013</td>
+  <td nowrap="nowrap">80</td>
+  <td nowrap="nowrap">A</td>
+  <td nowrap="nowrap">Python3</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team2013 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Rosa" width="10" src="runlist_files/765a37a25bf76cd5064a577cd7a9e3c0.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_330479629_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=330479629&amp;runsitenumber=1">330479629</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3031</td>
+  <td nowrap="nowrap">80</td>
+  <td nowrap="nowrap">D</td>
+  <td nowrap="nowrap">Python3</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3031 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Preto" width="10" src="runlist_files/670b14728ad9902aecba32e22fa4f6bd.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_329705428_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=329705428&amp;runsitenumber=1">329705428</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team2008</td>
+  <td nowrap="nowrap">79</td>
+  <td nowrap="nowrap">B</td>
+  <td nowrap="nowrap">Python3</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team2008 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Lilás" width="10" src="runlist_files/9b33668ee392f9e16ebaf9e36c3a5e97.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_329217227_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=329217227&amp;runsitenumber=1">329217227</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3021</td>
+  <td nowrap="nowrap">78</td>
+  <td nowrap="nowrap">E</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3021 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Amarelo" width="10" src="runlist_files/f5c58ff0a6fb5a8a3f7377eca49800f1.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_328484226_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=328484226&amp;runsitenumber=1">328484226</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team2004</td>
+  <td nowrap="nowrap">77</td>
+  <td nowrap="nowrap">A</td>
+  <td nowrap="nowrap">Python3</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team2004 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Rosa" width="10" src="runlist_files/765a37a25bf76cd5064a577cd7a9e3c0.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_328394225_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=328394225&amp;runsitenumber=1">328394225</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3036</td>
+  <td nowrap="nowrap">77</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3036 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_328232724_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=328232724&amp;runsitenumber=1">328232724</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team2011</td>
+  <td nowrap="nowrap">77</td>
+  <td nowrap="nowrap">A</td>
+  <td nowrap="nowrap">Python3</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team2011 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Rosa" width="10" src="runlist_files/765a37a25bf76cd5064a577cd7a9e3c0.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_327808523_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=327808523&amp;runsitenumber=1">327808523</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team2010</td>
+  <td nowrap="nowrap">76</td>
+  <td nowrap="nowrap">A</td>
+  <td nowrap="nowrap">Python3</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team2010 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Rosa" width="10" src="runlist_files/765a37a25bf76cd5064a577cd7a9e3c0.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_326765622_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=326765622&amp;runsitenumber=1">326765622</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3020</td>
+  <td nowrap="nowrap">74</td>
+  <td nowrap="nowrap">B</td>
+  <td nowrap="nowrap">Python3</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3020 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Runtime error</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_326182521_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=326182521&amp;runsitenumber=1">326182521</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3044</td>
+  <td nowrap="nowrap">73</td>
+  <td nowrap="nowrap">E</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3044 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_325652420_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=325652420&amp;runsitenumber=1">325652420</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3008</td>
+  <td nowrap="nowrap">72</td>
+  <td nowrap="nowrap">F</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3008 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_325434519_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=325434519&amp;runsitenumber=1">325434519</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team2001</td>
+  <td nowrap="nowrap">72</td>
+  <td nowrap="nowrap">B</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team2001 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Lilás" width="10" src="runlist_files/9b33668ee392f9e16ebaf9e36c3a5e97.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_324795118_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=324795118&amp;runsitenumber=1">324795118</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3046</td>
+  <td nowrap="nowrap">71</td>
+  <td nowrap="nowrap">D</td>
+  <td nowrap="nowrap">Java</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3046 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Preto" width="10" src="runlist_files/670b14728ad9902aecba32e22fa4f6bd.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_324765817_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=324765817&amp;runsitenumber=1">324765817</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team2005</td>
+  <td nowrap="nowrap">71</td>
+  <td nowrap="nowrap">A</td>
+  <td nowrap="nowrap">Python3</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team2005 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Rosa" width="10" src="runlist_files/765a37a25bf76cd5064a577cd7a9e3c0.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_324398516_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=324398516&amp;runsitenumber=1">324398516</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3045</td>
+  <td nowrap="nowrap">70</td>
+  <td nowrap="nowrap">F</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3045 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Compilation error</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_324130715_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=324130715&amp;runsitenumber=1">324130715</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3031</td>
+  <td nowrap="nowrap">70</td>
+  <td nowrap="nowrap">D</td>
+  <td nowrap="nowrap">Python3</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3031 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_323983414_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=323983414&amp;runsitenumber=1">323983414</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3047</td>
+  <td nowrap="nowrap">69</td>
+  <td nowrap="nowrap">F</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3047 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Runtime error</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_322796113_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=322796113&amp;runsitenumber=1">322796113</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3015</td>
+  <td nowrap="nowrap">67</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3015 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Branco" width="10" src="runlist_files/f59b7efafd800e27b47a488d30615c73.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_322781012_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=322781012&amp;runsitenumber=1">322781012</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3031</td>
+  <td nowrap="nowrap">67</td>
+  <td nowrap="nowrap">D</td>
+  <td nowrap="nowrap">Python3</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3031 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_322549511_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=322549511&amp;runsitenumber=1">322549511</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3036</td>
+  <td nowrap="nowrap">67</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3036 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_322295110_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=322295110&amp;runsitenumber=1">322295110</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team2013</td>
+  <td nowrap="nowrap">67</td>
+  <td nowrap="nowrap">A</td>
+  <td nowrap="nowrap">Python3</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team2013 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Runtime error</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_321964509_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=321964509&amp;runsitenumber=1">321964509</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3031</td>
+  <td nowrap="nowrap">66</td>
+  <td nowrap="nowrap">D</td>
+  <td nowrap="nowrap">Python3</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3031 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_321538308_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=321538308&amp;runsitenumber=1">321538308</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3005</td>
+  <td nowrap="nowrap">65</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3005 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Branco" width="10" src="runlist_files/f59b7efafd800e27b47a488d30615c73.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_321445007_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=321445007&amp;runsitenumber=1">321445007</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3031</td>
+  <td nowrap="nowrap">65</td>
+  <td nowrap="nowrap">D</td>
+  <td nowrap="nowrap">Python3</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3031 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_320482006_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=320482006&amp;runsitenumber=1">320482006</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3005</td>
+  <td nowrap="nowrap">64</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3005 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_319841505_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=319841505&amp;runsitenumber=1">319841505</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team2008</td>
+  <td nowrap="nowrap">63</td>
+  <td nowrap="nowrap">A</td>
+  <td nowrap="nowrap">Python3</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team2008 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_319825004_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=319825004&amp;runsitenumber=1">319825004</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3009</td>
+  <td nowrap="nowrap">63</td>
+  <td nowrap="nowrap">E</td>
+  <td nowrap="nowrap">Python3</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3009 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Amarelo" width="10" src="runlist_files/f5c58ff0a6fb5a8a3f7377eca49800f1.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_319731803_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=319731803&amp;runsitenumber=1">319731803</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team2001</td>
+  <td nowrap="nowrap">62</td>
+  <td nowrap="nowrap">A</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team2001 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Rosa" width="10" src="runlist_files/765a37a25bf76cd5064a577cd7a9e3c0.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_319629402_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=319629402&amp;runsitenumber=1">319629402</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3042</td>
+  <td nowrap="nowrap">62</td>
+  <td nowrap="nowrap">A</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3042 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Rosa" width="10" src="runlist_files/765a37a25bf76cd5064a577cd7a9e3c0.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_319216801_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=319216801&amp;runsitenumber=1">319216801</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3008</td>
+  <td nowrap="nowrap">62</td>
+  <td nowrap="nowrap">F</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3008 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_319170600_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=319170600&amp;runsitenumber=1">319170600</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3024</td>
+  <td nowrap="nowrap">61</td>
+  <td nowrap="nowrap">F</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3024 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Runtime error</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_319011499_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=319011499&amp;runsitenumber=1">319011499</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3045</td>
+  <td nowrap="nowrap">61</td>
+  <td nowrap="nowrap">E</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3045 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_318405398_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=318405398&amp;runsitenumber=1">318405398</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3025</td>
+  <td nowrap="nowrap">60</td>
+  <td nowrap="nowrap">F</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3025 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Runtime error</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_318153397_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=318153397&amp;runsitenumber=1">318153397</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3045</td>
+  <td nowrap="nowrap">60</td>
+  <td nowrap="nowrap">F</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3045 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Compilation error</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_317617596_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=317617596&amp;runsitenumber=1">317617596</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3047</td>
+  <td nowrap="nowrap">59</td>
+  <td nowrap="nowrap">F</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3047 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Runtime error</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_317448595_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=317448595&amp;runsitenumber=1">317448595</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team2002</td>
+  <td nowrap="nowrap">59</td>
+  <td nowrap="nowrap">A</td>
+  <td nowrap="nowrap">Python3</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team2002 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Rosa" width="10" src="runlist_files/765a37a25bf76cd5064a577cd7a9e3c0.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_317350494_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=317350494&amp;runsitenumber=1">317350494</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3029</td>
+  <td nowrap="nowrap">58</td>
+  <td nowrap="nowrap">E</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3029 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_317285493_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=317285493&amp;runsitenumber=1">317285493</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3009</td>
+  <td nowrap="nowrap">58</td>
+  <td nowrap="nowrap">E</td>
+  <td nowrap="nowrap">Python3</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3009 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_316352592_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=316352592&amp;runsitenumber=1">316352592</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3021</td>
+  <td nowrap="nowrap">57</td>
+  <td nowrap="nowrap">F</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3021 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Runtime error</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_316121391_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=316121391&amp;runsitenumber=1">316121391</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3010</td>
+  <td nowrap="nowrap">56</td>
+  <td nowrap="nowrap">F</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3010 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_315553590_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=315553590&amp;runsitenumber=1">315553590</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3024</td>
+  <td nowrap="nowrap">55</td>
+  <td nowrap="nowrap">E</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3024 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_315355989_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=315355989&amp;runsitenumber=1">315355989</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3014</td>
+  <td nowrap="nowrap">55</td>
+  <td nowrap="nowrap">D</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3014 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Preto" width="10" src="runlist_files/670b14728ad9902aecba32e22fa4f6bd.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_315167988_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=315167988&amp;runsitenumber=1">315167988</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team2013</td>
+  <td nowrap="nowrap">55</td>
+  <td nowrap="nowrap">A</td>
+  <td nowrap="nowrap">Python3</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team2013 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Runtime error</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_314612787_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=314612787&amp;runsitenumber=1">314612787</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3024</td>
+  <td nowrap="nowrap">54</td>
+  <td nowrap="nowrap">E</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3024 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_313248486_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=313248486&amp;runsitenumber=1">313248486</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3010</td>
+  <td nowrap="nowrap">52</td>
+  <td nowrap="nowrap">F</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3010 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Runtime error</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_312835485_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=312835485&amp;runsitenumber=1">312835485</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3006</td>
+  <td nowrap="nowrap">51</td>
+  <td nowrap="nowrap">E</td>
+  <td nowrap="nowrap">Python3</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3006 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Amarelo" width="10" src="runlist_files/f5c58ff0a6fb5a8a3f7377eca49800f1.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_312819084_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=312819084&amp;runsitenumber=1">312819084</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3045</td>
+  <td nowrap="nowrap">51</td>
+  <td nowrap="nowrap">F</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3045 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Compilation error</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_312452983_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=312452983&amp;runsitenumber=1">312452983</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3006</td>
+  <td nowrap="nowrap">50</td>
+  <td nowrap="nowrap">E</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3006 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Compilation error</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_312155782_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=312155782&amp;runsitenumber=1">312155782</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team2013</td>
+  <td nowrap="nowrap">50</td>
+  <td nowrap="nowrap">A</td>
+  <td nowrap="nowrap">Python3</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team2013 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Runtime error</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_312068581_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=312068581&amp;runsitenumber=1">312068581</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3021</td>
+  <td nowrap="nowrap">50</td>
+  <td nowrap="nowrap">F</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3021 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Runtime error</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_310346280_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=310346280&amp;runsitenumber=1">310346280</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3005</td>
+  <td nowrap="nowrap">47</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3005 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Runtime error</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_310228879_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=310228879&amp;runsitenumber=1">310228879</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3044</td>
+  <td nowrap="nowrap">47</td>
+  <td nowrap="nowrap">F</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3044 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_310111578_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=310111578&amp;runsitenumber=1">310111578</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3021</td>
+  <td nowrap="nowrap">46</td>
+  <td nowrap="nowrap">E</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3021 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_309258777_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=309258777&amp;runsitenumber=1">309258777</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3005</td>
+  <td nowrap="nowrap">45</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3005 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Runtime error</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_308576776_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=308576776&amp;runsitenumber=1">308576776</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team2016</td>
+  <td nowrap="nowrap">44</td>
+  <td nowrap="nowrap">B</td>
+  <td nowrap="nowrap">Python3</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team2016 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Lilás" width="10" src="runlist_files/9b33668ee392f9e16ebaf9e36c3a5e97.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_308541675_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=308541675&amp;runsitenumber=1">308541675</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3005</td>
+  <td nowrap="nowrap">44</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3005 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_307881574_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=307881574&amp;runsitenumber=1">307881574</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team2004</td>
+  <td nowrap="nowrap">43</td>
+  <td nowrap="nowrap">A</td>
+  <td nowrap="nowrap">Python3</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team2004 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_307824973_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=307824973&amp;runsitenumber=1">307824973</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3001</td>
+  <td nowrap="nowrap">43</td>
+  <td nowrap="nowrap">F</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3001 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_307366072_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=307366072&amp;runsitenumber=1">307366072</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3045</td>
+  <td nowrap="nowrap">42</td>
+  <td nowrap="nowrap">F</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3045 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Compilation error</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_306962071_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=306962071&amp;runsitenumber=1">306962071</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3004</td>
+  <td nowrap="nowrap">41</td>
+  <td nowrap="nowrap">D</td>
+  <td nowrap="nowrap">Python3</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3004 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Preto" width="10" src="runlist_files/670b14728ad9902aecba32e22fa4f6bd.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_305482770_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=305482770&amp;runsitenumber=1">305482770</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3014</td>
+  <td nowrap="nowrap">39</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3014 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Branco" width="10" src="runlist_files/f59b7efafd800e27b47a488d30615c73.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_303050269_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=303050269&amp;runsitenumber=1">303050269</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3037</td>
+  <td nowrap="nowrap">35</td>
+  <td nowrap="nowrap">D</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3037 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Preto" width="10" src="runlist_files/670b14728ad9902aecba32e22fa4f6bd.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_302469668_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=302469668&amp;runsitenumber=1">302469668</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3042</td>
+  <td nowrap="nowrap">34</td>
+  <td nowrap="nowrap">D</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3042 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Preto" width="10" src="runlist_files/670b14728ad9902aecba32e22fa4f6bd.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_302258167_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=302258167&amp;runsitenumber=1">302258167</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3001</td>
+  <td nowrap="nowrap">33</td>
+  <td nowrap="nowrap">E</td>
+  <td nowrap="nowrap">Python3</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3001 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Amarelo" width="10" src="runlist_files/f5c58ff0a6fb5a8a3f7377eca49800f1.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_301765766_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=301765766&amp;runsitenumber=1">301765766</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3006</td>
+  <td nowrap="nowrap">32</td>
+  <td nowrap="nowrap">D</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3006 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Preto" width="10" src="runlist_files/670b14728ad9902aecba32e22fa4f6bd.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_301437265_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=301437265&amp;runsitenumber=1">301437265</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3047</td>
+  <td nowrap="nowrap">32</td>
+  <td nowrap="nowrap">E</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3047 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Amarelo" width="10" src="runlist_files/f5c58ff0a6fb5a8a3f7377eca49800f1.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_301365364_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=301365364&amp;runsitenumber=1">301365364</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3034</td>
+  <td nowrap="nowrap">32</td>
+  <td nowrap="nowrap">B</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3034 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Lilás" width="10" src="runlist_files/9b33668ee392f9e16ebaf9e36c3a5e97.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_300951963_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=300951963&amp;runsitenumber=1">300951963</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3014</td>
+  <td nowrap="nowrap">31</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3014 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_300795462_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=300795462&amp;runsitenumber=1">300795462</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3034</td>
+  <td nowrap="nowrap">31</td>
+  <td nowrap="nowrap">A</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3034 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Rosa" width="10" src="runlist_files/765a37a25bf76cd5064a577cd7a9e3c0.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_300720961_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=300720961&amp;runsitenumber=1">300720961</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3029</td>
+  <td nowrap="nowrap">31</td>
+  <td nowrap="nowrap">D</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3029 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Preto" width="10" src="runlist_files/670b14728ad9902aecba32e22fa4f6bd.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_300655660_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=300655660&amp;runsitenumber=1">300655660</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3046</td>
+  <td nowrap="nowrap">31</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap">Java</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3046 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Branco" width="10" src="runlist_files/f59b7efafd800e27b47a488d30615c73.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_300580159_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=300580159&amp;runsitenumber=1">300580159</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team2016</td>
+  <td nowrap="nowrap">30</td>
+  <td nowrap="nowrap">A</td>
+  <td nowrap="nowrap">Python3</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team2016 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Rosa" width="10" src="runlist_files/765a37a25bf76cd5064a577cd7a9e3c0.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_300480758_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=300480758&amp;runsitenumber=1">300480758</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3016</td>
+  <td nowrap="nowrap">30</td>
+  <td nowrap="nowrap">D</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3016 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Preto" width="10" src="runlist_files/670b14728ad9902aecba32e22fa4f6bd.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_300331257_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=300331257&amp;runsitenumber=1">300331257</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3034</td>
+  <td nowrap="nowrap">30</td>
+  <td nowrap="nowrap">B</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3034 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Compilation error</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_300140756_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=300140756&amp;runsitenumber=1">300140756</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3004</td>
+  <td nowrap="nowrap">30</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap">Python3</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3004 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Branco" width="10" src="runlist_files/f59b7efafd800e27b47a488d30615c73.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_300132855_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=300132855&amp;runsitenumber=1">300132855</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3034</td>
+  <td nowrap="nowrap">30</td>
+  <td nowrap="nowrap">A</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3034 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Compilation error</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_299714754_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=299714754&amp;runsitenumber=1">299714754</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3038</td>
+  <td nowrap="nowrap">29</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap">Python3</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3038 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Branco" width="10" src="runlist_files/f59b7efafd800e27b47a488d30615c73.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_299449353_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=299449353&amp;runsitenumber=1">299449353</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3037</td>
+  <td nowrap="nowrap">29</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3037 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Branco" width="10" src="runlist_files/f59b7efafd800e27b47a488d30615c73.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_299354752_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=299354752&amp;runsitenumber=1">299354752</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3009</td>
+  <td nowrap="nowrap">28</td>
+  <td nowrap="nowrap">D</td>
+  <td nowrap="nowrap">Python3</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3009 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Preto" width="10" src="runlist_files/670b14728ad9902aecba32e22fa4f6bd.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_299054051_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=299054051&amp;runsitenumber=1">299054051</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3010</td>
+  <td nowrap="nowrap">28</td>
+  <td nowrap="nowrap">D</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3010 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Preto" width="10" src="runlist_files/670b14728ad9902aecba32e22fa4f6bd.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_298908249_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=298908249&amp;runsitenumber=1">298908249</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3001</td>
+  <td nowrap="nowrap">28</td>
+  <td nowrap="nowrap">D</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3001 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Preto" width="10" src="runlist_files/670b14728ad9902aecba32e22fa4f6bd.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_298909950_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=298909950&amp;runsitenumber=1">298909950</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3015</td>
+  <td nowrap="nowrap">28</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3015 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_298865848_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=298865848&amp;runsitenumber=1">298865848</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3031</td>
+  <td nowrap="nowrap">28</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap">Python3</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3031 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Branco" width="10" src="runlist_files/f59b7efafd800e27b47a488d30615c73.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_298585847_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=298585847&amp;runsitenumber=1">298585847</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3040</td>
+  <td nowrap="nowrap">27</td>
+  <td nowrap="nowrap">D</td>
+  <td nowrap="nowrap">Python3</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3040 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Preto" width="10" src="runlist_files/670b14728ad9902aecba32e22fa4f6bd.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_298421346_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=298421346&amp;runsitenumber=1">298421346</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3045</td>
+  <td nowrap="nowrap">27</td>
+  <td nowrap="nowrap">D</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3045 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Preto" width="10" src="runlist_files/670b14728ad9902aecba32e22fa4f6bd.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_298328045_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=298328045&amp;runsitenumber=1">298328045</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3044</td>
+  <td nowrap="nowrap">27</td>
+  <td nowrap="nowrap">D</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3044 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Preto" width="10" src="runlist_files/670b14728ad9902aecba32e22fa4f6bd.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_298212444_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=298212444&amp;runsitenumber=1">298212444</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3005</td>
+  <td nowrap="nowrap">27</td>
+  <td nowrap="nowrap">B</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3005 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Lilás" width="10" src="runlist_files/9b33668ee392f9e16ebaf9e36c3a5e97.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_297739543_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=297739543&amp;runsitenumber=1">297739543</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team2013</td>
+  <td nowrap="nowrap">26</td>
+  <td nowrap="nowrap">A</td>
+  <td nowrap="nowrap">Python3</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team2013 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Runtime error</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_297226942_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=297226942&amp;runsitenumber=1">297226942</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3006</td>
+  <td nowrap="nowrap">25</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3006 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Branco" width="10" src="runlist_files/f59b7efafd800e27b47a488d30615c73.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_296704741_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=296704741&amp;runsitenumber=1">296704741</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3005</td>
+  <td nowrap="nowrap">24</td>
+  <td nowrap="nowrap">B</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3005 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Runtime error</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_296597440_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=296597440&amp;runsitenumber=1">296597440</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3008</td>
+  <td nowrap="nowrap">24</td>
+  <td nowrap="nowrap">E</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3008 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Amarelo" width="10" src="runlist_files/f5c58ff0a6fb5a8a3f7377eca49800f1.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_296512839_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=296512839&amp;runsitenumber=1">296512839</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3006</td>
+  <td nowrap="nowrap">24</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3006 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_296412538_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=296412538&amp;runsitenumber=1">296412538</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3033</td>
+  <td nowrap="nowrap">24</td>
+  <td nowrap="nowrap">D</td>
+  <td nowrap="nowrap">Python3</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3033 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Preto" width="10" src="runlist_files/670b14728ad9902aecba32e22fa4f6bd.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_296004237_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=296004237&amp;runsitenumber=1">296004237</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3005</td>
+  <td nowrap="nowrap">23</td>
+  <td nowrap="nowrap">B</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3005 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Compilation error</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_295879736_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=295879736&amp;runsitenumber=1">295879736</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3042</td>
+  <td nowrap="nowrap">23</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3042 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Branco" width="10" src="runlist_files/f59b7efafd800e27b47a488d30615c73.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_295824635_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=295824635&amp;runsitenumber=1">295824635</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3029</td>
+  <td nowrap="nowrap">23</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3029 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Branco" width="10" src="runlist_files/f59b7efafd800e27b47a488d30615c73.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_295636234_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=295636234&amp;runsitenumber=1">295636234</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3009</td>
+  <td nowrap="nowrap">22</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap">Python3</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3009 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Branco" width="10" src="runlist_files/f59b7efafd800e27b47a488d30615c73.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_295143533_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=295143533&amp;runsitenumber=1">295143533</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3025</td>
+  <td nowrap="nowrap">21</td>
+  <td nowrap="nowrap">D</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3025 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Preto" width="10" src="runlist_files/670b14728ad9902aecba32e22fa4f6bd.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_295107832_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=295107832&amp;runsitenumber=1">295107832</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3016</td>
+  <td nowrap="nowrap">21</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3016 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Branco" width="10" src="runlist_files/f59b7efafd800e27b47a488d30615c73.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_294896131_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=294896131&amp;runsitenumber=1">294896131</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3021</td>
+  <td nowrap="nowrap">21</td>
+  <td nowrap="nowrap">D</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3021 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Preto" width="10" src="runlist_files/670b14728ad9902aecba32e22fa4f6bd.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_294030430_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=294030430&amp;runsitenumber=1">294030430</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3024</td>
+  <td nowrap="nowrap">20</td>
+  <td nowrap="nowrap">D</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3024 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Preto" width="10" src="runlist_files/670b14728ad9902aecba32e22fa4f6bd.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_294018929_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=294018929&amp;runsitenumber=1">294018929</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3045</td>
+  <td nowrap="nowrap">20</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3045 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Branco" width="10" src="runlist_files/f59b7efafd800e27b47a488d30615c73.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_293903428_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=293903428&amp;runsitenumber=1">293903428</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3001</td>
+  <td nowrap="nowrap">19</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3001 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Branco" width="10" src="runlist_files/f59b7efafd800e27b47a488d30615c73.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_293309127_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=293309127&amp;runsitenumber=1">293309127</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3035</td>
+  <td nowrap="nowrap">18</td>
+  <td nowrap="nowrap">D</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3035 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Preto" width="10" src="runlist_files/670b14728ad9902aecba32e22fa4f6bd.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_293158626_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=293158626&amp;runsitenumber=1">293158626</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3010</td>
+  <td nowrap="nowrap">18</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3010 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Branco" width="10" src="runlist_files/f59b7efafd800e27b47a488d30615c73.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_293054525_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=293054525&amp;runsitenumber=1">293054525</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3040</td>
+  <td nowrap="nowrap">18</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap">Python3</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3040 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Branco" width="10" src="runlist_files/f59b7efafd800e27b47a488d30615c73.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_292956924_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=292956924&amp;runsitenumber=1">292956924</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3047</td>
+  <td nowrap="nowrap">18</td>
+  <td nowrap="nowrap">D</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3047 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Preto" width="10" src="runlist_files/670b14728ad9902aecba32e22fa4f6bd.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_292880123_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=292880123&amp;runsitenumber=1">292880123</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3044</td>
+  <td nowrap="nowrap">18</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3044 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Branco" width="10" src="runlist_files/f59b7efafd800e27b47a488d30615c73.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_292468522_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=292468522&amp;runsitenumber=1">292468522</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3010</td>
+  <td nowrap="nowrap">17</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3010 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_292327321_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=292327321&amp;runsitenumber=1">292327321</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team2013</td>
+  <td nowrap="nowrap">17</td>
+  <td nowrap="nowrap">A</td>
+  <td nowrap="nowrap">Python3</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team2013 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_292161120_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=292161120&amp;runsitenumber=1">292161120</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3021</td>
+  <td nowrap="nowrap">16</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3021 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Branco" width="10" src="runlist_files/f59b7efafd800e27b47a488d30615c73.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_291314419_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=291314419&amp;runsitenumber=1">291314419</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3005</td>
+  <td nowrap="nowrap">15</td>
+  <td nowrap="nowrap">A</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3005 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_291153618_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=291153618&amp;runsitenumber=1">291153618</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3031</td>
+  <td nowrap="nowrap">15</td>
+  <td nowrap="nowrap">B</td>
+  <td nowrap="nowrap">Python3</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3031 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_290993617_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=290993617&amp;runsitenumber=1">290993617</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3046</td>
+  <td nowrap="nowrap">14</td>
+  <td nowrap="nowrap">B</td>
+  <td nowrap="nowrap">Java</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3046 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Lilás" width="10" src="runlist_files/9b33668ee392f9e16ebaf9e36c3a5e97.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_290785716_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=290785716&amp;runsitenumber=1">290785716</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3024</td>
+  <td nowrap="nowrap">14</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3024 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Branco" width="10" src="runlist_files/f59b7efafd800e27b47a488d30615c73.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_290526015_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=290526015&amp;runsitenumber=1">290526015</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3031</td>
+  <td nowrap="nowrap">14</td>
+  <td nowrap="nowrap">B</td>
+  <td nowrap="nowrap">Python3</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3031 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Lilás" width="10" src="runlist_files/9b33668ee392f9e16ebaf9e36c3a5e97.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_290500113_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=290500113&amp;runsitenumber=1">290500113</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3006</td>
+  <td nowrap="nowrap">14</td>
+  <td nowrap="nowrap">B</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3006 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Lilás" width="10" src="runlist_files/9b33668ee392f9e16ebaf9e36c3a5e97.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_290503814_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=290503814&amp;runsitenumber=1">290503814</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3035</td>
+  <td nowrap="nowrap">14</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3035 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Branco" width="10" src="runlist_files/f59b7efafd800e27b47a488d30615c73.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_290487212_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=290487212&amp;runsitenumber=1">290487212</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3038</td>
+  <td nowrap="nowrap">14</td>
+  <td nowrap="nowrap">B</td>
+  <td nowrap="nowrap">Python3</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3038 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Lilás" width="10" src="runlist_files/9b33668ee392f9e16ebaf9e36c3a5e97.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_290445711_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=290445711&amp;runsitenumber=1">290445711</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3005</td>
+  <td nowrap="nowrap">14</td>
+  <td nowrap="nowrap">A</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3005 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_290400310_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=290400310&amp;runsitenumber=1">290400310</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3045</td>
+  <td nowrap="nowrap">14</td>
+  <td nowrap="nowrap">B</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3045 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Lilás" width="10" src="runlist_files/9b33668ee392f9e16ebaf9e36c3a5e97.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_290371409_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=290371409&amp;runsitenumber=1">290371409</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3025</td>
+  <td nowrap="nowrap">13</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3025 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Branco" width="10" src="runlist_files/f59b7efafd800e27b47a488d30615c73.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_290207808_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=290207808&amp;runsitenumber=1">290207808</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3047</td>
+  <td nowrap="nowrap">13</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3047 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Branco" width="10" src="runlist_files/f59b7efafd800e27b47a488d30615c73.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_290179007_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=290179007&amp;runsitenumber=1">290179007</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3046</td>
+  <td nowrap="nowrap">13</td>
+  <td nowrap="nowrap">A</td>
+  <td nowrap="nowrap">Java</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3046 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Rosa" width="10" src="runlist_files/765a37a25bf76cd5064a577cd7a9e3c0.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_289636206_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=289636206&amp;runsitenumber=1">289636206</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3015</td>
+  <td nowrap="nowrap">12</td>
+  <td nowrap="nowrap">B</td>
+  <td nowrap="nowrap">Python3</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3015 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Lilás" width="10" src="runlist_files/9b33668ee392f9e16ebaf9e36c3a5e97.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_289384605_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=289384605&amp;runsitenumber=1">289384605</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3042</td>
+  <td nowrap="nowrap">12</td>
+  <td nowrap="nowrap">B</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3042 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Lilás" width="10" src="runlist_files/9b33668ee392f9e16ebaf9e36c3a5e97.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_289226904_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=289226904&amp;runsitenumber=1">289226904</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3008</td>
+  <td nowrap="nowrap">12</td>
+  <td nowrap="nowrap">D</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3008 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Preto" width="10" src="runlist_files/670b14728ad9902aecba32e22fa4f6bd.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_288954403_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=288954403&amp;runsitenumber=1">288954403</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3046</td>
+  <td nowrap="nowrap">11</td>
+  <td nowrap="nowrap">B</td>
+  <td nowrap="nowrap">Java</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3046 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Compilation error</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_288740402_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=288740402&amp;runsitenumber=1">288740402</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3014</td>
+  <td nowrap="nowrap">11</td>
+  <td nowrap="nowrap">B</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3014 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Lilás" width="10" src="runlist_files/9b33668ee392f9e16ebaf9e36c3a5e97.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_288421901_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=288421901&amp;runsitenumber=1">288421901</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3033</td>
+  <td nowrap="nowrap">10</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap">Python3</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3033 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Branco" width="10" src="runlist_files/f59b7efafd800e27b47a488d30615c73.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_288292599_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=288292599&amp;runsitenumber=1">288292599</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3004</td>
+  <td nowrap="nowrap">10</td>
+  <td nowrap="nowrap">B</td>
+  <td nowrap="nowrap">Python3</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3004 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Lilás" width="10" src="runlist_files/9b33668ee392f9e16ebaf9e36c3a5e97.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_288293500_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=288293500&amp;runsitenumber=1">288293500</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3009</td>
+  <td nowrap="nowrap">10</td>
+  <td nowrap="nowrap">B</td>
+  <td nowrap="nowrap">Python3</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3009 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Lilás" width="10" src="runlist_files/9b33668ee392f9e16ebaf9e36c3a5e97.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_288284298_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=288284298&amp;runsitenumber=1">288284298</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3045</td>
+  <td nowrap="nowrap">10</td>
+  <td nowrap="nowrap">A</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3045 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Rosa" width="10" src="runlist_files/765a37a25bf76cd5064a577cd7a9e3c0.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_287518297_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=287518297&amp;runsitenumber=1">287518297</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3008</td>
+  <td nowrap="nowrap">9</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3008 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Branco" width="10" src="runlist_files/f59b7efafd800e27b47a488d30615c73.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_287487896_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=287487896&amp;runsitenumber=1">287487896</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3037</td>
+  <td nowrap="nowrap">9</td>
+  <td nowrap="nowrap">B</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3037 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Lilás" width="10" src="runlist_files/9b33668ee392f9e16ebaf9e36c3a5e97.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_287470395_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=287470395&amp;runsitenumber=1">287470395</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3010</td>
+  <td nowrap="nowrap">9</td>
+  <td nowrap="nowrap">B</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3010 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Lilás" width="10" src="runlist_files/9b33668ee392f9e16ebaf9e36c3a5e97.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_287457494_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=287457494&amp;runsitenumber=1">287457494</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3044</td>
+  <td nowrap="nowrap">9</td>
+  <td nowrap="nowrap">B</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3044 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Lilás" width="10" src="runlist_files/9b33668ee392f9e16ebaf9e36c3a5e97.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_287420893_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=287420893&amp;runsitenumber=1">287420893</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3046</td>
+  <td nowrap="nowrap">9</td>
+  <td nowrap="nowrap">A</td>
+  <td nowrap="nowrap">Java</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3046 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Compilation error</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_287348991_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=287348991&amp;runsitenumber=1">287348991</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3031</td>
+  <td nowrap="nowrap">8</td>
+  <td nowrap="nowrap">A</td>
+  <td nowrap="nowrap">Python3</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3031 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Rosa" width="10" src="runlist_files/765a37a25bf76cd5064a577cd7a9e3c0.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_287349292_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=287349292&amp;runsitenumber=1">287349292</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3006</td>
+  <td nowrap="nowrap">8</td>
+  <td nowrap="nowrap">A</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3006 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Rosa" width="10" src="runlist_files/765a37a25bf76cd5064a577cd7a9e3c0.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_287288990_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=287288990&amp;runsitenumber=1">287288990</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3045</td>
+  <td nowrap="nowrap">8</td>
+  <td nowrap="nowrap">A</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3045 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Compilation error</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_287189789_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=287189789&amp;runsitenumber=1">287189789</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3038</td>
+  <td nowrap="nowrap">8</td>
+  <td nowrap="nowrap">B</td>
+  <td nowrap="nowrap">Python3</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3038 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_287090788_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=287090788&amp;runsitenumber=1">287090788</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3040</td>
+  <td nowrap="nowrap">8</td>
+  <td nowrap="nowrap">B</td>
+  <td nowrap="nowrap">Python3</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3040 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Lilás" width="10" src="runlist_files/9b33668ee392f9e16ebaf9e36c3a5e97.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_286927587_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=286927587&amp;runsitenumber=1">286927587</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3036</td>
+  <td nowrap="nowrap">8</td>
+  <td nowrap="nowrap">B</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3036 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Lilás" width="10" src="runlist_files/9b33668ee392f9e16ebaf9e36c3a5e97.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_286717586_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=286717586&amp;runsitenumber=1">286717586</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3005</td>
+  <td nowrap="nowrap">7</td>
+  <td nowrap="nowrap">A</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3005 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_286542485_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=286542485&amp;runsitenumber=1">286542485</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3016</td>
+  <td nowrap="nowrap">7</td>
+  <td nowrap="nowrap">B</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3016 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Lilás" width="10" src="runlist_files/9b33668ee392f9e16ebaf9e36c3a5e97.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_286536184_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=286536184&amp;runsitenumber=1">286536184</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3042</td>
+  <td nowrap="nowrap">7</td>
+  <td nowrap="nowrap">A</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">admin (1)</td>
+<td bgcolor="#77ff77">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_286172683_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=286172683&amp;runsitenumber=1">286172683</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3047</td>
+  <td nowrap="nowrap">6</td>
+  <td nowrap="nowrap">B</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3047 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Lilás" width="10" src="runlist_files/9b33668ee392f9e16ebaf9e36c3a5e97.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_285959482_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=285959482&amp;runsitenumber=1">285959482</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3021</td>
+  <td nowrap="nowrap">6</td>
+  <td nowrap="nowrap">B</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3021 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Lilás" width="10" src="runlist_files/9b33668ee392f9e16ebaf9e36c3a5e97.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_285719881_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=285719881&amp;runsitenumber=1">285719881</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3025</td>
+  <td nowrap="nowrap">6</td>
+  <td nowrap="nowrap">B</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3025 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Lilás" width="10" src="runlist_files/9b33668ee392f9e16ebaf9e36c3a5e97.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_285701280_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=285701280&amp;runsitenumber=1">285701280</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3004</td>
+  <td nowrap="nowrap">6</td>
+  <td nowrap="nowrap">A</td>
+  <td nowrap="nowrap">Python3</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3004 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Rosa" width="10" src="runlist_files/765a37a25bf76cd5064a577cd7a9e3c0.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_285664078_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=285664078&amp;runsitenumber=1">285664078</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3031</td>
+  <td nowrap="nowrap">6</td>
+  <td nowrap="nowrap">A</td>
+  <td nowrap="nowrap">Python3</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3031 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_285665779_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=285665779&amp;runsitenumber=1">285665779</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3036</td>
+  <td nowrap="nowrap">6</td>
+  <td nowrap="nowrap">B</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3036 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_285568977_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=285568977&amp;runsitenumber=1">285568977</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3001</td>
+  <td nowrap="nowrap">5</td>
+  <td nowrap="nowrap">B</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3001 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Lilás" width="10" src="runlist_files/9b33668ee392f9e16ebaf9e36c3a5e97.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_285558076_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=285558076&amp;runsitenumber=1">285558076</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3046</td>
+  <td nowrap="nowrap">5</td>
+  <td nowrap="nowrap">A</td>
+  <td nowrap="nowrap">Java</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3046 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Name mismatch</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_285538275_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=285538275&amp;runsitenumber=1">285538275</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3010</td>
+  <td nowrap="nowrap">5</td>
+  <td nowrap="nowrap">B</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3010 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Compilation error</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_285477574_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=285477574&amp;runsitenumber=1">285477574</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3021</td>
+  <td nowrap="nowrap">5</td>
+  <td nowrap="nowrap">B</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3021 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_285234573_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=285234573&amp;runsitenumber=1">285234573</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3035</td>
+  <td nowrap="nowrap">5</td>
+  <td nowrap="nowrap">B</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3035 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Lilás" width="10" src="runlist_files/9b33668ee392f9e16ebaf9e36c3a5e97.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_285112372_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=285112372&amp;runsitenumber=1">285112372</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3024</td>
+  <td nowrap="nowrap">5</td>
+  <td nowrap="nowrap">B</td>
+  <td nowrap="nowrap">Python3</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3024 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Lilás" width="10" src="runlist_files/9b33668ee392f9e16ebaf9e36c3a5e97.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_285074771_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=285074771&amp;runsitenumber=1">285074771</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3009</td>
+  <td nowrap="nowrap">5</td>
+  <td nowrap="nowrap">A</td>
+  <td nowrap="nowrap">Python3</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3009 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Rosa" width="10" src="runlist_files/765a37a25bf76cd5064a577cd7a9e3c0.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_284992170_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=284992170&amp;runsitenumber=1">284992170</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3014</td>
+  <td nowrap="nowrap">4</td>
+  <td nowrap="nowrap">A</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3014 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Rosa" width="10" src="runlist_files/765a37a25bf76cd5064a577cd7a9e3c0.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_284913169_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=284913169&amp;runsitenumber=1">284913169</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3029</td>
+  <td nowrap="nowrap">4</td>
+  <td nowrap="nowrap">B</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3029 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Lilás" width="10" src="runlist_files/9b33668ee392f9e16ebaf9e36c3a5e97.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_284904968_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=284904968&amp;runsitenumber=1">284904968</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3037</td>
+  <td nowrap="nowrap">4</td>
+  <td nowrap="nowrap">A</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3037 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Rosa" width="10" src="runlist_files/765a37a25bf76cd5064a577cd7a9e3c0.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_284881667_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=284881667&amp;runsitenumber=1">284881667</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3001</td>
+  <td nowrap="nowrap">4</td>
+  <td nowrap="nowrap">B</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3001 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_284837866_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=284837866&amp;runsitenumber=1">284837866</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3033</td>
+  <td nowrap="nowrap">4</td>
+  <td nowrap="nowrap">B</td>
+  <td nowrap="nowrap">Python3</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3033 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Lilás" width="10" src="runlist_files/9b33668ee392f9e16ebaf9e36c3a5e97.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_284758065_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=284758065&amp;runsitenumber=1">284758065</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3047</td>
+  <td nowrap="nowrap">4</td>
+  <td nowrap="nowrap">A</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3047 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Rosa" width="10" src="runlist_files/765a37a25bf76cd5064a577cd7a9e3c0.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_284672564_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=284672564&amp;runsitenumber=1">284672564</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3021</td>
+  <td nowrap="nowrap">4</td>
+  <td nowrap="nowrap">B</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3021 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_284611263_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=284611263&amp;runsitenumber=1">284611263</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3015</td>
+  <td nowrap="nowrap">4</td>
+  <td nowrap="nowrap">A</td>
+  <td nowrap="nowrap">Python3</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3015 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Rosa" width="10" src="runlist_files/765a37a25bf76cd5064a577cd7a9e3c0.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_284501362_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=284501362&amp;runsitenumber=1">284501362</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3016</td>
+  <td nowrap="nowrap">4</td>
+  <td nowrap="nowrap">A</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3016 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Rosa" width="10" src="runlist_files/765a37a25bf76cd5064a577cd7a9e3c0.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_284290260_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=284290260&amp;runsitenumber=1">284290260</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3044</td>
+  <td nowrap="nowrap">3</td>
+  <td nowrap="nowrap">A</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3044 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Rosa" width="10" src="runlist_files/765a37a25bf76cd5064a577cd7a9e3c0.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_284291961_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=284291961&amp;runsitenumber=1">284291961</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3038</td>
+  <td nowrap="nowrap">3</td>
+  <td nowrap="nowrap">A</td>
+  <td nowrap="nowrap">Python3</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3038 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Rosa" width="10" src="runlist_files/765a37a25bf76cd5064a577cd7a9e3c0.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_284020659_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=284020659&amp;runsitenumber=1">284020659</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3040</td>
+  <td nowrap="nowrap">3</td>
+  <td nowrap="nowrap">A</td>
+  <td nowrap="nowrap">Python3</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3040 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Rosa" width="10" src="runlist_files/765a37a25bf76cd5064a577cd7a9e3c0.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_284002558_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=284002558&amp;runsitenumber=1">284002558</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3008</td>
+  <td nowrap="nowrap">3</td>
+  <td nowrap="nowrap">B</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3008 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Lilás" width="10" src="runlist_files/9b33668ee392f9e16ebaf9e36c3a5e97.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_283812457_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=283812457&amp;runsitenumber=1">283812457</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3024</td>
+  <td nowrap="nowrap">3</td>
+  <td nowrap="nowrap">A</td>
+  <td nowrap="nowrap">Python3</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3024 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Rosa" width="10" src="runlist_files/765a37a25bf76cd5064a577cd7a9e3c0.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_283554456_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=283554456&amp;runsitenumber=1">283554456</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3035</td>
+  <td nowrap="nowrap">2</td>
+  <td nowrap="nowrap">A</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3035 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Rosa" width="10" src="runlist_files/765a37a25bf76cd5064a577cd7a9e3c0.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_283444955_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=283444955&amp;runsitenumber=1">283444955</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3036</td>
+  <td nowrap="nowrap">2</td>
+  <td nowrap="nowrap">A</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3036 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Rosa" width="10" src="runlist_files/765a37a25bf76cd5064a577cd7a9e3c0.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_283309154_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=283309154&amp;runsitenumber=1">283309154</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3025</td>
+  <td nowrap="nowrap">2</td>
+  <td nowrap="nowrap">A</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3025 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Rosa" width="10" src="runlist_files/765a37a25bf76cd5064a577cd7a9e3c0.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_283207153_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=283207153&amp;runsitenumber=1">283207153</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3010</td>
+  <td nowrap="nowrap">2</td>
+  <td nowrap="nowrap">A</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3010 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Rosa" width="10" src="runlist_files/765a37a25bf76cd5064a577cd7a9e3c0.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_283162452_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=283162452&amp;runsitenumber=1">283162452</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3033</td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">A</td>
+  <td nowrap="nowrap">Python3</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3033 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Rosa" width="10" src="runlist_files/765a37a25bf76cd5064a577cd7a9e3c0.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_283146351_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=283146351&amp;runsitenumber=1">283146351</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3021</td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">A</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3021 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Rosa" width="10" src="runlist_files/765a37a25bf76cd5064a577cd7a9e3c0.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_282972950_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=282972950&amp;runsitenumber=1">282972950</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3001</td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">A</td>
+  <td nowrap="nowrap">Python3</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3001 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Rosa" width="10" src="runlist_files/765a37a25bf76cd5064a577cd7a9e3c0.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_282667849_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=282667849&amp;runsitenumber=1">282667849</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3029</td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">A</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3029 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Rosa" width="10" src="runlist_files/765a37a25bf76cd5064a577cd7a9e3c0.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_282460048_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=282460048&amp;runsitenumber=1">282460048</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3008</td>
+  <td nowrap="nowrap">0</td>
+  <td nowrap="nowrap">A</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">team3008 (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Rosa" width="10" src="runlist_files/765a37a25bf76cd5064a577cd7a9e3c0.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_799571447_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=799571447&amp;runsitenumber=1">799571447</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">judgeadne</td>
+  <td nowrap="nowrap">-774</td>
+  <td nowrap="nowrap">G</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">judgeadne (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Azul" width="10" src="runlist_files/d5eed37f81ea68725d42553724bef434.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_797920146_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=797920146&amp;runsitenumber=1">797920146</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">judgeadne</td>
+  <td nowrap="nowrap">-776</td>
+  <td nowrap="nowrap">G</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">judgeadne (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_796245445_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=796245445&amp;runsitenumber=1">796245445</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">judgeadne</td>
+  <td nowrap="nowrap">-779</td>
+  <td nowrap="nowrap">G</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">judgeadne (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_795877244_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=795877244&amp;runsitenumber=1">795877244</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">judgeadne</td>
+  <td nowrap="nowrap">-780</td>
+  <td nowrap="nowrap">G</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">judgeadne (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_786029343_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=786029343&amp;runsitenumber=1">786029343</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">judgeadne</td>
+  <td nowrap="nowrap">-796</td>
+  <td nowrap="nowrap">E</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">judgeadne (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Amarelo" width="10" src="runlist_files/f5c58ff0a6fb5a8a3f7377eca49800f1.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_785323242_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=785323242&amp;runsitenumber=1">785323242</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">judgeadne</td>
+  <td nowrap="nowrap">-797</td>
+  <td nowrap="nowrap">E</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">judgeadne (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_783927641_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=783927641&amp;runsitenumber=1">783927641</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">judgeadne</td>
+  <td nowrap="nowrap">-800</td>
+  <td nowrap="nowrap">E</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">judgeadne (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_781782440_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=781782440&amp;runsitenumber=1">781782440</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">judgeadne</td>
+  <td nowrap="nowrap">-803</td>
+  <td nowrap="nowrap">D</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">judgeadne (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Preto" width="10" src="runlist_files/670b14728ad9902aecba32e22fa4f6bd.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_781003439_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=781003439&amp;runsitenumber=1">781003439</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">judgeadne</td>
+  <td nowrap="nowrap">-805</td>
+  <td nowrap="nowrap">E</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">judgeadne (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_770955038_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=770955038&amp;runsitenumber=1">770955038</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">judgeadne</td>
+  <td nowrap="nowrap">-821</td>
+  <td nowrap="nowrap">D</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">judgeadne (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Compilation error</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_763654537_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=763654537&amp;runsitenumber=1">763654537</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">judgeadne</td>
+  <td nowrap="nowrap">-833</td>
+  <td nowrap="nowrap">B</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">judgeadne (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Lilás" width="10" src="runlist_files/9b33668ee392f9e16ebaf9e36c3a5e97.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_763299936_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=763299936&amp;runsitenumber=1">763299936</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">judgeadne</td>
+  <td nowrap="nowrap">-834</td>
+  <td nowrap="nowrap">F</td>
+  <td nowrap="nowrap">Python3</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">judgeadne (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Verde-água" width="10" src="runlist_files/a03c5d4a8911e08d07b600653617a05b.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_761835935_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=761835935&amp;runsitenumber=1">761835935</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">judgeadne</td>
+  <td nowrap="nowrap">-836</td>
+  <td nowrap="nowrap">F</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">judgeadne (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Verde-água" width="10" src="runlist_files/a03c5d4a8911e08d07b600653617a05b.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_760522634_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=760522634&amp;runsitenumber=1">760522634</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">judgeadne</td>
+  <td nowrap="nowrap">-839</td>
+  <td nowrap="nowrap">F</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">judgeadne (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_758370033_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=758370033&amp;runsitenumber=1">758370033</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">judgeadne</td>
+  <td nowrap="nowrap">-842</td>
+  <td nowrap="nowrap">F</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">judgeadne (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Verde-água" width="10" src="runlist_files/a03c5d4a8911e08d07b600653617a05b.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_757956232_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=757956232&amp;runsitenumber=1">757956232</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">judgeadne</td>
+  <td nowrap="nowrap">-843</td>
+  <td nowrap="nowrap">A</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">judgeadne (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_757871031_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=757871031&amp;runsitenumber=1">757871031</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">judgeadne</td>
+  <td nowrap="nowrap">-843</td>
+  <td nowrap="nowrap">A</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">judgeadne (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_757461430_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=757461430&amp;runsitenumber=1">757461430</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">judgeadne</td>
+  <td nowrap="nowrap">-844</td>
+  <td nowrap="nowrap">F</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">judgeadne (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_439678229_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=439678229&amp;runsitenumber=1">439678229</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">judgemaristela</td>
+  <td nowrap="nowrap">-1373</td>
+  <td nowrap="nowrap">E</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">judgemaristela (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_439142628_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=439142628&amp;runsitenumber=1">439142628</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">judgemaristela</td>
+  <td nowrap="nowrap">-1374</td>
+  <td nowrap="nowrap">E</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">judgemaristela (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_435641027_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=435641027&amp;runsitenumber=1">435641027</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">judgemaristela</td>
+  <td nowrap="nowrap">-1380</td>
+  <td nowrap="nowrap">E</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">judgemaristela (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_435106426_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=435106426&amp;runsitenumber=1">435106426</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">judgemaristela</td>
+  <td nowrap="nowrap">-1381</td>
+  <td nowrap="nowrap">E</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">judgemaristela (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_433573825_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=433573825&amp;runsitenumber=1">433573825</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">judgemaristela</td>
+  <td nowrap="nowrap">-1384</td>
+  <td nowrap="nowrap">E</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">judgemaristela (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_433499424_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=433499424&amp;runsitenumber=1">433499424</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">judgemaristela</td>
+  <td nowrap="nowrap">-1384</td>
+  <td nowrap="nowrap">E</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">judgemaristela (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Runtime error</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_433274823_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=433274823&amp;runsitenumber=1">433274823</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">judgemaristela</td>
+  <td nowrap="nowrap">-1384</td>
+  <td nowrap="nowrap">E</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">judgemaristela (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Compilation error</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_432894822_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=432894822&amp;runsitenumber=1">432894822</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">judgemaristela</td>
+  <td nowrap="nowrap">-1385</td>
+  <td nowrap="nowrap">E</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">judgemaristela (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Compilation error</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_393280221_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=393280221&amp;runsitenumber=1">393280221</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">judgeisa</td>
+  <td nowrap="nowrap">-1451</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">judgeisa (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_391726620_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=391726620&amp;runsitenumber=1">391726620</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">judgevarguitas</td>
+  <td nowrap="nowrap">-1453</td>
+  <td nowrap="nowrap">E</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">judgevarguitas (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_390960819_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=390960819&amp;runsitenumber=1">390960819</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">judgevarguitas</td>
+  <td nowrap="nowrap">-1455</td>
+  <td nowrap="nowrap">E</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">judgevarguitas (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_388637718_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=388637718&amp;runsitenumber=1">388637718</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">judgevarguitas</td>
+  <td nowrap="nowrap">-1458</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">judgevarguitas (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Branco" width="10" src="runlist_files/f59b7efafd800e27b47a488d30615c73.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_388170217_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=388170217&amp;runsitenumber=1">388170217</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">judgevarguitas</td>
+  <td nowrap="nowrap">-1459</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">judgevarguitas (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Compilation error</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_385320716_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=385320716&amp;runsitenumber=1">385320716</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">judgevarguitas</td>
+  <td nowrap="nowrap">-1464</td>
+  <td nowrap="nowrap">D</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">judgevarguitas (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Time limit exceeded</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_384944915_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=384944915&amp;runsitenumber=1">384944915</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">judgevarguitas</td>
+  <td nowrap="nowrap">-1465</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">judgevarguitas (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Branco" width="10" src="runlist_files/f59b7efafd800e27b47a488d30615c73.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_383871314_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=383871314&amp;runsitenumber=1">383871314</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">judgevarguitas</td>
+  <td nowrap="nowrap">-1466</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">judgevarguitas (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_383737613_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=383737613&amp;runsitenumber=1">383737613</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">judgevarguitas</td>
+  <td nowrap="nowrap">-1467</td>
+  <td nowrap="nowrap">B</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">judgevarguitas (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_381663912_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=381663912&amp;runsitenumber=1">381663912</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">judgevarguitas</td>
+  <td nowrap="nowrap">-1470</td>
+  <td nowrap="nowrap">A</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">judgevarguitas (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Rosa" width="10" src="runlist_files/765a37a25bf76cd5064a577cd7a9e3c0.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_378980111_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=378980111&amp;runsitenumber=1">378980111</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">judgevarguitas</td>
+  <td nowrap="nowrap">-1475</td>
+  <td nowrap="nowrap">A</td>
+  <td nowrap="nowrap">Python3</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">judgevarguitas (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Rosa" width="10" src="runlist_files/765a37a25bf76cd5064a577cd7a9e3c0.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_45862310_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=45862310&amp;runsitenumber=1">45862310</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">judgeadne</td>
+  <td nowrap="nowrap">-3696</td>
+  <td nowrap="nowrap">C</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">judgeadne (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Branco" width="10" src="runlist_files/f59b7efafd800e27b47a488d30615c73.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_41906809_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=41906809&amp;runsitenumber=1">41906809</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">judgeadne</td>
+  <td nowrap="nowrap">-3703</td>
+  <td nowrap="nowrap">B</td>
+  <td nowrap="nowrap">Python3</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">judgeadne (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_39588208_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=39588208&amp;runsitenumber=1">39588208</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">judgeadne</td>
+  <td nowrap="nowrap">-3707</td>
+  <td nowrap="nowrap">B</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">judgeadne (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_37175507_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=37175507&amp;runsitenumber=1">37175507</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">judgeadne</td>
+  <td nowrap="nowrap">-3711</td>
+  <td nowrap="nowrap">A</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">judgeadne (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_36518206_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=36518206&amp;runsitenumber=1">36518206</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">judgeadne</td>
+  <td nowrap="nowrap">-3712</td>
+  <td nowrap="nowrap">B</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">judgeadne (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_36320205_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=36320205&amp;runsitenumber=1">36320205</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">judgeadne</td>
+  <td nowrap="nowrap">-3712</td>
+  <td nowrap="nowrap">B</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">judgeadne (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Wrong answer</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_34305204_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=34305204&amp;runsitenumber=1">34305204</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">judgeadne</td>
+  <td nowrap="nowrap">-3716</td>
+  <td nowrap="nowrap">A</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">judgeadne (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Rosa" width="10" src="runlist_files/765a37a25bf76cd5064a577cd7a9e3c0.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_576200803_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=576200803&amp;runsitenumber=1">576200803</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">judgeemerson</td>
+  <td nowrap="nowrap">-4479</td>
+  <td nowrap="nowrap">G</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">judgeemerson (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>NO - Runtime error</td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_571553902_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=571553902&amp;runsitenumber=1">571553902</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">judgeisa</td>
+  <td nowrap="nowrap">-4487</td>
+  <td nowrap="nowrap">E</td>
+  <td nowrap="nowrap">C++17</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">judgeisa (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Amarelo" width="10" src="runlist_files/f5c58ff0a6fb5a8a3f7377eca49800f1.png"></td>
+ </tr>
+  <tr><td nowrap="nowrap"><input type="checkbox" name="cbox_753438101_1"> <a href="https://mfpunb.maratonasdf.com.br/boca/admin/runedit.php?runnumber=753438101&amp;runsitenumber=1">753438101</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">judgeisa</td>
+  <td nowrap="nowrap">-5850</td>
+  <td nowrap="nowrap">A</td>
+  <td nowrap="nowrap">Python3</td>
+  <td nowrap="nowrap" bgcolor="#bbbbff">judged</td>
+  <td nowrap="nowrap">judgeisa (1)</td>
+<td bgcolor="#bbbbff">&nbsp;&nbsp;</td>
+  <td>YES <img alt="Rosa" width="10" src="runlist_files/765a37a25bf76cd5064a577cd7a9e3c0.png"></td>
+ </tr>
+</tbody></table>  <br>
+  <script language="javascript">
+    function conf() {
+      if (confirm("Confirm?")) {
+        document.form1.confirmation.value='confirm';
+      }
+    }
+  </script>
+  <center>
+<b>Click on the number of a run to edit it or select them with<br>the checkboxes and use the buttons to work on multiple runs:</b><br><br>
+      <input type="submit" name="auto" value="Re-run autojudge for selected runs" onclick="conf()">
+      <input type="submit" name="open" value="Open selected runs for rejudging" onclick="conf()">
+<br><br>
+  </center>
+  </form>
+
+
+</body></html>

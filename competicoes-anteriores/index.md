@@ -3,8 +3,9 @@ title: Competições Anteriores
 layout: page
 description: Competições anteriores
 ---
+## [VI Competição Femimina de Programação da UnB]({{site.url}}{% link _posts/blog/2025-06-30-6-mfp-unb-resultados.md %})
 
-## [X Maratona de Programação do IFB]({{site.url}}{% link _posts/blog/2025-05-11-10-mdp-ifb-resultados.md %})
+## [X Maratona de Programação do IFB (10/05/2025)]({{site.url}}{% link _posts/blog/2025-05-11-10-mdp-ifb-resultados.md %})
 
 ## [I Maratona SBC de Programação do Cerrado (05/04/2025)]({{site.url}}{% link _posts/blog/2025-04-06-1-mdp-cerrado-resultados.md %})
 

@@ -1,0 +1,1293 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- BOCA boca-1.5.21. Copyright (c) 2003-2024 Cassio Polpo de Campos -->
+<!-- http://www.ime.usp.br/~cassio/boca                                  -->
+<!-- This program is free software: you can redistribute it and/or modify  -->
+<!-- it under the terms of the GNU General Public License as published by -->
+<!-- the Free Software Foundation, either version 3 of the License, or -->
+<!-- (at your option) any later version. A copy of the  -->
+<!-- license can be found with this software or at http://www.gnu.org/licenses/ -->
+<html><head><title>Admin's Page</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="users_files/Css.php" type="text/css">
+</head><body id="body"><table border="1" width="100%">
+<tbody><tr><td nowrap="nowrap" bgcolor="eeee00" align="center"><img src="users_files/smallballoontransp.png" alt=""><font color="#000000">BOCA</font></td><td bgcolor="#eeee00" width="99%">
+Username: Administrator (site=1)<br>
+</td><td bgcolor="#eeee00" align="center" nowrap="nowrap">&nbsp;contest not running&nbsp;</td></tr>
+</tbody></table>
+<table border="0" width="100%" align="center">
+ <tbody><tr>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://mfpunb.maratonasdf.com.br/boca/admin/run.php">Runs</a></td>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://mfpunb.maratonasdf.com.br/boca/admin/score.php">Score</a></td>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://mfpunb.maratonasdf.com.br/boca/admin/clar.php">Clarifications</a></td>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://mfpunb.maratonasdf.com.br/boca/admin/user.php">Users</a></td>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://mfpunb.maratonasdf.com.br/boca/admin/problem.php">Problems</a></td>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://mfpunb.maratonasdf.com.br/boca/admin/language.php">Languages</a></td>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://mfpunb.maratonasdf.com.br/boca/admin/answer.php">Answers</a></td>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://mfpunb.maratonasdf.com.br/boca/admin/misc.php">Misc</a></td>
+ </tr><tr>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://mfpunb.maratonasdf.com.br/boca/admin/task.php">Tasks</a></td>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://mfpunb.maratonasdf.com.br/boca/admin/site.php">Site</a></td>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://mfpunb.maratonasdf.com.br/boca/admin/contest.php">Contest</a></td>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://mfpunb.maratonasdf.com.br/boca/admin/log.php">Logs</a></td>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://mfpunb.maratonasdf.com.br/boca/admin/report.php">Reports</a></td>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://mfpunb.maratonasdf.com.br/boca/admin/files.php">Backups</a></td>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://mfpunb.maratonasdf.com.br/boca/admin/option.php">Options</a></td>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://mfpunb.maratonasdf.com.br/boca/index.php">Logout</a></td>
+ </tr>
+</tbody></table>
+
+  <script language="javascript">
+    function conf2(url) {
+      if (confirm("Are you sure?")) {
+        document.location=url;
+      } else {
+        document.location='user.php';
+      }
+    }
+  </script>
+<br>
+<table width="100%" border="1">
+ <tbody><tr>
+  <td nowrap="nowrap"><b>User #</b></td>
+  <td><b>Site</b></td>
+  <td><b>Username</b></td>
+  <td><b>ICPC ID</b></td>
+  <td><b>Type</b></td>
+  <td><b>IP</b></td>
+  <td><b>LastLogin</b></td>
+  <td><b>LastLogout</b></td>
+  <td><b>Enabled</b></td>
+  <td><b>Multi</b></td>
+  <td><b>Fullname</b></td>
+  <td><b>Description</b></td>
+ </tr>
+ <tr>
+  <td nowrap="nowrap">1000</td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">admin&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">admin&nbsp;</td>
+  <td nowrap="nowrap">177.18.22.80&nbsp;</td>
+  <td nowrap="nowrap">10:22:51 -03 - 30/Jun/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=1000')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Administrator&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=2001">2001</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team2001&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">164.41.179.86&nbsp;</td>
+  <td nowrap="nowrap">13:59:31 -03 - 28/Jun/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=2001')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[EM/IFB/CBSB] Amanda Alves dos Santos&nbsp;</td>
+  <td nowrap="nowrap">Amanda Alves dos Santos&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=2002">2002</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team2002&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">164.41.179.76&nbsp;</td>
+  <td nowrap="nowrap">13:09:11 -03 - 28/Jun/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=2002')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[EM/CED 310] Ana Carolina Ferreira da Conceição&nbsp;</td>
+  <td nowrap="nowrap">Ana Carolina Ferreira da Conceição&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=2003">2003</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team2003&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[EM/CEL] Ana Luiza dos Reis Queiroz&nbsp;</td>
+  <td nowrap="nowrap">Ana Luiza dos Reis Queiroz&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=2004">2004</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team2004&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">164.41.179.114&nbsp;</td>
+  <td nowrap="nowrap">13:31:25 -03 - 28/Jun/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=2004')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[EM/CEL] Ana Luiza Pereira de Freitas&nbsp;</td>
+  <td nowrap="nowrap">Ana Luiza Pereira de Freitas&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=2005">2005</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team2005&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">164.41.179.77&nbsp;</td>
+  <td nowrap="nowrap">16:21:04 -03 - 28/Jun/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=2005')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[EM/CED 310] Camile Cortez do nascimento&nbsp;</td>
+  <td nowrap="nowrap">Camile Cortez do nascimento&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=2006">2006</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team2006&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[EM/CED 310] Geovanna Gonçalves da Rocha&nbsp;</td>
+  <td nowrap="nowrap">Geovanna Gonçalves da Rocha&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=2007">2007</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team2007&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[EM/CEL] Geovanna Viana Santana&nbsp;</td>
+  <td nowrap="nowrap">Geovanna Viana Santana&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=2008">2008</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team2008&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">164.41.179.73&nbsp;</td>
+  <td nowrap="nowrap">13:14:21 -03 - 28/Jun/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=2008')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[EM/CED 310] Lara Dutra Soares&nbsp;</td>
+  <td nowrap="nowrap">Lara Dutra Soares&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=2009">2009</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team2009&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[EM/CED 416] Maria Fernanda dos Santos Marques&nbsp;</td>
+  <td nowrap="nowrap">Maria Fernanda dos Santos Marques&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=2010">2010</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team2010&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">164.41.179.116&nbsp;</td>
+  <td nowrap="nowrap">13:06:33 -03 - 28/Jun/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=2010')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[EM/CED 310] Maryana da Silva Mendes&nbsp;</td>
+  <td nowrap="nowrap">Maryana da Silva Mendes&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=2011">2011</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team2011&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">164.41.179.78&nbsp;</td>
+  <td nowrap="nowrap">14:21:45 -03 - 28/Jun/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=2011')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[EM/CED 310] Nicole Valadares de Sousa&nbsp;</td>
+  <td nowrap="nowrap">Nicole Valadares de Sousa&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=2012">2012</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team2012&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">164.41.179.87&nbsp;</td>
+  <td nowrap="nowrap">13:33:04 -03 - 28/Jun/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=2012')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[EM/CEL] Pâmella Araújo Moreira&nbsp;</td>
+  <td nowrap="nowrap">Pâmella Araújo Moreira&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=2013">2013</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team2013&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">164.41.179.124&nbsp;</td>
+  <td nowrap="nowrap">13:33:19 -03 - 28/Jun/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=2013')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[EM/CEL] Sara Cerri Junqueira Reis&nbsp;</td>
+  <td nowrap="nowrap">Sara Cerri Junqueira Reis&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=2014">2014</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team2014&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[EM/CEM Urso Branco] Sarah Rodrigues Gonçalves&nbsp;</td>
+  <td nowrap="nowrap">Sarah Rodrigues Gonçalves&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=2015">2015</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team2015&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[EM/CEL] Sofia Costa Araújo&nbsp;</td>
+  <td nowrap="nowrap">Sofia Costa Araújo&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=2016">2016</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team2016&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">164.41.179.105&nbsp;</td>
+  <td nowrap="nowrap">13:35:57 -03 - 28/Jun/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=2016')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[EM/CEL] Sofia Matos Lacerda&nbsp;</td>
+  <td nowrap="nowrap">Sofia Matos Lacerda&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=2017">2017</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team2017&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">164.41.179.111&nbsp;</td>
+  <td nowrap="nowrap">14:53:28 -03 - 28/Jun/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=2017')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[EM/CEL] Talita Ribeiro Nascimento&nbsp;</td>
+  <td nowrap="nowrap">Talita Ribeiro Nascimento&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=2018">2018</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team2018&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[EM/CEL] Viviane Oliveira Lima&nbsp;</td>
+  <td nowrap="nowrap">Viviane Oliveira Lima&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3001">3001</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3001&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">164.41.179.195&nbsp;</td>
+  <td nowrap="nowrap">13:49:35 -03 - 28/Jun/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3001')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB/Darcy Ribeiro] Adrielly Medeiros Nunes&nbsp;</td>
+  <td nowrap="nowrap">Adrielly Medeiros Nunes&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3002">3002</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3002&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UFU] Alline Aparecida Ferreira Martins&nbsp;</td>
+  <td nowrap="nowrap">Alline Aparecida Ferreira Martins&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3003">3003</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3003&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[IESB] Amanda Ferreira Dahm&nbsp;</td>
+  <td nowrap="nowrap">Amanda Ferreira Dahm&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3004">3004</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3004&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">164.41.179.186&nbsp;</td>
+  <td nowrap="nowrap">15:18:25 -03 - 28/Jun/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3004')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB/Darcy Ribeiro] Ana Beatriz Cunha Wirthmann&nbsp;</td>
+  <td nowrap="nowrap">Ana Beatriz Cunha Wirthmann&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3005">3005</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3005&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">164.41.179.225&nbsp;</td>
+  <td nowrap="nowrap">13:25:27 -03 - 28/Jun/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3005')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB/Darcy Ribeiro] Ana Carolina Madeira Fialho&nbsp;</td>
+  <td nowrap="nowrap">Ana Carolina Madeira Fialho&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3006">3006</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3006&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">164.41.179.246&nbsp;</td>
+  <td nowrap="nowrap">13:29:08 -03 - 28/Jun/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3006')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB/FCTE] Ana Joyce Guedes Amorim da Silva&nbsp;</td>
+  <td nowrap="nowrap">Ana Joyce Guedes Amorim da Silva&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3007">3007</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3007&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[IESB] Ana Luiza Gomes de Lima&nbsp;</td>
+  <td nowrap="nowrap">Ana Luiza Gomes de Lima&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3008">3008</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3008&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">164.41.179.240&nbsp;</td>
+  <td nowrap="nowrap">13:09:58 -03 - 28/Jun/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3008')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB/FCTE] Ana Luiza Komatsu Aroeira&nbsp;</td>
+  <td nowrap="nowrap">Ana Luiza Komatsu Aroeira&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3009">3009</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3009&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">164.41.179.212&nbsp;</td>
+  <td nowrap="nowrap">13:31:08 -03 - 28/Jun/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3009')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB/Darcy Ribeiro] Catarina Yasmin De Freitas Silva&nbsp;</td>
+  <td nowrap="nowrap">Catarina Yasmin De Freitas Silva&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3010">3010</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3010&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">164.41.179.218&nbsp;</td>
+  <td nowrap="nowrap">13:13:25 -03 - 28/Jun/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3010')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB/FCTE] Cibelly Lourenço Ferreira&nbsp;</td>
+  <td nowrap="nowrap">Cibelly Lourenço Ferreira&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3011">3011</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3011&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB/Darcy Ribeiro] Dyesi Fernanda Montagner de Souza&nbsp;</td>
+  <td nowrap="nowrap">Dyesi Fernanda Montagner de Souza&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3012">3012</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3012&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UDF] Eliza de Matos Silva&nbsp;</td>
+  <td nowrap="nowrap">Eliza de Matos Silva&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3013">3013</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3013&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB/Darcy Ribeiro] Fernanda Marques Pereira&nbsp;</td>
+  <td nowrap="nowrap">Fernanda Marques Pereira&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3014">3014</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3014&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">164.41.179.248&nbsp;</td>
+  <td nowrap="nowrap">13:10:03 -03 - 28/Jun/2025</td>
+  <td nowrap="nowrap">16:27:37 -03 - 28/Jun/2025</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB/Darcy Ribeiro] Gabriela Barroso Alves&nbsp;</td>
+  <td nowrap="nowrap">Gabriela Barroso Alves&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3015">3015</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3015&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">164.41.179.232&nbsp;</td>
+  <td nowrap="nowrap">12:48:55 -03 - 28/Jun/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3015')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB/FCTE] Giovanna Felipe Guimarães&nbsp;</td>
+  <td nowrap="nowrap">Giovanna Felipe Guimarães&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3016">3016</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3016&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">164.41.179.202&nbsp;</td>
+  <td nowrap="nowrap">12:48:16 -03 - 28/Jun/2025</td>
+  <td nowrap="nowrap">14:47:36 -03 - 28/Jun/2025</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB/Darcy Ribeiro] Giovanna Sperandio&nbsp;</td>
+  <td nowrap="nowrap">Giovanna Sperandio&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3017">3017</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3017&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB/Darcy Ribeiro] Helena Miranda Longo&nbsp;</td>
+  <td nowrap="nowrap">Helena Miranda Longo&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3018">3018</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3018&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UDF] Ingrid Alexandre Fernandes Sousa&nbsp;</td>
+  <td nowrap="nowrap">Ingrid Alexandre Fernandes Sousa&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3019">3019</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3019&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UFU] Isabela Cunha Silva&nbsp;</td>
+  <td nowrap="nowrap">Isabela Cunha Silva&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3020">3020</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3020&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">164.41.179.155&nbsp;</td>
+  <td nowrap="nowrap">14:24:30 -03 - 28/Jun/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3020')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[CEUB] Jhenifer Ferreira Meneses&nbsp;</td>
+  <td nowrap="nowrap">Jhenifer Ferreira Meneses&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3021">3021</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3021&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">164.41.179.133&nbsp;</td>
+  <td nowrap="nowrap">13:28:21 -03 - 28/Jun/2025</td>
+  <td nowrap="nowrap">16:31:25 -03 - 28/Jun/2025</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB/Darcy Ribeiro] Kamily Silva Andrade Crispim&nbsp;</td>
+  <td nowrap="nowrap">Kamily Silva Andrade Crispim&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3022">3022</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3022&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[IESB] Lanay Guimarães de Paiva&nbsp;</td>
+  <td nowrap="nowrap">Lanay Guimarães de Paiva&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3023">3023</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3023&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB/Darcy Ribeiro] Laura de Oliveira Romão&nbsp;</td>
+  <td nowrap="nowrap">Laura de Oliveira Romão&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3024">3024</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3024&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">164.41.179.221&nbsp;</td>
+  <td nowrap="nowrap">13:22:51 -03 - 28/Jun/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3024')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB/Darcy Ribeiro] Ludmila Aysha Oliveira Nunes&nbsp;</td>
+  <td nowrap="nowrap">Ludmila Aysha Oliveira Nunes&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3025">3025</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3025&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">164.41.179.210&nbsp;</td>
+  <td nowrap="nowrap">13:06:49 -03 - 28/Jun/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3025')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB/Darcy Ribeiro] Luisa Ribeiro de Oliveira&nbsp;</td>
+  <td nowrap="nowrap">Luisa Ribeiro de Oliveira&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3026">3026</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3026&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB/Darcy Ribeiro] Luiza dos Santos Costa&nbsp;</td>
+  <td nowrap="nowrap">Luiza dos Santos Costa&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3027">3027</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3027&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB/Darcy Ribeiro] Márcia Nunes Vieira&nbsp;</td>
+  <td nowrap="nowrap">Márcia Nunes Vieira&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3028">3028</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3028&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB/Darcy Ribeiro] Maria Clara Leal Gonçalves&nbsp;</td>
+  <td nowrap="nowrap">Maria Clara Leal Gonçalves&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3029">3029</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3029&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">164.41.178.68&nbsp;</td>
+  <td nowrap="nowrap">13:19:59 -03 - 28/Jun/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3029')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB/Darcy Ribeiro] Maria Clara Sena de Lima&nbsp;</td>
+  <td nowrap="nowrap">Maria Clara Sena de Lima&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3030">3030</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3030&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB/Darcy Ribeiro] Maria Eduarda dos Santos Marques&nbsp;</td>
+  <td nowrap="nowrap">Maria Eduarda dos Santos Marques&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3031">3031</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3031&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">164.41.179.183&nbsp;</td>
+  <td nowrap="nowrap">16:20:17 -03 - 28/Jun/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3031')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB/Darcy Ribeiro] Maria Ellen Guedes Montalvão&nbsp;</td>
+  <td nowrap="nowrap">Maria Ellen Guedes Montalvão&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3032">3032</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3032&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB/Darcy Ribeiro] Maria Laura Regis Cabral Dias&nbsp;</td>
+  <td nowrap="nowrap">Maria Laura Regis Cabral Dias&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3033">3033</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3033&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">164.41.178.109&nbsp;</td>
+  <td nowrap="nowrap">13:25:44 -03 - 28/Jun/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3033')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[ES] Marina Agostini Galdi&nbsp;</td>
+  <td nowrap="nowrap">Marina Agostini Galdi&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3034">3034</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3034&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">164.41.179.154&nbsp;</td>
+  <td nowrap="nowrap">13:32:00 -03 - 28/Jun/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3034')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB/Darcy Ribeiro] Micaele Dias Alves&nbsp;</td>
+  <td nowrap="nowrap">Micaele Dias Alves&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3035">3035</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3035&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">164.41.178.112&nbsp;</td>
+  <td nowrap="nowrap">15:01:25 -03 - 28/Jun/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3035')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB/FCTE] Milena Fernandes Rocha&nbsp;</td>
+  <td nowrap="nowrap">Milena Fernandes Rocha&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3036">3036</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3036&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">164.41.178.89&nbsp;</td>
+  <td nowrap="nowrap">14:37:17 -03 - 28/Jun/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3036')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB/FCTE] Mylena Trindade de Mendonça&nbsp;</td>
+  <td nowrap="nowrap">Mylena Trindade de Mendonça&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3037">3037</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3037&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">164.41.179.163&nbsp;</td>
+  <td nowrap="nowrap">14:51:55 -03 - 28/Jun/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3037')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB/Darcy Ribeiro] Natalie Santos Tanoff&nbsp;</td>
+  <td nowrap="nowrap">Natalie Santos Tanoff&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3038">3038</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3038&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">164.41.178.111&nbsp;</td>
+  <td nowrap="nowrap">15:18:57 -03 - 28/Jun/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3038')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB/Darcy Ribeiro] Samira Gabriela Laquiz&nbsp;</td>
+  <td nowrap="nowrap">Samira Gabriela Laquiz&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3039">3039</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3039&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UFU] Sanmyla Silva Costa&nbsp;</td>
+  <td nowrap="nowrap">Sanmyla Silva Costa&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3040">3040</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3040&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">164.41.178.95&nbsp;</td>
+  <td nowrap="nowrap">15:15:48 -03 - 28/Jun/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3040')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB/Darcy Ribeiro] Sarah Cristina Lopes Silva&nbsp;</td>
+  <td nowrap="nowrap">Sarah Cristina Lopes Silva&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3041">3041</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3041&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[IFB/CBSB] Sarah Fróes de Barros Leite&nbsp;</td>
+  <td nowrap="nowrap">Sarah Fróes de Barros Leite&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3042">3042</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3042&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">164.41.178.118&nbsp;</td>
+  <td nowrap="nowrap">13:15:10 -03 - 28/Jun/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3042')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB/Darcy Ribeiro] Sofya Soares Lima de Souza&nbsp;</td>
+  <td nowrap="nowrap">Sofya Soares Lima de Souza&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3043">3043</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3043&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB/Darcy Ribeiro] Tarsila Marques de Oliveira Alves&nbsp;</td>
+  <td nowrap="nowrap">Tarsila Marques de Oliveira Alves&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3044">3044</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3044&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">164.41.178.114&nbsp;</td>
+  <td nowrap="nowrap">13:13:55 -03 - 28/Jun/2025</td>
+  <td nowrap="nowrap">16:14:48 -03 - 28/Jun/2025</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB/Darcy Ribeiro] Thaís Gabriely Rocha Xavier&nbsp;</td>
+  <td nowrap="nowrap">Thaís Gabriely Rocha Xavier&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3045">3045</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3045&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">164.41.178.84&nbsp;</td>
+  <td nowrap="nowrap">13:07:24 -03 - 28/Jun/2025</td>
+  <td nowrap="nowrap">16:14:47 -03 - 28/Jun/2025</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB/Darcy Ribeiro] Valquíria dos Santos Machado&nbsp;</td>
+  <td nowrap="nowrap">Valquíria dos Santos Machado&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3046">3046</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3046&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">164.41.179.158&nbsp;</td>
+  <td nowrap="nowrap">12:59:37 -03 - 28/Jun/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3046')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UCB] Yasmin Vitória Costa de lima&nbsp;</td>
+  <td nowrap="nowrap">Yasmin Vitória Costa de lima&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=3047">3047</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3047&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">164.41.179.152&nbsp;</td>
+  <td nowrap="nowrap">13:23:22 -03 - 28/Jun/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3047')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[EM/Pódion] Ana Júlia Quirino de Oliveira&nbsp;</td>
+  <td nowrap="nowrap">Ana Júlia Quirino de Oliveira&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=9000">9000</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">judgeadne&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">judge&nbsp;</td>
+  <td nowrap="nowrap">179.214.70.94&nbsp;</td>
+  <td nowrap="nowrap">22:54:14 -03 - 27/Jun/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=9000')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">judgeadne&nbsp;</td>
+  <td nowrap="nowrap">judgeadne&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=9001">9001</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">judgebelphy&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">judge&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">judgebelphy&nbsp;</td>
+  <td nowrap="nowrap">judgebelphy&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=9002">9002</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">judgeemerson&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">judge&nbsp;</td>
+  <td nowrap="nowrap">172.29.47.223&nbsp;</td>
+  <td nowrap="nowrap">10:13:57 -03 - 25/Jun/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=9002')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">judgeemerson&nbsp;</td>
+  <td nowrap="nowrap">judgeemerson&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=9003">9003</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">judgeiasmin&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">judge&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">judgeiasmin&nbsp;</td>
+  <td nowrap="nowrap">judgeiasmin&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=9004">9004</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">judgeisa&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">judge&nbsp;</td>
+  <td nowrap="nowrap">164.41.179.236&nbsp;</td>
+  <td nowrap="nowrap">12:48:27 -03 - 27/Jun/2025</td>
+  <td nowrap="nowrap">12:49:35 -03 - 27/Jun/2025</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">judgeisa&nbsp;</td>
+  <td nowrap="nowrap">judgeisa&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=9005">9005</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">judgelucas&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">judge&nbsp;</td>
+  <td nowrap="nowrap">164.41.179.45&nbsp;</td>
+  <td nowrap="nowrap">16:02:08 -03 - 28/Jun/2025</td>
+  <td nowrap="nowrap">16:06:53 -03 - 28/Jun/2025</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">judgelucas&nbsp;</td>
+  <td nowrap="nowrap">judgelucas&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=9006">9006</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">judgemaristela&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">judge&nbsp;</td>
+  <td nowrap="nowrap">177.18.22.80&nbsp;</td>
+  <td nowrap="nowrap">13:53:47 -03 - 27/Jun/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=9006')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">judgemaristela&nbsp;</td>
+  <td nowrap="nowrap">judgemaristela&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=9007">9007</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">judgemaxwell&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">judge&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">judgemaxwell&nbsp;</td>
+  <td nowrap="nowrap">judgemaxwell&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=9008">9008</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">judgepedro&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">judge&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">judgepedro&nbsp;</td>
+  <td nowrap="nowrap">judgepedro&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=9009">9009</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">judgevarguitas&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">judge&nbsp;</td>
+  <td nowrap="nowrap">164.41.179.240&nbsp;</td>
+  <td nowrap="nowrap">12:40:04 -03 - 27/Jun/2025</td>
+  <td nowrap="nowrap">12:49:14 -03 - 27/Jun/2025</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">judgevarguitas&nbsp;</td>
+  <td nowrap="nowrap">judgevarguitas&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=9010">9010</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">judgevinicius&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">judge&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">judgevinicius&nbsp;</td>
+  <td nowrap="nowrap">judgevinicius&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=10000">10000</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">adminisa&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">admin&nbsp;</td>
+  <td nowrap="nowrap">177.174.219.170&nbsp;</td>
+  <td nowrap="nowrap">17:10:04 -03 - 28/Jun/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=10000')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">adminisa&nbsp;</td>
+  <td nowrap="nowrap">adminisa&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=10001">10001</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">adminsaad&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">admin&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">adminsaad&nbsp;</td>
+  <td nowrap="nowrap">adminsaad&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=11000">11000</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">staff&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">staff&nbsp;</td>
+  <td nowrap="nowrap">164.41.179.49&nbsp;</td>
+  <td nowrap="nowrap">12:31:09 -03 - 28/Jun/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=11000')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Staff&nbsp;</td>
+  <td nowrap="nowrap">Staff&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://mfpunb.maratonasdf.com.br/boca/admin/user.php?site=1&amp;user=12000">12000</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">score&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">score&nbsp;</td>
+  <td nowrap="nowrap">164.41.179.45&nbsp;</td>
+  <td nowrap="nowrap">16:07:00 -03 - 28/Jun/2025</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=12000')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">score&nbsp;</td>
+  <td nowrap="nowrap">score&nbsp;</td>
+</tr></tbody></table>
+<script language="JavaScript" src="users_files/sha256.js"></script>
+<script language="JavaScript" src="users_files/hex.js"></script>
+<script language="JavaScript">
+function computeHASH()
+{
+	document.form3.passwordn1.value = bighexsoma(js_myhash(document.form3.passwordn1.value),js_myhash(document.form3.passwordo.value));
+	document.form3.passwordn2.value = bighexsoma(js_myhash(document.form3.passwordn2.value),js_myhash(document.form3.passwordo.value));
+	document.form3.passwordo.value = js_myhash(js_myhash(document.form3.passwordo.value)+'172m68ktcv5ntudecvt0ktlc1q');
+//	document.form3.passwordn1.value = js_myhash(document.form3.passwordn1.value);
+//	document.form3.passwordn2.value = js_myhash(document.form3.passwordn2.value);
+}
+</script>
+
+<br><br><center><b>Clicking on a user number will bring the user data for edition.<br>
+To import the users, just fill in the import file field.<br>
+The file must be in the format defined in the admin's manual.</b></center>
+
+<form name="form1" enctype="multipart/form-data" method="post" action="user.php">
+  <input type="hidden" name="confirmation" value="noconfirm">
+  <center>
+    <table border="0">
+      <tbody><tr>
+        <td width="25%" align="right">Import file:</td>
+        <td width="75%">
+          <input type="file" name="importfile" size="40">
+        </td>
+      </tr>
+    </tbody></table>
+  </center>
+  <script language="javascript">
+    function conf() {
+      if (confirm("Confirm?")) {
+        document.form1.confirmation.value='confirm';
+      }
+    }
+  </script>
+  <center>
+      <input type="submit" name="Submit" value="Import" onclick="conf()">
+      <input type="reset" name="Submit2" value="Clear">
+  </center>
+</form>
+
+  <br><br>
+  <center>
+<b>To create/edit one user, enter the data below.<br>
+Note that any changes will overwrite the already defined data.<br>
+(Specially care if you use a user number that is already existent.)<br>
+<br>
+</b>
+    <center>
+    </center><table border="0">
+<form name="form3" action="user.php" method="post"></form>
+  <input type="hidden" name="confirmation" value="noconfirm">
+  <script language="javascript">
+    function conf3() {
+      computeHASH();
+      if (confirm("Confirm?")) {
+        document.form3.confirmation.value='confirm';
+      }
+    }
+    function conf5() {
+      document.form3.confirmation.value='noconfirm';
+    }
+  </script>
+   </table><table border="0">
+      <tbody><tr> 
+        <td width="35%" align="right">User Site Number:</td>
+        <td width="65%">
+	  <input type="text" name="usersitenumber" value="1" size="20" maxlength="20">
+        </td>
+      </tr>
+      <tr> 
+        <td width="35%" align="right">User Number:</td>
+        <td width="65%">
+	  <input type="text" name="usernumber" size="20" maxlength="20">
+        </td>
+      </tr>
+      <tr> 
+        <td width="35%" align="right">Username:</td>
+        <td width="65%">
+	  <input type="text" name="username" size="20" maxlength="20">
+        </td>
+      </tr>
+      <tr> 
+        <td width="35%" align="right">ICPC ID:</td>
+        <td width="65%">
+	  <input type="text" name="usericpcid" size="20" maxlength="50">
+        </td>
+      </tr>
+      <tr> 
+        <td width="35%" align="right">Type:</td>
+        <td width="65%">
+		<select name="usertype">
+		<option selected="selected" value="team">Team</option>
+		<option value="judge">Judge</option>
+		<option value="admin">Admin</option>
+		<option value="staff">Staff</option>
+		<option value="score">Score</option>
+		        <option value="site">Site</option>
+        		</select>
+        </td>
+      </tr>
+      <tr> 
+        <td width="35%" align="right">Enabled:</td>
+        <td width="65%">
+		<select name="userenabled">
+		<option selected="selected" value="t">Yes</option>
+		<option value="f">No</option>
+		</select>
+        </td>
+      </tr>
+      <tr> 
+        <td width="35%" align="right">MultiLogins (local teams should be set to <b>No</b>):</td>
+        <td width="65%">
+		<select name="usermultilogin">
+		<option value="t">Yes</option>
+		<option selected="selected" value="f">No</option>
+		</select>
+        </td>
+      </tr>
+      <tr> 
+        <td width="35%" align="right">User Full Name:</td>
+        <td width="65%">
+	  <input type="text" name="userfullname" size="50" maxlength="200">
+        </td>
+      </tr>
+      <tr> 
+        <td width="35%" align="right">User Description:</td>
+        <td width="65%">
+	  <input type="text" name="userdesc" size="50" maxlength="300">
+        </td>
+      </tr>
+      <tr> 
+        <td width="35%" align="right">User IP:</td>
+        <td width="65%">
+	  <input type="text" name="userip" size="20" maxlength="20">
+        </td>
+      </tr>
+      <tr> 
+        <td width="35%" align="right">Password:</td>
+        <td width="65%">
+	  <input type="password" name="passwordn1" value="" size="20" maxlength="200">
+        </td>
+      </tr>
+      <tr> 
+        <td width="35%" align="right">Retype Password:</td>
+        <td width="65%">
+	  <input type="password" name="passwordn2" value="" size="20" maxlength="200">
+        </td>
+      </tr>
+      <tr> 
+        <td width="35%" align="right">Allow password change:</td>
+        <td width="65%">
+		<select name="changepass">
+		<option value="t">Yes</option>
+		<option selected="selected" value="f">No</option>
+		</select>
+        </td>
+      </tr>
+      <tr> 
+        <td width="35%" align="right">Admin (this user) Password:</td>
+        <td width="65%">
+	  <input type="password" name="passwordo" value="" size="20" maxlength="200">
+        </td>
+      </tr>
+    </tbody></table>
+  </center>
+  <center>
+      <input type="submit" name="Submit" value="Send" onclick="conf3()">
+      <input type="submit" name="Cancel" value="Cancel" onclick="conf5()">
+  </center>
+
+
+
+
+</body></html>
