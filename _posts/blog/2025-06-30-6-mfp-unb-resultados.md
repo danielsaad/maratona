@@ -16,7 +16,7 @@ Olá, pessoal.
 
 Gostaríamos de agradecer a todos que participaram e contribuíram com o evento.
 
-Abaixo seguem os mais bem colocados, os créditos da comissão organizadora e recursos como: placar final, caderno de problemas e tutoriais.
+Abaixo seguem os mais bem colocados, os créditos da comissão organizadora e recursos como: placar final e caderno de problemas.
 
 ## Cinco Melhores (Geral)
 
