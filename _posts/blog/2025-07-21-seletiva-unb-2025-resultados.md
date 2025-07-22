@@ -16,7 +16,7 @@ Olá, pessoal.
 
 Gostaríamos de agradecer a todos que participaram e contribuíram com o evento.
 
-O caderno e o evento foram [dedicados] ao professor Vinicius Ruela Pereira Borges, que temporariamente nos
+O caderno e o evento foram [dedicados]({{site.url}}/assets/seletiva-unb-2025/dedicatoria.pdf) ao professor Vinicius Ruela Pereira Borges, que temporariamente nos
 deixará para focar no seu pós-doutorado. Aguardamos ansiosos pelo retorno dele.
 
 Abaixo seguem os mais bem colocados, os créditos da comissão organizadora e recursos como: placar final e caderno de problemas.
