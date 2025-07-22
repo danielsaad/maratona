@@ -26,7 +26,7 @@ Abaixo seguem os mais bem colocados, os créditos da comissão organizadora e re
 - **[UnB/Darcy] Los Tralalelitos dizem FLAMENGOOO**: Lucas Sala Cruz, Wilson Oliveira Guimarães Neto e Eduardo Quirino de Oliveira
 - **[UnB/Darcy] My Little Paçoca do Chico Bento**: Pedro Avila Beneveli, Emerson Luiz Cruz Junior e Lucas Gabriel de Oliveira Lima
 - **[UnB/Darcy] Tamo competindo, tamo competindo**: Luiz Eduardo Pereira dos Reis, Henrique de Oliveira Ramos e Henrique Quirino de Oliveira
-- **[UnB/Darcy] |cinema| ฅ^•ﻌ•^ฅ**: Cauê de Macedo Britto Trindade de Sousa, Caleb martim de oliveira e João Vitor Fonseca Pimenta
+- **[UnB/Darcy] abs(cinema) ฅ^•ﻌ•^ฅ**: Cauê de Macedo Britto Trindade de Sousa, Caleb martim de oliveira e João Vitor Fonseca Pimenta
 - **[UnB/Darcy] gua.co de botas**: Iasmim de Queiroz Freitas, Adrielly Medeiros Nunes e Isabela Souza Sisnando de Araujo
 
 ## Organização
@@ -69,8 +69,8 @@ Abaixo seguem os mais bem colocados, os créditos da comissão organizadora e re
 
 ## Recursos
 
-- [Caderno de Problemas]({{site.url}}/assets/unb/caderno-seletiva-unb-2025.pdf)
-- [Tutoriais]({{site.url}}/assets/unb/tutoriais-seletiva-unb-2025.pdf)
+- [Caderno de Problemas]({{site.url}}/assets/seletiva-unb-2025/caderno-seletiva-unb-2025.pdf)
+- [Tutoriais]({{site.url}}/assets/seletiva-unb-2025/tutoriais-seletiva-unb-2025.pdf)
 - [Scoreboard]({{site.url}}/assets/seletiva-unb-2025/scoreboard.html)
 - [Estatísticas]({{site.url}}/assets/seletiva-unb-2025/statistics.html)
 - [Run list]({{site.url}}/assets/seletiva-unb-2025/runlist.html)
