@@ -1,0 +1,1228 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- BOCA boca-1.5.21. Copyright (c) 2003-2024 Cassio Polpo de Campos -->
+<!-- http://www.ime.usp.br/~cassio/boca                                  -->
+<!-- This program is free software: you can redistribute it and/or modify  -->
+<!-- it under the terms of the GNU General Public License as published by -->
+<!-- the Free Software Foundation, either version 3 of the License, or -->
+<!-- (at your option) any later version. A copy of the  -->
+<!-- license can be found with this software or at http://www.gnu.org/licenses/ -->
+<html><head><title>Admin's Page</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="users_files/Css.php" type="text/css">
+</head><body id="body"><table border="1" width="100%">
+<tbody><tr><td nowrap="nowrap" bgcolor="eeee00" align="center"><img src="users_files/smallballoontransp.png" alt=""><font color="#000000">BOCA</font></td><td bgcolor="#eeee00" width="99%">
+Username: Administrator (site=1)<br>
+</td><td bgcolor="#eeee00" align="center" nowrap="nowrap">&nbsp;contest not running&nbsp;</td></tr>
+</tbody></table>
+<table border="0" width="100%" align="center">
+ <tbody><tr>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://unboca.naquadah.com.br/boca/admin/run.php">Runs</a></td>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://unboca.naquadah.com.br/boca/admin/score.php">Score</a></td>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://unboca.naquadah.com.br/boca/admin/clar.php">Clarifications</a></td>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://unboca.naquadah.com.br/boca/admin/user.php">Users</a></td>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://unboca.naquadah.com.br/boca/admin/problem.php">Problems</a></td>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://unboca.naquadah.com.br/boca/admin/language.php">Languages</a></td>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://unboca.naquadah.com.br/boca/admin/answer.php">Answers</a></td>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://unboca.naquadah.com.br/boca/admin/misc.php">Misc</a></td>
+ </tr><tr>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://unboca.naquadah.com.br/boca/admin/task.php">Tasks</a></td>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://unboca.naquadah.com.br/boca/admin/site.php">Site</a></td>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://unboca.naquadah.com.br/boca/admin/contest.php">Contest</a></td>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://unboca.naquadah.com.br/boca/admin/log.php">Logs</a></td>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://unboca.naquadah.com.br/boca/admin/report.php">Reports</a></td>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://unboca.naquadah.com.br/boca/admin/files.php">Backups</a></td>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://unboca.naquadah.com.br/boca/admin/option.php">Options</a></td>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://unboca.naquadah.com.br/boca/index.php">Logout</a></td>
+ </tr>
+</tbody></table>
+
+  <script language="javascript">
+    function conf2(url) {
+      if (confirm("Are you sure?")) {
+        document.location=url;
+      } else {
+        document.location='user.php';
+      }
+    }
+  </script>
+<br>
+<table width="100%" border="1">
+ <tbody><tr>
+  <td nowrap="nowrap"><b>User #</b></td>
+  <td><b>Site</b></td>
+  <td><b>Username</b></td>
+  <td><b>ICPC ID</b></td>
+  <td><b>Type</b></td>
+  <td><b>IP</b></td>
+  <td><b>LastLogin</b></td>
+  <td><b>LastLogout</b></td>
+  <td><b>Enabled</b></td>
+  <td><b>Multi</b></td>
+  <td><b>Fullname</b></td>
+  <td><b>Description</b></td>
+ </tr>
+ <tr>
+  <td nowrap="nowrap">1000</td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">admin&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">admin&nbsp;</td>
+  <td nowrap="nowrap">164.41.127.89&nbsp;</td>
+  <td nowrap="nowrap">09:17:14 -03 - 26/Apr/2026</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=1000')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Administrator&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://unboca.naquadah.com.br/boca/admin/user.php?site=1&amp;user=2001">2001</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team2001&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">164.41.127.89&nbsp;</td>
+  <td nowrap="nowrap">13:56:36 -03 - 25/Apr/2026</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=2001')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UFG] linguiça e farinha&nbsp;</td>
+  <td nowrap="nowrap">Felipe Luz Leroy; Arthur Martins Batista; Gabriel dos Santos Oliveira&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://unboca.naquadah.com.br/boca/admin/user.php?site=1&amp;user=2005">2005</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team2005&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">164.41.127.89&nbsp;</td>
+  <td nowrap="nowrap">14:29:43 -03 - 25/Apr/2026</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=2005')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UFG] Monkeys: simulada maluca team XX&nbsp;</td>
+  <td nowrap="nowrap">Eduardo Machado leal ; Davi Saraiva coelho; Luiz Felipe Brilhante dos Santos Mendes&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://unboca.naquadah.com.br/boca/admin/user.php?site=1&amp;user=2016">2016</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team2016&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">164.41.127.89&nbsp;</td>
+  <td nowrap="nowrap">10:39:09 -03 - 25/Apr/2026</td>
+  <td nowrap="nowrap">15:58:45 -03 - 25/Apr/2026</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UFG] Monkeys: simulada maluca team 69&nbsp;</td>
+  <td nowrap="nowrap">Danilo Lourenço Macedo Dias; Felipe do Espírito Santo Sabino; Wevton Junior Fagundes Santana&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://unboca.naquadah.com.br/boca/admin/user.php?site=1&amp;user=2018">2018</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team2018&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">164.41.127.89&nbsp;</td>
+  <td nowrap="nowrap">10:40:29 -03 - 25/Apr/2026</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=2018')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UFG] DebugADAS&nbsp;</td>
+  <td nowrap="nowrap">Raphaelle Silva de Oliveira ; Emilly Ranny Dias Silva ; Gabriela Brasileiro Machado&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://unboca.naquadah.com.br/boca/admin/user.php?site=1&amp;user=2033">2033</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team2033&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">164.41.127.89&nbsp;</td>
+  <td nowrap="nowrap">11:55:04 -03 - 25/Apr/2026</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=2033')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UFG] Corrola manual&nbsp;</td>
+  <td nowrap="nowrap">Matheus Guilherme de Oliveira Moreno; Adriam Felipe Santos da Luz ; Walisson Fagundes Santana&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://unboca.naquadah.com.br/boca/admin/user.php?site=1&amp;user=2040">2040</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team2040&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">164.41.127.89&nbsp;</td>
+  <td nowrap="nowrap">10:45:15 -03 - 25/Apr/2026</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=2040')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UFG] Lorem Ipsum&nbsp;</td>
+  <td nowrap="nowrap">Monik Alves da Costa; Andressa Alves Martins; Yingfan Zhang&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://unboca.naquadah.com.br/boca/admin/user.php?site=1&amp;user=2055">2055</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team2055&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">164.41.127.89&nbsp;</td>
+  <td nowrap="nowrap">10:42:36 -03 - 25/Apr/2026</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=2055')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UFG] Monkeys: simulada maluca team 1&nbsp;</td>
+  <td nowrap="nowrap">Tiago Fonseca Pio; Dimas Heitor Lamunier Araújo Mesquita; Gustavo Linhares Rodrigues&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://unboca.naquadah.com.br/boca/admin/user.php?site=1&amp;user=3002">3002</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3002&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">164.41.127.89&nbsp;</td>
+  <td nowrap="nowrap">10:39:37 -03 - 25/Apr/2026</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3002')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB] Your Bluetooth Device is Ready to Pair&nbsp;</td>
+  <td nowrap="nowrap">Caio Cordeiro de Sousa ; Adrielly Vitória Costa de Lima; Rafael Dias Ghiorzi&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://unboca.naquadah.com.br/boca/admin/user.php?site=1&amp;user=3003">3003</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3003&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">164.41.127.89&nbsp;</td>
+  <td nowrap="nowrap">10:47:00 -03 - 25/Apr/2026</td>
+  <td nowrap="nowrap">16:03:27 -03 - 25/Apr/2026</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB] Cascata de Falhas&nbsp;</td>
+  <td nowrap="nowrap">Vinícius dos Santos Evangelista Dias ; Raphael Mendes da Silva; André João Cordeiro Gomes&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://unboca.naquadah.com.br/boca/admin/user.php?site=1&amp;user=3004">3004</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3004&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">164.41.127.89&nbsp;</td>
+  <td nowrap="nowrap">10:45:00 -03 - 25/Apr/2026</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3004')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB] It: A Coisa, um balão só :)&nbsp;</td>
+  <td nowrap="nowrap">Cibelly Lourenço Ferreira; Yasmin Sousa Abdon; Ana Clara Teixeira Guimarães&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://unboca.naquadah.com.br/boca/admin/user.php?site=1&amp;user=3006">3006</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3006&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">164.41.127.89&nbsp;</td>
+  <td nowrap="nowrap">16:04:22 -03 - 25/Apr/2026</td>
+  <td nowrap="nowrap">16:05:06 -03 - 25/Apr/2026</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB] MGC&nbsp;</td>
+  <td nowrap="nowrap">Caio Felipe Alcantara Nascimento ; Pedro Oliveira Melo; João Vítor Sauma de Faria&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://unboca.naquadah.com.br/boca/admin/user.php?site=1&amp;user=3007">3007</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3007&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">164.41.127.89&nbsp;</td>
+  <td nowrap="nowrap">16:04:19 -03 - 25/Apr/2026</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3007')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB] Dipirona&nbsp;</td>
+  <td nowrap="nowrap">Gabriel Sales Gerardo; Tarsila Marques de Oliveira Alves; Leonardo Tomé Sampaio&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://unboca.naquadah.com.br/boca/admin/user.php?site=1&amp;user=3008">3008</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3008&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">164.41.127.89&nbsp;</td>
+  <td nowrap="nowrap">10:39:53 -03 - 25/Apr/2026</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3008')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB] Calangada(Cerrado)&nbsp;</td>
+  <td nowrap="nowrap">Gustavo Roberto Silva de Melo; Juan Pablo Ricarte de Barros; Tiago Santos Bittencourt&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://unboca.naquadah.com.br/boca/admin/user.php?site=1&amp;user=3009">3009</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3009&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">164.41.127.89&nbsp;</td>
+  <td nowrap="nowrap">10:38:28 -03 - 25/Apr/2026</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3009')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB] seg fault&nbsp;</td>
+  <td nowrap="nowrap">Helena Miranda Longo; Ana Luiza Campos Coelho; Felipe Avila Maia&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://unboca.naquadah.com.br/boca/admin/user.php?site=1&amp;user=3011">3011</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3011&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">164.41.127.89&nbsp;</td>
+  <td nowrap="nowrap">15:03:00 -03 - 25/Apr/2026</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3011')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB] Por água abaixo&nbsp;</td>
+  <td nowrap="nowrap">Vinícius Pereira Ribeiro; Leonardo Gonçalves Machado; Cauã Matheus Alves Corrêa&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://unboca.naquadah.com.br/boca/admin/user.php?site=1&amp;user=3012">3012</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3012&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB] MSN&nbsp;</td>
+  <td nowrap="nowrap">Gabriel Caixeta Romero ; Lucas Saad Rodrigues ; Lucca Schoen de Almeida&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://unboca.naquadah.com.br/boca/admin/user.php?site=1&amp;user=3013">3013</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3013&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">164.41.127.89&nbsp;</td>
+  <td nowrap="nowrap">15:54:12 -03 - 25/Apr/2026</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3013')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB] pySandu All Stars&nbsp;</td>
+  <td nowrap="nowrap">Élvis Corrêa Miranda Júnior; Leonardo Mileo Krauss Guimarães; Pedro Marcinoni Varão Ribeiro Vieira da Rosa&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://unboca.naquadah.com.br/boca/admin/user.php?site=1&amp;user=3015">3015</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3015&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">164.41.127.89&nbsp;</td>
+  <td nowrap="nowrap">10:41:11 -03 - 25/Apr/2026</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3015')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB] vou colocar qualquer coisa aqui&nbsp;</td>
+  <td nowrap="nowrap">Iago Rocha Santos Marques; Arthur de Melo Viana; Caio Felipe Rocha Rodrigues&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://unboca.naquadah.com.br/boca/admin/user.php?site=1&amp;user=3022">3022</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3022&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">164.41.127.89&nbsp;</td>
+  <td nowrap="nowrap">10:47:32 -03 - 25/Apr/2026</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3022')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB] Black partes and white wolf&nbsp;</td>
+  <td nowrap="nowrap">Guilherme Oliveira Monteiro; Marcos Vinicius Monteiro; Luciano Alves do Brasil schindel machado&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://unboca.naquadah.com.br/boca/admin/user.php?site=1&amp;user=3026">3026</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3026&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">164.41.127.89&nbsp;</td>
+  <td nowrap="nowrap">10:54:02 -03 - 25/Apr/2026</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3026')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB] Chappell Roan, vc tá jurada aqui em São Sebastião&nbsp;</td>
+  <td nowrap="nowrap">Adrielly Medeiros Nunes; Luísa Ribeiro de Oliveira; Nikolle dos Santos Licá&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://unboca.naquadah.com.br/boca/admin/user.php?site=1&amp;user=3027">3027</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3027&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">164.41.127.89&nbsp;</td>
+  <td nowrap="nowrap">10:44:56 -03 - 25/Apr/2026</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3027')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB] Zeka, zika e zuka acabaram de subir no placar olha lá hahahaha&nbsp;</td>
+  <td nowrap="nowrap">Caio dias fleury; Kaio santos araujo; Enzo cardoso matins&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://unboca.naquadah.com.br/boca/admin/user.php?site=1&amp;user=3030">3030</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3030&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">164.41.127.89&nbsp;</td>
+  <td nowrap="nowrap">16:04:31 -03 - 25/Apr/2026</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3030')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB] nada sabo que nada sei&nbsp;</td>
+  <td nowrap="nowrap">Renan Pereira Reis; André Luís Livio Alvaro dos Santos; Ricardo Henrique Silva Rodrigues&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://unboca.naquadah.com.br/boca/admin/user.php?site=1&amp;user=3031">3031</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3031&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">164.41.127.89&nbsp;</td>
+  <td nowrap="nowrap">10:43:11 -03 - 25/Apr/2026</td>
+  <td nowrap="nowrap">16:02:36 -03 - 25/Apr/2026</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB] gipelio&nbsp;</td>
+  <td nowrap="nowrap">Helio de Oliveira Dias; Giovanni Daldegan; Pedro Henrique Braga da Silva&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://unboca.naquadah.com.br/boca/admin/user.php?site=1&amp;user=3032">3032</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3032&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">164.41.127.89&nbsp;</td>
+  <td nowrap="nowrap">10:53:32 -03 - 25/Apr/2026</td>
+  <td nowrap="nowrap">15:59:54 -03 - 25/Apr/2026</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB] pySanduuu&nbsp;</td>
+  <td nowrap="nowrap">Davi Galvão Guerra; Antonio Barros Coelho; Davi Brasileiro Gomes&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://unboca.naquadah.com.br/boca/admin/user.php?site=1&amp;user=3034">3034</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3034&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">164.41.127.89&nbsp;</td>
+  <td nowrap="nowrap">10:40:23 -03 - 25/Apr/2026</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3034')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB] Dedinhos Mágicos&nbsp;</td>
+  <td nowrap="nowrap">Yogi Nam de Souza Barbosa; Pedro Teixeira Moriel Sanchez; Marcos Vinícius Gündel da Silva&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://unboca.naquadah.com.br/boca/admin/user.php?site=1&amp;user=3035">3035</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3035&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">164.41.127.89&nbsp;</td>
+  <td nowrap="nowrap">11:07:36 -03 - 25/Apr/2026</td>
+  <td nowrap="nowrap">15:58:27 -03 - 25/Apr/2026</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB] Py.sandu mma experts opala 6 cilindros&nbsp;</td>
+  <td nowrap="nowrap">Gustavo Alves Dias; Daniel de Oliveira Morais; Lucas Mendes de Albuquerque Barreto Fonseca&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://unboca.naquadah.com.br/boca/admin/user.php?site=1&amp;user=3037">3037</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3037&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">164.41.127.89&nbsp;</td>
+  <td nowrap="nowrap">10:39:20 -03 - 25/Apr/2026</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3037')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB] Cpp no Duolingo&nbsp;</td>
+  <td nowrap="nowrap">Samuel Pereira da Silveira; Lucas Gabriel de Oliveira Lima; João Pedro Pirolo Oliveira&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://unboca.naquadah.com.br/boca/admin/user.php?site=1&amp;user=3038">3038</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3038&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB] rock lees da programação&nbsp;</td>
+  <td nowrap="nowrap">Ana Carolina Madeira Fialho; Guilherme Flyan Araujo; João Carlos Lobo Sousa Monteiro&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://unboca.naquadah.com.br/boca/admin/user.php?site=1&amp;user=3039">3039</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3039&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">164.41.127.89&nbsp;</td>
+  <td nowrap="nowrap">15:50:23 -03 - 25/Apr/2026</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3039')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB] prometa que o coffee break não vai ser no ru&nbsp;</td>
+  <td nowrap="nowrap">João Carlos Gonçalves de Oliveira Filho; Arthur da Silva Pereira Bispo; Ana Luísa de Souza Paraguassu&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://unboca.naquadah.com.br/boca/admin/user.php?site=1&amp;user=3041">3041</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3041&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">164.41.127.89&nbsp;</td>
+  <td nowrap="nowrap">10:52:42 -03 - 25/Apr/2026</td>
+  <td nowrap="nowrap">16:01:20 -03 - 25/Apr/2026</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB] casoCamelo&nbsp;</td>
+  <td nowrap="nowrap">Diego Carlito Rodrigues de Souza; Marcos Antonio Teles de Castilhos; João Antonio Ginuino Carvalho&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://unboca.naquadah.com.br/boca/admin/user.php?site=1&amp;user=3044">3044</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3044&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">164.41.127.89&nbsp;</td>
+  <td nowrap="nowrap">10:35:56 -03 - 25/Apr/2026</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3044')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB] abs(cinema)&nbsp;</td>
+  <td nowrap="nowrap">Cauê de Macedo Britto Trindade de Sousa; João Vítor Fonseca Pimenta; Caleb Martim de Oliveira&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://unboca.naquadah.com.br/boca/admin/user.php?site=1&amp;user=3045">3045</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3045&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">164.41.127.89&nbsp;</td>
+  <td nowrap="nowrap">10:47:27 -03 - 25/Apr/2026</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3045')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB] Escolher o Nome do Time é NP&nbsp;</td>
+  <td nowrap="nowrap">Henrique de Oliveira Ramos; Isabela Souza Sisnando de Araujo ; Nirva Neves de Macedo&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://unboca.naquadah.com.br/boca/admin/user.php?site=1&amp;user=3046">3046</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3046&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">164.41.127.89&nbsp;</td>
+  <td nowrap="nowrap">15:04:43 -03 - 25/Apr/2026</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3046')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB] Stranger Strings&nbsp;</td>
+  <td nowrap="nowrap">Maria Eduarda de Oliveira Gomes; Júlia Amanda Silva Lima; Agatha Natasha Ferreira da Silva Vieira&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://unboca.naquadah.com.br/boca/admin/user.php?site=1&amp;user=3047">3047</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3047&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">164.41.127.89&nbsp;</td>
+  <td nowrap="nowrap">10:38:56 -03 - 25/Apr/2026</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3047')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB] COMO DIMINUI A FONTE&nbsp;</td>
+  <td nowrap="nowrap">Giovanna Liberato Raulino ; Heitor Rodrigues de Farias; Enriko de Santana Barbosa&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://unboca.naquadah.com.br/boca/admin/user.php?site=1&amp;user=3048">3048</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3048&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">164.41.127.89&nbsp;</td>
+  <td nowrap="nowrap">15:59:06 -03 - 25/Apr/2026</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3048')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB] telefone com fio&nbsp;</td>
+  <td nowrap="nowrap">Pedro Avila Beneveli; Emerson Luiz Cruz Junior; Iasmim de Queiroz Freitas&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://unboca.naquadah.com.br/boca/admin/user.php?site=1&amp;user=3049">3049</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3049&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">164.41.127.89&nbsp;</td>
+  <td nowrap="nowrap">10:38:39 -03 - 25/Apr/2026</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3049')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB] tudo passa em O(edson)&nbsp;</td>
+  <td nowrap="nowrap">Ana Luiza Komatsu Aroeira; Maria Clara Sena de Lima; Ana Joyce Guedes Amorim da Silva&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://unboca.naquadah.com.br/boca/admin/user.php?site=1&amp;user=3050">3050</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3050&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">164.41.127.89&nbsp;</td>
+  <td nowrap="nowrap">10:39:16 -03 - 25/Apr/2026</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3050')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB] Sapezalenses&nbsp;</td>
+  <td nowrap="nowrap">Caio Ferreira Duarte; Daniel Rodrigues Nascimento; Rafael Welz Schadt&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://unboca.naquadah.com.br/boca/admin/user.php?site=1&amp;user=3053">3053</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3053&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">164.41.127.89&nbsp;</td>
+  <td nowrap="nowrap">12:54:43 -03 - 25/Apr/2026</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3053')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB] Brasília Military Middle School 2017&nbsp;</td>
+  <td nowrap="nowrap">Arthur Menezes Botelho; Luiz Eduardo Pereira dos Reis; Henrique Quirino de Oliveira&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://unboca.naquadah.com.br/boca/admin/user.php?site=1&amp;user=3054">3054</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3054&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB] alexa ligar aura&nbsp;</td>
+  <td nowrap="nowrap">Antônio Fagundes Rodrigues de Souza; João Victor Martins Pereira; Henrique Puttini de Almeida&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://unboca.naquadah.com.br/boca/admin/user.php?site=1&amp;user=3056">3056</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3056&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">164.41.127.89&nbsp;</td>
+  <td nowrap="nowrap">11:03:21 -03 - 25/Apr/2026</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3056')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB] O time de cima é ruim! ops, não tem...&nbsp;</td>
+  <td nowrap="nowrap">Lucas Sala Cruz; Eduardo Quirino de Oliveira; Wilson Oliveira Guimarães Neto&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://unboca.naquadah.com.br/boca/admin/user.php?site=1&amp;user=4010">4010</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team4010&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">164.41.127.89&nbsp;</td>
+  <td nowrap="nowrap">17:55:51 -03 - 25/Apr/2026</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=4010')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UFU] Os 3 melhores de Anta Gorda - RS&nbsp;</td>
+  <td nowrap="nowrap">Marcelo Henrique Viana Santos; Gabriel Augusto Alves Borges; Anderson Gabriel Moura Ribeiro&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://unboca.naquadah.com.br/boca/admin/user.php?site=1&amp;user=4017">4017</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team4017&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">164.41.127.89&nbsp;</td>
+  <td nowrap="nowrap">13:40:15 -03 - 25/Apr/2026</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=4017')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UFU] Praise the Sonic&nbsp;</td>
+  <td nowrap="nowrap">Luís Augusto Queiroz Martins; Guilherme Cabral de Menezes; Carlos Cabral de Menezes Filho&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://unboca.naquadah.com.br/boca/admin/user.php?site=1&amp;user=4028">4028</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team4028&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">164.41.127.89&nbsp;</td>
+  <td nowrap="nowrap">10:43:29 -03 - 25/Apr/2026</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=4028')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UFU] Os caras estão no terminal&nbsp;</td>
+  <td nowrap="nowrap">Erick da Silva Marques; Matheus Tavares Roscoe; Eduardo Carvalho Valadão&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://unboca.naquadah.com.br/boca/admin/user.php?site=1&amp;user=4042">4042</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team4042&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">164.41.127.89&nbsp;</td>
+  <td nowrap="nowrap">11:12:45 -03 - 25/Apr/2026</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=4042')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UFU] Grafo de Botas&nbsp;</td>
+  <td nowrap="nowrap">Pedro Tavares Oliveira; Yasmin Pierazo Amaral; Ítalo Lorenzzo Resende Capuzzo&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://unboca.naquadah.com.br/boca/admin/user.php?site=1&amp;user=4043">4043</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team4043&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">164.41.127.89&nbsp;</td>
+  <td nowrap="nowrap">10:43:41 -03 - 25/Apr/2026</td>
+  <td nowrap="nowrap">16:01:13 -03 - 25/Apr/2026</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UFU] Os Caramelos&nbsp;</td>
+  <td nowrap="nowrap">Guilherme Rodrigues Martins; Rafael Luiz Gonçalves dos Santos; Luiz Henrique Pereira Pena&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://unboca.naquadah.com.br/boca/admin/user.php?site=1&amp;user=4051">4051</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team4051&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">164.41.127.89&nbsp;</td>
+  <td nowrap="nowrap">17:38:03 -03 - 25/Apr/2026</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=4051')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UFU] Aoooo pow(tencia)&nbsp;</td>
+  <td nowrap="nowrap">Victor Sisterolli Neto; Leandro Elias Fontes Carrijo; Leandro Silva Pina de Campos&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://unboca.naquadah.com.br/boca/admin/user.php?site=1&amp;user=4052">4052</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team4052&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">164.41.127.89&nbsp;</td>
+  <td nowrap="nowrap">10:45:09 -03 - 25/Apr/2026</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=4052')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UFU] Charlie´s Angels&nbsp;</td>
+  <td nowrap="nowrap">Isabela Cunha Silva; Maria Eduarda Gomes Kuhn; Maria Rita Vieira Souza&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://unboca.naquadah.com.br/boca/admin/user.php?site=1&amp;user=5014">5014</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team5014&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">164.41.127.89&nbsp;</td>
+  <td nowrap="nowrap">10:44:41 -03 - 25/Apr/2026</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=5014')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[IFB/CTAG] PUSHOFF 0&nbsp;</td>
+  <td nowrap="nowrap">Igor de Oliveira Moura ; Gabriel Cesar Silvino Xavier; Arthur Andrade Dolival&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://unboca.naquadah.com.br/boca/admin/user.php?site=1&amp;user=6019">6019</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team6019&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UDF] PMP - PEQUENOS, MAS ESFORÇADOS&nbsp;</td>
+  <td nowrap="nowrap">Davi José Carvalho Nascimento; Gabriel Dos Santos Paz; João Pedro Magalhães Walverde&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://unboca.naquadah.com.br/boca/admin/user.php?site=1&amp;user=7020">7020</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team7020&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">164.41.127.89&nbsp;</td>
+  <td nowrap="nowrap">10:40:53 -03 - 25/Apr/2026</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=7020')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[PUC-GO] Vai sobrar?&nbsp;</td>
+  <td nowrap="nowrap">Lucas Oliveira do Amaral; Daniel Júnior Teixeira Pinheiro ; Caio Felipe Brito Paranaiba&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://unboca.naquadah.com.br/boca/admin/user.php?site=1&amp;user=7021">7021</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team7021&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">164.41.127.89&nbsp;</td>
+  <td nowrap="nowrap">10:41:53 -03 - 25/Apr/2026</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=7021')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[PUC-GO] Oi posso coda&nbsp;</td>
+  <td nowrap="nowrap">Eduardo Augusto Moreira; Bruno Henrique de Souza; Alysson Victor Almeida Souza&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://unboca.naquadah.com.br/boca/admin/user.php?site=1&amp;user=7023">7023</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team7023&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">164.41.127.89&nbsp;</td>
+  <td nowrap="nowrap">10:42:25 -03 - 25/Apr/2026</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=7023')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[PUC-GO] Três contra o Judge&nbsp;</td>
+  <td nowrap="nowrap">João Guilherme Guimarães e Silva; Allann Barbosa Cintra; Matheus Henrique de Campos&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://unboca.naquadah.com.br/boca/admin/user.php?site=1&amp;user=7025">7025</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team7025&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">164.41.127.89&nbsp;</td>
+  <td nowrap="nowrap">11:07:32 -03 - 25/Apr/2026</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=7025')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[PUC-GO] Herobrine&nbsp;</td>
+  <td nowrap="nowrap">Lorenzo Oliveira Maciel; Eduardo Valcacer Coelho; Fernando Augusto Gonçalves de Lacerda&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://unboca.naquadah.com.br/boca/admin/user.php?site=1&amp;user=7029">7029</a>(inactive)</td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team7029&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">No</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[PUC-GO] Vai sobrar?&nbsp;</td>
+  <td nowrap="nowrap">Lucas Oliveira do Amaral; Daniel Junior Teixeira Pinheiro; Caio Felipe Brito Paranaiba&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://unboca.naquadah.com.br/boca/admin/user.php?site=1&amp;user=7036">7036</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team7036&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">164.41.127.89&nbsp;</td>
+  <td nowrap="nowrap">10:40:02 -03 - 25/Apr/2026</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=7036')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[PUC-GO] def pucDUgoiais()&nbsp;</td>
+  <td nowrap="nowrap">Clara Morais Jorge Ribeiro; Gabriela Silva Souza; Bruna Gouveia de Morais&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://unboca.naquadah.com.br/boca/admin/user.php?site=1&amp;user=8024">8024</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team8024&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">164.41.127.89&nbsp;</td>
+  <td nowrap="nowrap">10:40:02 -03 - 25/Apr/2026</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=8024')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UCB] Farm Automática de Aura&nbsp;</td>
+  <td nowrap="nowrap">Lucas Costa Silva; Luís Fernando Ventura Ferreira; Gabriel Moura da Silva Serafim&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://unboca.naquadah.com.br/boca/admin/user.php?site=1&amp;user=9000">9000</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">judgeadne&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">judge&nbsp;</td>
+  <td nowrap="nowrap">164.41.127.89&nbsp;</td>
+  <td nowrap="nowrap">21:43:15 -03 - 23/Apr/2026</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=9000')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">judgeadne&nbsp;</td>
+  <td nowrap="nowrap">judgeadne&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://unboca.naquadah.com.br/boca/admin/user.php?site=1&amp;user=9001">9001</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">judgealberto&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">judge&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">judgealberto&nbsp;</td>
+  <td nowrap="nowrap">judgealberto&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://unboca.naquadah.com.br/boca/admin/user.php?site=1&amp;user=9002">9002</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">judgedayllon&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">judge&nbsp;</td>
+  <td nowrap="nowrap">164.41.127.89&nbsp;</td>
+  <td nowrap="nowrap">13:58:52 -03 - 23/Apr/2026</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=9002')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">judgedayllon&nbsp;</td>
+  <td nowrap="nowrap">judgedayllon&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://unboca.naquadah.com.br/boca/admin/user.php?site=1&amp;user=9003">9003</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">judgeedson&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">judge&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">judgeedson&nbsp;</td>
+  <td nowrap="nowrap">judgeedson&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://unboca.naquadah.com.br/boca/admin/user.php?site=1&amp;user=9004">9004</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">judgegallo&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">judge&nbsp;</td>
+  <td nowrap="nowrap">164.41.127.89&nbsp;</td>
+  <td nowrap="nowrap">11:24:19 -03 - 22/Apr/2026</td>
+  <td nowrap="nowrap">20:43:20 -03 - 22/Apr/2026</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">judgegallo&nbsp;</td>
+  <td nowrap="nowrap">judgegallo&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://unboca.naquadah.com.br/boca/admin/user.php?site=1&amp;user=9005">9005</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">judgeguilherme&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">judge&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">judgeguilherme&nbsp;</td>
+  <td nowrap="nowrap">judgeguilherme&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://unboca.naquadah.com.br/boca/admin/user.php?site=1&amp;user=9006">9006</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">judgegustavo&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">judge&nbsp;</td>
+  <td nowrap="nowrap">164.41.127.89&nbsp;</td>
+  <td nowrap="nowrap">11:11:34 -03 - 25/Apr/2026</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=9006')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">judgegustavo&nbsp;</td>
+  <td nowrap="nowrap">judgegustavo&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://unboca.naquadah.com.br/boca/admin/user.php?site=1&amp;user=9007">9007</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">judgejeremias&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">judge&nbsp;</td>
+  <td nowrap="nowrap">164.41.127.89&nbsp;</td>
+  <td nowrap="nowrap">11:13:29 -03 - 25/Apr/2026</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=9007')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">judgejeremias&nbsp;</td>
+  <td nowrap="nowrap">judgejeremias&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://unboca.naquadah.com.br/boca/admin/user.php?site=1&amp;user=9008">9008</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">judgejose&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">judge&nbsp;</td>
+  <td nowrap="nowrap">164.41.127.89&nbsp;</td>
+  <td nowrap="nowrap">12:00:04 -03 - 25/Apr/2026</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=9008')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">judgejose&nbsp;</td>
+  <td nowrap="nowrap">judgejose&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://unboca.naquadah.com.br/boca/admin/user.php?site=1&amp;user=9009">9009</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">judgemattioli&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">judge&nbsp;</td>
+  <td nowrap="nowrap">164.41.127.89&nbsp;</td>
+  <td nowrap="nowrap">22:43:23 -03 - 24/Apr/2026</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=9009')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">judgemattioli&nbsp;</td>
+  <td nowrap="nowrap">judgemattioli&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://unboca.naquadah.com.br/boca/admin/user.php?site=1&amp;user=9010">9010</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">judgemaxwell&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">judge&nbsp;</td>
+  <td nowrap="nowrap">164.41.127.89&nbsp;</td>
+  <td nowrap="nowrap">18:38:02 -03 - 21/Apr/2026</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=9010')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">judgemaxwell&nbsp;</td>
+  <td nowrap="nowrap">judgemaxwell&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://unboca.naquadah.com.br/boca/admin/user.php?site=1&amp;user=9011">9011</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">judgeporto&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">judge&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">judgeporto&nbsp;</td>
+  <td nowrap="nowrap">judgeporto&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://unboca.naquadah.com.br/boca/admin/user.php?site=1&amp;user=9012">9012</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">judgeruan&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">judge&nbsp;</td>
+  <td nowrap="nowrap">164.41.127.89&nbsp;</td>
+  <td nowrap="nowrap">10:52:25 -03 - 25/Apr/2026</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=9012')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">judgeruan&nbsp;</td>
+  <td nowrap="nowrap">judgeruan&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://unboca.naquadah.com.br/boca/admin/user.php?site=1&amp;user=9013">9013</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">judgesaad&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">judge&nbsp;</td>
+  <td nowrap="nowrap">164.41.127.89&nbsp;</td>
+  <td nowrap="nowrap">11:00:34 -03 - 25/Apr/2026</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=9013')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">judgesaad&nbsp;</td>
+  <td nowrap="nowrap">judgesaad&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://unboca.naquadah.com.br/boca/admin/user.php?site=1&amp;user=10000">10000</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">adminedson&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">admin&nbsp;</td>
+  <td nowrap="nowrap">164.41.127.89&nbsp;</td>
+  <td nowrap="nowrap">11:02:23 -03 - 25/Apr/2026</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=10000')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">adminedson&nbsp;</td>
+  <td nowrap="nowrap">adminedson&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://unboca.naquadah.com.br/boca/admin/user.php?site=1&amp;user=10001">10001</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">adminsaad&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">admin&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">adminsaad&nbsp;</td>
+  <td nowrap="nowrap">adminsaad&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://unboca.naquadah.com.br/boca/admin/user.php?site=1&amp;user=10002">10002</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">admingustavo&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">admin&nbsp;</td>
+  <td nowrap="nowrap">164.41.127.89&nbsp;</td>
+  <td nowrap="nowrap">03:21:27 -03 - 25/Apr/2026</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=10002')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">admingustavo&nbsp;</td>
+  <td nowrap="nowrap">admingustavo&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://unboca.naquadah.com.br/boca/admin/user.php?site=1&amp;user=11000">11000</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">staff&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">staff&nbsp;</td>
+  <td nowrap="nowrap">164.41.127.89&nbsp;</td>
+  <td nowrap="nowrap">11:10:20 -03 - 25/Apr/2026</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=11000')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Staff&nbsp;</td>
+  <td nowrap="nowrap">Staff&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://unboca.naquadah.com.br/boca/admin/user.php?site=1&amp;user=12000">12000</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">score&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">score&nbsp;</td>
+  <td nowrap="nowrap">164.41.127.89&nbsp;</td>
+  <td nowrap="nowrap">08:43:36 -03 - 26/Apr/2026</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=12000')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">score&nbsp;</td>
+  <td nowrap="nowrap">score&nbsp;</td>
+</tr></tbody></table>
+<script language="JavaScript" src="users_files/sha256.js"></script>
+<script language="JavaScript" src="users_files/hex.js"></script>
+<script language="JavaScript">
+function computeHASH()
+{
+	document.form3.passwordn1.value = bighexsoma(js_myhash(document.form3.passwordn1.value),js_myhash(document.form3.passwordo.value));
+	document.form3.passwordn2.value = bighexsoma(js_myhash(document.form3.passwordn2.value),js_myhash(document.form3.passwordo.value));
+	document.form3.passwordo.value = js_myhash(js_myhash(document.form3.passwordo.value)+'34opeu6c0mrg7eukgt6csmmggc');
+//	document.form3.passwordn1.value = js_myhash(document.form3.passwordn1.value);
+//	document.form3.passwordn2.value = js_myhash(document.form3.passwordn2.value);
+}
+</script>
+
+<br><br><center><b>Clicking on a user number will bring the user data for edition.<br>
+To import the users, just fill in the import file field.<br>
+The file must be in the format defined in the admin's manual.</b></center>
+
+<form name="form1" enctype="multipart/form-data" method="post" action="user.php">
+  <input type="hidden" name="confirmation" value="noconfirm">
+  <center>
+    <table border="0">
+      <tbody><tr>
+        <td width="25%" align="right">Import file:</td>
+        <td width="75%">
+          <input type="file" name="importfile" size="40">
+        </td>
+      </tr>
+    </tbody></table>
+  </center>
+  <script language="javascript">
+    function conf() {
+      if (confirm("Confirm?")) {
+        document.form1.confirmation.value='confirm';
+      }
+    }
+  </script>
+  <center>
+      <input type="submit" name="Submit" value="Import" onclick="conf()">
+      <input type="reset" name="Submit2" value="Clear">
+  </center>
+</form>
+
+  <br><br>
+  <center>
+<b>To create/edit one user, enter the data below.<br>
+Note that any changes will overwrite the already defined data.<br>
+(Specially care if you use a user number that is already existent.)<br>
+<br>
+</b>
+    <center>
+    </center><table border="0">
+<form name="form3" action="user.php" method="post"></form>
+  <input type="hidden" name="confirmation" value="noconfirm">
+  <script language="javascript">
+    function conf3() {
+      computeHASH();
+      if (confirm("Confirm?")) {
+        document.form3.confirmation.value='confirm';
+      }
+    }
+    function conf5() {
+      document.form3.confirmation.value='noconfirm';
+    }
+  </script>
+   </table><table border="0">
+      <tbody><tr> 
+        <td width="35%" align="right">User Site Number:</td>
+        <td width="65%">
+	  <input type="text" name="usersitenumber" value="1" size="20" maxlength="20">
+        </td>
+      </tr>
+      <tr> 
+        <td width="35%" align="right">User Number:</td>
+        <td width="65%">
+	  <input type="text" name="usernumber" size="20" maxlength="20">
+        </td>
+      </tr>
+      <tr> 
+        <td width="35%" align="right">Username:</td>
+        <td width="65%">
+	  <input type="text" name="username" size="20" maxlength="20">
+        </td>
+      </tr>
+      <tr> 
+        <td width="35%" align="right">ICPC ID:</td>
+        <td width="65%">
+	  <input type="text" name="usericpcid" size="20" maxlength="50">
+        </td>
+      </tr>
+      <tr> 
+        <td width="35%" align="right">Type:</td>
+        <td width="65%">
+		<select name="usertype">
+		<option selected="selected" value="team">Team</option>
+		<option value="judge">Judge</option>
+		<option value="admin">Admin</option>
+		<option value="staff">Staff</option>
+		<option value="score">Score</option>
+		        <option value="site">Site</option>
+        		</select>
+        </td>
+      </tr>
+      <tr> 
+        <td width="35%" align="right">Enabled:</td>
+        <td width="65%">
+		<select name="userenabled">
+		<option selected="selected" value="t">Yes</option>
+		<option value="f">No</option>
+		</select>
+        </td>
+      </tr>
+      <tr> 
+        <td width="35%" align="right">MultiLogins (local teams should be set to <b>No</b>):</td>
+        <td width="65%">
+		<select name="usermultilogin">
+		<option value="t">Yes</option>
+		<option selected="selected" value="f">No</option>
+		</select>
+        </td>
+      </tr>
+      <tr> 
+        <td width="35%" align="right">User Full Name:</td>
+        <td width="65%">
+	  <input type="text" name="userfullname" size="50" maxlength="200">
+        </td>
+      </tr>
+      <tr> 
+        <td width="35%" align="right">User Description:</td>
+        <td width="65%">
+	  <input type="text" name="userdesc" size="50" maxlength="300">
+        </td>
+      </tr>
+      <tr> 
+        <td width="35%" align="right">User IP:</td>
+        <td width="65%">
+	  <input type="text" name="userip" size="20" maxlength="20">
+        </td>
+      </tr>
+      <tr> 
+        <td width="35%" align="right">Password:</td>
+        <td width="65%">
+	  <input type="password" name="passwordn1" value="" size="20" maxlength="200">
+        </td>
+      </tr>
+      <tr> 
+        <td width="35%" align="right">Retype Password:</td>
+        <td width="65%">
+	  <input type="password" name="passwordn2" value="" size="20" maxlength="200">
+        </td>
+      </tr>
+      <tr> 
+        <td width="35%" align="right">Allow password change:</td>
+        <td width="65%">
+		<select name="changepass">
+		<option value="t">Yes</option>
+		<option selected="selected" value="f">No</option>
+		</select>
+        </td>
+      </tr>
+      <tr> 
+        <td width="35%" align="right">Admin (this user) Password:</td>
+        <td width="65%">
+	  <input type="password" name="passwordo" value="" size="20" maxlength="200">
+        </td>
+      </tr>
+    </tbody></table>
+  </center>
+  <center>
+      <input type="submit" name="Submit" value="Send" onclick="conf3()">
+      <input type="submit" name="Cancel" value="Cancel" onclick="conf5()">
+  </center>
+
+
+
+
+</body></html>
