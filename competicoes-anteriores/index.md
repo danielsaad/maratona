@@ -3,7 +3,7 @@ title: Competições Anteriores
 layout: page
 description: Competições anteriores
 ---
-## [II Maratona SBC de Programação do Cerrado]({{site.url}}{% link _posts/blog/2025-04-26-2-mdp-cerrado-resultados.md %})
+## [II Maratona SBC de Programação do Cerrado]({{site.url}}{% link _posts/blog/2026-04-26-2-mdp-cerrado-resultados.md %})
 
 ## [Seletiva UnB 2025]({{site.url}}{% link _posts/blog/2025-07-21-seletiva-unb-2025-resultados.md %})
 
