@@ -52,11 +52,15 @@ Abaixo seguem os mais bem colocados, os créditos da comissão organizadora e re
 ### Revisores
 
 - Dayllon Xavier
-- Maxwell Oliveira 
 - Jeremias Moreira
+- Lucas Mattioli
+- Maxwell Oliveira 
 - Pedro Gallo
 
 ### Staff
+
+- Rafael Silva Wasconcelos
+- Isaac Menezes Pereira 
 
 ### Sistemas
 
@@ -75,3 +79,4 @@ Agradecemos ao prof. Bruno Ribas com ajuda na configuração dos Sistemas.
 - [Estatísticas]({{site.url}}/assets/2-mdp-cerrado/statistics.html)
 - [Run list]({{site.url}}/assets/2-mdp-cerrado/runlist.html)
 - [Upsolving Codeforces](https://codeforces.com/group/btcK4I5D5f/contest/689113)
+- [Fotos](https://drive.google.com/drive/folders/1G6FXIFrNZVrseiif-sq_HLClIkonV2WF)
