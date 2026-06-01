@@ -11,6 +11,7 @@
 	color: $base-color;
 	text-shadow: none;
 }
+
 ::selection {
 	background-color: lighten($base-color, 65%);
 	color: $base-color;
@@ -23,13 +24,13 @@
    ========================================================================== */
 
 body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  font-family: $base-font;
-  color: $text-color;
-  background-color: $body-color;
-  border-top: 5px solid $black;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	font-family: $base-font;
+	color: $text-color;
+	background-color: $body-color;
+	border-top: 5px solid $black;
 }
 
 /*
@@ -43,16 +44,21 @@ body {
 }
 
 p {
-	@include font-size(18,yes,28);
+	@include font-size(18, yes, 28);
 }
 
 li {
-	@include font-size(16,12,24);
+	@include font-size(16, 12, 24);
 }
 
 /* headings */
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
 	font-family: $heading-font;
 	text-rendering: optimizeLegibility; // Fix the character spacing for headings
 }
@@ -96,6 +102,8 @@ ins {
 a {
 	text-decoration: none;
 	color: $link-color;
+	animation: blink 1s infinite;
+
 
 	&:visited {
 		color: lighten($link-color, 20);
@@ -116,18 +124,19 @@ a {
 	}
 }
 
+
 /*
    Horizontal rules
    ========================================================================== */
 
 hr {
-  display: block;
-  margin: 1em 0;
-  padding: 0;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #ccc;
-  border-bottom: 1px solid #fff;
+	display: block;
+	margin: 1em 0;
+	padding: 0;
+	height: 1px;
+	border: 0;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #fff;
 }
 
 /*
@@ -135,35 +144,35 @@ hr {
    ========================================================================== */
 
 figure {
-  margin: 0;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  @include clearfix;
+	margin: 0;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	@include clearfix;
 
-  img {
-    margin-bottom: 10px;
-  }
+	img {
+		margin-bottom: 10px;
+	}
 
-  a {
+	a {
 
-    img {
-      @include transform(translateY(0));
-      -webkit-transition-duration: 0.25s;
-      -moz-transition-duration: 0.25s;
-      -o-transition-duration: 0.25s;
-      opacity: 0.7;
+		img {
+			@include transform(translateY(0));
+			-webkit-transition-duration: 0.25s;
+			-moz-transition-duration: 0.25s;
+			-o-transition-duration: 0.25s;
+			opacity: 0.7;
 
-      &:hover {
-        @include transform(translateY(-5px));
-        @include box-shadow(0 0 10px rgba($black, .20));
-        opacity: 1;
-      }
-    }
-  }
+			&:hover {
+				@include transform(translateY(-5px));
+				@include box-shadow(0 0 10px rgba($black, .20));
+				opacity: 1;
+			}
+		}
+	}
 }
 
 svg:not(:root) {
-  overflow: hidden;
+	overflow: hidden;
 }
 
 // Figure captions
@@ -180,7 +189,7 @@ figcaption {
 // --------------------------------------------------
 
 table {
-  width: 100%;
+	width: 100%;
 }
 
 
@@ -199,7 +208,11 @@ blockquote {
 // Code
 // --------------------------------------------------
 
-tt, code, kbd, samp, pre {
+tt,
+code,
+kbd,
+samp,
+pre {
 	font-family: $code-font;
 }
 
@@ -227,14 +240,30 @@ pre {
 // Global Transition
 // ---------------------------------------------------
 
-b, i, strong, em, blockquote, p, q, span, figure, img, h1, h2, header, input, a, .highlight {
+b,
+i,
+strong,
+em,
+blockquote,
+p,
+q,
+span,
+figure,
+img,
+h1,
+h2,
+header,
+input,
+a,
+.highlight {
 	@include transition(all 0.2s ease);
 }
 
 
-table tr:nth-child(odd) td{
-	background:#ccc;
+table tr:nth-child(odd) td {
+	background: #ccc;
 }
-table tr:nth-child(even) td{
-	 background:#fff;
+
+table tr:nth-child(even) td {
+	background: #fff;
 }
