@@ -43,3 +43,4 @@ dedicação, e esperamos vê-las novamente.
 - [Caderno de Problemas]({{site.url}}/assets/8-cfp-unb/caderno-8-cfp-unb.pdf)
 - [Estatísticas]({{site.url}}/assets/8-cfp-unb/statistics.html)
 - [Tutoriais]({{site.url}}/assets/8-cfp-unb/tutoriais.pdf)
+- [Guia da Maratona]({{site.url}}/assets/8-cfp-unb/guia-da-maratona-cfp.pdf)
