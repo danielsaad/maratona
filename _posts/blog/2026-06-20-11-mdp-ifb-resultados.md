@@ -41,7 +41,7 @@ Abaixo seguem os mais bem colocados, os créditos da comissão organizadora e re
 - E) *E.T.*: Jeremias Moreira Gomes
 - F) *Formatura*: Alberto Neto
 - G) *Gooool*: Jeremias Moreira Gomes
-- H) *Herói das Cartas*: José Carlos Gonçalves de Oliveira Filho
+- H) *Herói das Cartas*: João Carlos Gonçalves de Oliveira Filho
 - I) *Império dos Bits*: Felipe Louza
 - J) *Jogadores Icônicos*: Daniel Saad
 - K) *Kátia e as constelações*: Edson Alves
@@ -57,6 +57,7 @@ Abaixo seguem os mais bem colocados, os créditos da comissão organizadora e re
 - Gabriel Pinheiro
 - Giovanni Lucas
 - Giulianna Ellen
+- Isaque Camargos
 - João Henrique
 - João Brito
 - Letícia Torres
