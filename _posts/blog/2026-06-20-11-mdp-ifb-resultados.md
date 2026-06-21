@@ -40,7 +40,7 @@ Abaixo seguem os mais bem colocados, os créditos da comissão organizadora e re
 - D) *Dia de Trote*: João Carlos Gonçalves de Oliveira Filho
 - E) *E.T.*: Jeremias Moreira Gomes
 - F) *Formatura*: Alberto Neto
-- G) *Goool*: Jeremias Moreira Gomes
+- G) *Gooool*: Jeremias Moreira Gomes
 - H) *Herói das Cartas*: José Carlos Gonçalves de Oliveira Filho
 - I) *Império dos Bits*: Felipe Louza
 - J) *Jogadores Icônicos*: Daniel Saad
@@ -49,10 +49,19 @@ Abaixo seguem os mais bem colocados, os créditos da comissão organizadora e re
 - M) *Mudança*: Edson Alves
 
 
-### Staff
+### Staff  ️
 
-- Rafael Silva Wasconcelos
-- Isaac Menezes Pereira 
+- Arthur Carlos Neuhauss
+- Ciro Moraes
+- Erick Saraiva
+- Gabriel Pinheiro
+- Giovanni Lucas
+- Giulianna Ellen
+- João Henrique
+- João Brito
+- Letícia Torres
+- Luan Mateus Nunes
+- Maria Eduarda Moraes
 
 ### Sistemas
 
