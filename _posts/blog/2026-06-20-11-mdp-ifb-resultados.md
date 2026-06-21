@@ -81,5 +81,6 @@ Agradecemos ao prof. Leonardo Leódido por confeccionar os chaveiros da premiaç
 - [Estatísticas]({{site.url}}/assets/11-mdp-ifb/statistics.html)
 - [Run list]({{site.url}}/assets/11-mdp-ifb/runlist.html)
 - [Clarifications]({{site.url}}/assets/11-mdp-ifb/clarifications.html)
+- [Usuários]({{site.url}}/assets/11-mdp-ifb/users.html)
 - [Upsolving Codeforces](https://codeforces.com/group/btcK4I5D5f/contest/699730)
 - [Fotos](https://drive.google.com/drive/folders/1yyTJmzVA0e91t3JqX-4y-rGAE_Arj9ez?usp=sharing)
