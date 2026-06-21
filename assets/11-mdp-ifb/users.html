@@ -1,0 +1,827 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- BOCA boca-1.5.24. Copyright (c) 2003-2025 Cassio Polpo de Campos -->
+<!-- http://www.ime.usp.br/~cassio/boca                                  -->
+<!-- This program is free software: you can redistribute it and/or modify  -->
+<!-- it under the terms of the GNU General Public License as published by -->
+<!-- the Free Software Foundation, either version 3 of the License, or -->
+<!-- (at your option) any later version. A copy of the  -->
+<!-- license can be found with this software or at http://www.gnu.org/licenses/ -->
+<html><head><title>Admin's Page</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="users_files/Css_Pn36.php" type="text/css">
+</head><body id="body"><table border="1" width="100%">
+<tbody><tr><td nowrap="nowrap" bgcolor="eeee00" align="center"><img src="users_files/smallballoontransp_Pn36.png" alt=""><font color="#000000">BOCA</font></td><td bgcolor="#eeee00" width="99%">
+Username: admin (site=1)<br>
+</td><td bgcolor="#eeee00" align="center" nowrap="nowrap">&nbsp;contest not running&nbsp;</td></tr>
+</tbody></table>
+<table border="0" width="100%" align="center">
+ <tbody><tr>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://boca.danielsaad.com/boca/admin/run.php">Runs</a></td>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://boca.danielsaad.com/boca/admin/score.php">Score</a></td>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://boca.danielsaad.com/boca/admin/clar.php">Clarifications</a></td>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://boca.danielsaad.com/boca/admin/user.php">Users</a></td>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://boca.danielsaad.com/boca/admin/problem.php">Problems</a></td>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://boca.danielsaad.com/boca/admin/language.php">Languages</a></td>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://boca.danielsaad.com/boca/admin/answer.php">Answers</a></td>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://boca.danielsaad.com/boca/admin/misc.php">Misc</a></td>
+ </tr><tr>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://boca.danielsaad.com/boca/admin/task.php">Tasks</a></td>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://boca.danielsaad.com/boca/admin/site.php">Site</a></td>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://boca.danielsaad.com/boca/admin/contest.php">Contest</a></td>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://boca.danielsaad.com/boca/admin/log.php">Logs</a></td>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://boca.danielsaad.com/boca/admin/report.php">Reports</a></td>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://boca.danielsaad.com/boca/admin/files.php">Backups</a></td>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://boca.danielsaad.com/boca/admin/option.php">Options</a></td>
+  <td align="center"><a class="menu" style="font-weight:bold" href="https://boca.danielsaad.com/boca/index.php">Logout</a></td>
+ </tr>
+</tbody></table>
+
+  <script language="javascript">
+    function conf2(url) {
+      if (confirm("Are you sure?")) {
+        document.location=url;
+      } else {
+        document.location='user.php';
+      }
+    }
+  </script>
+<br>
+<table width="100%" border="1">
+ <tbody><tr>
+  <td nowrap="nowrap"><b>User #</b></td>
+  <td><b>Site</b></td>
+  <td><b>Username</b></td>
+  <td><b>ICPC ID</b></td>
+  <td><b>Type</b></td>
+  <td><b>IP</b></td>
+  <td><b>LastLogin</b></td>
+  <td><b>LastLogout</b></td>
+  <td><b>Enabled</b></td>
+  <td><b>Multi</b></td>
+  <td><b>Fullname</b></td>
+  <td><b>Description</b></td>
+ </tr>
+ <tr>
+  <td nowrap="nowrap">1000</td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">admin&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">admin&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">01:27:15 UTC - 21/Jun/2026</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=1000')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Administrator&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.danielsaad.com/boca/admin/user.php?site=1&amp;user=2001">2001</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team2001&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">17:36:40 UTC - 20/Jun/2026</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=2001')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[IFB/CTAG] "dá console.log() ai"&nbsp;</td>
+  <td nowrap="nowrap">Igor de Oliveira Moura, Gabriel Cesar Silvino Xavier e Arthur Andrade Dolival&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.danielsaad.com/boca/admin/user.php?site=1&amp;user=2002">2002</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team2002&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">16:35:15 UTC - 20/Jun/2026</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=2002')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[IFB/CTAG] ?&nbsp;</td>
+  <td nowrap="nowrap">Lucas Rocha Vilela de Faria, Camila Souza Anderle  e Gustavo Rodrigues Pereira Carvalho&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.danielsaad.com/boca/admin/user.php?site=1&amp;user=2004">2004</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team2004&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">16:44:38 UTC - 20/Jun/2026</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=2004')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[IFB/CTAG] Aboba&nbsp;</td>
+  <td nowrap="nowrap">Arthur Daniel Ribeiro Pereira Dantas Lourenço , Danilo Moraes Borges Piquiá e Thiago Vinícius da Silva Rezende&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.danielsaad.com/boca/admin/user.php?site=1&amp;user=2005">2005</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team2005&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">16:34:52 UTC - 20/Jun/2026</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=2005')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[IFB/CTAG] Ah, eu não quero aveia, eu quero Nescau Ball....&nbsp;</td>
+  <td nowrap="nowrap">Caio Lauro de Lima, Luma da Silva Bergmann e Yuri Daniel Moreira Gomes&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.danielsaad.com/boca/admin/user.php?site=1&amp;user=2017">2017</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team2017&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">20:50:46 UTC - 20/Jun/2026</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=2017')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[IFB/CTAG] 404 Imposto Not Found&nbsp;</td>
+  <td nowrap="nowrap">Cássio dos Santos Rodrigues, Ryan Micael Benício dos Santos e Murylo Ferreira da Costa&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.danielsaad.com/boca/admin/user.php?site=1&amp;user=2024">2024</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team2024&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">20:18:09 UTC - 20/Jun/2026</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=2024')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[IFB/CTAG] Javaamigos&nbsp;</td>
+  <td nowrap="nowrap">Pedro César Lopes de Oliveira , Miguel Yohan Vieira Marques Silva e Gustavo Vieira dos Santos&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.danielsaad.com/boca/admin/user.php?site=1&amp;user=2025">2025</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team2025&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">16:46:32 UTC - 20/Jun/2026</td>
+  <td nowrap="nowrap">20:49:59 UTC - 20/Jun/2026</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[IFB/CTAG] B.I.G&nbsp;</td>
+  <td nowrap="nowrap">Gabriel Marcinoni Varão Ribeiro Vieira da Rosa, Isabella Victoria Souza dos Santos e Giovane Alves Leal&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.danielsaad.com/boca/admin/user.php?site=1&amp;user=2031">2031</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team2031&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">16:39:13 UTC - 20/Jun/2026</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=2031')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[IFB/CTAG] Not a Name (NaN)&nbsp;</td>
+  <td nowrap="nowrap">Marlon Ferreira de Sá, João Caio de Oliveira Lins e Pedro Eduardo Lemos Sousa&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.danielsaad.com/boca/admin/user.php?site=1&amp;user=2034">2034</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team2034&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">16:49:36 UTC - 20/Jun/2026</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=2034')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[IFB/CTAG] Lucas Dias Nunes&nbsp;</td>
+  <td nowrap="nowrap">Lucas Dias Nunes&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.danielsaad.com/boca/admin/user.php?site=1&amp;user=3003">3003</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3003&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">16:37:05 UTC - 20/Jun/2026</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3003')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB/FCTE] “ᶜᵒᵐᵒ ᵃᵘᵐᵉⁿᵗᵃ ᵃ ᶠᵒⁿᵗᵉ”&nbsp;</td>
+  <td nowrap="nowrap">Enriko de Santana Barbosa, Giovanna Liberato Raulino e Heitor Rodrigues de Farias&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.danielsaad.com/boca/admin/user.php?site=1&amp;user=3006">3006</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3006&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">16:38:17 UTC - 20/Jun/2026</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3006')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB/Darcy] Vetores Bugados na Matrix&nbsp;</td>
+  <td nowrap="nowrap">Ana Luiza Campos Coelho, Gabriel Sales Gerardo e Tarsila Marques de Oliveira Alves&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.danielsaad.com/boca/admin/user.php?site=1&amp;user=3007">3007</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3007&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">16:35:06 UTC - 20/Jun/2026</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3007')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB/FCTE] Expansão de Domínio: Recursão Infinita&nbsp;</td>
+  <td nowrap="nowrap">Diego Carlito Rodrigues de Souza, João Antonio Ginuino Carvalho e Marcos Antonio Teles de Castilhos&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.danielsaad.com/boca/admin/user.php?site=1&amp;user=3009">3009</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3009&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">18:43:45 UTC - 20/Jun/2026</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3009')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB/FCTE] Os Fios Terra&nbsp;</td>
+  <td nowrap="nowrap">Isaac José Oliveira Ferreira , Vinicius Nunes da Cruz  e João Guilherme Batista Oliveira Sales&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.danielsaad.com/boca/admin/user.php?site=1&amp;user=3010">3010</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3010&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">16:36:38 UTC - 20/Jun/2026</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3010')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB/FCTE] O Problema da Divisão&nbsp;</td>
+  <td nowrap="nowrap">Filipe Bressanelli Azevedo Filho, Mylena Mendonça e ENZO COSTA AZEVEDO JACUNDA&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.danielsaad.com/boca/admin/user.php?site=1&amp;user=3013">3013</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3013&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">19:52:18 UTC - 20/Jun/2026</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3013')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB/FCTE] A terceira é da sorte mesmo?&nbsp;</td>
+  <td nowrap="nowrap">Maria Clara Sena de Lima , Ana Luiza Komatsu Aroeira  e Cibelly Lourenço Ferreira&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.danielsaad.com/boca/admin/user.php?site=1&amp;user=3016">3016</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3016&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">20:07:26 UTC - 20/Jun/2026</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3016')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB/FCTE] Runtime Terrors&nbsp;</td>
+  <td nowrap="nowrap">Caio Ferreira Duarte, Danielle Soares da Silva e Daniel Rodrigues Nascimento&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.danielsaad.com/boca/admin/user.php?site=1&amp;user=3023">3023</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3023&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">16:36:43 UTC - 20/Jun/2026</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3023')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB/FCTE] TR22 PARADORA&nbsp;</td>
+  <td nowrap="nowrap">Joao Victor da Silva Batista de farias, Natan da Cruz Almeida e Paulo Henrique lamounier Dantas&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.danielsaad.com/boca/admin/user.php?site=1&amp;user=3028">3028</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team3028&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">17:12:29 UTC - 20/Jun/2026</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=3028')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB/Darcy] py.sandu mma experts carona da silva mauro patrão opala 6 cilindros&nbsp;</td>
+  <td nowrap="nowrap">Daniel de Oliveira Morais, Lucas Mendes de Albuquerque Barreto Fonseca e Gustavo Alves Dias&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.danielsaad.com/boca/admin/user.php?site=1&amp;user=4011">4011</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team4011&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">16:35:40 UTC - 20/Jun/2026</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=4011')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB/Darcy] Gulosinhos&nbsp;</td>
+  <td nowrap="nowrap">Gabriel Alexandre Gomes , Fernando Henrique Souza Nunes  e Márcio Vinícius da Silva Guimarães&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.danielsaad.com/boca/admin/user.php?site=1&amp;user=4012">4012</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team4012&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">18:10:54 UTC - 20/Jun/2026</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=4012')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB/Darcy] py.Sandu restaurante careca aura MOD 
+ego, o que resta? nullptr, brutal its over só resta o churrascamento pro
+ betas, vulgo opala 6 cilindros&nbsp;</td>
+  <td nowrap="nowrap">Élvis Correia Miranda Junior, Leonardo Mileo Moreira Krauss Guimarães e Rafael Medeiros de Alencar&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.danielsaad.com/boca/admin/user.php?site=1&amp;user=4014">4014</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team4014&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB/Darcy] Pysandu Menalito: 0% CIA, 100% Menalitagem&nbsp;</td>
+  <td nowrap="nowrap">Davi Galvão Guerra, Gabriel Pinto Rodrigues e Roberto Ribeiro Corrêa De Oliveira Andrade Neto&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.danielsaad.com/boca/admin/user.php?site=1&amp;user=4015">4015</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team4015&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">19:10:07 UTC - 20/Jun/2026</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=4015')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB/Darcy] Igor Fagundes Bobão: O matador de pysandu&nbsp;</td>
+  <td nowrap="nowrap">João Pedro Pirolo Oliveira, Samuel Pereira da Silveira e Caio dias Fleury&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.danielsaad.com/boca/admin/user.php?site=1&amp;user=4018">4018</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team4018&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">16:41:08 UTC - 20/Jun/2026</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=4018')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB/Darcy] mod não, apelidos são pra amigos e a congruência modular módulo m não é minha amiga&nbsp;</td>
+  <td nowrap="nowrap">Nikolle dos Santos Licá, Adrielly Medeiros Nunes e Luisa Ribeiro de Oliveira&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.danielsaad.com/boca/admin/user.php?site=1&amp;user=4019">4019</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team4019&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">16:40:09 UTC - 20/Jun/2026</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=4019')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB/Darcy] 404&nbsp;</td>
+  <td nowrap="nowrap">João Pedro Lopes Baliza Lima, João Pedro dos Santos Braga e Gabriel Carneiro Hentschke&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.danielsaad.com/boca/admin/user.php?site=1&amp;user=4020">4020</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team4020&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">16:40:05 UTC - 20/Jun/2026</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=4020')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB/Darcy] Resenha de programa&nbsp;</td>
+  <td nowrap="nowrap">Arthur Carrijo Willer , Rafarl Okahara Gonçalves  e Ricardo Felix Guedes Silva Nonato&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.danielsaad.com/boca/admin/user.php?site=1&amp;user=4021">4021</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team4021&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">20:20:18 UTC - 20/Jun/2026</td>
+  <td nowrap="nowrap">20:48:03 UTC - 20/Jun/2026</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB/Darcy] Performáticos&nbsp;</td>
+  <td nowrap="nowrap">Matheus Costa Giuvenduto, Eliza Pereira Marques  e Ana Clara Zimmer Fernandes&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.danielsaad.com/boca/admin/user.php?site=1&amp;user=4022">4022</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team4022&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB/Darcy] Alexa, ligar aura.&nbsp;</td>
+  <td nowrap="nowrap">Antônio Fagundes Rodrigues de Souza, João Victor Martins Pereira e Henrique Puttini de Almeida&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.danielsaad.com/boca/admin/user.php?site=1&amp;user=4029">4029</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team4029&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">16:35:48 UTC - 20/Jun/2026</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=4029')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB/Darcy] UnBugs&nbsp;</td>
+  <td nowrap="nowrap">José Carlos Nunes de Siqueira Neto, Amanda Alves dos Santos e Dominic Carvalho de Melo&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.danielsaad.com/boca/admin/user.php?site=1&amp;user=4030">4030</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team4030&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">20:45:52 UTC - 20/Jun/2026</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=4030')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[UnB/Darcy] Avengers Assembly!&nbsp;</td>
+  <td nowrap="nowrap">Lucas Martins Santos, Vitor Almeida de Cerqueira Lima e Matheus Vitorio Sousa Araujo&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.danielsaad.com/boca/admin/user.php?site=1&amp;user=5008">5008</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team5008&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">16:37:46 UTC - 20/Jun/2026</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=5008')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[IDP] WannaSmile&nbsp;</td>
+  <td nowrap="nowrap">João Victor Martins Teixeira, João Manoel Freire Melo Nunes e Miguel Chagas Maciel&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.danielsaad.com/boca/admin/user.php?site=1&amp;user=6026">6026</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team6026&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">20:29:29 UTC - 20/Jun/2026</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=6026')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[CED/04] Equipe Bazinga!&nbsp;</td>
+  <td nowrap="nowrap">Adrian Gutshaw Sandes da Silva, Yishrael Quinto Lourenço Gomes e Samuel Gonçalves de Oliveira&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.danielsaad.com/boca/admin/user.php?site=1&amp;user=6027">6027</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team6027&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">18:29:46 UTC - 20/Jun/2026</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=6027')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[CED/04] É sério?&nbsp;</td>
+  <td nowrap="nowrap">Eduardo Custódio de Freitas, Gabriel Gouveia de Paula e Enzo da Silva Leandro Tavares&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.danielsaad.com/boca/admin/user.php?site=1&amp;user=7032">7032</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team7032&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">19:47:52 UTC - 20/Jun/2026</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=7032')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[IFB/CCEI] TriMagoElite&nbsp;</td>
+  <td nowrap="nowrap">Vitória Vieira de Oliveira, Winne Lemes Barcellos e Andrey Lucas Vieira de Paula Lima&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.danielsaad.com/boca/admin/user.php?site=1&amp;user=7033">7033</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">team7033&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">team&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">18:30:14 UTC - 20/Jun/2026</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=7033')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">[IFB/CCEI] Machine juninhos&nbsp;</td>
+  <td nowrap="nowrap">Davi Gomes Leite, Filipe Loiola Sousa jakson e Gabriel Miranda Santos&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.danielsaad.com/boca/admin/user.php?site=1&amp;user=9000">9000</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">judgealberto&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">judge&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">17:04:48 UTC - 20/Jun/2026</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=9000')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">judgealberto&nbsp;</td>
+  <td nowrap="nowrap">judgealberto&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.danielsaad.com/boca/admin/user.php?site=1&amp;user=9001">9001</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">judgeedson&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">judge&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">16:27:32 UTC - 20/Jun/2026</td>
+  <td nowrap="nowrap">19:50:32 UTC - 20/Jun/2026</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">judgeedson&nbsp;</td>
+  <td nowrap="nowrap">judgeedson&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.danielsaad.com/boca/admin/user.php?site=1&amp;user=9002">9002</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">judgej3r3mias&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">judge&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">16:56:13 UTC - 20/Jun/2026</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=9002')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">judgej3r3mias&nbsp;</td>
+  <td nowrap="nowrap">judgej3r3mias&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.danielsaad.com/boca/admin/user.php?site=1&amp;user=9003">9003</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">judgejoao&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">judge&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">00:38:22 UTC - 21/Jun/2026</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=9003')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">judgejoao&nbsp;</td>
+  <td nowrap="nowrap">judgejoao&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.danielsaad.com/boca/admin/user.php?site=1&amp;user=9004">9004</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">judgesaad&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">judge&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">17:13:50 UTC - 20/Jun/2026</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=9004')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">judgesaad&nbsp;</td>
+  <td nowrap="nowrap">judgesaad&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.danielsaad.com/boca/admin/user.php?site=1&amp;user=10000">10000</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">adminedson&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">admin&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">19:50:42 UTC - 20/Jun/2026</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=10000')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">adminedson&nbsp;</td>
+  <td nowrap="nowrap">adminedson&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.danielsaad.com/boca/admin/user.php?site=1&amp;user=10001">10001</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">adminsaad&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">admin&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">adminsaad&nbsp;</td>
+  <td nowrap="nowrap">adminsaad&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.danielsaad.com/boca/admin/user.php?site=1&amp;user=10002">10002</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">adminj3r3mias&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">admin&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">adminj3r3mias&nbsp;</td>
+  <td nowrap="nowrap">adminj3r3mias&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.danielsaad.com/boca/admin/user.php?site=1&amp;user=11000">11000</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">staff&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">staff&nbsp;</td>
+  <td nowrap="nowrap">200.130.152.84&nbsp;</td>
+  <td nowrap="nowrap">16:53:47 UTC - 20/Jun/2026</td>
+  <td nowrap="nowrap"><a href="javascript: conf2('user.php?logout=1&amp;site=1&amp;user=11000')">Force Logout</a></td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Staff&nbsp;</td>
+  <td nowrap="nowrap">Staff&nbsp;</td>
+</tr> <tr>
+  <td nowrap="nowrap"><a href="https://boca.danielsaad.com/boca/admin/user.php?site=1&amp;user=12000">12000</a></td>
+  <td nowrap="nowrap">1</td>
+  <td nowrap="nowrap">score&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">score&nbsp;</td>
+  <td nowrap="nowrap">&nbsp;</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">never</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">Yes</td>
+  <td nowrap="nowrap">score&nbsp;</td>
+  <td nowrap="nowrap">score&nbsp;</td>
+</tr></tbody></table>
+<script language="JavaScript" src="users_files/sha256_Pn36.js"></script>
+<script language="JavaScript" src="users_files/hex_Pn36.js"></script>
+<script language="JavaScript">
+function computeHASH()
+{
+	document.form3.passwordn1.value = bighexsoma(js_myhash(document.form3.passwordn1.value),js_myhash(document.form3.passwordo.value));
+	document.form3.passwordn2.value = bighexsoma(js_myhash(document.form3.passwordn2.value),js_myhash(document.form3.passwordo.value));
+	document.form3.passwordo.value = js_myhash(js_myhash(document.form3.passwordo.value)+'p2hf1c43vagda841vd4b8cv1ch');
+//	document.form3.passwordn1.value = js_myhash(document.form3.passwordn1.value);
+//	document.form3.passwordn2.value = js_myhash(document.form3.passwordn2.value);
+}
+</script>
+
+<br><br><center><b>Clicking on a user number will bring the user data for edition.<br>
+To import the users, just fill in the import file field.<br>
+The file must be in the format defined in the admin's manual.</b></center>
+
+<form name="form1" enctype="multipart/form-data" method="post" action="user.php">
+  <input type="hidden" name="confirmation" value="noconfirm">
+  <center>
+    <table border="0">
+      <tbody><tr>
+        <td width="25%" align="right">Import file:</td>
+        <td width="75%">
+          <input type="file" name="importfile" size="40">
+        </td>
+      </tr>
+    </tbody></table>
+  </center>
+  <script language="javascript">
+    function conf() {
+      if (confirm("Confirm?")) {
+        document.form1.confirmation.value='confirm';
+      }
+    }
+  </script>
+  <center>
+      <input type="submit" name="Submit" value="Import" onclick="conf()">
+      <input type="reset" name="Submit2" value="Clear">
+  </center>
+</form>
+
+  <br><br>
+  <center>
+<b>To create/edit one user, enter the data below.<br>
+Note that any changes will overwrite the already defined data.<br>
+(Specially care if you use a user number that is already existent.)<br>
+<br>
+</b>
+    <center>
+    </center><table border="0">
+<form name="form3" action="user.php" method="post"></form>
+  <input type="hidden" name="confirmation" value="noconfirm">
+  <script language="javascript">
+    function conf3() {
+      computeHASH();
+      if (confirm("Confirm?")) {
+        document.form3.confirmation.value='confirm';
+      }
+    }
+    function conf5() {
+      document.form3.confirmation.value='noconfirm';
+    }
+  </script>
+   </table><table border="0">
+      <tbody><tr> 
+        <td width="35%" align="right">User Site Number:</td>
+        <td width="65%">
+	  <input type="text" name="usersitenumber" value="1" size="20" maxlength="20">
+        </td>
+      </tr>
+      <tr> 
+        <td width="35%" align="right">User Number:</td>
+        <td width="65%">
+	  <input type="text" name="usernumber" size="20" maxlength="20">
+        </td>
+      </tr>
+      <tr> 
+        <td width="35%" align="right">Username:</td>
+        <td width="65%">
+	  <input type="text" name="username" value="team3006" size="20" maxlength="20">
+        </td>
+      </tr>
+      <tr> 
+        <td width="35%" align="right">ICPC ID:</td>
+        <td width="65%">
+	  <input type="text" name="usericpcid" size="20" maxlength="50">
+        </td>
+      </tr>
+      <tr> 
+        <td width="35%" align="right">Type:</td>
+        <td width="65%">
+		<select name="usertype">
+		<option selected="selected" value="team">Team</option>
+		<option value="judge">Judge</option>
+		<option value="admin">Admin</option>
+		<option value="staff">Staff</option>
+		<option value="score">Score</option>
+		        <option value="site">Site</option>
+        		</select>
+        </td>
+      </tr>
+      <tr> 
+        <td width="35%" align="right">Enabled:</td>
+        <td width="65%">
+		<select name="userenabled">
+		<option selected="selected" value="t">Yes</option>
+		<option value="f">No</option>
+		</select>
+        </td>
+      </tr>
+      <tr> 
+        <td width="35%" align="right">MultiLogins (local teams should be set to <b>No</b>):</td>
+        <td width="65%">
+		<select name="usermultilogin">
+		<option value="t">Yes</option>
+		<option selected="selected" value="f">No</option>
+		</select>
+        </td>
+      </tr>
+      <tr> 
+        <td width="35%" align="right">User Full Name:</td>
+        <td width="65%">
+	  <input type="text" name="userfullname" size="50" maxlength="200">
+        </td>
+      </tr>
+      <tr> 
+        <td width="35%" align="right">User Description:</td>
+        <td width="65%">
+	  <input type="text" name="userdesc" size="50" maxlength="300">
+        </td>
+      </tr>
+      <tr> 
+        <td width="35%" align="right">User IP:</td>
+        <td width="65%">
+	  <input type="text" name="userip" size="20" maxlength="20">
+        </td>
+      </tr>
+      <tr> 
+        <td width="35%" align="right">Password:</td>
+        <td width="65%">
+	  <input type="password" name="passwordn1" value="" size="20" maxlength="200">
+        </td>
+      </tr>
+      <tr> 
+        <td width="35%" align="right">Retype Password:</td>
+        <td width="65%">
+	  <input type="password" name="passwordn2" value="" size="20" maxlength="200">
+        </td>
+      </tr>
+      <tr> 
+        <td width="35%" align="right">Allow password change:</td>
+        <td width="65%">
+		<select name="changepass">
+		<option value="t">Yes</option>
+		<option selected="selected" value="f">No</option>
+		</select>
+        </td>
+      </tr>
+      <tr> 
+        <td width="35%" align="right">Admin (this user) Password:</td>
+        <td width="65%">
+	  <input type="password" name="passwordo" value="" size="20" maxlength="200">
+        </td>
+      </tr>
+    </tbody></table>
+  </center>
+  <center>
+      <input type="submit" name="Submit" value="Send" onclick="conf3()">
+      <input type="submit" name="Cancel" value="Cancel" onclick="conf5()">
+  </center>
+
+
+
+
+</body></html>
