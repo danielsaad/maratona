@@ -28,7 +28,7 @@ Abaixo seguem os mais bem colocados, os créditos da comissão organizadora e re
 
 ### Melhor Equipe Feminina
 
-- **[UnB/Darcy] mod não, apelidos são pra amigos e a congruência modular não é minha amiga**
+- **[UnB/Darcy] mod não, apelidos são pra amigos e a congruência modular não é minha amiga**: Adrielly Medeiros Nunes, Luisa Ribeiro de Oliveira e Nikolle dos Santos Licá  
 
 ## Organização
 
