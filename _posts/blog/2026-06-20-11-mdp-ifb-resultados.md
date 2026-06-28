@@ -54,7 +54,7 @@ Abaixo seguem os mais bem colocados, os créditos da comissão organizadora e re
 - Arthur Carlos Neuhauss
 - Ciro Moraes
 - Erick Saraiva
-- Gabriel Pinheiro
+- Gabriel Pinho
 - Giovanni Lucas
 - Giulianna Ellen
 - Isaque Camargos
