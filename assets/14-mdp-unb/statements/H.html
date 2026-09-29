@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>tmp</title>
+  <style>
+html {
+color: #1a1a1a;
+background-color: #fdfdfd;
+}
+body {
+margin: 0 auto;
+max-width: 36em;
+padding-left: 50px;
+padding-right: 50px;
+padding-top: 50px;
+padding-bottom: 50px;
+hyphens: auto;
+overflow-wrap: break-word;
+text-rendering: optimizeLegibility;
+font-kerning: normal;
+}
+@media (max-width: 600px) {
+body {
+font-size: 0.9em;
+padding: 12px;
+}
+h1 {
+font-size: 1.8em;
+}
+}
+@media print {
+html {
+background-color: white;
+}
+body {
+background-color: transparent;
+color: black;
+font-size: 12pt;
+}
+p, h2, h3 {
+orphans: 3;
+widows: 3;
+}
+h2, h3, h4 {
+page-break-after: avoid;
+}
+}
+p {
+margin: 1em 0;
+}
+a {
+color: #1a1a1a;
+}
+a:visited {
+color: #1a1a1a;
+}
+img {
+max-width: 100%;
+}
+svg {
+height: auto;
+max-width: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+margin-top: 1.4em;
+}
+h5, h6 {
+font-size: 1em;
+font-style: italic;
+}
+h6 {
+font-weight: normal;
+}
+ol, ul {
+padding-left: 1.7em;
+margin-top: 1em;
+}
+li > ol, li > ul {
+margin-top: 0;
+}
+blockquote {
+margin: 1em 0 1em 1.7em;
+padding-left: 1em;
+border-left: 2px solid #e6e6e6;
+color: #606060;
+}
+code {
+font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+font-size: 85%;
+margin: 0;
+hyphens: manual;
+}
+pre {
+margin: 1em 0;
+overflow: auto;
+}
+pre code {
+padding: 0;
+overflow: visible;
+overflow-wrap: normal;
+}
+.sourceCode {
+background-color: transparent;
+overflow: visible;
+}
+hr {
+background-color: #1a1a1a;
+border: none;
+height: 1px;
+margin: 1em 0;
+}
+table {
+margin: 1em 0;
+border-collapse: collapse;
+width: 100%;
+overflow-x: auto;
+display: block;
+font-variant-numeric: lining-nums tabular-nums;
+}
+table caption {
+margin-bottom: 0.75em;
+}
+tbody {
+margin-top: 0.5em;
+border-top: 1px solid #1a1a1a;
+border-bottom: 1px solid #1a1a1a;
+}
+th {
+border-top: 1px solid #1a1a1a;
+padding: 0.25em 0.5em 0.25em 0.5em;
+}
+td {
+padding: 0.125em 0.5em 0.25em 0.5em;
+}
+header {
+margin-bottom: 4em;
+text-align: center;
+}
+#TOC li {
+list-style: none;
+}
+#TOC ul {
+padding-left: 1.3em;
+}
+#TOC > ul {
+padding-left: 0;
+}
+#TOC a:not(:hover) {
+text-decoration: none;
+}
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+
+ul.task-list[class]{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+font-size: inherit;
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+</style>
+<style>body{font-family:system-ui,Arial,sans-serif;max-width:52rem;margin:1rem auto;padding:0 1rem;line-height:1.55;color:#111}.moj-title{margin:.2rem 0 1.1rem}pre{background:#f3f4f6;padding:.6rem;border-radius:6px;overflow:auto;white-space:pre-wrap}.moj-exemplos h2{margin-top:1.2rem}.moj-exemplo{border:1px solid #e5e7eb;border-radius:8px;padding:.2rem .8rem;margin:.6rem 0}.moj-exemplo h3,.moj-exemplo h4{margin:.5rem 0 .2rem}.moj-exemplo-nota{margin:.1rem 0 .5rem;color:#374151}img{max-width:100%}.moj-graph{margin:1rem 0}.moj-graph.center{text-align:center}.moj-graph svg{max-width:100%;height:auto}table{border-collapse:collapse}td,th{border:1px solid #ccc;padding:.2rem .5rem}</style>
+</head>
+<body>
+<h1 class="moj-title">Hugo e o Jogo das Palavras</h1>
+<p>Hugo tem apenas 6 anos e está iniciando seu processo de
+alfabetização. Para ensinar o alfabeto para ele e para as demais
+crianças, a professora propôs a seguinte brincadeira: Hugo escolheria
+uma palavra
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>s</mi><annotation encoding="application/x-tex">s</annotation></semantics></math>
+e a professora uma palavra
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>t</mi><annotation encoding="application/x-tex">t</annotation></semantics></math>.
+Se
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>s</mi><annotation encoding="application/x-tex">s</annotation></semantics></math>
+anteceder
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>t</mi><annotation encoding="application/x-tex">t</annotation></semantics></math>
+na ordem alfabética, Hugo e as crianças são os vencedores; caso
+contrário, a professora vence o jogo.</p>
+<p>Lembre-se da definição de ordem alfabética para palavras: para duas
+palavras diferentes
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math>
+e
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>b</mi><annotation encoding="application/x-tex">b</annotation></semantics></math>,
+caso uma seja prefixo da outra, a menor em tamanho antece a outra nessa
+ordem. Caso contrário, toma-se a primeira posição (da esquerda para a
+direita) em que elas diferem: a que tiver o caractere menor (na ordem do
+alfabeto) nesta posição é a menor palavra na ordem alfabética.</p>
+<p>Seguindo seu objetivo didático, a professora também estabeleceu a
+seguinte regra: antes de comparar as palavras, Hugo pode selecionar uma
+dentre as duas. Uma vez selecionada a palavra, ele pode escolher duas
+letras, em posições distintas, e trocá-las de lugar. Hugo pode optar por
+não fazer nenhuma troca antes da comparação das palavras, mas ele não
+pode realizar mais de uma troca.</p>
+<p>Por exemplo, suponha que Hugo escolheu
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>=</mo></mrow><annotation encoding="application/x-tex">s =</annotation></semantics></math>
+“<code>maca</code>” e a professora,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi><mo>=</mo></mrow><annotation encoding="application/x-tex">t =</annotation></semantics></math>
+“<code>doutor</code>”. Neste momento, a professora seria a vencedora,
+mas Hugo selecionou a palavra
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>s</mi><annotation encoding="application/x-tex">s</annotation></semantics></math>
+e trocou a primeira e a terceira letras de posição, obtendo agora
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>=</mo></mrow><annotation encoding="application/x-tex">s =</annotation></semantics></math>
+“<code>cama</code>” e vencendo a partida.</p>
+<p>A criançada gostou da brincadeira. Para ajudar a professora a
+verificar se as crianças têm ou não chances de vencer a partida, escreva
+um programa que receba as palavras
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>s</mi><annotation encoding="application/x-tex">s</annotation></semantics></math>
+e
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>t</mi><annotation encoding="application/x-tex">t</annotation></semantics></math>
+e decida se existe alguma forma de Hugo e as crianças vencerem a
+partida.</p>
+<h2 id="entrada">Entrada</h2>
+<p>A primeira linha da entrada contém o inteiro
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">(</mo><mn>1</mn><mo>≤</mo><mi>n</mi><mo>≤</mo><mn>100</mn><mo stretchy="true" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(1\leq n\leq 100)</annotation></semantics></math>,
+que indica o número de letras na palavra
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>s</mi><annotation encoding="application/x-tex">s</annotation></semantics></math>.</p>
+<p>A segunda linha da entrada contém a palavra
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>s</mi><annotation encoding="application/x-tex">s</annotation></semantics></math>,
+que é composta de
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>
+caracteres alfabéticos minúsculos.</p>
+<p>A terceira linha da entrada contém o inteiro
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>m</mi><annotation encoding="application/x-tex">m</annotation></semantics></math>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">(</mo><mn>1</mn><mo>≤</mo><mi>m</mi><mo>≤</mo><mn>100</mn><mo stretchy="true" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(1\leq m\leq 100)</annotation></semantics></math>,
+que indica o número de letras na palavra
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>t</mi><annotation encoding="application/x-tex">t</annotation></semantics></math>.</p>
+<p>A quarta linha da entrada contém a palavra
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>t</mi><annotation encoding="application/x-tex">t</annotation></semantics></math>,
+que é composta de
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>m</mi><annotation encoding="application/x-tex">m</annotation></semantics></math>
+caracteres alfabéticos minúsculos.</p>
+<h2 id="saída">Saída</h2>
+<p>Imprima, em uma linha, o caractere ‘<code>S</code>’, caso exista
+alguma forma de Hugo e as crianças vencerem a partida; caso contrário,
+imprima o caractere ‘<code>N</code>’.</p>
+<section class="moj-exemplos"><h2>Exemplos</h2><div class="moj-exemplo"><h3>Entrada</h3><pre data-sample="sample1" data-kind="input">4
+maca
+6
+doutor
+</pre><h3>Saída</h3><pre data-sample="sample1" data-kind="output">S
+</pre><div class="moj-exemplo-nota"><h3>Explicação</h3><p>Este foi o exemplo apresentado no texto.</p></div></div><div class="moj-exemplo"><h3>Entrada</h3><pre data-sample="sample2" data-kind="input">4
+moto
+4
+caso
+</pre><h3>Saída</h3><pre data-sample="sample2" data-kind="output">S
+</pre><div class="moj-exemplo-nota"><h3>Explicação</h3><p>Hugo pode trocar a primeira e a terceira letra para obter <span class="math inline"><em>t</em>=</span> “<code>saco</code>”, que sucede
+“<code>moto</code>” na ordem alfabética.</p></div></div><div class="moj-exemplo"><h3>Entrada</h3><pre data-sample="sample3" data-kind="input">4
+fcte
+3
+abc
+</pre><h3>Saída</h3><pre data-sample="sample3" data-kind="output">N
+</pre></div><div class="moj-exemplo"><h3>Entrada</h3><pre data-sample="sample4" data-kind="input">1
+a
+1
+a
+</pre><h3>Saída</h3><pre data-sample="sample4" data-kind="output">N
+</pre><div class="moj-exemplo-nota"><h3>Explicação</h3><p>Hugo não consegue fazer trocas neste caso. Como as palavras são
+iguais, <span class="math inline"><em>s</em></span> não antecede <span class="math inline"><em>t</em></span> na ordem alfabética, portanto, a
+professora ganha.</p></div></div></section>
+</body>
+</html>

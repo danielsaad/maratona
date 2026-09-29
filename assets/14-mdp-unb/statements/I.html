@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>tmp</title>
+  <style>
+html {
+color: #1a1a1a;
+background-color: #fdfdfd;
+}
+body {
+margin: 0 auto;
+max-width: 36em;
+padding-left: 50px;
+padding-right: 50px;
+padding-top: 50px;
+padding-bottom: 50px;
+hyphens: auto;
+overflow-wrap: break-word;
+text-rendering: optimizeLegibility;
+font-kerning: normal;
+}
+@media (max-width: 600px) {
+body {
+font-size: 0.9em;
+padding: 12px;
+}
+h1 {
+font-size: 1.8em;
+}
+}
+@media print {
+html {
+background-color: white;
+}
+body {
+background-color: transparent;
+color: black;
+font-size: 12pt;
+}
+p, h2, h3 {
+orphans: 3;
+widows: 3;
+}
+h2, h3, h4 {
+page-break-after: avoid;
+}
+}
+p {
+margin: 1em 0;
+}
+a {
+color: #1a1a1a;
+}
+a:visited {
+color: #1a1a1a;
+}
+img {
+max-width: 100%;
+}
+svg {
+height: auto;
+max-width: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+margin-top: 1.4em;
+}
+h5, h6 {
+font-size: 1em;
+font-style: italic;
+}
+h6 {
+font-weight: normal;
+}
+ol, ul {
+padding-left: 1.7em;
+margin-top: 1em;
+}
+li > ol, li > ul {
+margin-top: 0;
+}
+blockquote {
+margin: 1em 0 1em 1.7em;
+padding-left: 1em;
+border-left: 2px solid #e6e6e6;
+color: #606060;
+}
+code {
+font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+font-size: 85%;
+margin: 0;
+hyphens: manual;
+}
+pre {
+margin: 1em 0;
+overflow: auto;
+}
+pre code {
+padding: 0;
+overflow: visible;
+overflow-wrap: normal;
+}
+.sourceCode {
+background-color: transparent;
+overflow: visible;
+}
+hr {
+background-color: #1a1a1a;
+border: none;
+height: 1px;
+margin: 1em 0;
+}
+table {
+margin: 1em 0;
+border-collapse: collapse;
+width: 100%;
+overflow-x: auto;
+display: block;
+font-variant-numeric: lining-nums tabular-nums;
+}
+table caption {
+margin-bottom: 0.75em;
+}
+tbody {
+margin-top: 0.5em;
+border-top: 1px solid #1a1a1a;
+border-bottom: 1px solid #1a1a1a;
+}
+th {
+border-top: 1px solid #1a1a1a;
+padding: 0.25em 0.5em 0.25em 0.5em;
+}
+td {
+padding: 0.125em 0.5em 0.25em 0.5em;
+}
+header {
+margin-bottom: 4em;
+text-align: center;
+}
+#TOC li {
+list-style: none;
+}
+#TOC ul {
+padding-left: 1.3em;
+}
+#TOC > ul {
+padding-left: 0;
+}
+#TOC a:not(:hover) {
+text-decoration: none;
+}
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+
+ul.task-list[class]{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+font-size: inherit;
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+</style>
+<style>body{font-family:system-ui,Arial,sans-serif;max-width:52rem;margin:1rem auto;padding:0 1rem;line-height:1.55;color:#111}.moj-title{margin:.2rem 0 1.1rem}pre{background:#f3f4f6;padding:.6rem;border-radius:6px;overflow:auto;white-space:pre-wrap}.moj-exemplos h2{margin-top:1.2rem}.moj-exemplo{border:1px solid #e5e7eb;border-radius:8px;padding:.2rem .8rem;margin:.6rem 0}.moj-exemplo h3,.moj-exemplo h4{margin:.5rem 0 .2rem}.moj-exemplo-nota{margin:.1rem 0 .5rem;color:#374151}img{max-width:100%}.moj-graph{margin:1rem 0}.moj-graph.center{text-align:center}.moj-graph svg{max-width:100%;height:auto}table{border-collapse:collapse}td,th{border:1px solid #ccc;padding:.2rem .5rem}</style>
+</head>
+<body>
+<h1 class="moj-title">Igualzim, não!</h1>
+<p>Geraldo e Genésio são dois compadres que moram em um pequeno
+município de Minas Gerais. Ambos resolveram pintar as fachadas de suas
+residências e, conversando sobre o assunto, descobriram que ambos iriam
+usar a cor azul. Na mesma hora, Genésio bradou: “Igualzim, não!”.</p>
+<p>O problema é que os moradores são muito sistemáticos e também muito
+próximos, de modo que muitos são compadres uns dos outros. Além disso,
+na venda do seu Tião, único estabelecimento comercial da região, só há
+duas cores de tinta disponíveis: azul e branco (todos lá são
+Cruzeiro…).</p>
+<p>Sabendo que dois compadres não pintarão suas casas de uma mesma cor,
+e dadas as informações sobre os
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>N</mi><annotation encoding="application/x-tex">N</annotation></semantics></math>
+moradores do município (quem é ou não compadre do outro), determine o
+número de maneiras distintas de renovar as fachadas das residências da
+região, uma vez que a notícia se espalhou e ninguém quer ficar de fora
+(isto é, todos pintarão suas casas).</p>
+<h2 id="entrada">Entrada</h2>
+<p>A primeira linha da entrada contém o inteiro
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>N</mi><annotation encoding="application/x-tex">N</annotation></semantics></math>
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>≤</mo><mi>N</mi><mo>≤</mo><mn>2</mn><mo>×</mo><msup><mn>10</mn><mn>5</mn></msup></mrow><annotation encoding="application/x-tex">1\leq N\leq 2\times 10^5</annotation></semantics></math>),
+indicando o número de moradores do município. Cada morador será
+identificado por um inteiro único no intervalo
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">[</mo><mn>1</mn><mo>,</mo><mi>N</mi><mo stretchy="true" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">[1, N]</annotation></semantics></math>.</p>
+<p>As
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>N</mi><annotation encoding="application/x-tex">N</annotation></semantics></math>
+linhas seguintes contêm, cada uma, a lista de compadres. A
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>i</mi><annotation encoding="application/x-tex">i</annotation></semantics></math>-ésima
+linha começa com um inteiro
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>m</mi><mi>i</mi></msub><annotation encoding="application/x-tex">m_i</annotation></semantics></math>
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>≤</mo><msub><mi>m</mi><mi>i</mi></msub><mo>&lt;</mo><mi>N</mi></mrow><annotation encoding="application/x-tex">0\leq m_i &lt; N</annotation></semantics></math>),
+indicando quantos são os compadres do
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>i</mi><annotation encoding="application/x-tex">i</annotation></semantics></math>-ésimo
+morador. Após um espaço em branco, seguem
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>m</mi><mi>i</mi></msub><annotation encoding="application/x-tex">m_i</annotation></semantics></math>
+inteiros
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>c</mi><mi>k</mi></msub><annotation encoding="application/x-tex">c_k</annotation></semantics></math>
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>≤</mo><msub><mi>c</mi><mi>k</mi></msub><mo>≤</mo><mi>N</mi><mo>,</mo><msub><mi>c</mi><mi>k</mi></msub><mo>≠</mo><mi>i</mi><mo>,</mo><mi>k</mi><mo>∈</mo><mrow><mo stretchy="true" form="prefix">[</mo><mn>1</mn><mo>,</mo><msub><mi>m</mi><mi>i</mi></msub><mo stretchy="true" form="postfix">]</mo></mrow></mrow><annotation encoding="application/x-tex">1\leq c_k\leq N, c_k\neq i, k\in [1, m_i]</annotation></semantics></math>),
+separados por um espaço em branco, indicando que
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>c</mi><mi>k</mi></msub><annotation encoding="application/x-tex">c_k</annotation></semantics></math>
+é compadre de
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>i</mi><annotation encoding="application/x-tex">i</annotation></semantics></math>.</p>
+<p>É garantido que:</p>
+<ul>
+<li>se
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>i</mi><annotation encoding="application/x-tex">i</annotation></semantics></math>
+é compadre de
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>j</mi><annotation encoding="application/x-tex">j</annotation></semantics></math>,
+então
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>j</mi><annotation encoding="application/x-tex">j</annotation></semantics></math>
+também é compadre de
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>i</mi><annotation encoding="application/x-tex">i</annotation></semantics></math>;</li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>i</mi><annotation encoding="application/x-tex">i</annotation></semantics></math>
+ser compadre de
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>j</mi><annotation encoding="application/x-tex">j</annotation></semantics></math>
+e
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>j</mi><annotation encoding="application/x-tex">j</annotation></semantics></math>
+ser compadre de
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>k</mi><annotation encoding="application/x-tex">k</annotation></semantics></math>
+não implica, necessariamente, que
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>i</mi><annotation encoding="application/x-tex">i</annotation></semantics></math>
+e
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>k</mi><annotation encoding="application/x-tex">k</annotation></semantics></math>
+sejam compadres;</li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>N</mi></msubsup><msub><mi>m</mi><mi>i</mi></msub><mo>≤</mo><mn>4</mn><mo>×</mo><msup><mn>10</mn><mn>5</mn></msup></mrow><annotation encoding="application/x-tex">\displaystyle\sum_{i=1}^N m_i \leq 4\times 10^5</annotation></semantics></math>.</li>
+</ul>
+<h2 id="saída">Saída</h2>
+<p>Imprima, em uma linha, o número de maneiras distintas que as casas do
+município podem ser coloridas, usando as tintas da venda do seu Tião e
+de modo que compadres tenham casas de cores diferentes. Como este número
+pode ser muito grande, imprima o seu resto da divisão por
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>10</mn><mn>9</mn></msup><mo>+</mo><mn>7</mn></mrow><annotation encoding="application/x-tex">10^9 + 7</annotation></semantics></math>.</p>
+<section class="moj-exemplos"><h2>Exemplos</h2><div class="moj-exemplo"><h3>Entrada</h3><pre data-sample="sample1" data-kind="input">3
+1 2
+2 1 3
+1 2
+</pre><h3>Saída</h3><pre data-sample="sample1" data-kind="output">2
+</pre><div class="moj-exemplo-nota"><h3>Explicação</h3><p>Há dois pares de compadres: 1 e 2, 2 e 3. Existem duas formas de
+pintar as casas: 1 e 3 pintam suas casas de branco e 2 de azul, ou 1 e 3
+pintam suas casas de azul e 2 pinta a sua de branco. Note que 1 e 3 não
+são compadres, de modo que podem ter casas de mesma cor.</p></div></div><div class="moj-exemplo"><h3>Entrada</h3><pre data-sample="sample2" data-kind="input">3
+2 2 3
+2 1 3
+2 1 2
+</pre><h3>Saída</h3><pre data-sample="sample2" data-kind="output">0
+</pre><div class="moj-exemplo-nota"><h3>Explicação</h3><p>Todos os moradores são compadres entre si, de modo que não há como
+pintar as casas com apenas as duas cores disponíveis sem que ao menos
+dois compadres fiquem com a mesma cor.</p></div></div><div class="moj-exemplo"><h3>Entrada</h3><pre data-sample="sample3" data-kind="input">2
+0
+0
+</pre><h3>Saída</h3><pre data-sample="sample3" data-kind="output">4
+</pre><div class="moj-exemplo-nota"><h3>Explicação</h3><p>Os dois moradores não são compadres, de modo que cada um pode pintar
+sua casa da cor que preferir. Assim, são quatro maneiras distintas: AA,
+AB, BA e BB, se usarmos a letra A para sinalizar a cor azul e B para a
+cor branca.</p></div></div></section>
+</body>
+</html>

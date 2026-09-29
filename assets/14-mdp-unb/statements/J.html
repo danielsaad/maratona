@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>enunciado</title>
+  <style>
+html {
+color: #1a1a1a;
+background-color: #fdfdfd;
+}
+body {
+margin: 0 auto;
+max-width: 36em;
+padding-left: 50px;
+padding-right: 50px;
+padding-top: 50px;
+padding-bottom: 50px;
+hyphens: auto;
+overflow-wrap: break-word;
+text-rendering: optimizeLegibility;
+font-kerning: normal;
+}
+@media (max-width: 600px) {
+body {
+font-size: 0.9em;
+padding: 12px;
+}
+h1 {
+font-size: 1.8em;
+}
+}
+@media print {
+html {
+background-color: white;
+}
+body {
+background-color: transparent;
+color: black;
+font-size: 12pt;
+}
+p, h2, h3 {
+orphans: 3;
+widows: 3;
+}
+h2, h3, h4 {
+page-break-after: avoid;
+}
+}
+p {
+margin: 1em 0;
+}
+a {
+color: #1a1a1a;
+}
+a:visited {
+color: #1a1a1a;
+}
+img {
+max-width: 100%;
+}
+svg {
+height: auto;
+max-width: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+margin-top: 1.4em;
+}
+h5, h6 {
+font-size: 1em;
+font-style: italic;
+}
+h6 {
+font-weight: normal;
+}
+ol, ul {
+padding-left: 1.7em;
+margin-top: 1em;
+}
+li > ol, li > ul {
+margin-top: 0;
+}
+blockquote {
+margin: 1em 0 1em 1.7em;
+padding-left: 1em;
+border-left: 2px solid #e6e6e6;
+color: #606060;
+}
+code {
+font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+font-size: 85%;
+margin: 0;
+hyphens: manual;
+}
+pre {
+margin: 1em 0;
+overflow: auto;
+}
+pre code {
+padding: 0;
+overflow: visible;
+overflow-wrap: normal;
+}
+.sourceCode {
+background-color: transparent;
+overflow: visible;
+}
+hr {
+background-color: #1a1a1a;
+border: none;
+height: 1px;
+margin: 1em 0;
+}
+table {
+margin: 1em 0;
+border-collapse: collapse;
+width: 100%;
+overflow-x: auto;
+display: block;
+font-variant-numeric: lining-nums tabular-nums;
+}
+table caption {
+margin-bottom: 0.75em;
+}
+tbody {
+margin-top: 0.5em;
+border-top: 1px solid #1a1a1a;
+border-bottom: 1px solid #1a1a1a;
+}
+th {
+border-top: 1px solid #1a1a1a;
+padding: 0.25em 0.5em 0.25em 0.5em;
+}
+td {
+padding: 0.125em 0.5em 0.25em 0.5em;
+}
+header {
+margin-bottom: 4em;
+text-align: center;
+}
+#TOC li {
+list-style: none;
+}
+#TOC ul {
+padding-left: 1.3em;
+}
+#TOC > ul {
+padding-left: 0;
+}
+#TOC a:not(:hover) {
+text-decoration: none;
+}
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+
+ul.task-list[class]{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+font-size: inherit;
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+</style>
+<style>body{font-family:system-ui,Arial,sans-serif;max-width:52rem;margin:1rem auto;padding:0 1rem;line-height:1.55;color:#111}.moj-title{margin:.2rem 0 1.1rem}pre{background:#f3f4f6;padding:.6rem;border-radius:6px;overflow:auto;white-space:pre-wrap}.moj-exemplos h2{margin-top:1.2rem}.moj-exemplo{border:1px solid #e5e7eb;border-radius:8px;padding:.2rem .8rem;margin:.6rem 0}.moj-exemplo h3,.moj-exemplo h4{margin:.5rem 0 .2rem}.moj-exemplo-nota{margin:.1rem 0 .5rem;color:#374151}img{max-width:100%}.moj-graph{margin:1rem 0}.moj-graph.center{text-align:center}.moj-graph svg{max-width:100%;height:auto}table{border-collapse:collapse}td,th{border:1px solid #ccc;padding:.2rem .5rem}</style>
+</head>
+<body>
+<h1 class="moj-title">Jogo da Memória</h1>
+<p>Todo domingo, Zuleide monta a barraca dela na Feira da Torre de TV,
+entre a tenda dos pastéis e a das redes de dormir. Ela vende um jogo da
+memória feito à mão, com cartas que trazem os monumentos de Brasília
+desenhados a nanquim: dois Congressos, duas Catedrais, duas pontes JK, e
+assim por diante. Como ninguém compra o que não experimenta, Zuleide
+inventou um desafio para atrair freguês: quem limpar o tabuleiro dela
+leva o jogo de graça.</p>
+<p>O desafio funciona assim. Zuleide embaralha as cartas e as espalha
+viradas para baixo num tabuleiro de
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>N</mi><annotation encoding="application/x-tex">N</annotation></semantics></math>
+linhas e
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>M</mi><annotation encoding="application/x-tex">M</annotation></semantics></math>
+colunas. Cada carta traz um desenho, e cada desenho aparece em
+exatamente duas cartas do tabuleiro. Para conversar com os fregueses de
+fora, que não sabem distinguir o Itamaraty do Palácio da Justiça, ela
+numerou os desenhos de
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>1</mn><annotation encoding="application/x-tex">1</annotation></semantics></math>
+a
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mrow><mi>N</mi><mo>⋅</mo><mi>M</mi></mrow><mn>2</mn></mfrac><annotation encoding="application/x-tex">\frac{N \cdot M}{2}</annotation></semantics></math>.
+A cada jogada, o freguês aponta duas cartas ainda viradas para baixo e
+Zuleide as vira. Se os desenhos forem iguais, o par foi encontrado e as
+duas cartas ficam viradas para cima até o fim do jogo. Se forem
+diferentes, Zuleide diz qual desenho estava em cada uma e vira as duas
+de volta para baixo.</p>
+<p>A pegadinha é o limite: o freguês só leva o jogo se encontrar todos
+os pares usando, no máximo, tantas jogadas quantas são as cartas do
+tabuleiro, ou seja,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><mo>⋅</mo><mi>M</mi></mrow><annotation encoding="application/x-tex">N \cdot M</annotation></semantics></math>
+jogadas. Zuleide garante que sempre dá para vencer. Só que quase ninguém
+consegue, e quem perde acaba comprando o jogo mesmo assim, o que é
+exatamente o plano dela.</p>
+<p>Você está na fila com o dinheiro contado e decidiu que vai levar o
+jogo de graça. Escreva um programa que jogue contra Zuleide e limpe o
+tabuleiro dentro do limite.</p>
+<p>Este é um problema interativo: em vez de ler uma entrada fixa, o seu
+programa conversa com o juiz, que faz o papel de Zuleide. O seu programa
+aponta as cartas e recebe de volta o que ela viu ao virá-las.</p>
+<h2 id="interação">Interação</h2>
+<p>No início, o juiz envia uma linha com dois inteiros
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>N</mi><annotation encoding="application/x-tex">N</annotation></semantics></math>
+e
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>M</mi><annotation encoding="application/x-tex">M</annotation></semantics></math>
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>≤</mo><mi>N</mi><mo>,</mo><mi>M</mi><mo>≤</mo><msup><mn>10</mn><mn>4</mn></msup></mrow><annotation encoding="application/x-tex">1 \leq N, M \leq 10^4</annotation></semantics></math>),
+as dimensões do tabuleiro. É garantido que
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><mo>⋅</mo><mi>M</mi></mrow><annotation encoding="application/x-tex">N \cdot M</annotation></semantics></math>
+é par e que
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mo>≤</mo><mi>N</mi><mo>⋅</mo><mi>M</mi><mo>≤</mo><msup><mn>10</mn><mn>4</mn></msup></mrow><annotation encoding="application/x-tex">2 \leq N \cdot M \leq 10^4</annotation></semantics></math>.
+As linhas são numeradas de
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>1</mn><annotation encoding="application/x-tex">1</annotation></semantics></math>
+a
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>N</mi><annotation encoding="application/x-tex">N</annotation></semantics></math>,
+de cima para baixo, e as colunas de
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>1</mn><annotation encoding="application/x-tex">1</annotation></semantics></math>
+a
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>M</mi><annotation encoding="application/x-tex">M</annotation></semantics></math>,
+da esquerda para a direita. Cada carta traz um inteiro entre
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>1</mn><annotation encoding="application/x-tex">1</annotation></semantics></math>
+e
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mrow><mi>N</mi><mo>⋅</mo><mi>M</mi></mrow><mn>2</mn></mfrac><annotation encoding="application/x-tex">\frac{N \cdot M}{2}</annotation></semantics></math>,
+e cada um desses inteiros aparece em exatamente duas cartas.</p>
+<p>A cada jogada, o seu programa imprime uma linha
+<code>r1 c1 r2 c2</code>, com
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>≤</mo><msub><mi>r</mi><mn>1</mn></msub><mo>,</mo><msub><mi>r</mi><mn>2</mn></msub><mo>≤</mo><mi>N</mi></mrow><annotation encoding="application/x-tex">1 \leq r_1, r_2 \leq N</annotation></semantics></math>
+e
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>≤</mo><msub><mi>c</mi><mn>1</mn></msub><mo>,</mo><msub><mi>c</mi><mn>2</mn></msub><mo>≤</mo><mi>M</mi></mrow><annotation encoding="application/x-tex">1 \leq c_1, c_2 \leq M</annotation></semantics></math>,
+indicando as duas cartas que quer virar: a da linha
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>r</mi><mn>1</mn></msub><annotation encoding="application/x-tex">r_1</annotation></semantics></math>
+e coluna
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>c</mi><mn>1</mn></msub><annotation encoding="application/x-tex">c_1</annotation></semantics></math>
+e a da linha
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>r</mi><mn>2</mn></msub><annotation encoding="application/x-tex">r_2</annotation></semantics></math>
+e coluna
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>c</mi><mn>2</mn></msub><annotation encoding="application/x-tex">c_2</annotation></semantics></math>.
+As duas posições devem ser distintas e nenhuma delas pode ser de uma
+carta já emparelhada. O juiz responde uma linha:</p>
+<ul>
+<li><code>IGUAL</code>, se as duas cartas traziam o mesmo inteiro. O par
+foi encontrado e as duas cartas ficam viradas para cima até o fim do
+jogo.</li>
+<li><code>DIFERENTE v1 v2</code>, se traziam inteiros diferentes:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>v</mi><mn>1</mn></msub><annotation encoding="application/x-tex">v_1</annotation></semantics></math>
+é o inteiro da carta em
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>r</mi><mn>1</mn></msub><mo>,</mo><msub><mi>c</mi><mn>1</mn></msub><mo stretchy="true" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(r_1, c_1)</annotation></semantics></math>
+e
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>v</mi><mn>2</mn></msub><annotation encoding="application/x-tex">v_2</annotation></semantics></math>
+é o da carta em
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>r</mi><mn>2</mn></msub><mo>,</mo><msub><mi>c</mi><mn>2</mn></msub><mo stretchy="true" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(r_2, c_2)</annotation></semantics></math>.
+As duas voltam a ficar viradas para baixo.</li>
+</ul>
+<p>Quando a resposta <code>IGUAL</code> completar o último par, o jogo
+acaba e o seu programa deve encerrar.</p>
+<p>Seu programa pode fazer no máximo
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><mo>⋅</mo><mi>M</mi></mrow><annotation encoding="application/x-tex">N \cdot M</annotation></semantics></math>
+jogadas. Estourar esse limite, indicar uma posição fora do tabuleiro,
+repetir a mesma posição nas duas cartas de uma jogada ou virar uma carta
+já emparelhada dá <em>Wrong Answer</em>.</p>
+<p>É garantido que o tabuleiro está fixado antes da primeira jogada, ou
+seja, o juiz não muda as cartas de lugar em função do que você jogou, e
+que existe uma estratégia que limpa qualquer tabuleiro dentro do
+limite.</p>
+<p>Dê flush na saída depois de cada linha impressa. A conversa com o
+juiz passa por um <em>pipe</em>, e uma linha presa no buffer de saída
+nunca chega do outro lado: o seu programa fica esperando por uma
+resposta que não vem e o veredito acaba sendo um <em>Time Limit
+Exceeded</em> injusto. Use <code>fflush(stdout)</code> em C,
+<code>std::endl</code> ou <code>&lt;&lt; std::flush</code> em C++,
+<code>print(..., flush=True)</code> em Python,
+<code>io::stdout().flush()</code> em Rust e
+<code>System.out.flush()</code> em Java e Kotlin, cujas JVMs têm buffer
+próprio. Em Bash, o <code>echo</code> já entrega a linha. Leia sempre a
+resposta antes de fazer a jogada seguinte, e leia uma linha por vez: ler
+a entrada até o fim trava o programa, porque o juiz só fala depois de
+cada jogada sua.</p>
+<h2 id="entrada">Entrada</h2>
+<p>A única coisa que o seu programa recebe antes de jogar é a linha com
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>N</mi><annotation encoding="application/x-tex">N</annotation></semantics></math>
+e
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>M</mi><annotation encoding="application/x-tex">M</annotation></semantics></math>.
+Tudo o que ele lê depois são as respostas <code>IGUAL</code> e
+<code>DIFERENTE v1 v2</code>, uma por linha, cada uma logo depois de uma
+jogada que ele mesmo imprimiu.</p>
+<h2 id="saída">Saída</h2>
+<p>O seu programa imprime as jogadas no formato
+<code>r1 c1 r2 c2</code>, uma por linha, e encerra assim que a resposta
+<code>IGUAL</code> completar o último par.</p>
+<h2 id="exemplo">Exemplo</h2>
+<p>Nos diálogos abaixo, as linhas sem recuo são o que o seu programa
+imprime e as linhas recuadas são o que o juiz responde.</p>
+<p>Num tabuleiro
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mo>×</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">2 \times 2</annotation></semantics></math>
+cujas cartas, escondidas, são</p>
+<pre><code>1 2
+2 1</code></pre>
+<p>uma partida vencedora é:</p>
+<pre><code>        2 2
+1 1 1 2
+        DIFERENTE 1 2
+2 1 2 2
+        DIFERENTE 2 1
+1 1 2 2
+        IGUAL
+1 2 2 1
+        IGUAL</code></pre>
+<p>A figura a seguir reflete essa partida. Nas duas primeiras jogadas as
+cartas viradas eram diferentes e voltaram para baixo; nas duas últimas,
+os pares foram encontrados. Foram
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>4</mn><annotation encoding="application/x-tex">4</annotation></semantics></math>
+jogadas, exatamente o limite
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><mo>⋅</mo><mi>M</mi><mo>=</mo><mn>4</mn></mrow><annotation encoding="application/x-tex">N \cdot M = 4</annotation></semantics></math>.</p>
+<p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MjQgMjEwIiB3aWR0aD0iNjI0IiBoZWlnaHQ9IjIxMCIgZm9udC1mYW1pbHk9IlZlcmRhbmEsRGVqYVZ1IFNhbnMsc2Fucy1zZXJpZiI+CjxyZWN0IHdpZHRoPSI2MjQiIGhlaWdodD0iMjEwIiBmaWxsPSIjZmZmZmZmIi8+CjxyZWN0IHg9IjEyIiB5PSI2IiB3aWR0aD0iMTMyIiBoZWlnaHQ9IjE5OCIgcng9IjgiIGZpbGw9IiNmN2Y5ZmMiIHN0cm9rZT0iI2Q1ZGJlNSIvPgo8dGV4dCB4PSI3OC4wIiB5PSIyNSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1zaXplPSIxMiIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMyYzNlNTAiPmpvZ2FkYSAxPC90ZXh0Pgo8cmVjdCB4PSIyOCIgeT0iMzYiIHdpZHRoPSI0NiIgaGVpZ2h0PSI1OCIgcng9IjYiIGZpbGw9IiNmZmY4ZGMiIHN0cm9rZT0iI2UwYTgwMCIgc3Ryb2tlLXdpZHRoPSIzIi8+Cjx0ZXh0IHg9IjUxLjAiIHk9Ijc1LjAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMjYiIGZvbnQtd2VpZ2h0PSJib2xkIiBmaWxsPSIjN2E1YTAwIj4xPC90ZXh0Pgo8cmVjdCB4PSI4MiIgeT0iMzYiIHdpZHRoPSI0NiIgaGVpZ2h0PSI1OCIgcng9IjYiIGZpbGw9IiNmZmY4ZGMiIHN0cm9rZT0iI2UwYTgwMCIgc3Ryb2tlLXdpZHRoPSIzIi8+Cjx0ZXh0IHg9IjEwNS4wIiB5PSI3NS4wIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXNpemU9IjI2IiBmb250LXdlaWdodD0iYm9sZCIgZmlsbD0iIzdhNWEwMCI+MjwvdGV4dD4KPHJlY3QgeD0iMjgiIHk9IjEwMiIgd2lkdGg9IjQ2IiBoZWlnaHQ9IjU4IiByeD0iNiIgZmlsbD0iIzRhNjliZCIgc3Ryb2tlPSIjMzE0ODllIiBzdHJva2Utd2lkdGg9IjIiLz4KPHJlY3QgeD0iMzMiIHk9IjEwNyIgd2lkdGg9IjM2IiBoZWlnaHQ9IjQ4IiByeD0iNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjN2Q5M2RhIiBzdHJva2Utd2lkdGg9IjEuMiIvPgo8dGV4dCB4PSI1MS4wIiB5PSIxNDAuMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1zaXplPSIyNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiNkZmU2ZmYiPj88L3RleHQ+CjxyZWN0IHg9IjgyIiB5PSIxMDIiIHdpZHRoPSI0NiIgaGVpZ2h0PSI1OCIgcng9IjYiIGZpbGw9IiM0YTY5YmQiIHN0cm9rZT0iIzMxNDg5ZSIgc3Ryb2tlLXdpZHRoPSIyIi8+CjxyZWN0IHg9Ijg3IiB5PSIxMDciIHdpZHRoPSIzNiIgaGVpZ2h0PSI0OCIgcng9IjQiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzdkOTNkYSIgc3Ryb2tlLXdpZHRoPSIxLjIiLz4KPHRleHQgeD0iMTA1LjAiIHk9IjE0MC4wIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXNpemU9IjI0IiBmb250LXdlaWdodD0iYm9sZCIgZmlsbD0iI2RmZTZmZiI+PzwvdGV4dD4KPHRleHQgeD0iNzguMCIgeT0iMTc2IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXNpemU9IjExIiBmaWxsPSIjMmMzZTUwIiBmb250LWZhbWlseT0iRGVqYVZ1IFNhbnMgTW9ubyxtb25vc3BhY2UiPjEgMSAxIDI8L3RleHQ+Cjx0ZXh0IHg9Ijc4LjAiIHk9IjE5NCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1zaXplPSIxMSIgZmlsbD0iIzdhNWEwMCIgZm9udC1mYW1pbHk9IkRlamFWdSBTYW5zIE1vbm8sbW9ub3NwYWNlIj5ESUZFUkVOVEUgMSAyPC90ZXh0Pgo8cmVjdCB4PSIxNjgiIHk9IjYiIHdpZHRoPSIxMzIiIGhlaWdodD0iMTk4IiByeD0iOCIgZmlsbD0iI2Y3ZjlmYyIgc3Ryb2tlPSIjZDVkYmU1Ii8+Cjx0ZXh0IHg9IjIzNC4wIiB5PSIyNSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1zaXplPSIxMiIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMyYzNlNTAiPmpvZ2FkYSAyPC90ZXh0Pgo8cmVjdCB4PSIxODQiIHk9IjM2IiB3aWR0aD0iNDYiIGhlaWdodD0iNTgiIHJ4PSI2IiBmaWxsPSIjNGE2OWJkIiBzdHJva2U9IiMzMTQ4OWUiIHN0cm9rZS13aWR0aD0iMiIvPgo8cmVjdCB4PSIxODkiIHk9IjQxIiB3aWR0aD0iMzYiIGhlaWdodD0iNDgiIHJ4PSI0IiBmaWxsPSJub25lIiBzdHJva2U9IiM3ZDkzZGEiIHN0cm9rZS13aWR0aD0iMS4yIi8+Cjx0ZXh0IHg9IjIwNy4wIiB5PSI3NC4wIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXNpemU9IjI0IiBmb250LXdlaWdodD0iYm9sZCIgZmlsbD0iI2RmZTZmZiI+PzwvdGV4dD4KPHJlY3QgeD0iMjM4IiB5PSIzNiIgd2lkdGg9IjQ2IiBoZWlnaHQ9IjU4IiByeD0iNiIgZmlsbD0iIzRhNjliZCIgc3Ryb2tlPSIjMzE0ODllIiBzdHJva2Utd2lkdGg9IjIiLz4KPHJlY3QgeD0iMjQzIiB5PSI0MSIgd2lkdGg9IjM2IiBoZWlnaHQ9IjQ4IiByeD0iNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjN2Q5M2RhIiBzdHJva2Utd2lkdGg9IjEuMiIvPgo8dGV4dCB4PSIyNjEuMCIgeT0iNzQuMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1zaXplPSIyNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiNkZmU2ZmYiPj88L3RleHQ+CjxyZWN0IHg9IjE4NCIgeT0iMTAyIiB3aWR0aD0iNDYiIGhlaWdodD0iNTgiIHJ4PSI2IiBmaWxsPSIjZmZmOGRjIiBzdHJva2U9IiNlMGE4MDAiIHN0cm9rZS13aWR0aD0iMyIvPgo8dGV4dCB4PSIyMDcuMCIgeT0iMTQxLjAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMjYiIGZvbnQtd2VpZ2h0PSJib2xkIiBmaWxsPSIjN2E1YTAwIj4yPC90ZXh0Pgo8cmVjdCB4PSIyMzgiIHk9IjEwMiIgd2lkdGg9IjQ2IiBoZWlnaHQ9IjU4IiByeD0iNiIgZmlsbD0iI2ZmZjhkYyIgc3Ryb2tlPSIjZTBhODAwIiBzdHJva2Utd2lkdGg9IjMiLz4KPHRleHQgeD0iMjYxLjAiIHk9IjE0MS4wIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXNpemU9IjI2IiBmb250LXdlaWdodD0iYm9sZCIgZmlsbD0iIzdhNWEwMCI+MTwvdGV4dD4KPHRleHQgeD0iMjM0LjAiIHk9IjE3NiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1zaXplPSIxMSIgZmlsbD0iIzJjM2U1MCIgZm9udC1mYW1pbHk9IkRlamFWdSBTYW5zIE1vbm8sbW9ub3NwYWNlIj4yIDEgMiAyPC90ZXh0Pgo8dGV4dCB4PSIyMzQuMCIgeT0iMTk0IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXNpemU9IjExIiBmaWxsPSIjN2E1YTAwIiBmb250LWZhbWlseT0iRGVqYVZ1IFNhbnMgTW9ubyxtb25vc3BhY2UiPkRJRkVSRU5URSAyIDE8L3RleHQ+CjxyZWN0IHg9IjMyNCIgeT0iNiIgd2lkdGg9IjEzMiIgaGVpZ2h0PSIxOTgiIHJ4PSI4IiBmaWxsPSIjZjdmOWZjIiBzdHJva2U9IiNkNWRiZTUiLz4KPHRleHQgeD0iMzkwLjAiIHk9IjI1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXNpemU9IjEyIiBmb250LXdlaWdodD0iYm9sZCIgZmlsbD0iIzJjM2U1MCI+am9nYWRhIDM8L3RleHQ+CjxyZWN0IHg9IjM0MCIgeT0iMzYiIHdpZHRoPSI0NiIgaGVpZ2h0PSI1OCIgcng9IjYiIGZpbGw9IiNlYWZhZjEiIHN0cm9rZT0iIzI3YWU2MCIgc3Ryb2tlLXdpZHRoPSIyIi8+Cjx0ZXh0IHg9IjM2My4wIiB5PSI3NS4wIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXNpemU9IjI2IiBmb250LXdlaWdodD0iYm9sZCIgZmlsbD0iIzFlODQ0OSI+MTwvdGV4dD4KPHJlY3QgeD0iMzk0IiB5PSIzNiIgd2lkdGg9IjQ2IiBoZWlnaHQ9IjU4IiByeD0iNiIgZmlsbD0iIzRhNjliZCIgc3Ryb2tlPSIjMzE0ODllIiBzdHJva2Utd2lkdGg9IjIiLz4KPHJlY3QgeD0iMzk5IiB5PSI0MSIgd2lkdGg9IjM2IiBoZWlnaHQ9IjQ4IiByeD0iNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjN2Q5M2RhIiBzdHJva2Utd2lkdGg9IjEuMiIvPgo8dGV4dCB4PSI0MTcuMCIgeT0iNzQuMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1zaXplPSIyNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiNkZmU2ZmYiPj88L3RleHQ+CjxyZWN0IHg9IjM0MCIgeT0iMTAyIiB3aWR0aD0iNDYiIGhlaWdodD0iNTgiIHJ4PSI2IiBmaWxsPSIjNGE2OWJkIiBzdHJva2U9IiMzMTQ4OWUiIHN0cm9rZS13aWR0aD0iMiIvPgo8cmVjdCB4PSIzNDUiIHk9IjEwNyIgd2lkdGg9IjM2IiBoZWlnaHQ9IjQ4IiByeD0iNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjN2Q5M2RhIiBzdHJva2Utd2lkdGg9IjEuMiIvPgo8dGV4dCB4PSIzNjMuMCIgeT0iMTQwLjAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMjQiIGZvbnQtd2VpZ2h0PSJib2xkIiBmaWxsPSIjZGZlNmZmIj4/PC90ZXh0Pgo8cmVjdCB4PSIzOTQiIHk9IjEwMiIgd2lkdGg9IjQ2IiBoZWlnaHQ9IjU4IiByeD0iNiIgZmlsbD0iI2VhZmFmMSIgc3Ryb2tlPSIjMjdhZTYwIiBzdHJva2Utd2lkdGg9IjIiLz4KPHRleHQgeD0iNDE3LjAiIHk9IjE0MS4wIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXNpemU9IjI2IiBmb250LXdlaWdodD0iYm9sZCIgZmlsbD0iIzFlODQ0OSI+MTwvdGV4dD4KPHRleHQgeD0iMzkwLjAiIHk9IjE3NiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1zaXplPSIxMSIgZmlsbD0iIzJjM2U1MCIgZm9udC1mYW1pbHk9IkRlamFWdSBTYW5zIE1vbm8sbW9ub3NwYWNlIj4xIDEgMiAyPC90ZXh0Pgo8dGV4dCB4PSIzOTAuMCIgeT0iMTk0IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXNpemU9IjExIiBmaWxsPSIjMWU4NDQ5IiBmb250LWZhbWlseT0iRGVqYVZ1IFNhbnMgTW9ubyxtb25vc3BhY2UiPklHVUFMPC90ZXh0Pgo8cmVjdCB4PSI0ODAiIHk9IjYiIHdpZHRoPSIxMzIiIGhlaWdodD0iMTk4IiByeD0iOCIgZmlsbD0iI2Y3ZjlmYyIgc3Ryb2tlPSIjZDVkYmU1Ii8+Cjx0ZXh0IHg9IjU0Ni4wIiB5PSIyNSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1zaXplPSIxMiIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMyYzNlNTAiPmpvZ2FkYSA0PC90ZXh0Pgo8cmVjdCB4PSI0OTYiIHk9IjM2IiB3aWR0aD0iNDYiIGhlaWdodD0iNTgiIHJ4PSI2IiBmaWxsPSIjZWFmYWYxIiBzdHJva2U9IiMyN2FlNjAiIHN0cm9rZS13aWR0aD0iMiIvPgo8dGV4dCB4PSI1MTkuMCIgeT0iNzUuMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1zaXplPSIyNiIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxZTg0NDkiPjE8L3RleHQ+CjxyZWN0IHg9IjU1MCIgeT0iMzYiIHdpZHRoPSI0NiIgaGVpZ2h0PSI1OCIgcng9IjYiIGZpbGw9IiNlYWZhZjEiIHN0cm9rZT0iIzI3YWU2MCIgc3Ryb2tlLXdpZHRoPSIyIi8+Cjx0ZXh0IHg9IjU3My4wIiB5PSI3NS4wIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXNpemU9IjI2IiBmb250LXdlaWdodD0iYm9sZCIgZmlsbD0iIzFlODQ0OSI+MjwvdGV4dD4KPHJlY3QgeD0iNDk2IiB5PSIxMDIiIHdpZHRoPSI0NiIgaGVpZ2h0PSI1OCIgcng9IjYiIGZpbGw9IiNlYWZhZjEiIHN0cm9rZT0iIzI3YWU2MCIgc3Ryb2tlLXdpZHRoPSIyIi8+Cjx0ZXh0IHg9IjUxOS4wIiB5PSIxNDEuMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1zaXplPSIyNiIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMxZTg0NDkiPjI8L3RleHQ+CjxyZWN0IHg9IjU1MCIgeT0iMTAyIiB3aWR0aD0iNDYiIGhlaWdodD0iNTgiIHJ4PSI2IiBmaWxsPSIjZWFmYWYxIiBzdHJva2U9IiMyN2FlNjAiIHN0cm9rZS13aWR0aD0iMiIvPgo8dGV4dCB4PSI1NzMuMCIgeT0iMTQxLjAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMjYiIGZvbnQtd2VpZ2h0PSJib2xkIiBmaWxsPSIjMWU4NDQ5Ij4xPC90ZXh0Pgo8dGV4dCB4PSI1NDYuMCIgeT0iMTc2IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXNpemU9IjExIiBmaWxsPSIjMmMzZTUwIiBmb250LWZhbWlseT0iRGVqYVZ1IFNhbnMgTW9ubyxtb25vc3BhY2UiPjEgMiAyIDE8L3RleHQ+Cjx0ZXh0IHg9IjU0Ni4wIiB5PSIxOTQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMTEiIGZpbGw9IiMxZTg0NDkiIGZvbnQtZmFtaWx5PSJEZWphVnUgU2FucyBNb25vLG1vbm9zcGFjZSI+SUdVQUw8L3RleHQ+Cjwvc3ZnPg==" /></p>
+<p>Num tabuleiro
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>×</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">1 \times 2</annotation></semantics></math>
+só há um par, e uma jogada resolve:</p>
+<pre><code>        1 2
+1 1 1 2
+        IGUAL</code></pre>
+</body>
+</html>

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>enunciado</title>
+  <style>
+html {
+color: #1a1a1a;
+background-color: #fdfdfd;
+}
+body {
+margin: 0 auto;
+max-width: 36em;
+padding-left: 50px;
+padding-right: 50px;
+padding-top: 50px;
+padding-bottom: 50px;
+hyphens: auto;
+overflow-wrap: break-word;
+text-rendering: optimizeLegibility;
+font-kerning: normal;
+}
+@media (max-width: 600px) {
+body {
+font-size: 0.9em;
+padding: 12px;
+}
+h1 {
+font-size: 1.8em;
+}
+}
+@media print {
+html {
+background-color: white;
+}
+body {
+background-color: transparent;
+color: black;
+font-size: 12pt;
+}
+p, h2, h3 {
+orphans: 3;
+widows: 3;
+}
+h2, h3, h4 {
+page-break-after: avoid;
+}
+}
+p {
+margin: 1em 0;
+}
+a {
+color: #1a1a1a;
+}
+a:visited {
+color: #1a1a1a;
+}
+img {
+max-width: 100%;
+}
+svg {
+height: auto;
+max-width: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+margin-top: 1.4em;
+}
+h5, h6 {
+font-size: 1em;
+font-style: italic;
+}
+h6 {
+font-weight: normal;
+}
+ol, ul {
+padding-left: 1.7em;
+margin-top: 1em;
+}
+li > ol, li > ul {
+margin-top: 0;
+}
+blockquote {
+margin: 1em 0 1em 1.7em;
+padding-left: 1em;
+border-left: 2px solid #e6e6e6;
+color: #606060;
+}
+code {
+font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+font-size: 85%;
+margin: 0;
+hyphens: manual;
+}
+pre {
+margin: 1em 0;
+overflow: auto;
+}
+pre code {
+padding: 0;
+overflow: visible;
+overflow-wrap: normal;
+}
+.sourceCode {
+background-color: transparent;
+overflow: visible;
+}
+hr {
+background-color: #1a1a1a;
+border: none;
+height: 1px;
+margin: 1em 0;
+}
+table {
+margin: 1em 0;
+border-collapse: collapse;
+width: 100%;
+overflow-x: auto;
+display: block;
+font-variant-numeric: lining-nums tabular-nums;
+}
+table caption {
+margin-bottom: 0.75em;
+}
+tbody {
+margin-top: 0.5em;
+border-top: 1px solid #1a1a1a;
+border-bottom: 1px solid #1a1a1a;
+}
+th {
+border-top: 1px solid #1a1a1a;
+padding: 0.25em 0.5em 0.25em 0.5em;
+}
+td {
+padding: 0.125em 0.5em 0.25em 0.5em;
+}
+header {
+margin-bottom: 4em;
+text-align: center;
+}
+#TOC li {
+list-style: none;
+}
+#TOC ul {
+padding-left: 1.3em;
+}
+#TOC > ul {
+padding-left: 0;
+}
+#TOC a:not(:hover) {
+text-decoration: none;
+}
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+
+ul.task-list[class]{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+font-size: inherit;
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+</style>
+<style>body{font-family:system-ui,Arial,sans-serif;max-width:52rem;margin:1rem auto;padding:0 1rem;line-height:1.55;color:#111}.moj-title{margin:.2rem 0 1.1rem}pre{background:#f3f4f6;padding:.6rem;border-radius:6px;overflow:auto;white-space:pre-wrap}.moj-exemplos h2{margin-top:1.2rem}.moj-exemplo{border:1px solid #e5e7eb;border-radius:8px;padding:.2rem .8rem;margin:.6rem 0}.moj-exemplo h3,.moj-exemplo h4{margin:.5rem 0 .2rem}.moj-exemplo-nota{margin:.1rem 0 .5rem;color:#374151}img{max-width:100%}.moj-graph{margin:1rem 0}.moj-graph.center{text-align:center}.moj-graph svg{max-width:100%;height:auto}table{border-collapse:collapse}td,th{border:1px solid #ccc;padding:.2rem .5rem}</style>
+</head>
+<body>
+<h1 class="moj-title">Kolisão</h1>
+<p>Dani e Pedro estão brincando com seus novos polígonos convexos. Após
+se cansarem, decidiram deixá-los em piloto automático com uma velocidade
+específica.</p>
+<p>Seja
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>v</mi><mi>x</mi></msub><mo>,</mo><msub><mi>v</mi><mi>y</mi></msub><mo stretchy="true" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(v_x, v_y)</annotation></semantics></math>
+a velocidade de um polígono
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>P</mi><annotation encoding="application/x-tex">P</annotation></semantics></math>.
+Após um tempo
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi><mo>≥</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">t \ge 0</annotation></semantics></math>,
+todo o polígono é movido
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>v</mi><mi>x</mi></msub><mo>*</mo><mi>t</mi></mrow><annotation encoding="application/x-tex">v_x * t</annotation></semantics></math>
+unidades na coordenada
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>
+e
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>v</mi><mi>y</mi></msub><mo>*</mo><mi>t</mi></mrow><annotation encoding="application/x-tex">v_y * t</annotation></semantics></math>
+unidades na coordenada
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>y</mi><annotation encoding="application/x-tex">y</annotation></semantics></math>.</p>
+<p>O maior problema de deixar polígonos em movimento sem supervisão são
+colisões. Temos uma colisão quando um ponto qualquer é coberto por dois
+polígonos.</p>
+<p>Dani facilmente calculou quando eles precisam voltar a tomar o
+controle antes de algum acidente, mas decidiu testar se você esteve
+prestando atenção ás últimas aulas de Geometria Computacional.</p>
+<p>Descubra o instante de colisão dos polígonos de Dani e Pedro!</p>
+<h2 id="entrada">Entrada</h2>
+<p>A primeira linha da entrada contém três inteiros
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><mo>,</mo><msub><mi>v</mi><mrow><mi>a</mi><mi>x</mi></mrow></msub><mo>,</mo><msub><mi>v</mi><mrow><mi>a</mi><mi>y</mi></mrow></msub></mrow><annotation encoding="application/x-tex">N, v_{ax}, v_{ay}</annotation></semantics></math>
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn><mo>≤</mo><mi>N</mi><mo>≤</mo><msup><mn>10</mn><mn>5</mn></msup></mrow><annotation encoding="application/x-tex">3 \le N \le 10^5</annotation></semantics></math>,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mn>1000</mn><mo>≤</mo><msub><mi>v</mi><mrow><mi>a</mi><mi>x</mi></mrow></msub><mo>,</mo><msub><mi>v</mi><mrow><mi>a</mi><mi>y</mi></mrow></msub><mo>≤</mo><mn>1000</mn></mrow><annotation encoding="application/x-tex">-1000 \le v_{ax}, v_{ay} \le 1000</annotation></semantics></math>,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>v</mi><mrow><mi>a</mi><mi>x</mi></mrow><mn>2</mn></msubsup><mo>+</mo><msubsup><mi>v</mi><mrow><mi>a</mi><mi>y</mi></mrow><mn>2</mn></msubsup><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">v_{ax}^2 + v_{ay}^2 &gt; 0</annotation></semantics></math>),
+o número de vértices de
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>,
+o polígono de Dani, e sua velocidade.</p>
+<p>Cada uma das próximas
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>N</mi><annotation encoding="application/x-tex">N</annotation></semantics></math>
+linhas contém dois inteiros
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mspace width="0.222em"></mspace><mi>y</mi></mrow><annotation encoding="application/x-tex">x\ y</annotation></semantics></math>
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>≤</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>≤</mo><msup><mn>10</mn><mn>9</mn></msup></mrow><annotation encoding="application/x-tex">0 \le x, y \le 10^9</annotation></semantics></math>),
+os vértices de
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+em ordem anti-horária. É garantido que
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+é convexo e não tem três pontos colineares.</p>
+<p>A próxima linha contém três inteiros
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi><mo>,</mo><msub><mi>v</mi><mrow><mi>b</mi><mi>x</mi></mrow></msub><mo>,</mo><msub><mi>v</mi><mrow><mi>b</mi><mi>y</mi></mrow></msub></mrow><annotation encoding="application/x-tex">M, v_{bx}, v_{by}</annotation></semantics></math>
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn><mo>≤</mo><mi>M</mi><mo>≤</mo><msup><mn>10</mn><mn>5</mn></msup></mrow><annotation encoding="application/x-tex">3 \le M \le 10^5</annotation></semantics></math>,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mn>1000</mn><mo>≤</mo><msub><mi>v</mi><mrow><mi>b</mi><mi>x</mi></mrow></msub><mo>,</mo><msub><mi>v</mi><mrow><mi>b</mi><mi>y</mi></mrow></msub><mo>≤</mo><mn>1000</mn></mrow><annotation encoding="application/x-tex">-1000 \le v_{bx}, v_{by} \le 1000</annotation></semantics></math>,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>v</mi><mrow><mi>b</mi><mi>x</mi></mrow><mn>2</mn></msubsup><mo>+</mo><msubsup><mi>v</mi><mrow><mi>b</mi><mi>y</mi></mrow><mn>2</mn></msubsup><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">v_{bx}^2 + v_{by}^2 &gt; 0</annotation></semantics></math>),
+o número de vértices de
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>,
+o polígono de Pedro, e sua velocidade.</p>
+<p>Cada uma das próximas
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>M</mi><annotation encoding="application/x-tex">M</annotation></semantics></math>
+linhas contém dois inteiros
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mspace width="0.222em"></mspace><mi>y</mi></mrow><annotation encoding="application/x-tex">x\ y</annotation></semantics></math>
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>≤</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>≤</mo><msup><mn>10</mn><mn>9</mn></msup></mrow><annotation encoding="application/x-tex">0 \le x, y \le 10^9</annotation></semantics></math>),
+os vértices de
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>
+em ordem anti-horária. É garantido que
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>
+é convexo e não tem três pontos colineares.</p>
+<p>É garantido que os polígonos não se intersectam no instante
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">t = 0</annotation></semantics></math>.</p>
+<h2 id="saída">Saída</h2>
+<p>Imprima um único número real
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">t &gt; 0</annotation></semantics></math>,
+o primeiro instante em que os dois polígonos se chocam. Ou
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mn>1</mn></mrow><annotation encoding="application/x-tex">-1</annotation></semantics></math>
+caso não haja colisão.</p>
+<p>Sua resposta será aceita caso o erro absoluto ou relativo não exceda
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mn>10</mn><mrow><mi>−</mi><mn>6</mn></mrow></msup><annotation encoding="application/x-tex">10^{-6}</annotation></semantics></math>.</p>
+<section class="moj-exemplos"><h2>Exemplos</h2><div class="moj-exemplo"><h3>Entrada</h3><pre data-sample="sample1" data-kind="input">4 1 0
+0 0
+2 0
+2 3
+0 3
+4 -1 0
+10 3
+12 3
+13 4
+10 4
+</pre><h3>Saída</h3><pre data-sample="sample1" data-kind="output">4
+</pre><div class="moj-exemplo-nota"><h3>Explicação</h3><p>No exemplo, os retângulos começam a 8 unidades de distância e se
+aproximam com velocidade relativa <span class="math inline">2</span>,
+encostando pela primeira vez em <span class="math inline"><em>t</em> = 4</span>.</p></div></div><div class="moj-exemplo"><h3>Entrada</h3><pre data-sample="sample2" data-kind="input">4 -1 0
+0 0
+2 0
+2 2
+0 2
+4 1 0
+10 0
+12 0
+12 2
+10 2
+</pre><h3>Saída</h3><pre data-sample="sample2" data-kind="output">-1
+</pre><div class="moj-exemplo-nota"><h3>Explicação</h3><p>Dois retângulos se afastando.</p></div></div></section>
+</body>
+</html>

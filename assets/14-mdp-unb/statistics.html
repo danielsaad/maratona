@@ -1,0 +1,4114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Estatísticas — XIV Maratona UnB de Programação</title>
+<style>
+:root{color-scheme:light}
+/* shared/ui.css — identidade visual do MOJ (limpa, moderna, sem framework).
+   Tokens e nomes de classe estáveis: as páginas de contest reusam estes. */
+:root {
+  --blue:#2b6cb0; --blue-dark:#1c4e86; --blue-soft:#e8f0fb; --blue-bg:#f5f8fc;
+  --accent:#6d5cff; --purple:#6d5cff; --ink:#19222e; --muted:#64748b; --line:#e6ebf3;
+  --ok:#15803d; --ok-bg:#dcfce7; --err:#be1241; --err-bg:#ffe1e8;
+  --warn:#9a6700; --warn-bg:#fdf3d3; --card:#ffffff; --radius:14px;
+  --page-max:1600px; /* teto da largura da página (container + barras); adapta abaixo, centraliza acima */
+  --shadow:0 1px 2px rgba(20,40,80,.04), 0 6px 20px rgba(20,40,80,.06);
+  --shadow-sm:0 1px 3px rgba(20,40,80,.07);
+  --mono:"JetBrains Mono","Fira Mono","DejaVu Sans Mono",Consolas,monospace;
+}
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; -webkit-text-size-adjust:100%; }
+body { margin:0; color:var(--ink); line-height:1.6; font-size:16px;
+  overflow-x:clip;  /* rolagem lateral vive nos contêineres (.chart-wrap etc.), nunca no body */
+  font-family:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+  background:linear-gradient(180deg,#eef3fb 0%,var(--blue-bg) 240px,var(--blue-bg)) no-repeat; }
+a { color:var(--blue); text-decoration:none; } a:hover { color:var(--blue-dark); text-decoration:underline; }
+h1,h2,h3 { line-height:1.25; letter-spacing:-.01em; }
+.container { max-width:var(--page-max); margin:0 auto; padding:1.4rem 1.2rem 3rem; }
+
+/* topbar */
+.topbar { background:linear-gradient(105deg,#163a6b 0%,var(--blue-dark) 45%,var(--blue) 100%);
+  color:#fff; box-shadow:0 2px 16px rgba(20,40,80,.18); position:sticky; top:0; z-index:50; }
+.topbar .bar { max-width:var(--page-max); margin:0 auto; padding:.7rem 1.2rem; display:flex;
+  align-items:center; gap:1rem; flex-wrap:wrap; }
+.topbar .brand { display:flex; align-items:center; gap:.55rem; font-weight:800; font-size:1.2rem;
+  letter-spacing:-.02em; color:#fff; }
+.topbar .brand:hover { text-decoration:none; opacity:.95; }
+.topbar .brand img { height:34px; filter:drop-shadow(0 1px 3px rgba(0,0,0,.25)); }
+.topbar .slogan { opacity:.8; font-weight:400; font-size:.82rem; }
+.topbar .spacer { flex:1; }
+.topbar a { color:#eaf2ff; opacity:.92; font-weight:500; } .topbar a:hover { opacity:1; color:#fff; }
+.topbar .navlinks a.active { opacity:1; color:#fff; font-weight:700; text-decoration:underline; text-underline-offset:5px; text-decoration-thickness:2px; }
+.badge-beta { background:var(--accent); color:#fff; font-size:.62rem; padding:.12rem .42rem;
+  border-radius:999px; font-weight:800; letter-spacing:.06em; vertical-align:middle;
+  box-shadow:0 1px 6px rgba(109,92,255,.5); }
+.navlinks { display:flex; gap:1.1rem; flex-wrap:wrap; align-items:center; font-size:.95rem; }
+.contest-title { font-weight:800; font-size:1.05rem; }
+.countdown { font-variant-numeric:tabular-nums; font-weight:700; }
+
+/* seletor de idioma (sutil, não botões) */
+.lang-toggle { display:inline-flex; align-items:center; gap:.1rem; }
+.lang-toggle .lang-opt { background:none; border:0; cursor:pointer; color:#eaf2ff; opacity:.5;
+  font-size:.8rem; font-weight:600; line-height:1; padding:.15rem .3rem; border-radius:6px;
+  transition:opacity .12s, background .12s; }
+.lang-toggle .lang-opt:hover { opacity:.85; background:rgba(255,255,255,.08); }
+.lang-toggle .lang-opt.active { opacity:1; color:#fff; font-weight:800;
+  text-decoration:underline; text-underline-offset:3px; text-decoration-thickness:2px; }
+
+/* menu do usuário (avatar ▾ -> dropdown) */
+.user-menu { position:relative; display:inline-flex; }
+.user-menu-btn { display:inline-flex; align-items:center; gap:.45rem; background:none; border:0;
+  color:#fff; font-size:.95rem; font-weight:600; cursor:pointer; padding:.25rem .4rem;
+  border-radius:10px; transition:background .12s; }
+.user-menu-btn:hover { background:rgba(255,255,255,.14); }
+.user-menu-btn .caret { font-size:.7rem; opacity:.8; transition:transform .12s; }
+.user-menu-btn[aria-expanded="true"] .caret { transform:rotate(180deg); }
+.menu-panel { position:absolute; right:0; top:calc(100% + .4rem); min-width:12.5rem; max-width:calc(100vw - 16px);
+  background:var(--card); color:var(--ink); border:1px solid var(--line); border-radius:12px;
+  box-shadow:var(--shadow); z-index:60; padding:.3rem; display:none; }
+.menu-panel.open { display:block; }
+.menu-panel .menu-item { display:flex; align-items:center; gap:.5rem; width:100%; box-sizing:border-box;
+  text-align:left; background:none; border:0; color:var(--ink); opacity:1; font-size:.9rem;
+  font-weight:500; padding:.5rem .6rem; border-radius:8px; cursor:pointer; text-decoration:none; }
+.menu-panel .menu-item:hover { background:var(--blue-soft); color:var(--ink); text-decoration:none; opacity:1; }
+.menu-panel .menu-sep { height:1px; background:var(--line); margin:.3rem .25rem; }
+
+/* quicknav */
+.quicknav { background:#fff; border-bottom:1px solid var(--line); position:sticky; top:52px; z-index:40; }
+.quicknav .bar { max-width:var(--page-max); margin:0 auto; padding:.55rem 1.2rem; display:flex; gap:1.3rem; flex-wrap:wrap; }
+.quicknav a { color:var(--blue-dark); font-weight:600; font-size:.92rem; }
+
+/* sections / cards */
+.section { background:var(--card); border:1px solid var(--line); border-radius:var(--radius);
+  box-shadow:var(--shadow); padding:1.3rem 1.4rem; margin:1.2rem 0; transition:box-shadow .15s; }
+.section:hover { box-shadow:0 2px 4px rgba(20,40,80,.05), 0 10px 30px rgba(20,40,80,.09); }
+.section > h2 { margin:.05rem 0 .9rem; color:var(--blue-dark); font-size:1.3rem; font-weight:800;
+  display:flex; align-items:center; gap:.5rem; }
+.section > h3 { color:var(--blue-dark); }
+.section-head { background:linear-gradient(90deg,var(--blue-soft),#fff); color:var(--blue-dark);
+  font-weight:700; padding:.45rem .9rem; border-left:4px solid var(--blue); border-radius:8px; margin:1.1rem 0 .6rem; }
+
+/* buttons / forms */
+.btn { display:inline-flex; align-items:center; gap:.4rem; background:linear-gradient(180deg,var(--blue),var(--blue-dark));
+  color:#fff; border:0; border-radius:10px; padding:.58rem 1.1rem; font-size:.95rem; font-weight:650;
+  cursor:pointer; transition:transform .08s, box-shadow .15s, filter .15s; box-shadow:0 2px 8px rgba(43,108,176,.28); }
+.btn:hover { filter:brightness(1.06); text-decoration:none; box-shadow:0 4px 14px rgba(43,108,176,.36); color:#fff; }
+.btn:active { transform:translateY(1px); }
+.btn:disabled { opacity:.5; cursor:not-allowed; box-shadow:none; filter:grayscale(.3); }
+.btn.secondary { background:var(--blue-soft); color:var(--blue-dark); box-shadow:none; }
+.btn.ghost { background:#fff; color:var(--blue-dark); border:1px solid var(--line); box-shadow:none; }
+.btn.ghost:hover { background:var(--blue-soft); }
+input,select,textarea { font:inherit; padding:.52rem .7rem; border:1px solid var(--line);
+  border-radius:10px; background:#fff; color:var(--ink); transition:border-color .12s, box-shadow .12s; }
+input::placeholder { color:#9aa7b8; }
+input:focus,textarea:focus,select:focus { outline:0; border-color:var(--blue);
+  box-shadow:0 0 0 3px rgba(43,108,176,.16); }
+.field { display:flex; flex-direction:column; gap:.3rem; margin:.55rem 0; }
+.field > label { font-size:.85rem; font-weight:600; color:var(--muted); }
+.row { display:flex; gap:.6rem; flex-wrap:wrap; align-items:center; }
+
+/* tables */
+table.moj { width:100%; border-collapse:separate; border-spacing:0; background:#fff;
+  border:1px solid var(--line); border-radius:12px; overflow:hidden; font-size:.93rem; }
+table.moj th,table.moj td { padding:.6rem .9rem; text-align:left; border-bottom:1px solid var(--line);
+  font-variant-numeric:tabular-nums; }
+table.moj thead th { background:#f3f7fd; color:var(--blue-dark); font-weight:700; font-size:.82rem;
+  text-transform:uppercase; letter-spacing:.03em; cursor:pointer; user-select:none; position:sticky; top:0; }
+/* COLUNA NUMÉRICA (.n no th E no td): número à direita, cabeçalho no MESMO lado e largura
+   só do conteúdo. Sem isto o th ficava à esquerda e o número no fim de uma coluna esticada
+   pelo width:100% — a olho, o valor parecia pertencer à coluna vizinha. */
+table.moj th.n, table.moj td.n { text-align:right; font-variant-numeric:tabular-nums;
+  width:1%; white-space:nowrap; }
+table.moj tbody tr:nth-child(even) td { background:#fafcff; }
+table.moj tbody tr:hover td { background:var(--blue-soft); }
+table.moj tbody tr:last-child td { border-bottom:0; }
+/* embrulho rolável p/ tabelas/gráficos largos (placar, todas-submissões, etc.):
+   rola na horizontal em vez de estourar o viewport. Definição única (global). */
+.chart-wrap { overflow-x:auto; scrollbar-width:thin; -webkit-overflow-scrolling:touch; }
+
+/* status colors (veredictos) — preenchem a célula */
+.verdict { display:block; padding:.32rem .6rem; border-radius:7px; font-weight:650; font-size:.88rem; }
+.v-ok { background:var(--ok-bg); color:var(--ok); }
+.v-err { background:var(--err-bg); color:var(--err); }
+.v-warn { background:var(--warn-bg); color:var(--warn); }
+.v-pending { background:#eef2f8; color:var(--muted); }
+.spin { display:inline-block; width:1em; height:1em; border:2px solid #cbd5e1;
+  border-top-color:var(--blue); border-radius:50%; animation:spin .8s linear infinite; vertical-align:-.15em; }
+@keyframes spin { to { transform:rotate(360deg); } }
+
+/* difficulty / tags */
+.tag { display:inline-block; background:var(--blue-soft); color:var(--blue-dark); border-radius:999px;
+  padding:.15rem .65rem; font-size:.78rem; font-weight:600; margin:.12rem; transition:.12s; }
+.tag:hover { background:#d6e6fb; text-decoration:none; transform:translateY(-1px); }
+.tags-blur .tag { filter:blur(4px); } .tags-blur:hover .tag { filter:none; }
+/* coleções (curso/organização — cor distinta das tags; NUNCA borradas) */
+.collection { display:inline-block; background:#efeaff; color:#4a37c9; border-radius:999px;
+  padding:.15rem .65rem; font-size:.78rem; font-weight:600; margin:.12rem; transition:.12s; }
+.collection:hover { background:#e3dbff; text-decoration:none; transform:translateY(-1px); }
+.diff { font-weight:700; } .diff-easy{color:var(--ok);} .diff-med{color:var(--warn);} .diff-hard{color:var(--err);}
+/* dirt (shared/difficulty.js): baixo ≤20% · médio ≤50% · alto */
+.dirt-low{color:var(--ok);} .dirt-mid{color:var(--warn);} .dirt-high{color:var(--err);font-weight:700;}
+
+/* balloons (ICPC) */
+.balloon { position:relative; display:inline-block; width:18px; height:23px; border-radius:50% 50% 50% 50%/55% 55% 45% 45%;
+  box-shadow:inset -3px -3px 6px rgba(0,0,0,.18); }
+.balloon::after { content:""; position:absolute; bottom:-5px; left:50%; transform:translateX(-50%);
+  border-left:3px solid transparent; border-right:3px solid transparent; border-bottom:6px solid currentColor; opacity:.5; }
+
+/* editor */
+.cm-mojeditor,.code-fallback { width:100%; min-height:340px; border:1px solid var(--line);
+  border-radius:12px; font-family:var(--mono); font-size:.9rem; box-shadow:var(--shadow-sm); }
+.cm-mojeditor { overflow:hidden; }
+.cm-mojeditor .cm-editor { border-radius:12px; }
+.cm-mojeditor .cm-focused { outline:0; }
+.code-fallback { padding:.8rem; background:#0d1626; color:#e2e8f0; line-height:1.5; }
+.submit-steps { font-size:.86rem; color:var(--muted); margin:.5rem 0; min-height:1.2em; }
+/* caixa do editor: altura inicial fixa, redimensionável e com toggle */
+.editor-box { height:380px; min-height:120px; max-height:82vh; overflow:hidden; resize:vertical;
+  border:1px solid var(--line); border-radius:12px; box-shadow:var(--shadow-sm); background:#fff; transition:height .15s; }
+.editor-box .cm-mojeditor,.editor-box .cm-editor { height:100% !important; min-height:0; border:0; box-shadow:none; }
+.editor-box .cm-mojeditor .cm-scroller { overflow:auto; }
+.editor-box .code-fallback { height:100%; min-height:0; border:0; border-radius:12px; resize:none; }
+.editor-box.collapsed { height:0 !important; min-height:0; border-width:0; resize:none; }
+.editor-bar { display:flex; align-items:center; gap:.6rem; flex-wrap:wrap; margin-bottom:.5rem; }
+.editor-bar .btn { padding:.3rem .7rem; font-size:.85rem; }
+/* documentos da prova na aba Contest: uma linha por documento, idiomas como chips à direita
+   ("📘 Caderno de problemas   PT EN ES") — mesma anatomia do .tl-block abaixo */
+.doc-lines { display:flex; flex-direction:column; gap:.35rem; margin:.1rem 0 .2rem; }
+.doc-line { display:flex; align-items:center; gap:.4rem; flex-wrap:wrap; }
+.doc-name { font-size:.92rem; font-weight:600; color:var(--blue-dark); margin-right:.15rem; }
+.doc-line .tag { min-width:2.1rem; text-align:center; font-family:var(--mono); font-size:.74rem; }
+
+/* time limits (chips) na página do problema */
+.tl-block { display:flex; align-items:center; gap:.4rem; flex-wrap:wrap; margin-top:.7rem; }
+/* chips de IDIOMA DO ENUNCIADO (shared/statement-langs.js): treino, sanfona do contest, editor.
+   Ativo = cheio; os outros = contorno. Vazio quando o problema tem um idioma só. */
+.stmt-chips { display:inline-flex; gap:.3rem; align-items:center; flex-wrap:wrap; }
+.stmt-chip { border:1px solid var(--blue-dark); background:#fff; color:var(--blue-dark); font-weight:700;
+  font-size:.74rem; letter-spacing:.03em; padding:.08rem .55rem; border-radius:999px; cursor:pointer; line-height:1.5; }
+.stmt-chip:hover { background:var(--blue-soft); }
+.stmt-chip.active { background:var(--blue-dark); color:#fff; cursor:default; }
+.stmt-chip.add { border-style:dashed; font-weight:600; }
+.stmt-badge { display:inline-block; margin-left:.4rem; font-size:.68rem; font-weight:700; letter-spacing:.04em;
+  color:var(--muted); border:1px solid var(--line); border-radius:4px; padding:0 .3rem; vertical-align:middle; }
+.tl-label { font-size:.82rem; font-weight:700; color:var(--blue-dark); margin-right:.15rem; }
+.tl-chip { display:inline-flex; align-items:center; gap:.45rem; background:#fafcff; border:1px solid var(--line);
+  border-radius:999px; padding:.18rem .65rem; font-size:.82rem; }
+.tl-chip b { color:var(--blue-dark); font-weight:700; }
+.tl-chip .tl-time { font-variant-numeric:tabular-nums; color:var(--muted); font-family:var(--mono); }
+
+/* statement (enunciado integrado) */
+.statement-content { line-height:1.7; font-size:1.04rem; }
+.statement-content h1.title { display:none !important; }
+.statement-content h1,.statement-content h2,.statement-content h3 { color:var(--blue-dark); }
+.statement-content code { font-family:var(--mono); color:var(--blue-dark); background:#eef3fb;
+  padding:.05em .35em; border-radius:5px; font-size:.92em; }
+.statement-content pre { font-family:var(--mono); background:#0d1626; color:#e2e8f0;
+  border-radius:10px; padding:.9em 1.2em; overflow-x:auto; box-shadow:var(--shadow-sm); }
+.statement-content pre code { background:none; color:inherit; padding:0; }
+.statement-content footer,.statement-content #footer { color:var(--muted); text-align:right; font-size:.95em; margin-top:2em; }
+.statement-content img { max-width:100%; border-radius:8px; }
+.statement-content h1.moj-title { color:var(--blue-dark); margin:.2rem 0 1rem; }
+.statement-content ul,.statement-content ol { padding-left:1.5em; }
+.statement-content blockquote { border-left:3px solid var(--border,#d0d7de); margin:.8em 0; padding:.1em .9em; color:var(--muted); }
+.statement-content table { border-collapse:collapse; margin:.7rem 0; }
+.statement-content th,.statement-content td { border:1px solid var(--border,#d0d7de); padding:.25rem .55rem; }
+/* exemplos (mesmo markup do render-statement.sh: .moj-exemplos / .moj-exemplo / .moj-exemplo-nota) */
+.statement-content .moj-exemplos h2 { margin-top:1.3rem; }
+.statement-content .moj-exemplo { border:1px solid var(--border,#d0d7de); border-radius:8px; padding:.2rem .85rem; margin:.7rem 0; }
+.statement-content .moj-exemplo h3,.statement-content .moj-exemplo h4 { margin:.5rem 0 .2rem; color:var(--blue-dark); }
+/* botão "Copiar" de cada bloco de exemplo (shared/statement-samples.js): o h3 vira uma linha flex
+   com o botão à direita; sempre visível (celular não tem hover) */
+.statement-content .moj-exemplo h3.sample-head { display:flex; align-items:center; justify-content:space-between; gap:.5rem; }
+.sample-copy { font:600 .72rem/1.4 inherit; font-family:inherit; padding:.1rem .6rem; border:1px solid var(--border,#d0d7de);
+  border-radius:999px; background:#fff; color:var(--blue-dark); cursor:pointer; white-space:nowrap; }
+.sample-copy:hover { background:#eef3fb; }
+.sample-copy.ok { border-color:#2e7d32; color:#2e7d32; }
+.statement-content .moj-exemplo-nota { margin:.1rem 0 .6rem; color:var(--muted); }
+
+/* utils */
+.muted { color:var(--muted); } .center { text-align:center; } .small { font-size:.85rem; }
+.hidden { display:none !important; }
+.notice { background:var(--warn-bg); color:var(--warn); padding:.6rem .9rem; border-radius:10px; border:1px solid #f2e2a8; }
+.error-box { background:var(--err-bg); color:var(--err); padding:.6rem .9rem; border-radius:10px; }
+/* hero (home) */
+.hero { background:linear-gradient(115deg,#163a6b,var(--blue) 58%,var(--accent)); color:#fff;
+  border-radius:18px; padding:2.3rem 2rem; margin:1.4rem 0; display:flex; align-items:center;
+  gap:1.8rem; flex-wrap:wrap; box-shadow:0 12px 34px rgba(28,78,134,.28); position:relative; overflow:hidden; }
+.hero::after { content:""; position:absolute; right:-70px; top:-70px; width:260px; height:260px;
+  background:radial-gradient(circle, rgba(255,255,255,.16), transparent 70%); pointer-events:none; }
+.hero img { height:88px; filter:drop-shadow(0 4px 12px rgba(0,0,0,.32)); }
+.hero .hero-text { flex:1; min-width:260px; }
+.hero h1 { margin:0; font-size:2.1rem; font-weight:850; letter-spacing:-.02em; }
+.hero h1 small { font-weight:500; opacity:.85; font-size:1.05rem; }
+.hero p { margin:.4rem 0 0; opacity:.92; font-size:1.05rem; max-width:52ch; }
+.hero .cta { margin-top:1.1rem; display:flex; gap:.6rem; flex-wrap:wrap; }
+.hero .btn.ghost { background:rgba(255,255,255,.16); color:#fff; border-color:rgba(255,255,255,.45); box-shadow:none; }
+.hero .btn.ghost:hover { background:rgba(255,255,255,.26); }
+/* topo da home: hero compacto + notícia em destaque (no lugar do hero gigante) */
+.home-top { display:grid; grid-template-columns:1.05fr 1fr; gap:1.2rem; margin:1.4rem 0; align-items:stretch; }
+.hero-slim { display:flex; align-items:center; gap:1.1rem; color:#fff; border-radius:16px; padding:1.25rem 1.5rem;
+  background:linear-gradient(115deg,#163a6b,var(--blue) 60%,var(--accent)); box-shadow:0 10px 28px rgba(28,78,134,.24); }
+.hero-slim img { height:58px; filter:drop-shadow(0 3px 9px rgba(0,0,0,.30)); }
+.hero-slim h1 { margin:0 0 .55rem; font-size:1.5rem; font-weight:850; letter-spacing:-.02em; }
+.hero-slim h1 small { font-weight:500; opacity:.85; font-size:.85rem; }
+.hero-slim .cta { display:flex; gap:.5rem; flex-wrap:wrap; }
+.hero-slim .btn.ghost { background:rgba(255,255,255,.16); color:#fff; border-color:rgba(255,255,255,.42); box-shadow:none; }
+.hero-slim .btn.ghost:hover { background:rgba(255,255,255,.27); }
+.featured-news { background:var(--card); border:1px solid var(--line); border-radius:16px; padding:1.15rem 1.3rem;
+  box-shadow:var(--shadow); display:flex; flex-direction:column; gap:.25rem; min-width:0; justify-content:center; }
+.featured-news .fn-tag { font-size:.7rem; font-weight:800; color:var(--accent); letter-spacing:.05em; text-transform:uppercase; }
+.featured-news .fn-title { font-size:1.15rem; font-weight:800; color:var(--ink); text-decoration:none; line-height:1.25; }
+.featured-news .fn-title:hover { color:var(--blue); }
+.featured-news .fn-sum { color:var(--muted); font-size:.92rem; margin-top:.15rem; }
+@media (max-width:760px){ .home-top { grid-template-columns:1fr; } }
+/* página de notícias: lista (cards) + detalhe (markdown renderizado) */
+.news-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(290px,1fr)); gap:1rem; }
+.news-card { display:flex; flex-direction:column; gap:.3rem; background:var(--card); border:1px solid var(--line);
+  border-radius:14px; padding:1.05rem 1.2rem; box-shadow:var(--shadow-sm); color:inherit; transition:.12s; }
+.news-card:hover { text-decoration:none; box-shadow:var(--shadow); transform:translateY(-2px); }
+.news-card-title { font-size:1.1rem; font-weight:800; color:var(--ink); line-height:1.25; }
+.news-card-sum { font-size:.92rem; }
+.news-card-more { color:var(--blue); font-weight:700; margin-top:.25rem; font-size:.85rem; }
+.news-body { font-size:1.02rem; line-height:1.7; }
+.news-body h1,.news-body h2,.news-body h3,.news-body h4 { line-height:1.25; margin:1.5rem 0 .6rem; }
+.news-body h1 { font-size:1.55rem; } .news-body h2 { font-size:1.28rem; } .news-body h3 { font-size:1.1rem; }
+.news-body p { margin:.7rem 0; } .news-body ul,.news-body ol { margin:.7rem 0 .7rem 1.3rem; }
+.news-body a { color:var(--blue); }
+.news-body img { max-width:100%; height:auto; border-radius:8px; }
+.news-body pre { background:#f6f8fb; border:1px solid var(--line); border-radius:8px; padding:.8rem 1rem; overflow-x:auto; font-size:.9em; }
+.news-body code { background:#eef3fb; padding:.1em .35em; border-radius:4px; font-size:.9em; }
+.news-body pre code { background:none; padding:0; }
+.news-body blockquote { border-left:3px solid var(--blue-soft); margin:.8rem 0; padding:.2rem 1rem; color:var(--muted); }
+.news-body table { border-collapse:collapse; margin:1rem 0; } .news-body th,.news-body td { border:1px solid var(--line); padding:.4rem .6rem; }
+/* editor de markdown (admin de notícias): editor + preview lado a lado */
+.news-editor-split { display:grid; grid-template-columns:1fr 1fr; gap:1rem; align-items:start; }
+@media (max-width:820px){ .news-editor-split { grid-template-columns:1fr; } }
+.md-toolbar { display:flex; gap:.3rem; flex-wrap:wrap; margin-bottom:.35rem; }
+.md-toolbar .btn { font-weight:700; line-height:1; }
+
+/* problema: enunciado + envio lado a lado (telas largas) */
+.problem-cols { display:grid; grid-template-columns:1fr; gap:1.2rem; align-items:start; }
+@media (min-width:992px){
+  .problem-cols { grid-template-columns:minmax(0,1.55fr) minmax(0,1fr); }
+  .problem-cols .submit-col { position:sticky; top:72px; }
+}
+
+/* cartões da home (treino: top10 + recentes) */
+.two-col { display:grid; grid-template-columns:1fr; gap:1.2rem; }
+@media (min-width:760px){ .two-col { grid-template-columns:1fr 1fr; } }
+.subcard { background:#fafcff; border:1px solid var(--line); border-radius:12px; padding:.9rem 1.1rem; }
+.subcard > h3 { margin:.1rem 0 .7rem; font-size:.98rem; color:var(--blue-dark); display:flex; align-items:center; gap:.4rem; }
+.rank-list { display:flex; flex-direction:column; gap:.12rem; }
+.rank-row { display:flex; align-items:center; gap:.7rem; padding:.4rem .5rem; border-radius:10px; color:inherit; }
+.rank-row:hover { background:var(--blue-soft); text-decoration:none; }
+.rank-num { flex:0 0 1.7rem; height:1.7rem; display:grid; place-items:center; border-radius:50%;
+  background:var(--blue-soft); color:var(--blue-dark); font-weight:800; font-size:.78rem; }
+.rank-row.r1 .rank-num { background:#fde68a; color:#92560a; }
+.rank-row.r2 .rank-num { background:#e5e9f0; color:#475569; }
+.rank-row.r3 .rank-num { background:#fcd9b6; color:#9a4a16; }
+.rank-name { flex:1; min-width:0; display:flex; flex-direction:column; }
+.rank-name .rn-name { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; font-weight:600; }
+.ed-tag { font-size:.68rem; color:var(--muted); line-height:1.15; }
+.rank-chip { background:var(--ok-bg); color:var(--ok); font-weight:700; font-size:.76rem; padding:.1rem .55rem; border-radius:999px; white-space:nowrap; }
+/* avatar mini + chip de usuário (topbar / listas do treino) */
+.avatar-mini { display:inline-block; border-radius:50%; overflow:hidden; flex:0 0 auto; vertical-align:middle;
+  background:#cbd5e1; line-height:0; box-shadow:0 1px 3px rgba(20,40,80,.25); }
+.avatar-mini img { width:100%; height:100%; object-fit:cover; display:block; border-radius:50%; }
+.avatar-mini.ini { display:inline-grid; place-items:center; color:#fff; font-weight:800; line-height:1; }
+.user-chip { display:inline-flex; align-items:center; gap:.45rem; font-weight:600; }
+.topbar .user-chip { color:#fff; }
+.user-chip:hover { text-decoration:none; opacity:.92; }
+.recent-row { display:flex; flex-direction:column; gap:.05rem; padding:.4rem .5rem; border-radius:10px; color:inherit; }
+.recent-row:hover { background:var(--blue-soft); text-decoration:none; }
+.recent-row .ttl { font-weight:600; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.recent-row .who { font-size:.78rem; color:var(--muted); }
+/* grade de cards do treino (home): top10 / semana passada / recentes */
+.tcards { display:grid; grid-template-columns:repeat(auto-fit, minmax(260px,1fr)); gap:1rem; align-items:start; }
+.tcol { display:flex; flex-direction:column; gap:1rem; }       /* empilha 2 cards numa coluna */
+.subcard-sm { padding:.75rem .95rem; }
+.subcard-sm > h3 { margin-bottom:.45rem; }
+.card-foot-link { display:inline-block; margin-top:.55rem; font-size:.82rem; font-weight:700; }
+/* "mais resolvidos na semana passada": ranking de problemas */
+.week-row { display:flex; align-items:center; gap:.6rem; padding:.42rem .5rem; border-radius:10px; color:inherit; }
+.week-row:hover { background:var(--blue-soft); text-decoration:none; }
+.week-row.editor-top { background:var(--blue-soft); }
+.week-row.editor-top .wk-ttl { font-weight:800; }
+.wk-rank { flex:0 0 1.5rem; height:1.5rem; display:grid; place-items:center; border-radius:7px;
+  background:#fff3d6; color:#92560a; font-weight:800; font-size:.74rem; }
+.wk-ttl { flex:1; min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; font-weight:600; }
+/* feed "resolvidos recentemente": problema + quem resolveu + quando */
+.feed { display:flex; flex-direction:column; gap:.1rem; }
+.feed-item { display:flex; align-items:flex-start; gap:.55rem; padding:.45rem .5rem; border-radius:10px; color:inherit; }
+.feed-item:hover { background:var(--blue-soft); text-decoration:none; }
+.feed-ic { flex:0 0 auto; font-size:.92rem; line-height:1.45; }
+.feed-body { min-width:0; flex:1; display:flex; flex-direction:column; gap:.12rem; }
+.feed-ttl { font-weight:600; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.feed-sub { display:flex; align-items:center; gap:.35rem; font-size:.78rem; color:var(--muted); }
+.feed-who { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.feed-time { margin-left:auto; padding-left:.4rem; white-space:nowrap; opacity:.85; }
+
+/* lista de contests (home): cartões com status */
+.contest-group { margin:.4rem 0 1.2rem; }
+.contest-group .gh { display:flex; align-items:center; gap:.5rem; font-weight:800; color:var(--blue-dark);
+  font-size:1.02rem; margin:.8rem 0 .55rem; padding-bottom:.32rem; border-bottom:2px solid var(--line); }
+.contest-group .gh .count { background:var(--blue-soft); color:var(--blue-dark); border-radius:999px;
+  font-size:.74rem; padding:.05rem .55rem; font-weight:800; }
+.contest-card { display:flex; align-items:center; gap:.9rem; flex-wrap:wrap; background:#fff;
+  border:1px solid var(--line); border-left:4px solid #cbd5e1; border-radius:12px;
+  padding:.65rem .9rem; margin:.45rem 0; transition:box-shadow .12s, transform .12s; }
+.contest-card:hover { box-shadow:var(--shadow-sm); transform:translateX(2px); }
+.contest-card.open { border-left-color:var(--ok); }
+.contest-card.upcoming { border-left-color:var(--accent); }
+.contest-card .cc-main { flex:1 1 240px; min-width:0; }
+.contest-card .cc-title { font-weight:700; font-size:1.03rem; }
+.contest-card .cc-meta { display:flex; gap:.9rem; flex-wrap:wrap; font-size:.8rem; color:var(--muted); margin-top:.15rem; }
+.contest-card .cc-when { font-weight:700; color:var(--blue-dark); }
+.contest-card .cc-actions { display:flex; gap:.4rem; flex-wrap:wrap; }
+.cc-badge { font-size:.72rem; font-weight:800; padding:.2rem .55rem; border-radius:999px; white-space:nowrap; flex:0 0 auto; }
+.cc-badge.open { background:var(--ok-bg); color:var(--ok); }
+.cc-badge.upcoming { background:#ece9ff; color:var(--accent); }
+.cc-badge.closed { background:#eef2f8; color:var(--muted); }
+
+@media (max-width:820px){
+  /* topbar COMPACTO: nunca empilhar em coluna (o layout antigo punha brand + 2 linhas de
+     nav + form de login em ~40% da tela do celular). Máximo 2 linhas baixas: marca+usuário
+     na primeira; navegação vira TIRA de 1 linha com rolagem própria na segunda. */
+  .topbar .bar{ padding:.45rem .7rem; gap:.3rem .7rem; flex-wrap:wrap; }
+  .topbar .slogan, .topbar .badge-beta{ display:none; }
+  .topbar .brand{ font-size:1.05rem; } .topbar .brand img{ height:26px; }
+  .navlinks{ order:3; flex-basis:100%; flex-wrap:nowrap; overflow-x:auto;
+             gap:.85rem; font-size:.9rem; padding-bottom:.15rem;
+             scrollbar-width:none; -webkit-overflow-scrolling:touch; }
+  .navlinks::-webkit-scrollbar{ display:none; }
+  .navlinks a{ white-space:nowrap; }
+  /* login (deslogado) numa linha compacta; logado = só avatar (o nome some, .un) */
+  .topbar .bar > #authArea{ order:4; flex-basis:100%; display:flex; flex-wrap:wrap; gap:.35rem; margin-left:0 !important; }
+  .topbar #authArea input{ flex:1 1 90px; min-width:70px; width:auto; padding:.35rem .5rem; font-size:.9rem; }
+  .topbar #authArea .btn{ padding:.35rem .7rem; }
+  .user-menu-btn .un{ display:none; }
+  .quicknav{ top:0; position:static; }
+  .quicknav .bar{ flex-wrap:nowrap; overflow-x:auto; scrollbar-width:none; gap:1rem; padding:.5rem .7rem; }
+  .quicknav .bar a{ white-space:nowrap; }
+  .container{ padding:1rem .8rem 2rem; }
+  .hero{ padding:1.4rem 1rem; }
+  .hero h1{ font-size:1.5rem; }
+  /* PAINÉIS (admin/chief/judge — "dados no celular"): abas em tira rolável de 1 linha,
+     tabelas mais densas, cards de dashboard em grade sem buracos, tabela rola até a borda.
+     `body .x` porque os estilos-base da tabbar são <style> LOCAIS carregados DEPOIS deste
+     arquivo — sem o boost de especificidade, o flex-wrap local venceria o mobile daqui. */
+  body .tabbar{ flex-wrap:nowrap; overflow-x:auto; scrollbar-width:none; -webkit-overflow-scrolling:touch; }
+  body .tabbar::-webkit-scrollbar{ display:none; }
+  body .tabbar button, body .tabbar a{ white-space:nowrap; padding:.35rem .6rem; font-size:.85rem; }
+  body table.moj th, body table.moj td{ padding:.42rem .5rem; font-size:.85rem; }
+  body .dash-cards{ display:grid; grid-template-columns:repeat(auto-fill,minmax(140px,1fr)); }
+  body .dash-card{ min-width:0; }
+  body .chart-wrap{ margin:0 -.8rem; padding:0 .8rem; }
+}
+
+/* gráficos (lib/charts.js): legenda da pizza + barras horizontais. Centralizado
+   aqui para que qualquer página que use charts.js renderize legível (antes só a
+   página de stat do treino definia .legend, e as demais saíam como texto corrido). */
+.legend{ display:flex; flex-wrap:wrap; gap:.35rem .9rem; justify-content:center; margin-top:.5rem; font-size:.85rem; color:var(--ink); }
+.legend .sw{ display:inline-block; width:.8em; height:.8em; border-radius:3px; margin-right:.3em; vertical-align:-.05em; }
+.hbars{ display:flex; flex-direction:column; gap:.32rem; margin:.4rem 0; }
+.hbar-row{ display:grid; grid-template-columns:minmax(64px,32%) 1fr auto; align-items:center; gap:.55rem; font-size:.86rem; }
+.hbar-label{ white-space:nowrap; overflow:hidden; text-overflow:ellipsis; color:var(--ink); }
+.hbar-track{ background:var(--blue-soft); border-radius:6px; height:.9rem; overflow:hidden; }
+.hbar-fill{ height:100%; border-radius:6px; min-width:2px; }
+.hbar-val{ font-variant-numeric:tabular-nums; color:var(--muted); white-space:nowrap; font-size:.82rem; }
+
+/* placar: linha de time CONVIDADO (extra-oficial) — aparece intercalada mas sem posição
+   oficial (a numeração pula). Fundo levemente distinto + número "–" na coluna de posição. */
+/* ===== PLACAR — definição ÚNICA (a página do contest, a cerimônia de revelação e o relatório
+   offline usam esta; o report-gen inlina este arquivo). REGRA: o placar NUNCA rola para o lado.
+   Como se garante isso: `table-layout:fixed` + <colgroup> com porcentagens que fecham em 100%
+   (ver web/contest/score/score-cols.js e o mesmo cálculo no awk do report-gen.sh) — a coluna
+   vale o que o <col> diz e o conteúdo QUEBRA dentro dela. Antes era layout auto + nowrap em
+   toda célula: o nome comprido do time esticava a tabela e sobrava rolagem (em 1024px só 3 de
+   14 problemas apareciam). O número da célula fica em fonte menor (`.pv`) para a REFERÊNCIA da
+   coluna (letra + balão) continuar legível. */
+table.score { width:100%; table-layout:fixed; border-collapse:separate; border-spacing:0;
+  background:#fff; border-radius:10px; overflow:hidden; font-size:.92rem;
+  /* cenário (o JS carimba): --nprob, --w-flag, --w-pen, --w-total; o resto é conta daqui.
+     A divisão fecha SEMPRE em 100%: colunas fixas + os problemas ficam com a FRAÇÃO
+     `--w-prob-share` do que sobra e o time com o resto. Cada faixa de tela só mexe nas
+     constantes. ⚠ Sem `min()`/`max()`: o Firefox IGNORA função de comparação na largura de
+     <col> (testado — a tabela caía para colunas uniformes), então a proporção substitui o
+     "piso" do nome do time. */
+  --nprob:1; --w-place:4%; --w-flag-on:3.5%; --w-total-on:5.5%; --w-pen-on:6.5%;
+  --w-flag:var(--w-flag-on); --w-total:var(--w-total-on); --w-pen:var(--w-pen-on);
+  --w-prob-share:.62; --w-team-div:1;
+  --w-fixed:calc(var(--w-place) + var(--w-flag) + var(--w-total) + var(--w-pen));
+  --w-avail:calc(100% - var(--w-fixed));
+  --w-team:calc(var(--w-avail) * (1 - var(--w-prob-share)));
+  --w-prob:calc(var(--w-avail) * var(--w-prob-share) / var(--nprob)); }
+table.score col.c-place { width:var(--w-place); }
+table.score col.c-flag  { width:var(--w-flag); }
+table.score col.c-team  { width:calc(var(--w-team) / var(--w-team-div)); }
+table.score col.c-prob  { width:var(--w-prob); }
+table.score col.c-total { width:var(--w-total); }
+table.score col.c-pen   { width:var(--w-pen); }
+table.score th, table.score td { padding:.4rem .35rem; text-align:center;
+  border-bottom:1px solid var(--line); font-variant-numeric:tabular-nums;
+  white-space:normal; overflow-wrap:anywhere; }
+table.score th { background:var(--blue-soft); color:var(--blue-dark); font-weight:700;
+  cursor:pointer; user-select:none; position:sticky; top:0; z-index:1; line-height:1.15; }
+table.score th.prob { font-size:.95em; }
+table.score td.team { text-align:left; line-height:1.25; }
+table.score td.team .u { color:var(--muted); font-size:.8em; }
+table.score tr:hover td { background:#f0f7ff; }
+table.score .cl-place, table.score td.place { font-weight:800; color:var(--blue-dark); }
+/* o número é uma unidade: não quebra no meio (só a coluna encolhe a fonte) */
+table.score td.cell .pv { font-size:.78em; font-variant-numeric:tabular-nums;
+  overflow-wrap:normal; word-break:keep-all; }
+/* ★ (primeiro a resolver) FORA DO FLUXO (issue #24, 2026-09-15): era um span inline antes do
+   ponto do balão e do número — em coluna fixa de ~3,6% os três não cabiam e o número vazava
+   para a coluna vizinha. Absoluta no canto, não ocupa largura; o número segue inteiro. */
+table.score td.cell { position:relative; }
+table.score td.cell .fts { position:absolute; top:.05em; left:.15em; font-size:.62em; line-height:1; pointer-events:none; }
+/* .bdot — o ponto da cor do balão na célula resolvida (modo 'icon' do placar, o padrão).
+   A BORDA é a informação, não acabamento: sobre o verde de acerto um ponto branco dá 1,1:1.
+   Ela vem do balloonEdge (score-colors.js) e chega por --bdot-edge. Ver docs/SCOREBOARD.md. */
+table.score td.cell .bdot { display:inline-block; width:.62em; height:.62em; border-radius:50%;
+  border:1px solid var(--bdot-edge,#8a8a8a); background:var(--bdot,#ccc);
+  vertical-align:-.02em; margin-right:.2em; }
+/* a bandeira vem com ALTURA inline (flags.js) e largura livre: numa coluna estreita ela
+   TRANSBORDA e encosta na 1ª letra do nome do time (a célula não corta). O teto é da coluna. */
+table.score .flag-mini { max-width:100%; }
+.prob-wait-cell, table.score td.c-try { background:#fdf1d0; color:var(--warn); font-weight:700; }
+.balloon-svg { width:20px; height:23px; vertical-align:middle; }
+/* embrulho do placar: ao contrário do .chart-wrap, NÃO rola — o layout já garante o encaixe */
+.board-wrap { overflow-x:visible; }
+/* BARRA DE FILTROS do placar (coorte, bandeira, universidade, sede, busca). Definição ÚNICA:
+   vale para a página do contest e para o relatório offline, que inlina este arquivo — os dois
+   filtram o mesmo placar, então filtram com a mesma cara. */
+.fbar { display:flex; flex-wrap:wrap; gap:.5rem .8rem; align-items:center; background:var(--card);
+  border:1px solid var(--line); border-radius:var(--radius); padding:.6rem .9rem; margin:.7rem 0;
+  box-shadow:var(--shadow-sm); }
+.fbar label { font-size:.85rem; color:var(--muted); display:flex; align-items:center; gap:.35rem; }
+.fbar select { padding:.35rem .5rem; border:1px solid #c8cfd9; border-radius:8px; background:#fff;
+  font:inherit; font-size:.85rem; max-width:15rem; }
+.fbar input.filter { margin:0; width:16rem; padding:.35rem .5rem; border:1px solid #c8cfd9;
+  border-radius:8px; font:inherit; font-size:.85rem; max-width:100%; }
+.fbar .fcount { font-size:.85rem; color:var(--muted); margin-left:auto; }
+.fbar button { padding:.35rem .7rem; border:1px solid #c8cfd9; border-radius:8px; background:#fff;
+  font:inherit; font-size:.85rem; cursor:pointer; color:var(--blue-dark); }
+.fbar button:hover { background:var(--blue-soft); }
+/* posição no placar GERAL, dentro da coluna # do placar de coorte (o número grande é a posição
+   na coorte). No celular o rótulo do cabeçalho sai — o dado continua, com title. */
+.plg { display:block; font-size:.7em; font-weight:600; color:var(--muted); line-height:1.1; }
+/* CLASSIFICADO p/ a próxima fase — 3 camadas (pedido de 31/08: claro E elegante):
+   linha tintada + barra de acento, pill 🎓 com rótulo, e sub-linha estilo PDA sob o nome.
+   Rascunho (só admin) = âmbar tracejado. Classes próprias (não reusar .pill — cascata). */
+table.score tr.qual-row td { background:#f0faf2; }
+table.score tr.qual-row td:first-child { border-left:3px solid #2f9e50; }
+table.score tr.qual-row.draft td { background:#fdf7e3; }
+table.score tr.qual-row.draft td:first-child { border-left:3px dashed #c9a227; }
+.qual-chip { display:inline-block; font-size:.72em; font-weight:700; letter-spacing:.02em;
+  padding:.12em .5em; border-radius:.8em; vertical-align:middle; cursor:help; white-space:nowrap;
+  color:#fff; background:#2f9e50; border:1px solid #27853f; }
+.qual-chip.draft { color:#6b5a10; background:#f5e8b8; border:1px dashed #c9a227; }
+.qual-sub { display:block; font-size:.72em; font-weight:600; color:#237a3e; line-height:1.25;
+  margin-top:.1em; }
+tr.qual-row.draft .qual-sub { color:#8a7420; }
+@media (max-width:640px) {
+  table.score .qual-chip { padding:.05em .3em; }
+  table.score .qual-sub { display:none; }   /* no celular: pill + tooltip bastam */
+}
+@media (max-width:640px) { table.score th .plg { display:none; } }
+/* telas médias: aperta espaçamento e fonte antes de mexer no conteúdo */
+@media (max-width:1100px) {
+  table.score { font-size:.86rem; }
+  table.score th, table.score td { padding:.3rem .15rem; }
+  table.score td.cell .pv { font-size:.74em; }
+  .balloon-svg { width:16px; height:18px; }
+}
+@media (max-width:820px) {
+  table.score { font-size:.8rem; --w-prob-share:.68; }
+  table.score th, table.score td { padding:.25rem .1rem; }
+  table.score td.cell .pv { font-size:.7em; }
+  .balloon-svg { width:13px; height:15px; }
+}
+/* CELULAR: número não cabe em 14+ colunas — a célula vira MARCA (o fundo do balão continua
+   sendo a informação; ✓/✗ garante leitura sem depender de cor). Os números seguem no title. */
+@media (max-width:640px) {
+  table.score { font-size:.78rem;
+    /* o número virou ✓: a coluna de problema precisa de quase nada e o nome do time e os
+       totais ficam com o espaço (senão "Total" quebrava em "T/ot/al"). */
+    --w-place:6%; --w-flag-on:5.5%; --w-total-on:8%; --w-pen-on:10%; --w-prob-share:.515; }
+  table.score th, table.score td { padding:.3rem .06rem; }
+  /* rótulo curto não quebra: "Total" virava "Tota/l" em 360px. O que passa da coluna é
+     fração de pixel e o fundo do cabeçalho é contínuo — ninguém percebe. */
+  table.score th { font-size:.74em; letter-spacing:-.02em;
+    overflow-wrap:normal; word-break:keep-all; hyphens:none; }
+  table.score td.team { font-size:.95em; }
+  table.score td.team img, table.score td.cell .fts { display:none; }
+  /* o anel do "primeiro a resolver" é inline (box-shadow): em coluna de ~9px ele virava um
+     retângulo alto sem sentido. Some no celular — a informação fica no title. */
+  table.score td.cell { box-shadow:none !important; }
+  /* quem manda é a LARGURA da coluna: a altura sai da proporção (height inline vira auto),
+     senão a bandeira invade o nome do time. */
+  table.score .flag-mini { height:auto !important; }
+  /* só o número do PROBLEMA vira marca. A penalidade é a 1ª desempatadora depois do total —
+     esconder o `.pv` dela (total e penalidade também são `td.cell`) deixava a coluna "Pen."
+     com cabeçalho e nenhuma célula, ocupando largura sem informar nada. */
+  /* ⚠ SÓ no ICPC: aqui a célula é `tentativas/minuto`, que vira ✓. No OBI (e no genérico) a
+     célula é a NOTA — esconder o número e mostrar ✓ dizia "acertou" p/ QUALQUER pontuação > 0,
+     inclusive 10 de 100. A classe de modo vem dos renderizadores (score-{icpc,obi,generic}.js). */
+  table.score.m-icpc td.cell:not(.tot):not(.pen) .pv { display:none; }
+  table.score.m-icpc td.cell:not(.tot):not(.pen).ok::before { content:"✓"; font-weight:800; }
+  /* o ponto da cor e o ✓ não cabem juntos: a ~2,6% da largura da tabela a coluna tem ~9px num
+     aparelho de 360px. Aqui quem diz "resolvido" é o ✓ — um SÍMBOLO, que é justamente o canal
+     que não depende de enxergar cor — e a cor de cada problema segue no balão do cabeçalho. */
+  table.score td.cell .bdot { display:none; }
+  table.score.m-icpc td.cell:not(.tot):not(.pen).c-try::before { content:"✗"; }
+  table.score td.cell.pen .pv { font-size:.72em; }
+  table.score td.team .u, table.score td.team .pill { display:none; }
+}
+/* celular ESTREITO (360px ainda é comum): a letra da coluna precisa de mais folga que o nome
+   do time — o nome quebra em mais linhas, que é o combinado (quebrar, nunca rolar). */
+@media (max-width:420px) {
+  table.score { --w-prob-share:.56; }
+  table.score th { font-size:.7em; }
+}
+table.score tr.guest-row { background: rgba(120,120,120,.07) }
+table.score tr.guest-row .cl-place { color: var(--muted, #777); font-style: italic }
+/* PARTICIPAÇÃO VIRTUAL (treino/virtual): linha virtual é um convidado com marca própria; `you` = quem olha */
+table.score tr.virtual-row { background: rgba(52,120,246,.07) }
+table.score tr.you-row { background: rgba(52,120,246,.18); outline: 2px solid rgba(52,120,246,.55); outline-offset: -2px }
+/* porta de serviço da organização na tela de login (antes da abertura): canto inferior direito,
+   apagada. NÃO pode chamar atenção — o competidor que clica à toa só se frustra. */
+#orgLoginLink { position:fixed; right:.5rem; bottom:.35rem; z-index:2; font-size:.68rem;
+  letter-spacing:.02em; color:inherit; opacity:.22; text-decoration:none; padding:.2rem .35rem }
+#orgLoginLink:hover, #orgLoginLink:focus-visible { opacity:.7; text-decoration:underline }
+.pinbtn { border: 0; background: transparent; cursor: pointer; padding: 0 .2rem; font-size: .95em; opacity: .35; filter: grayscale(1) }
+.pinbtn:hover, .pinbtn:focus-visible { opacity: .8 }
+.pinbtn[aria-pressed="true"] { opacity: 1; filter: none }
+table.score tr.pinned-row { background: rgba(245,166,35,.13) }
+.pill.virtual { background: rgba(52,120,246,.15); color: #1f4fa8; border-color: rgba(52,120,246,.45) }
+@media (prefers-color-scheme: dark) { .pill.virtual { color: #9cc0ff } table.score tr.virtual-row { background: rgba(90,150,255,.10) } }
+/* numeração PRÓPRIA dos convidados (GUEST_NUMBERING, flag g do TXT — issue #25) */
+.gplace { font-style: italic; color: var(--muted, #777); font-weight: 600; }
+/* rodapé do site e das páginas de contest (shared/site-footer.js — issue #20) */
+.sitefoot { margin-top: 2rem; border-top: 1px solid var(--line); color: var(--muted); font-size: .85rem; background: transparent; }
+.sitefoot-in { display: flex; flex-wrap: wrap; gap: .4rem .7rem; align-items: center; padding: .8rem 0; }
+.sitefoot-in a { color: var(--muted); text-decoration: underline; }
+.sitefoot-credits { margin-left: auto; }
+@media (max-width: 640px) { .sitefoot-credits { margin-left: 0; } }
+/* o CROMO do site nunca vai ao PAPEL (relato do Daniel Saad, 24/09/2026): o rodapé entra DEPOIS do
+   <main> e, nas etiquetas de credenciais, saía no topo da 1ª folha empurrando a grade Pimaco; o alerta
+   do juiz-chefe é fixo e sairia no topo de TODA folha. Teste: server/test/smoke-print-chrome.sh */
+@media print { .sitefoot, #mojChiefAlert { display: none !important; } }
+@media (prefers-color-scheme: dark) { table.score tr.guest-row { background: rgba(255,255,255,.05) } }
+
+/* ---- primitivas de painel (admin de contest e afins) ----
+   Estavam definidas só no <style> de algumas páginas (ou em nenhuma): `.pill` e `.btn.danger`
+   eram usadas no JS de contest sem existir na cascata — pílula virava texto solto e o botão
+   destrutivo ficava igual aos outros. Página com <style> local continua vencendo (carga depois). */
+.pill { display:inline-block; font-size:.78rem; line-height:1.4; padding:.05rem .5rem; border-radius:999px;
+  border:1px solid var(--line); background:#fff; color:var(--muted); white-space:nowrap; }
+.pill.ok { border-color:var(--ok); color:var(--ok); background:var(--ok-bg); }
+.pill.bad { border-color:var(--err); color:#fff; background:var(--err); }
+.btn.danger { background:linear-gradient(180deg,#e0436c,var(--err)); box-shadow:0 2px 8px rgba(190,18,65,.28); }
+.btn.danger:hover { box-shadow:0 4px 14px rgba(190,18,65,.36); }
+.btn.ghost.danger { background:#fff; color:var(--err); border-color:var(--err); box-shadow:none; }
+.btn.ghost.danger:hover { background:var(--err-bg); color:var(--err); }
+.alert { background:#fff7e0; border:1px solid #f3df9e; color:#7a5c00; padding:.5rem .7rem;
+  border-radius:8px; margin:.4rem 0; font-size:.9rem; }
+/* grupo dobrável de campos (configurações avançadas, listas de regra) */
+details.fgroup { border:1px solid var(--line); border-radius:10px; padding:.3rem .7rem; margin:.4rem 0;
+  background:#fff; }
+details.fgroup > summary { cursor:pointer; font-weight:700; padding:.3rem 0; list-style:none;
+  color:var(--blue-dark); }
+details.fgroup > summary::-webkit-details-marker { display:none }
+details.fgroup > summary::before { content:'▸ '; color:var(--blue); }
+details.fgroup[open] > summary::before { content:'▾ '; }
+
+/* ---- navegação em 2 níveis: barra de GRUPOS + sub-navegação de painéis ----
+   (painel de admin do contest; a `.tabbar` de aba única continua existindo para as outras
+   páginas). No telefone as duas viram TIRA ROLÁVEL — empilhar 6 painéis come a tela toda. */
+.groupbar { display:flex; gap:.4rem; flex-wrap:wrap; align-items:center; margin:.2rem 0 .1rem;
+  padding:.35rem .4rem; border:1px solid var(--line); border-radius:12px; background:#fff; }
+.groupbar button { font-size:1rem; font-weight:700; padding:.45rem .9rem; border-radius:9px;
+  border:1px solid transparent; background:transparent; color:var(--ink); cursor:pointer; }
+.groupbar button:hover { background:var(--blue-soft); }
+.groupbar button.active { background:var(--blue); color:#fff; }
+/* cartões de número (Situação, Central › Ao vivo, Anomalias, chefe) — FONTE ÚNICA: o admin e o
+   chefe tinham cópias divergentes em <style> local */
+.dash-cards { display:flex; gap:.6rem; flex-wrap:wrap; margin:.4rem 0 .8rem }
+.dash-card { background:#fff; border:1px solid #d7dee8; border-radius:10px; padding:.5rem .9rem; min-width:110px; text-align:center }
+.dash-card.warn { border-color:#f3c08e; background:#fff7ec }
+.dash-val { font-size:1.5rem; font-weight:800; color:var(--blue); }
+.dash-card.warn .dash-val { color:#b3261e }
+.dash-lbl { font-size:.78rem; color:#64748b }
+/* separador entre os grupos comuns e os de EVENTO (Evento, Máquinas — só com módulo ligado) */
+.groupbar .groupbar-sep { width:1px; height:1.6rem; background:var(--line); margin:0 .3rem; }
+.gen-card.off { opacity:.72; }
+.subnav { display:flex; gap:.3rem; flex-wrap:wrap; margin:.5rem 0 .8rem;
+  border-bottom:1px solid var(--line); padding-bottom:.4rem; }
+.subnav button { font-size:.9rem; padding:.3rem .7rem; border-radius:8px; border:1px solid var(--line);
+  background:#fff; color:var(--ink); cursor:pointer; }
+.subnav button:hover { background:var(--blue-soft); }
+.subnav button.active { border-color:var(--blue); color:var(--blue-dark); font-weight:700; }
+@media (max-width:820px){
+  .groupbar, .subnav { flex-wrap:nowrap; overflow-x:auto; scrollbar-width:none; }
+  .groupbar::-webkit-scrollbar, .subnav::-webkit-scrollbar { display:none; }
+  .groupbar button, .subnav button { white-space:nowrap; }
+  .groupbar button { font-size:.9rem; padding:.35rem .6rem; }
+}
+    .contest-topbar-title { font-weight:800; font-size:1.25rem; }
+    .quicknav a.active { text-decoration:underline; }
+    /* o CSS do placar (largura fixa por colgroup, quebra de linha, marca no celular) mora em
+       /shared/ui.css — é o MESMO da cerimônia e do relatório offline. Aqui fica só o que é
+       desta página. */
+    /* animação de mudança de posição */
+    tr.placing-up td { animation:flash-up 1.1s ease; }
+    tr.placing-down td { animation:flash-down 1.1s ease; }
+    @keyframes flash-up { 0%{background:#d7f5dd;} 100%{background:transparent;} }
+    @keyframes flash-down { 0%{background:#fde0e4;} 100%{background:transparent;} }
+    /* a barra de filtros (.fbar) é a MESMA do relatório offline: mora no /shared/ui.css */
+    .contest-topbar-title { font-weight:800; font-size:1.25rem; }
+    .quicknav a.active { text-decoration:underline; }
+    .stat-cards { display:flex; gap:1rem; flex-wrap:wrap; margin-bottom:1rem }
+    .stat-card { flex:1; min-width:150px; background:#fff; border:1px solid #e3e9f2; border-radius:12px; padding:1rem 1.1rem; box-shadow:0 2px 10px rgba(20,40,80,.05) }
+    .big-num { font-size:2rem; font-weight:800; line-height:1; font-variant-numeric:tabular-nums }
+    .big-sub { color:#64748b; font-size:.88rem; margin-top:.2rem }
+    .two-col { display:flex; gap:1.2rem; flex-wrap:wrap }
+    .two-col > div { flex:1 1 320px; min-width:0 }   /* min-width:0 deixa o flex encolher */
+    .chart-title { text-align:center; font-weight:600; margin-bottom:.3rem }
+    /* SVGs responsivos: caem dentro da coluna sem estourar a borda */
+    svg.chart { max-width:100%; height:auto; display:block; margin:0 auto }
+    .vp-table td.hot { font-weight:700 }
+    table.moj { width:100%; border-collapse:collapse; font-size:.9rem }
+    table.moj th, table.moj td { padding:.35rem .45rem; border-top:1px solid #eef2f8; text-align:left }
+    table.moj thead th { border-top:0; color:#64748b; font-size:.82rem }
+    table.moj td.n { text-align:right; font-variant-numeric:tabular-nums }
+/* exclusivos do relatório offline */
+body{background:var(--blue-bg)}
+/* o relatório é DOCUMENTO, não app: nem o cabeçalho nem a barra de abas grudam no topo
+   (duas faixas sticky em top:0 se atropelavam no headless e no PDF de impressão). */
+.topbar{position:static}
+.topbar .bar{padding:.8rem 1.2rem;gap:.5rem}
+.topbar .rep-sub{opacity:.85;font-size:.85rem}
+.wrap{max-width:var(--page-max);margin:0 auto;padding:1.1rem 1.2rem 2.5rem}
+.repnav{background:#fff;border-bottom:1px solid var(--line);position:static}
+.repnav .wrap{display:flex;flex-wrap:wrap;gap:.15rem;padding:0 1.2rem}
+.repnav a{color:var(--muted);text-decoration:none;padding:.6rem .85rem;font-size:.92rem;font-weight:600;border-bottom:3px solid transparent}
+.repnav a:hover{color:var(--blue-dark);background:var(--blue-soft)}
+.repnav a.on{color:var(--blue-dark);border-bottom-color:var(--accent)}
+h2{font-size:1.25rem;color:var(--blue-dark);margin:1.4rem 0 .6rem}
+table{width:100%}
+/* tabela de POUCAS colunas não estica: com width:100% a coluna de rótulo engolia o vão e os
+   números ficavam a meia tela do próprio cabeçalho. `narrow` deixa as colunas do tamanho do
+   conteúdo (com um piso p/ não virar tabelinha perdida no meio do card). */
+table.moj.narrow{width:auto;min-width:min(100%,34rem)}
+/* o width:1% das colunas numéricas (que no modo esticado empurra o número p/ a direita)
+   FORÇA a tabela de largura automática a crescer — porcentagem de célula resolve contra a
+   largura da tabela. Em `narrow` a coluna volta a ser do tamanho do conteúdo. */
+table.moj.narrow th.n, table.moj.narrow td.n{width:auto}
+.tblwrap{overflow-x:auto}
+/* o placar (largura por colgroup, quebra de linha, marca no celular) vem do ui.css inlinado:
+   aqui NÃO pode voltar `white-space:nowrap` nem `min-width` — era o que forçava a rolagem. */
+td.place{text-align:right}
+.doclist{list-style:none;padding:0;margin:.3rem 0 .8rem}
+.doclist li{margin:.25rem 0}
+.btn-doc{display:inline-block;padding:.15em .6em;margin:0 .15em;border:1px solid var(--line,#c9d2e0);
+  border-radius:.5em;text-decoration:none;font-size:.85em;font-weight:600}
+tr.guest-row td{background:#fbfbfd;color:var(--muted)} i.gplace{font-style:italic;font-weight:600}
+.v-ac{color:var(--ok);font-weight:700}
+.v-rej{color:var(--err)}
+.v-pend{color:var(--muted);font-style:italic}
+.badge{display:inline-block;border-radius:999px;padding:1px 9px;font-size:.75rem;background:var(--blue-soft);color:var(--blue-dark)}
+.badge.pub{background:var(--ok-bg);color:var(--ok)}.badge.priv{background:var(--err-bg);color:var(--err)}
+.badge.org,.badge.st-printed{background:var(--warn-bg);color:var(--warn)}
+.badge.st-pending{background:var(--err-bg);color:var(--err)}
+.badge.st-delivered{background:var(--ok-bg);color:var(--ok)}
+.cards{display:flex;flex-wrap:wrap;gap:.6rem;margin:.6rem 0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:.7rem 1.1rem;min-width:140px;box-shadow:var(--shadow-sm)}
+.card .n{font-size:1.6rem;font-weight:800;color:var(--blue-dark)}
+.card .l{font-size:.78rem;color:var(--muted)}
+.info{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:.3rem 1.1rem .9rem;margin:.7rem 0;box-shadow:var(--shadow-sm)}
+.info dl{display:grid;grid-template-columns:max-content 1fr;gap:4px 14px;margin:.6rem 0 0}
+.info dt{color:var(--muted);font-size:.85rem}.info dd{margin:0;font-size:.92rem}
+/* barrinha da linha do tempo do <noscript>. NÃO pode se chamar .bar: essa classe é a do
+   CONTEINER da topbar no ui.css e o height:14px daqui achatava o cabeçalho inteiro. */
+.tbar{background:var(--blue-soft);height:14px;display:inline-block;vertical-align:middle;border-radius:3px}
+.tbar.ac{background:#bfe8cd}
+.qa{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:.7rem 1.1rem;margin:.7rem 0;box-shadow:var(--shadow-sm)}
+.qa .q{white-space:pre-wrap;margin:.4rem 0}
+.qa .a{white-space:pre-wrap;margin:.4rem 0;padding:.5rem .7rem;background:var(--ok-bg);border-left:3px solid var(--ok);border-radius:6px}
+.qa .meta{color:var(--muted);font-size:.8rem}
+.swatch{display:inline-block;width:.9em;height:.9em;border-radius:50%;border:1px solid #9993;vertical-align:-.1em}
+/* bandeira = caixa fixa + imagem no CSS (uma vez por código, ver rep_flag): `contain` mantém a
+   proporção de qualquer bandeira dentro dela. */
+span.flag-mini{display:inline-block;width:27px;height:18px;max-width:100%;
+  background-repeat:no-repeat;background-position:center;background-size:contain;
+  vertical-align:middle;border-radius:2px;box-shadow:0 0 1px rgba(0,0,0,.45)}
+/* o tier de celular do ui.css manda `height:auto` na bandeira — regra pensada p/ <img>, que tem
+   proporção própria; num <span> ela zeraria a altura. */
+@media (max-width:640px){ table.score span.flag-mini{height:14px !important;width:100%} }
+.flag-mini{height:18px;vertical-align:middle;border-radius:2px;box-shadow:0 0 1px rgba(0,0,0,.45)}
+input.filter{padding:.45rem .7rem;border:1px solid #c8cfd9;border-radius:10px;margin:0 0 .7rem;width:280px;max-width:100%}
+footer{color:var(--muted);font-size:.78rem;margin:2rem 0 .6rem}
+.note{color:var(--muted);font-size:.85rem;margin:.4rem 0}
+/* a barra de filtros (.fbar) e a posição geral (.plg) moram no ui.css inlinado acima: são as
+   MESMAS do placar ao vivo — os dois filtram o mesmo placar. */
+</style>
+</head>
+<body>
+<header class="topbar"><div class="bar">
+<span class="brand"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCIgcm9sZT0iaW1nIiBhcmlhLWxhYmVsPSJNT0og4oCUIE1lbGhvciBPbmxpbmUgSnVkZ2UiPgogIDx0aXRsZT5NT0og4oCUIE1lbGhvciBPbmxpbmUgSnVkZ2U8L3RpdGxlPgogIDxkZWZzPgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJtb2pUaWxlIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzNiODJlOCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiM3YzVjZmYiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9Im1valNoZWVuIiB4MT0iMCIgeTE9IjAiIHgyPSIwIiB5Mj0iMSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIuMjIiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIuNTUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMCIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPCEtLSB0aWxlIChhcHAtaWNvbikgY29tIHNoZWVuICsgbGV2ZSBib3JkYSBjbGFyYSBwLyBzZXBhcmFyIGRvIHRvcGJhciBlc2N1cm8gLS0+CiAgPHJlY3QgeD0iNSIgeT0iNSIgd2lkdGg9IjU0IiBoZWlnaHQ9IjU0IiByeD0iMTUiIGZpbGw9InVybCgjbW9qVGlsZSkiIHN0cm9rZT0iI2ZmZmZmZiIgc3Ryb2tlLW9wYWNpdHk9Ii4yNSIgc3Ryb2tlLXdpZHRoPSIxLjUiLz4KICA8cmVjdCB4PSI1IiB5PSI1IiB3aWR0aD0iNTQiIGhlaWdodD0iNTQiIHJ4PSIxNSIgZmlsbD0idXJsKCNtb2pTaGVlbikiLz4KICA8IS0tIOKckyA9IHZlcmVkaWN0byBBY2NlcHRlZCAo4omIIFNBVGlzZmlhYmxlKS4gTyBicmHDp28gbG9uZ28gc29iZSBjb21vIGEKICAgICAgIHRyYWpldMOzcmlhIGRlIHVtIHBsYW5vOyBvIOKIpyAoY29uanVuw6fDo28pIGZpY2EgaW5zaW51YWRvIG5vIHbDqXJ0aWNlIGRvIOKcky4gLS0+CiAgPHBhdGggZD0iTTE3IDM0IEwyNiA0MyBMNDUgMjIiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmZmZmZiIgc3Ryb2tlLXdpZHRoPSI2LjIiCiAgICAgICAgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+CiAgPCEtLSDiiqQgKHRydWUvdG9wKSA9IG8gbsOzLW1ldGEgZG8gcGxhbm86ICJzYXRpc2ZleiAvIG1ldGEgYXRpbmdpZGEiLgogICAgICAgQWNlbm8gYmVtIHN1dGlsIGEgU0FUICsgUGxhbmVqYW1lbnRvIEF1dG9tYXRpemFkby4gLS0+CiAgPGcgc3Ryb2tlPSIjZmZkMjNmIiBzdHJva2Utd2lkdGg9IjMuMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIj4KICAgIDxsaW5lIHgxPSIzOSIgeTE9IjE1IiB4Mj0iNTEiIHkyPSIxNSIvPgogICAgPGxpbmUgeDE9IjQ1IiB5MT0iMTUiIHgyPSI0NSIgeTI9IjIyIi8+CiAgPC9nPgo8L3N2Zz4K" alt="MOJ"> MOJ</span>
+<span class="contest-topbar-title">XIV Maratona UnB de Programação</span>
+<span class="spacer"></span>
+<span class="rep-sub">relatório da competição</span>
+</div></header>
+<nav class="repnav"><div class="wrap"><a href="index.html">🏆 Placar</a><a href="runs.html">📨 Runs</a><a href="clarifications.html">💬 Clarifications</a><a href="statistics.html" class="on">📊 Estatísticas</a><a href="documentos.html">📄 Documentos</a><a href="staff-tasks.html">🖨️ Tarefas do staff</a><a href="score-frozen.html">❄ Placar congelado</a></div></nav>
+<div class="wrap">
+<h2>Estatísticas</h2>
+<div class="fbar" id="sbar" hidden data-sel="Recorte: %s — %s de %s participantes" data-glob="%s participantes">
+<label>Sede: <select id="sRegion"><option value="">todas</option></select></label>
+<label>País: <select id="sFlag"><option value="">todos</option></select></label>
+<span class="fcount" id="sCount"></span>
+</div>
+<div id="stats"></div>
+<script>
+const LANG="pt";
+function T(pt,en,es){if(LANG==="es")return es!=null?es:(en!=null?en:pt);if(LANG==="en")return en!=null?en:pt;return pt}
+function uiLocale(){return LANG==="es"?"es-419":(LANG==="en"?"en-US":"pt-BR")}
+function getLang(){return LANG}
+// shared/dom.js — o construtor de elementos, SEM nenhuma dependência (nem i18n, nem rede).
+//
+// Mora aqui (e não no ui.js) porque o ui.js importa auth/api: quem só quer montar DOM não
+// pode arrastar a camada de rede junto. É o que permite reaproveitar os renderizadores de
+// gráfico/estatística no RELATÓRIO OFFLINE, que é inlinado num <script> sem fetch nenhum.
+// O ui.js re-exporta `el`, então os ~79 importadores antigos seguem valendo.
+function el(tag, attrs = {}, ...kids) {
+  const e = document.createElement(tag);
+  for (const [k, v] of Object.entries(attrs)) {
+    // booleano = atributo booleano HTML: false OMITE (setAttribute('disabled', false)
+    // deixaria o atributo PRESENTE = desabilitado!), true põe o atributo vazio.
+    if (v == null || v === false) continue;
+    if (k === 'class') e.className = v;
+    else if (k === 'html') e.innerHTML = v;
+    else if (k.startsWith('on') && typeof v === 'function') e.addEventListener(k.slice(2), v);
+    else e.setAttribute(k, v === true ? '' : v);
+  }
+  for (const kid of kids.flat()) {
+    if (kid == null) continue;
+    e.append(kid.nodeType ? kid : document.createTextNode(String(kid)));
+  }
+  return e;
+}
+// shared/difficulty.js — DIFICULDADE e DIRT de um problema: fonte ÚNICA do lado da web
+// (issue #30, 2026-09-15). Gêmeo de server/api/v1/lib/difficulty.sh — as faixas são as mesmas.
+//
+//   dificuldade = "quem tenta consegue?": taxa POR USUÁRIO (resolveram ÷ tentaram, distintos):
+//       ≥ .9 muito fácil · ≥ .7 fácil · ≥ .5 médio · < .5 difícil · sem tentantes = novo
+//   dirt        = "quanto se erra até acertar": (submissões de quem resolveu até o 1º AC − ACs)
+//       ÷ (essas submissões) — a métrica do resolver do ICPC, a mesma das estatísticas do contest.
+//
+// O servidor já manda `difficulty` (chave) e `dirt` em /treino/problems, /treino/problem-stats e
+// /contest/statistics; `diffKeyOf` PREFERE a chave do servidor e só recalcula dos counts quando
+// ela falta (cache velho). Nenhuma outra tela recalcula faixa — a inconsistência veio disso.
+
+const DIFF_KEYS = ['veasy', 'easy', 'med', 'hard', 'new'];
+const DIFF_META = {
+  veasy: { pt: 'muito fácil', en: 'very easy', es: 'muy fácil', cls: 'diff-easy', color: '#15803d' },
+  easy:  { pt: 'fácil',       en: 'easy',      es: 'fácil',     cls: 'diff-easy', color: '#4ca464' },
+  med:   { pt: 'médio',       en: 'medium',    es: 'medio',     cls: 'diff-med',  color: '#9a6700' },
+  hard:  { pt: 'difícil',     en: 'hard',      es: 'difícil',   cls: 'diff-hard', color: '#be1241' },
+  new:   { pt: 'novo',        en: 'new',       es: 'nuevo',     cls: '',          color: '#64748b' },
+};
+const DIFF_VEASY = 0.9, DIFF_EASY = 0.7, DIFF_MED = 0.5;
+
+// taxa por usuário -> chave (null/undefined = sem tentantes = 'new')
+function diffKeyFromRate(rate) {
+  if (rate == null || Number.isNaN(rate)) return 'new';
+  return rate >= DIFF_VEASY ? 'veasy' : rate >= DIFF_EASY ? 'easy' : rate >= DIFF_MED ? 'med' : 'hard';
+}
+// objeto de problema (da lista do treino ou do stats) -> chave
+function diffKeyOf(p) {
+  if (!p) return 'new';
+  if (p.difficulty && DIFF_META[p.difficulty]) return p.difficulty;
+  const a = p.attempted_count || p.distinct_attempted || 0;
+  if (!a) return 'new';
+  return diffKeyFromRate((p.solved_count || p.distinct_solved || 0) / a);
+}
+function diffLabel(key) { const m = DIFF_META[key] || DIFF_META.new; return T(m.pt, m.en, m.es); }
+function diffClass(key) { return (DIFF_META[key] || DIFF_META.new).cls; }
+function diffColor(key) { return (DIFF_META[key] || DIFF_META.new).color; }
+// {key,label,cls,color} de um problema — o pacote que as telas pintam
+function difficultyOf(p) { const k = diffKeyOf(p); return { key: k, label: diffLabel(k), cls: diffClass(k), color: diffColor(k) }; }
+// taxa por usuário de um problema (0..1) ou null
+function userRateOf(p) {
+  if (!p) return null;
+  if (typeof p.user_rate === 'number') return p.user_rate;
+  const a = p.attempted_count || p.distinct_attempted || 0;
+  return a ? (p.solved_count || p.distinct_solved || 0) / a : null;
+}
+
+// dirt: tom p/ colorir (baixo ≤ .2 · médio ≤ .5 · alto) e texto "35%"
+function dirtTone(d) { if (d == null) return ''; return d <= 0.2 ? 'dirt-low' : d <= 0.5 ? 'dirt-mid' : 'dirt-high'; }
+function dirtText(d) { return d == null ? '—' : Math.round(d * 100) + '%'; }
+const dirtHelp = () => T('dirt: parte das submissões de quem RESOLVEU que estava errada (métrica do resolver do ICPC). Alto = o problema pune erros.',
+  'dirt: the part of the SOLVERS’ submissions that was wrong (ICPC resolver metric). High = the problem punishes mistakes.',
+  'dirt: la parte de los envíos de quienes RESOLVIERON que estaba mal (métrica del resolver de ICPC). Alto = el problema castiga los errores.');
+const difficultyHelp = () => T('dificuldade: quem tenta consegue? Taxa por usuário (resolveram ÷ tentaram): ≥90% muito fácil · ≥70% fácil · ≥50% médio · <50% difícil.',
+  'difficulty: do those who try succeed? Per-user rate (solved ÷ attempted): ≥90% very easy · ≥70% easy · ≥50% medium · <50% hard.',
+  'dificultad: ¿quienes lo intentan lo logran? Tasa por usuario (resolvieron ÷ intentaron): ≥90% muy fácil · ≥70% fácil · ≥50% medio · <50% difícil.');
+// shared/charts.js — gráficos minimalistas em SVG, SEM bibliotecas externas
+// (build-free / offline). Renderiza barras, pizza e rosca. Cada função devolve
+// um elemento DOM (svg ou div com svg + legenda) pronto para inserir.
+//
+// NOTA: este módulo é novo e independente; não altera os demais shared/*.
+
+const PALETTE = [
+  '#216097', '#7a5ada', '#1a7f37', '#c4314b', '#a66a00', '#23b0de',
+  '#12d88b', '#6060a1', '#ef8a56', '#d94f9a', '#5b6b7d', '#0aa', '#84a',
+];
+
+function svgEl(tag, attrs) {
+  const e = document.createElementNS('http://www.w3.org/2000/svg', tag);
+  for (const [k, v] of Object.entries(attrs || {})) e.setAttribute(k, v);
+  return e;
+}
+function colorAt(i) { return PALETTE[i % PALETTE.length]; }
+function esc(s) { return String(s); }
+
+// cor canônica por veredicto (fonte ÚNICA — stat do usuário e stats do problema usam a mesma;
+// alinhada às faixas do ui.css: --ok/--err/--warn)
+function verdictColor(v) {
+  v = String(v || '');
+  return /^Accepted/i.test(v) ? '#15803d'
+    : /^Wrong/i.test(v) ? '#be1241'
+      : /^Time Limit/i.test(v) ? '#9a6700'
+        : /^(Possible Runtime|Runtime)/i.test(v) ? '#d94f9a'
+          : /^(Compilation|Language)/i.test(v) ? '#7a5ada' : '#5b6b7d';
+}
+
+// ---- barras verticais --------------------------------------------------------
+// data: [{label, value}], opts: {width,height,color,maxLabels}
+function barChart(data, opts = {}) {
+  const W = opts.width || 720, H = opts.height || 240;
+  const padL = 34, padB = opts.rotateLabels ? 48 : 22, padT = 10, padR = 8;
+  const innerW = W - padL - padR, innerH = H - padT - padB;
+  const max = Math.max(1, ...data.map(d => d.value));
+  const n = Math.max(1, data.length);
+  const bw = innerW / n;
+  const svg = svgEl('svg', { class: 'chart', viewBox: `0 0 ${W} ${H}`, width: W, height: H, role: 'img' });
+
+  // eixo y (3 marcas)
+  for (let g = 0; g <= 2; g++) {
+    const val = Math.round(max * g / 2);
+    const y = padT + innerH - (innerH * g / 2);
+    svg.append(svgEl('line', { x1: padL, y1: y, x2: W - padR, y2: y, stroke: '#e3e8f2', 'stroke-width': 1 }));
+    const tx = svgEl('text', { x: padL - 5, y: y + 3, 'text-anchor': 'end', 'font-size': 10, fill: '#5b6b7d' });
+    tx.textContent = val; svg.append(tx);
+  }
+
+  const everyLabel = Math.ceil(n / (opts.maxLabels || n));
+  data.forEach((d, i) => {
+    const h = (d.value / max) * innerH;
+    const x = padL + i * bw;
+    const y = padT + innerH - h;
+    svg.append(svgEl('rect', { x: x + bw * 0.12, y, width: bw * 0.76, height: Math.max(0, h), fill: opts.color || colorAt(i), rx: 2 }));
+    if (i % everyLabel === 0) {
+      const cx = x + bw / 2;
+      const ty = padT + innerH + 12;
+      const t = svgEl('text', { 'font-size': 9, fill: '#5b6b7d' });
+      if (opts.rotateLabels) {
+        t.setAttribute('x', cx); t.setAttribute('y', ty + 4);
+        t.setAttribute('text-anchor', 'end');
+        t.setAttribute('transform', `rotate(-45 ${cx} ${ty + 4})`);
+      } else {
+        t.setAttribute('x', cx); t.setAttribute('y', ty); t.setAttribute('text-anchor', 'middle');
+      }
+      t.textContent = esc(d.label);
+      svg.append(t);
+    }
+    const title = svgEl('title', {}); title.textContent = `${d.label}: ${d.value}`;
+    svg.append(title);
+  });
+  return svg;
+}
+
+// ---- pizza / rosca -----------------------------------------------------------
+// data: [{label,value,color?}], opts:{size,donut(0..1),colors}
+function pieChart(data, opts = {}) {
+  const size = opts.size || 220, r = size / 2, cx = r, cy = r;
+  const total = data.reduce((a, d) => a + (d.value || 0), 0);
+  const wrap = document.createElement('div');
+  const svg = svgEl('svg', { class: 'chart', viewBox: `0 0 ${size} ${size}`, width: size, height: size, role: 'img' });
+
+  if (total <= 0) {
+    svg.append(svgEl('circle', { cx, cy, r: r - 2, fill: '#eef3fb' }));
+  } else {
+    let acc = 0;
+    data.forEach((d, i) => {
+      const frac = (d.value || 0) / total;
+      if (frac <= 0) return;
+      const a0 = acc * 2 * Math.PI - Math.PI / 2;
+      acc += frac;
+      const a1 = acc * 2 * Math.PI - Math.PI / 2;
+      const color = d.color || (opts.colors && opts.colors[i]) || colorAt(i);
+      if (frac >= 0.9999) {
+        const c = svgEl('circle', { cx, cy, r: r - 2, fill: color });
+        const title = svgEl('title', {}); title.textContent = `${d.label}: ${d.value}`;
+        c.append(title); svg.append(c);
+      } else {
+        const x0 = cx + (r - 2) * Math.cos(a0), y0 = cy + (r - 2) * Math.sin(a0);
+        const x1 = cx + (r - 2) * Math.cos(a1), y1 = cy + (r - 2) * Math.sin(a1);
+        const large = (a1 - a0) > Math.PI ? 1 : 0;
+        const path = svgEl('path', {
+          d: `M ${cx} ${cy} L ${x0} ${y0} A ${r - 2} ${r - 2} 0 ${large} 1 ${x1} ${y1} Z`,
+          fill: color, stroke: '#fff', 'stroke-width': 1,
+        });
+        const title = svgEl('title', {}); title.textContent = `${d.label}: ${d.value} (${Math.round(frac * 100)}%)`;
+        path.append(title); svg.append(path);
+      }
+    });
+    const donut = opts.donut != null ? opts.donut : 0;
+    if (donut > 0) svg.append(svgEl('circle', { cx, cy, r: (r - 2) * donut, fill: '#fff' }));
+  }
+  wrap.append(svg);
+
+  // legenda
+  const legend = document.createElement('div');
+  legend.className = 'legend';
+  data.forEach((d, i) => {
+    if (!(d.value > 0)) return;
+    const color = d.color || (opts.colors && opts.colors[i]) || colorAt(i);
+    const span = document.createElement('span');
+    span.innerHTML = `<span class="sw" style="background:${color}"></span>${esc(d.label)} (${d.value})`;
+    legend.append(span);
+  });
+  wrap.append(legend);
+  return wrap;
+}
+
+// ---- barras horizontais ------------------------------------------------------
+// Ideal p/ distribuições categóricas de RÓTULO LONGO (veredictos, linguagens):
+// cada categoria ocupa a sua própria linha — rótulo | barra proporcional | valor·%.
+// Muito mais legível que uma pizza + legenda quando há nomes grandes/muitas fatias.
+// data: [{label,value,color?}]; opts:{total, hideZero, maxRows, fmt(value)->string
+// (texto da coluna de valor; default "<v>  ·  <pct>%" quando há total)}.
+function hBarChart(data, opts = {}) {
+  let rows = (data || []).slice();
+  if (opts.hideZero) rows = rows.filter(d => (d.value || 0) > 0);
+  if (opts.maxRows && rows.length > opts.maxRows) rows = rows.slice(0, opts.maxRows);
+  const total = opts.total != null ? opts.total : (data || []).reduce((a, d) => a + (d.value || 0), 0);
+  const max = Math.max(1, ...rows.map(d => d.value || 0));
+  const wrap = document.createElement('div');
+  wrap.className = 'hbars';
+  if (!rows.length) {
+    const empty = document.createElement('div'); empty.className = 'muted small'; empty.textContent = '—';
+    wrap.append(empty); return wrap;
+  }
+  rows.forEach((d, i) => {
+    const color = d.color || colorAt(i);
+    const row = document.createElement('div'); row.className = 'hbar-row';
+    const lab = document.createElement('div'); lab.className = 'hbar-label'; lab.title = esc(d.label); lab.textContent = esc(d.label);
+    const track = document.createElement('div'); track.className = 'hbar-track';
+    const fill = document.createElement('div'); fill.className = 'hbar-fill';
+    fill.style.width = Math.max(1.5, ((d.value || 0) / max) * 100) + '%';
+    fill.style.background = color;
+    track.append(fill);
+    const val = document.createElement('div'); val.className = 'hbar-val';
+    val.textContent = opts.fmt ? opts.fmt(d.value || 0)
+      : String(d.value || 0) + (total > 0 ? '  ·  ' + Math.round(((d.value || 0) / total) * 100) + '%' : '');
+    row.append(lab, track, val);
+    wrap.append(row);
+  });
+  return wrap;
+}
+
+// ---- linha / área -----------------------------------------------------------
+// points: [{x:Date|number(epoch s)|string('YYYY-MM-DD'), y:number}] (ordenados por x),
+// ou [{label, value}] (eixo x categórico igualmente espaçado).
+// opts: {width,height,color,fill(bool),yLabel,maxLabels}
+function lineChart(points, opts = {}) {
+  const W = opts.width || 720, H = opts.height || 240;
+  const padL = 36, padB = 26, padT = 12, padR = 10;
+  const innerW = W - padL - padR, innerH = H - padT - padB;
+  const color = opts.color || colorAt(0);
+  const svg = svgEl('svg', { class: 'chart', viewBox: `0 0 ${W} ${H}`, width: W, height: H, role: 'img' });
+
+  // normaliza pontos -> {t:number(ms ou índice), y, label}
+  const toMs = (x) => {
+    if (x instanceof Date) return x.getTime();
+    if (typeof x === 'number') return x < 1e12 ? x * 1000 : x; // epoch s -> ms
+    const d = new Date(x); return isNaN(d.getTime()) ? null : d.getTime();
+  };
+  let pts = (points || []).map((p, i) => {
+    if (p.x !== undefined) { const t = toMs(p.x); return t == null ? null : { t, y: +p.y || 0, label: p.label }; }
+    return { t: i, y: +p.value || +p.y || 0, label: p.label }; // categórico
+  }).filter(Boolean);
+
+  const max = Math.max(1, ...pts.map(p => p.y));
+  // eixo y (3 marcas)
+  for (let g = 0; g <= 2; g++) {
+    const val = Math.round(max * g / 2);
+    const y = padT + innerH - (innerH * g / 2);
+    svg.append(svgEl('line', { x1: padL, y1: y, x2: W - padR, y2: y, stroke: '#e3e8f2', 'stroke-width': 1 }));
+    const tx = svgEl('text', { x: padL - 5, y: y + 3, 'text-anchor': 'end', 'font-size': 10, fill: '#5b6b7d' });
+    tx.textContent = val; svg.append(tx);
+  }
+  if (pts.length < 2) {
+    if (pts.length === 1) {
+      const cx = padL + innerW / 2, cy = padT + innerH - (pts[0].y / max) * innerH;
+      svg.append(svgEl('circle', { cx, cy, r: 3, fill: color }));
+    }
+    return svg;
+  }
+
+  const tMin = pts[0].t, tMax = pts[pts.length - 1].t, tSpan = Math.max(1, tMax - tMin);
+  const sx = (t) => padL + ((t - tMin) / tSpan) * innerW;
+  const sy = (y) => padT + innerH - (y / max) * innerH;
+  const d = pts.map((p, i) => (i ? 'L' : 'M') + sx(p.t).toFixed(1) + ' ' + sy(p.y).toFixed(1)).join(' ');
+
+  if (opts.fill !== false) {
+    const area = `M ${sx(pts[0].t).toFixed(1)} ${(padT + innerH).toFixed(1)} ` +
+      pts.map(p => 'L ' + sx(p.t).toFixed(1) + ' ' + sy(p.y).toFixed(1)).join(' ') +
+      ` L ${sx(pts[pts.length - 1].t).toFixed(1)} ${(padT + innerH).toFixed(1)} Z`;
+    svg.append(svgEl('path', { d: area, fill: color, 'fill-opacity': 0.12, stroke: 'none' }));
+  }
+  svg.append(svgEl('path', { d, fill: 'none', stroke: color, 'stroke-width': 2, 'stroke-linejoin': 'round', 'stroke-linecap': 'round' }));
+
+  // marca o último ponto + tooltip por ponto
+  pts.forEach((p, i) => {
+    const c = svgEl('circle', { cx: sx(p.t), cy: sy(p.y), r: i === pts.length - 1 ? 3.2 : 0, fill: color });
+    const title = svgEl('title', {}); title.textContent = (p.label != null ? p.label + ': ' : '') + p.y;
+    c.append(title); svg.append(c);
+  });
+
+  // rótulos do eixo x: escolhidos por POSIÇÃO no eixo (não por índice do ponto — pontos
+  // aglomerados no tempo punham dois rótulos no mesmo pixel), com folga mínima entre eles
+  // e o do último ponto sempre presente.
+  const fmtX = (t) => {
+    const dt = new Date(t);
+    return String(dt.getDate()).padStart(2, '0') + '/' + String(dt.getMonth() + 1).padStart(2, '0');
+  };
+  const nLab = Math.min(opts.maxLabels || 6, pts.length);
+  const minGap = 38;                                  // ~largura de "dd/mm" em font-size 9 + respiro
+  const lastX = sx(pts[pts.length - 1].t);
+  const chosen = [];
+  for (let k = 0; k < nLab; k++) {
+    const targetT = tMin + (tSpan * k) / (nLab - 1 || 1);
+    let best = 0, bd = Infinity;
+    pts.forEach((p, i) => { const d = Math.abs(p.t - targetT); if (d < bd) { bd = d; best = i; } });
+    const p = pts[best], x = sx(p.t);
+    if (chosen.length && x - chosen[chosen.length - 1].x < minGap) continue;
+    if (x < lastX && lastX - x < minGap) continue;    // reserva o lugar do rótulo do último ponto
+    chosen.push({ p, x });
+  }
+  if (!chosen.length || chosen[chosen.length - 1].x < lastX) chosen.push({ p: pts[pts.length - 1], x: lastX });
+  chosen.forEach(({ p, x }, k) => {
+    const tx = svgEl('text', { x, y: padT + innerH + 14, 'text-anchor': k === 0 ? 'start' : k === chosen.length - 1 ? 'end' : 'middle', 'font-size': 9, fill: '#5b6b7d' });
+    tx.textContent = p.label != null && typeof points[0] === 'object' && points[0].x === undefined ? p.label : fmtX(p.t);
+    svg.append(tx);
+  });
+  return svg;
+}
+
+// ---- heatmap estilo GitHub (calendário de atividade diária) ------------------
+// countsByDate: { 'YYYY-MM-DD': n }. opts:{weeks(~26),cell,gap,color,end(Date),
+//   scaleMax (corta a escala de cor, ex.: no p95), fmt(v,date)->string (texto do tooltip;
+//   default "<v> submissões" — passe p/ exibir tempo, ex.: "média 12s")}.
+// Devolve um <div> com o SVG + legenda "menos … mais".
+function heatmap(countsByDate, opts = {}) {
+  const weeks = opts.weeks || 26;
+  const cell = opts.cell || 13, gap = opts.gap || 3;
+  const base = opts.color || '#216097';
+  const counts = countsByDate || {};
+  const wrap = document.createElement('div');
+
+  const tag = (dt) => dt.getFullYear() + '-' + String(dt.getMonth() + 1).padStart(2, '0') + '-' + String(dt.getDate()).padStart(2, '0');
+  // fim = hoje (ou opts.end); recua até o domingo da semana mais antiga
+  const end = opts.end ? new Date(opts.end) : new Date();
+  end.setHours(0, 0, 0, 0);
+  const start = new Date(end);
+  start.setDate(start.getDate() - (weeks * 7 - 1));
+  start.setDate(start.getDate() - start.getDay()); // alinha no domingo
+
+  let maxV = 1;
+  for (let d = new Date(start); d <= end; d.setDate(d.getDate() + 1)) maxV = Math.max(maxV, counts[tag(d)] || 0);
+  // escala de cor: por padrão o máximo do período; opts.scaleMax permite cortar no p95 p/ não
+  // deixar um único outlier "lavar" o mapa (útil quando o valor é tempo médio, não contagem).
+  const scale = Math.max(1, opts.scaleMax || maxV);
+
+  const cols = Math.ceil(((end - start) / 86400000 + 1) / 7);
+  const padTop = 18, padLeft = 32;
+  const W = padLeft + cols * (cell + gap) + 4;
+  const H = padTop + 7 * (cell + gap) + 4;
+  const svg = svgEl('svg', { class: 'chart', viewBox: `0 0 ${W} ${H}`, width: W, height: H, role: 'img' });
+
+  // 4 níveis de intensidade
+  const shade = (v) => {
+    if (!v) return '#eef3fb';
+    const lvl = v >= scale * 0.75 ? 0.95 : v >= scale * 0.5 ? 0.72 : v >= scale * 0.25 ? 0.5 : 0.3;
+    return mix('#eef3fb', base, lvl);
+  };
+
+  // dias da semana (Seg, Qua, Sex)
+  const DOW = ['', T('Seg', 'Mon', 'Lun'), '', T('Qua', 'Wed', 'Mié'), '', T('Sex', 'Fri', 'Vie'), ''];
+  DOW.forEach((lbl, r) => {
+    if (!lbl) return;
+    const tx = svgEl('text', { x: 2, y: padTop + r * (cell + gap) + cell - 2, 'font-size': 10, fill: '#5b6b7d' });
+    tx.textContent = lbl; svg.append(tx);
+  });
+
+  // (T devolve o ARRAY do idioma — a detecção antiga por T('pt','en')==='en' dava PT em espanhol)
+  const MONTHS = T(['jan', 'fev', 'mar', 'abr', 'mai', 'jun', 'jul', 'ago', 'set', 'out', 'nov', 'dez'],
+    ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+    ['ene', 'feb', 'mar', 'abr', 'may', 'jun', 'jul', 'ago', 'sep', 'oct', 'nov', 'dic']);
+  let lastMonth = -1;
+  const cur = new Date(start);
+  for (let c = 0; c < cols; c++) {
+    // rótulo do mês na 1ª semana em que ele aparece
+    if (cur.getMonth() !== lastMonth) {
+      lastMonth = cur.getMonth();
+      const tx = svgEl('text', { x: padLeft + c * (cell + gap), y: padTop - 5, 'font-size': 10, fill: '#5b6b7d' });
+      tx.textContent = MONTHS[lastMonth]; svg.append(tx);
+    }
+    for (let r = 0; r < 7; r++) {
+      if (cur > end) break;
+      const v = counts[tag(cur)] || 0;
+      const x = padLeft + c * (cell + gap), y = padTop + r * (cell + gap);
+      const rect = svgEl('rect', { x, y, width: cell, height: cell, rx: 2, fill: shade(v) });
+      const title = svgEl('title', {});
+      title.textContent = opts.fmt ? opts.fmt(v, tag(cur)) : `${tag(cur)}: ${v} ${v === 1 ? T('submissão', 'submission', 'envío') : T('submissões', 'submissions', 'envíos')}`;
+      rect.append(title); svg.append(rect);
+      cur.setDate(cur.getDate() + 1);
+    }
+  }
+  wrap.append(svg);
+
+  // legenda menos→mais
+  const legend = document.createElement('div');
+  legend.className = 'legend';
+  const lg = document.createElement('span');
+  lg.style.cssText = 'display:inline-flex;align-items:center;gap:.25rem';
+  lg.append(document.createTextNode(T('menos ', 'less ', 'menos ')));
+  [0, 0.3, 0.5, 0.72, 0.95].forEach(l => {
+    const s = document.createElement('span');
+    s.className = 'sw';
+    s.style.background = l === 0 ? '#eef3fb' : mix('#eef3fb', base, l);
+    lg.append(s);
+  });
+  lg.append(document.createTextNode(T(' mais', ' more', ' más')));
+  legend.append(lg);
+  wrap.append(legend);
+  return wrap;
+}
+
+// ---- heatmap em grade dia-da-semana × hora ----------------------------------
+// Matriz 7×24 (linhas = Dom..Sáb, colunas = horas 0–23) colorida por `value`. Ideal p/
+// ver QUANDO, na semana, algo piora (ex.: tempo médio de resposta) — decisão de capacidade.
+// cells: [{dow:0..6 (0=Dom), hour:0..23, value:number, n?:number}].
+// opts:{cell,gap,color,scaleMax, fmt(value)->string (default "média <value>s")}.
+// Devolve um <div> com o SVG + legenda "menos … mais".
+function heatmapGrid(cells, opts = {}) {
+  const cell = opts.cell || 22, gap = opts.gap || 4;
+  const base = opts.color || '#c4314b';
+  const fmt = opts.fmt || ((v) => T('média ', 'avg ', 'prom ') + v + 's');
+  const DAYS = T(['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb'],
+    ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+    ['Dom', 'Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb']);
+  const wrap = document.createElement('div');
+
+  // grade[dow][hour] = {value, n}
+  const grid = Array.from({ length: 7 }, () => new Array(24).fill(null));
+  let maxV = 1;
+  (cells || []).forEach((c) => {
+    const d = +c.dow, h = +c.hour;
+    if (d >= 0 && d < 7 && h >= 0 && h < 24) {
+      grid[d][h] = { value: +c.value || 0, n: +c.n || 0 };
+      maxV = Math.max(maxV, +c.value || 0);
+    }
+  });
+  const scale = Math.max(1, opts.scaleMax || maxV);
+  const shade = (v) => {
+    if (!v) return '#eef3fb';
+    const lvl = v >= scale * 0.75 ? 0.95 : v >= scale * 0.5 ? 0.72 : v >= scale * 0.25 ? 0.5 : 0.3;
+    return mix('#eef3fb', base, lvl);
+  };
+
+  const padTop = 20, padLeft = 40;
+  const W = padLeft + 24 * (cell + gap) + 2;
+  const H = padTop + 7 * (cell + gap) + 2;
+  const svg = svgEl('svg', { class: 'chart', viewBox: `0 0 ${W} ${H}`, width: W, height: H, role: 'img' });
+
+  // rótulos de hora (0,3,6,…,21) no topo
+  for (let h = 0; h < 24; h++) {
+    if (h % 3 !== 0) continue;
+    const tx = svgEl('text', { x: padLeft + h * (cell + gap), y: padTop - 6, 'font-size': 11, fill: '#5b6b7d' });
+    tx.textContent = h + 'h'; svg.append(tx);
+  }
+  for (let d = 0; d < 7; d++) {
+    const ty = svgEl('text', { x: 2, y: padTop + d * (cell + gap) + cell - 5, 'font-size': 11, fill: '#5b6b7d' });
+    ty.textContent = DAYS[d]; svg.append(ty);
+    for (let h = 0; h < 24; h++) {
+      const g = grid[d][h];
+      const v = g ? g.value : 0;
+      const x = padLeft + h * (cell + gap), y = padTop + d * (cell + gap);
+      const rect = svgEl('rect', { x, y, width: cell, height: cell, rx: 2, fill: shade(v) });
+      const title = svgEl('title', {});
+      title.textContent = g
+        ? `${DAYS[d]} ${h}h · ${fmt(v)} · ${g.n} ${g.n === 1 ? 'sub' : 'subs'}`
+        : `${DAYS[d]} ${h}h · ${T('sem dados', 'no data', 'sin datos')}`;
+      rect.append(title); svg.append(rect);
+    }
+  }
+  wrap.append(svg);
+
+  // legenda menos→mais
+  const legend = document.createElement('div');
+  legend.className = 'legend';
+  const lg = document.createElement('span');
+  lg.style.cssText = 'display:inline-flex;align-items:center;gap:.25rem';
+  lg.append(document.createTextNode(T('menos ', 'less ', 'menos ')));
+  [0, 0.3, 0.5, 0.72, 0.95].forEach(l => {
+    const s = document.createElement('span');
+    s.className = 'sw';
+    s.style.background = l === 0 ? '#eef3fb' : mix('#eef3fb', base, l);
+    lg.append(s);
+  });
+  lg.append(document.createTextNode(T(' mais', ' more', ' más')));
+  legend.append(lg);
+  wrap.append(legend);
+  return wrap;
+}
+
+// mistura linear entre duas cores hex (#rrggbb), f em [0..1]
+function mix(a, b, f) {
+  const pa = hex(a), pb = hex(b);
+  const c = pa.map((v, i) => Math.round(v + (pb[i] - v) * f));
+  return '#' + c.map(v => v.toString(16).padStart(2, '0')).join('');
+}
+function hex(s) {
+  s = String(s).replace('#', '');
+  if (s.length === 3) s = s.split('').map(ch => ch + ch).join('');
+  return [parseInt(s.slice(0, 2), 16), parseInt(s.slice(2, 4), 16), parseInt(s.slice(4, 6), 16)];
+}
+
+
+
+// multiLineChart — várias séries em DEGRAUS sobre a linha do tempo da prova (Estatísticas
+// 2.0, 01/09): a corrida dos problemas (ACs acumulados por problema) e a comparação de
+// times (resolvidos × minuto). series = [{label, points:[{x:minuto, y}], color?}];
+// opts: {width, height, xMax (minutos da prova), legend:true, yMax, step:false (linha
+// contínua ponto a ponto — memória/swap do mlinux, que são MÉDIAS e não acumulados),
+// yUnit ('%' / ' MB' — sufixo dos ticks do eixo y)}
+function multiLineChart(series, opts = {}) {
+  const step = opts.step !== false;
+  const W = opts.width || 760, H = opts.height || 280;
+  const padL = 36, padB = 24, padT = 12, padR = 10;
+  const innerW = W - padL - padR, innerH = H - padT - padB;
+  const svg = svgEl('svg', { class: 'chart', viewBox: `0 0 ${W} ${H}`, width: W, height: H, role: 'img' });
+  const all = (series || []).filter(s => (s.points || []).length);
+  const xMax = Math.max(1, opts.xMax || Math.max(...all.flatMap(s => s.points.map(p => p.x)), 1));
+  const yMax = Math.max(1, opts.yMax || Math.max(...all.flatMap(s => s.points.map(p => p.y)), 1));
+  const sx = (x) => padL + (x / xMax) * innerW;
+  const sy = (y) => padT + innerH - (y / yMax) * innerH;
+  for (let g = 0; g <= 2; g++) {
+    const val = Math.round(yMax * g / 2), y = sy(val);
+    svg.append(svgEl('line', { x1: padL, y1: y, x2: W - padR, y2: y, stroke: '#e3e8f2', 'stroke-width': 1 }));
+    const tx = svgEl('text', { x: padL - 5, y: y + 3, 'text-anchor': 'end', 'font-size': 10, fill: '#5b6b7d' });
+    tx.textContent = val + (opts.yUnit || ''); svg.append(tx);
+  }
+  for (let g = 0; g <= 4; g++) {
+    const mx = Math.round(xMax * g / 4);
+    const tx = svgEl('text', { x: sx(mx), y: H - 8, 'text-anchor': 'middle', 'font-size': 10, fill: '#5b6b7d' });
+    tx.textContent = mx + 'm'; svg.append(tx);
+  }
+  all.forEach((s, i) => {
+    const color = s.color || colorAt(i);
+    // degraus: sobe no minuto do evento; termina no fim da prova
+    const pts = s.points.slice().sort((a, b) => a.x - b.x);
+    let d;
+    if (step) {
+      d = 'M' + sx(0).toFixed(1) + ' ' + sy(0).toFixed(1); let py = 0;
+      pts.forEach(p => {
+        d += ' L' + sx(p.x).toFixed(1) + ' ' + sy(py).toFixed(1);
+        d += ' L' + sx(p.x).toFixed(1) + ' ' + sy(p.y).toFixed(1);
+        py = p.y;
+      });
+      d += ' L' + sx(xMax).toFixed(1) + ' ' + sy(py).toFixed(1);
+    } else {
+      // linha contínua: começa no 1º ponto (não na origem) e termina no último
+      d = pts.map((p, k) => (k ? ' L' : 'M') + sx(p.x).toFixed(1) + ' ' + sy(p.y).toFixed(1)).join('');
+    }
+    const path = svgEl('path', { d, fill: 'none', stroke: color, 'stroke-width': 2 });
+    if (s.label) { const t = svgEl('title', {}); t.textContent = s.label; path.append(t); }
+    svg.append(path);
+  });
+  if (opts.legend === false || !all.length) return svg;
+  const wrap = document.createElement('div');
+  wrap.append(svg);
+  const leg = document.createElement('div');
+  leg.style.cssText = 'display:flex;flex-wrap:wrap;gap:.3rem .8rem;font-size:.78rem;margin-top:.2rem';
+  all.forEach((s, i) => {
+    const it = document.createElement('span');
+    const sw = document.createElement('span');
+    sw.style.cssText = 'display:inline-block;width:.85em;height:.85em;border-radius:2px;margin-right:.3em;vertical-align:-1px;background:' + (s.color || colorAt(i));
+    it.append(sw, s.label || '');
+    leg.append(it);
+  });
+  wrap.append(leg);
+  return wrap;
+}
+// lib/stats-view.js — as SEÇÕES da página de estatísticas, em um lugar só.
+//
+// Fonte ÚNICA de duas telas que precisam ser iguais: /contest/statistics/ (ao vivo) e o
+// statistics.html do RELATÓRIO OFFLINE (report-gen.sh inlina este arquivo, o charts.js e o
+// dom.js num <script> e chama statsSections com o statistics.cache.json embutido). Antes o
+// relatório tinha 5 tabelas escritas à mão em jq — sem gráfico, sem destaques, sem balões,
+// sem matriz de veredictos — e divergia do painel a cada mudança.
+//
+// Só depende de dom.js (sem rede) e charts.js. Recebe o objeto do
+// /contest/statistics (= var/statistics.cache.json) e devolve um ARRAY de elementos.
+
+const pct = (x) => Math.round((x || 0) * 100) + '%';
+
+// "Nome do Time (login)" — em estatística NUNCA se mostra só o login: quem lê procura o
+// nome. O nome vem do próprio cache (first_solver_name, resolvido no stats-gen).
+function who(login, name) {
+  if (!login) return '—';
+  return name && name !== login ? name + ' (' + login + ')' : login;
+}
+
+function expandSolves(dist) { const a = []; (dist || []).forEach((d) => { for (let i = 0; i < d.users; i++) a.push(d.solved); }); return a; }
+function quartiles(arr) {
+  if (!arr.length) return null;
+  const s = arr.slice().sort((a, b) => b - a), at = (p) => s[Math.min(s.length - 1, Math.floor(p * s.length))];
+  return { top25: at(0.25), median: at(0.5), bottom25: at(0.75), max: s[0], min: s[s.length - 1], n: s.length };
+}
+
+function highlights(s, shortOf) {
+  // cada destaque DIZ a métrica que usa (feedback 01/09); texto curto e direto (STE)
+  const ps = s.problems || [], ls = s.languages || [], items = [];
+  const mostSolved = ps.slice().sort((a, b) => b.solved - a.solved)[0];
+  const leastSolved = ps.filter((p) => p.attempted > 0).slice().sort((a, b) => a.solved - b.solved)[0];
+  const dirtiest = ps.filter((p) => p.dirt != null).slice().sort((a, b) => b.dirt - a.dirt)[0];
+  const latest = ps.filter((p) => p.avg_ac_min != null).slice().sort((a, b) => b.avg_ac_min - a.avg_ac_min)[0];
+  if (mostSolved) items.push(T('🏆 Mais resolvido: ', '🏆 Most solved: ', '🏆 Más resuelto: ') + shortOf(mostSolved.problem_id) +
+    ' (' + mostSolved.solved + T(' times resolveram', ' teams solved it', ' equipos lo resolvieron') + ')');
+  if (leastSolved) items.push(T('🧊 Menos resolvido: ', '🧊 Least solved: ', '🧊 Menos resuelto: ') + shortOf(leastSolved.problem_id) +
+    ' (' + leastSolved.solved + T(' times resolveram', ' teams solved it', ' equipos lo resolvieron') + ')');
+  if (dirtiest) items.push(T('🧹 Maior dirt: ', '🧹 Highest dirt: ', '🧹 Mayor dirt: ') + shortOf(dirtiest.problem_id) +
+    ' (' + pct(dirtiest.dirt) + T(' das submissões de quem resolveu eram erradas', ' of the solvers\u2019 submissions were wrong', ' de los envíos de quienes lo resolvieron eran incorrectos') + ')');
+  if (latest) items.push(T('🕘 AC médio mais tardio: ', '🕘 Latest average AC: ', '🕘 AC promedio más tardío: ') + shortOf(latest.problem_id) +
+    ' (' + T('minuto ', 'minute ', 'minuto ') + latest.avg_ac_min + ')');
+  if (ls[0]) items.push(T('⌨ Linguagem mais usada: ', '⌨ Most used language: ', '⌨ Lenguaje más usado: ') + ls[0].lang +
+    ' (' + ls[0].submissions + T(' submissões', ' submissions', ' envíos') + ')');
+  if ((s.totals || {}).submissions) items.push(T('✅ Aceitação global: ', '✅ Global acceptance: ', '✅ Aceptación global: ') +
+    pct((s.totals.accepted || 0) / s.totals.submissions) + T(' das submissões', ' of all submissions', ' de todos los envíos'));
+  return items.length ? el('div', { class: 'section' }, el('h2', {}, T('Destaques', 'Highlights', 'Destacados')), el('ul', { style: 'margin:.2rem 0 0 1.1rem' }, ...items.map((x) => el('li', {}, x)))) : el('div', {});
+}
+
+function totalsCards(t) {
+  const card = (big, sub) => el('div', { class: 'stat-card' }, el('div', { class: 'big-num' }, String(big)), el('div', { class: 'big-sub' }, sub));
+  // enrolled/absent (2026-08-31): a página contava só quem SUBMETEU e os zeros do placar
+  // "sumiam" (relato da LATAM). Cache novo traz inscritos + ausentes; cache antigo (sem os
+  // campos) mantém os 4 cartões de sempre.
+  const extra = (t.enrolled != null)
+    ? [card(t.enrolled || 0, T('inscritos', 'enrolled', 'inscritos')),
+       card(t.absent || 0, T('ausentes (sem submissão)', 'absent (no submissions)', 'ausentes (sin envíos)'))]
+    : [];
+  return el('div', { class: 'stat-cards' },
+    ...extra,
+    card(t.users || 0, T('participantes ativos', 'active participants', 'participantes activos')),
+    card(t.submissions || 0, T('submissões', 'submissions', 'envíos')), card(t.accepted || 0, T('aceitas', 'accepted', 'aceptados')),
+    card(t.problems_solved || 0, T('problemas resolvidos', 'problems solved', 'problemas resueltos')));
+}
+
+function problemsTable(ps, shortOf) {
+  const tb = el('tbody');
+  ps.forEach((p) => tb.append(el('tr', {},
+    el('td', {}, el('b', {}, p.short_name || shortOf(p.problem_id)), el('div', { class: 'small muted' }, p.full_name || '')),
+    el('td', { class: 'n' }, String(p.submissions)),
+    el('td', { class: 'n' }, String(p.accepted_subs != null ? p.accepted_subs : '—')),
+    el('td', { class: 'n' }, String(p.attempted)),
+    el('td', { class: 'n' }, String(p.solved)),
+    el('td', { class: 'n' }, pct(p.accept_rate)),
+    // dificuldade = mesmo vocabulário do treino (shared/difficulty.js): rótulo pela taxa por time
+    (() => { const k = p.difficulty || (p.attempted ? diffKeyFromRate(p.accept_rate) : 'new'); return el('td', { class: 'diff ' + diffClass(k) }, diffLabel(k)); })(),
+    el('td', { class: 'n' }, p.avg_subs != null ? p.avg_subs.toFixed(1) : '—'),
+    el('td', { class: 'n' }, p.avg_ac_min != null ? p.avg_ac_min + 'm' : '—'),
+    el('td', { class: 'n' }, p.tries_per_ac != null ? String(p.tries_per_ac) : '—'),
+    el('td', { class: 'n ' + dirtTone(p.dirt) }, p.dirt != null ? pct(p.dirt) : '—'),
+    el('td', { class: 'small' }, (() => {
+      const l = Object.entries(p.ac_langs || {}).sort((a, b) => b[1] - a[1]);
+      if (!l.length) return '—';
+      return l.slice(0, 2).map(([k, n]) => k + '×' + n).join(' ') + (l.length > 2 ? ' …' : '');
+    })()),
+    el('td', {}, p.first_solver ? (who(p.first_solver, p.first_solver_name) + ' · ' + p.first_minute + 'min' + (p.first_seconds >= 0 ? ' (' + p.first_seconds + 's)' : '')) : '—'))));
+  return el('div', { class: 'chart-wrap' }, el('table', { class: 'moj' },
+    el('thead', {}, el('tr', {}, el('th', {}, T('Problema', 'Problem', 'Problema')),
+      el('th', { class: 'n' }, 'Subs'), el('th', { class: 'n' }, T('Aceitas', 'Accepted', 'Aceptados')),
+      el('th', { class: 'n' }, T('Tentaram', 'Attempted', 'Intentaron')), el('th', { class: 'n' }, T('Resolveram', 'Solved', 'Resolvieron')),
+      el('th', { class: 'n' }, T('Taxa', 'Rate', 'Tasa')),
+      el('th', { title: T('rótulo pela taxa: ≥90% muito fácil · ≥70% fácil · ≥50% médio · <50% difícil (o mesmo do treino)', 'label by the rate: ≥90% very easy · ≥70% easy · ≥50% medium · <50% hard (same as the practice area)', 'etiqueta por la tasa: ≥90% muy fácil · ≥70% fácil · ≥50% medio · <50% difícil (igual que el área de práctica)') }, T('Dificuldade', 'Difficulty', 'Dificultad')),
+      el('th', { class: 'n' }, T('Subs/pessoa', 'Subs/person', 'Envíos/persona')),
+      el('th', { class: 'n', title: T('minuto médio do AC', 'average AC minute', 'minuto promedio del AC') }, T('AC médio', 'Avg AC', 'AC prom.')),
+      el('th', { class: 'n', title: T('submissões até o AC (média de quem resolveu)', 'submissions until AC (avg of solvers)', 'envíos hasta el AC (promedio de quienes resolvieron)') }, T('Tent./AC', 'Tries/AC', 'Intentos/AC')),
+      el('th', { class: 'n', title: T('parte das submissões de quem resolveu que estava errada (métrica do resolver ICPC)', 'the part of the solvers\u2019 submissions that was wrong (ICPC resolver metric)', 'la parte de los envíos de quienes resolvieron que fue incorrecta (métrica del resolver ICPC)') }, 'Dirt'),
+      el('th', { title: T('linguagem dos ACs', 'language of the ACs', 'lenguaje de los AC') }, T('Língua', 'Language', 'Lenguaje')),
+      el('th', {}, T('1º a resolver', 'First to solve', 'Primero en resolver')))), tb));
+}
+
+function verdictMatrix(s, shortOf) {
+  const vbp = s.verdict_by_problem || [];
+  if (!vbp.length) return el('div', {});
+  const gv = {}; vbp.forEach((x) => { gv[x.verdict] = (gv[x.verdict] || 0) + x.count; });
+  const cols = Object.keys(gv).sort((a, b) => gv[b] - gv[a]).slice(0, 6);
+  const m = {}; vbp.forEach((x) => { (m[x.problem] = m[x.problem] || {})[x.verdict] = x.count; });
+  const tb = el('tbody');
+  (s.problems || []).forEach((p) => {
+    const row = m[p.problem_id] || {}, maxv = Math.max(0, ...cols.map((c) => row[c] || 0));
+    tb.append(el('tr', {}, el('td', {}, el('b', {}, shortOf(p.problem_id))),
+      ...cols.map((c) => { const v = row[c] || 0; return el('td', { class: 'n' + (v && v === maxv ? ' hot' : '') }, v ? String(v) : '·'); })));
+  });
+  return el('div', { class: 'chart-wrap' }, el('table', { class: 'moj vp-table' },
+    el('thead', {}, el('tr', {}, el('th', {}, T('Problema', 'Problem', 'Problema')), ...cols.map((c) => el('th', { class: 'n' }, c)))), tb));
+}
+
+function balloonsSection(ps, shortOf) {
+  const solved = (ps || []).filter((p) => p.first_solver).slice()
+    .sort((a, b) => (a.first_seconds >= 0 && b.first_seconds >= 0 ? a.first_seconds - b.first_seconds : a.first_minute - b.first_minute));
+  if (!solved.length) return el('div', {});
+  const ol = el('ol', { style: 'margin:.2rem 0 0 1.2rem' });
+  solved.forEach((p) => ol.append(el('li', {}, el('b', {}, shortOf(p.problem_id)), ' · ', who(p.first_solver, p.first_solver_name),
+    el('span', { class: 'small muted' }, T(' aos ', ' at ', ' a los ') + p.first_minute + ' min' + (p.first_seconds >= 0 ? ' (' + p.first_seconds + 's)' : '')))));
+  return el('div', { class: 'section' }, el('h2', {}, T('🎈 Primeiras resoluções (balões)', '🎈 First solves (balloons)', '🎈 Primeras resoluciones (globos)')), ol);
+}
+
+function langTable(ls) {
+  const tb = el('tbody');
+  ls.forEach((l) => tb.append(el('tr', {},
+    el('td', {}, l.lang), el('td', { class: 'n' }, String(l.submissions)),
+    el('td', { class: 'n' }, String(l.accepted)), el('td', { class: 'n' }, String(l.solvers)))));
+  return el('div', { class: 'chart-wrap' }, el('table', { class: 'moj' },
+    el('thead', {}, el('tr', {}, el('th', {}, T('Linguagem', 'Language', 'Lenguaje')), el('th', { class: 'n' }, 'Subs'),
+      el('th', { class: 'n' }, T('Aceitas', 'Accepted', 'Aceptados')), el('th', { class: 'n' }, T('Resolvedores', 'Solvers', 'Resolvedores')))), tb));
+}
+
+// ---- Estatísticas 2.0: corrida, comparação e desempenho POR RECORTE (01/09) -----------
+// As três seções computam dos ac_events GLOBAIS, filtrados pela seleção corrente.
+// opts.analytics = {events, idx, pen, unrankedRe, filter} vem do chamador; sem ele, o
+// objeto global serve de fonte (filter nulo). idx: {login:{n,c,r}} (tolera string antiga).
+const MIN_RANK_TEAMS = 30;   // ranking/desempenho só com 30+ times com AC na seleção
+function idxName(idx, lg) { const v = idx && idx[lg]; return typeof v === 'string' ? v : (v && v.n) || lg; }
+function anFrom(s, opts) {
+  if (opts && opts.analytics) return opts.analytics;
+  if (!s.ac_events) return null;
+  let unr = null; try { unr = s.unranked_regex ? new RegExp(s.unranked_regex) : null; } catch (e) { unr = null; }
+  return { events: s.ac_events, idx: s.teams_idx || {}, pen: s.penalty_minutes || 20, unrankedRe: unr, filter: null };
+}
+function anEvents(an) { return an.filter ? an.events.filter((e) => an.filter(e[0])) : an.events; }
+function contestDur(s, ev) {
+  return Math.max(1, ...((s.timeline || []).map((t) => t.minute)), ...(ev.map((e) => e[2])));
+}
+// 🏁 ACs acumulados por problema (curva de progressão do ICPC), na seleção corrente
+function problemRace(s, shortOf, an) {
+  if (!an) return null;
+  const ev = anEvents(an);
+  if (!ev.length) return null;
+  const by = {};
+  ev.forEach((e) => { (by[e[1]] = by[e[1]] || []).push(e[2]); });
+  const series = Object.keys(by).sort((a, b) => shortOf(a).localeCompare(shortOf(b))).map((pid) => {
+    let c = 0;
+    return { label: shortOf(pid), points: by[pid].sort((x, y) => x - y).map((m) => ({ x: m, y: ++c })) };
+  });
+  return el('div', { class: 'section' },
+    el('h2', {}, T('🏁 Corrida dos problemas', '🏁 Problem race', '🏁 Carrera de problemas')),
+    el('p', { class: 'muted small' }, T('Cada linha mostra os ACs acumulados de um problema. A curva mostra a ordem real de dificuldade.',
+      'Each line shows the cumulative ACs of one problem. The curve shows the real difficulty order.',
+      'Cada línea muestra los AC acumulados de un problema. La curva muestra el orden real de dificultad.')),
+    multiLineChart(series, { xMax: contestDur(s, ev) }));
+}
+// 🆚 comparação de times (resolvidos × minuto, degraus), na seleção corrente
+function teamCompare(s, an) {
+  if (!an) return null;
+  const ev = anEvents(an), idx = an.idx;
+  if (!ev.length) return null;
+  const byTeam = {};
+  ev.forEach((e) => { (byTeam[e[0]] = byTeam[e[0]] || []).push({ m: e[2], tries: e[3] }); });
+  const box = el('div', { class: 'section' });
+  const chartBox = el('div', {});
+  const chosen = [];
+  const chips = el('div', { style: 'display:flex;flex-wrap:wrap;gap:.3rem;margin:.3rem 0' });
+  const dlid = 'cmp-teams-' + Math.floor(Math.random() * 1e6);
+  const dl = el('datalist', { id: dlid });
+  Object.keys(byTeam).forEach((lg) => dl.append(el('option', { value: who(lg, idxName(idx, lg)) })));
+  const inp = el('input', { list: dlid, placeholder: T('adicione um time (nome ou login)', 'add a team (name or login)', 'agregar un equipo (nombre o usuario)'), style: 'min-width:240px' });
+  function loginOf(text) {
+    const t = String(text || '').trim();
+    if (byTeam[t]) return t;
+    const m = t.match(/\(([^)]+)\)\s*$/); if (m && byTeam[m[1]]) return m[1];
+    const lower = t.toLowerCase();
+    return Object.keys(byTeam).find((lg) => idxName(idx, lg).toLowerCase() === lower) || null;
+  }
+  const tops = rankTeams(an).slice(0, 15);
+  function render() {
+    chips.innerHTML = ''; chartBox.innerHTML = '';
+    chosen.forEach((lg, i) => chips.append(el('span', { class: 'small', style: 'padding:.15em .5em;border:1px solid var(--line,#c9d2e0);border-radius:1em;cursor:pointer', title: T('remover', 'remove', 'quitar'),
+      onclick: () => { chosen.splice(i, 1); render(); } }, who(lg, idxName(idx, lg)) + ' ✕')));
+    if (!chosen.length) { chartBox.append(el('p', { class: 'muted small' }, T('Escolha times acima ou use um preset.', 'Choose teams above or use a preset.', 'Elige equipos arriba o usa un preajuste.'))); return; }
+    const series = chosen.map((lg) => {
+      let c = 0;
+      const pts = byTeam[lg].slice().sort((a, b) => a.m - b.m).map((e) => ({ x: e.m, y: ++c }));
+      return { label: who(lg, idxName(idx, lg)), points: pts };
+    });
+    chartBox.append(multiLineChart(series, { xMax: contestDur(s, ev) }));
+  }
+  function preset(n) { chosen.length = 0; tops.slice(0, n).forEach((t) => chosen.push(t.login)); render(); }
+  inp.addEventListener('change', () => { const lg = loginOf(inp.value); if (lg) { inp.value = ''; if (chosen.indexOf(lg) < 0) { chosen.push(lg); render(); } } });
+  box.append(el('h2', {}, T('🆚 Comparar times na prova', '🆚 Compare teams in the contest', '🆚 Comparar equipos en la competencia')),
+    el('p', { class: 'muted small' }, T('O gráfico mostra os problemas resolvidos de cada time, minuto a minuto.',
+      'The chart shows the solved problems of each team, minute by minute.',
+      'El gráfico muestra los problemas resueltos de cada equipo, minuto a minuto.')),
+    el('div', { class: 'toolbar' }, inp,
+      el('button', { class: 'btn ghost', onclick: () => preset(3) }, 'top 3'),
+      el('button', { class: 'btn ghost', onclick: () => preset(10) }, 'top 10'),
+      el('button', { class: 'btn ghost', onclick: () => { chosen.length = 0; render(); } }, T('limpar', 'clear', 'limpiar'))),
+    dl, chips, chartBox);
+  render();
+  return box;
+}
+// ranking oficial da seleção: solved/penalty por time, convidado (unranked) fora
+function rankTeams(an) {
+  const per = {};
+  anEvents(an).forEach((e) => {
+    const lg = e[0];
+    if (an.unrankedRe && an.unrankedRe.test(lg)) return;
+    const t = per[lg] || (per[lg] = { login: lg, solved: 0, penalty: 0, first: Infinity });
+    t.solved++; t.penalty += e[2] + an.pen * (e[3] - 1);
+    if (e[2] < t.first) t.first = e[2];
+  });
+  return Object.values(per).sort((a, b) => (b.solved - a.solved) || (a.penalty - b.penalty));
+}
+function pctlOf(arr, q) { return arr.length ? arr[Math.floor((arr.length - 1) * q)] : null; }
+// 🏆 desempenho + top 15 da SELEÇÃO (com card explicativo quando a amostra é pequena)
+function performanceSection(s, an) {
+  if (!an) return null;
+  const teams = rankTeams(an);
+  const sec = el('div', { class: 'section' }, el('h2', {}, T('🏆 Desempenho e top teams', '🏆 Performance and top teams', '🏆 Desempeño y mejores equipos')));
+  if (!teams.length) return null;
+  if (teams.length < MIN_RANK_TEAMS) {
+    sec.append(el('p', { class: 'muted' },
+      T('Esta seleção tem ' + teams.length + ' time(s) com AC. Este quadro aparece com ' + MIN_RANK_TEAMS + ' ou mais times. Use o placar com o filtro de sede para ver poucos times.',
+        'This selection has ' + teams.length + ' team(s) with an AC. This panel needs ' + MIN_RANK_TEAMS + ' or more teams. Use the scoreboard with the site filter to see few teams.',
+        'Esta selección tiene ' + teams.length + ' equipo(s) con AC. Este cuadro aparece con ' + MIN_RANK_TEAMS + ' o más equipos. Usa el marcador con el filtro de sede para ver pocos equipos.')));
+    return sec;
+  }
+  const so = teams.map((t) => t.solved).sort((a, b) => a - b);
+  const pe = teams.map((t) => t.penalty).sort((a, b) => a - b);
+  const fa = teams.map((t) => t.first).sort((a, b) => a - b);
+  const mean = (a) => Math.round((a.reduce((x, y) => x + y, 0) / a.length) * 100) / 100;
+  const card = (big, sub) => el('div', { class: 'stat-card' }, el('div', { class: 'big-num' }, String(big)), el('div', { class: 'big-sub' }, sub));
+  sec.append(el('div', { class: 'stat-cards' },
+    card(teams.length, T('times com AC na seleção', 'teams with an AC in the selection', 'equipos con un AC en el recorte')),
+    card(mean(so), T('média de resolvidos', 'average solved', 'promedio de resueltos')),
+    card(pctlOf(so, 0.5) + ' · ' + pctlOf(so, 0.25) + '–' + pctlOf(so, 0.75), T('mediana · quartis (resolvidos)', 'median · quartiles (solved)', 'mediana · cuartiles (resueltos)')),
+    card('≥' + pctlOf(so, 0.9), T('o top 10% resolveu', 'the top 10% solved', 'el 10% superior resolvió')),
+    card(pctlOf(pe, 0.5), T('penalidade mediana', 'median penalty', 'penalidad mediana')),
+    card(pctlOf(fa, 0.5) + 'm', T('minuto mediano do 1º AC', 'median minute of the first AC', 'minuto mediano del primer AC'))));
+  const tb = el('tbody');
+  teams.slice(0, 15).forEach((t, i) => tb.append(el('tr', {},
+    el('td', { class: 'n' }, String(i + 1)),
+    el('td', {}, who(t.login, idxName(an.idx, t.login))),
+    el('td', { class: 'n' }, String(t.solved)),
+    el('td', { class: 'n' }, String(t.penalty)))));
+  sec.append(el('div', { class: 'chart-title', style: 'margin-top:.5rem' }, T('Top 15 da seleção', 'Top 15 of the selection', 'Top 15 del recorte')),
+    el('div', { class: 'chart-wrap' }, el('table', { class: 'moj narrow' },
+      el('thead', {}, el('tr', {}, el('th', { class: 'n' }, '#'), el('th', {}, T('Time', 'Team', 'Equipo')),
+        el('th', { class: 'n' }, T('Resolvidos', 'Solved', 'Resueltos')), el('th', { class: 'n' }, T('Penalidade', 'Penalty', 'Penalidad')))), tb)),
+    el('p', { class: 'muted small' },
+      T('Convidados (coorte extra-oficial) não entram neste quadro. A penalidade usa a regra ICPC.',
+        'Guest teams (unranked cohort) are not in this panel. The penalty uses the ICPC rule.',
+        'Los equipos invitados (cohorte extraoficial) no están en este panel. La penalidad usa la regla ICPC.')));
+  return sec;
+}
+// legenda da tabela por problema (o que cada coluna significa)
+function problemsLegend() {
+  const li = (k, txt) => el('li', {}, el('b', {}, k + ': '), txt);
+  return el('details', { class: 'small', style: 'margin:.3rem 0 .6rem' },
+    el('summary', {}, T('Como ler a tabela', 'How to read the table', 'Cómo leer la tabla')),
+    el('ul', { style: 'margin:.2rem 0 0 1.1rem' },
+      li(T('Taxa', 'Rate', 'Tasa'), T('times que resolveram dividido por times que tentaram.', 'teams that solved divided by teams that tried.', 'equipos que resolvieron dividido por equipos que lo intentaron.')),
+      li(T('Dificuldade', 'Difficulty', 'Dificultad'), T('rótulo pela Taxa: ≥90% muito fácil, ≥70% fácil, ≥50% médio, <50% difícil. É a mesma escala do Treino Livre.', 'label by the Rate: ≥90% very easy, ≥70% easy, ≥50% medium, <50% hard. It is the same scale as the practice area.', 'etiqueta por la Tasa: ≥90% muy fácil, ≥70% fácil, ≥50% medio, <50% difícil. Es la misma escala que el área de práctica.')),
+      li(T('Subs/pessoa', 'Subs/person', 'Envíos/persona'), T('submissões por time que tentou.', 'submissions per team that tried.', 'envíos por equipo que lo intentó.')),
+      li(T('AC médio', 'Avg AC', 'AC prom.'), T('minuto médio do primeiro AC de cada time.', 'average minute of the first AC of each team.', 'minuto promedio del primer AC de cada equipo.')),
+      li(T('Tent./AC', 'Tries/AC', 'Intentos/AC'), T('submissões até o AC, na média de quem resolveu.', 'submissions until the AC, on average, for solvers.', 'envíos hasta el AC, en promedio, para quienes resolvieron.')),
+      li('Dirt', T('parte das submissões de quem RESOLVEU que estava errada. É a métrica do resolver do ICPC. Dirt alto: o problema pune erros. Dirt baixo com poucos ACs: o problema é difícil de pensar.',
+        'the part of the SOLVERS\u2019 submissions that was wrong. This is the ICPC resolver metric. High dirt: the problem punishes mistakes. Low dirt with few ACs: the problem is hard to think.',
+        'la parte de los envíos de QUIENES RESOLVIERON que fue incorrecta. Esta es la métrica del resolver ICPC. Dirt alto: el problema castiga los errores. Dirt bajo con pocos AC: el problema es difícil de pensar.')),
+      li(T('Língua', 'Language', 'Lenguaje'), T('linguagens dos ACs.', 'languages of the ACs.', 'lenguajes de los AC.'))));
+}
+
+// statsSections(s, opts) -> [elementos] na ordem da página.
+// opts.probMap: {problem_id: letra} opcional (o cache já traz short_name; o mapa só cobre
+// contest legado cujo history guarda o offset interno).
+function statsSections(s, opts = {}) {
+  const probMap = Object.assign({}, opts.probMap || {});
+  (s.problems || []).forEach((p) => { if (p.short_name) probMap[p.problem_id] = p.short_name; });
+  const shortOf = (pid) => probMap[pid] || pid;
+  const out = [];
+
+  // fatia de RECORTE (view:true no regions.json — supersede/femininos): sobrepõe as sedes
+  // de propósito; quem soma fatia a fatia contaria times em dobro. O aviso viaja com o
+  // módulo (página de estatísticas E relatório offline).
+  if (s.view) {
+    out.push(el('div', { class: 'section', style: 'background:var(--card-bg,#f5f7fb);border-left:4px solid var(--warn,#a66a00);padding:.5rem .8rem' },
+      el('b', {}, T('◈ Recorte sobreposto', '◈ Overlapping view', '◈ Recorte superpuesto')),
+      el('span', { class: 'small' },
+        T(': esta fatia agrega times que também aparecem nas sedes. Não some fatias com sedes. Os times contariam duas vezes.',
+          ': this slice aggregates teams that also appear under their sites. Do not add slices to sites. The teams would count twice.',
+          ': esta porción agrega equipos que también aparecen bajo sus sedes. No sumes porciones a las sedes. Los equipos contarían dos veces.'))));
+  }
+  out.push(totalsCards(s.totals || {}));
+  out.push(highlights(s, shortOf));
+
+  out.push(el('div', { class: 'section' }, el('h2', {}, T('Por problema', 'By problem', 'Por problema')),
+    problemsTable(s.problems || [], shortOf),
+    problemsLegend(),
+    el('div', { class: 'two-col', style: 'margin-top:1rem' },
+      el('div', {}, el('div', { class: 'chart-title' }, T('Submissões por problema', 'Submissions by problem', 'Envíos por problema')),
+        barChart((s.problems || []).map((p) => ({ label: shortOf(p.problem_id), value: p.submissions })), { rotateLabels: true })),
+      el('div', {}, el('div', { class: 'chart-title' }, T('Resolvedores por problema', 'Solvers by problem', 'Resolvedores por problema')),
+        barChart((s.problems || []).map((p) => ({ label: shortOf(p.problem_id), value: p.solved })), { rotateLabels: true })))));
+
+  const AN = anFrom(s, opts);
+  const race = problemRace(s, shortOf, AN); if (race) out.push(race);
+  out.push(balloonsSection(s.problems, shortOf));
+
+  const totSubs = (s.totals || {}).submissions || 0;
+  out.push(el('div', { class: 'section' }, el('h2', {}, T('Veredictos e linguagens', 'Verdicts and languages', 'Veredictos y lenguajes')),
+    el('div', { class: 'two-col' },
+      el('div', {}, el('div', { class: 'chart-title' }, T('Distribuição de veredictos', 'Verdict distribution', 'Distribución de veredictos')),
+        hBarChart((s.verdicts || []).map((v) => ({ label: v.verdict, value: v.count })), { hideZero: true, total: totSubs }),
+        el('div', { class: 'small muted', style: 'text-align:center; margin-top:.35rem' }, T('cada barra = % das ', 'each bar = % of the ', 'cada barra = % de los ') + totSubs + T(' submissões', ' submissions', ' envíos'))),
+      el('div', {}, el('div', { class: 'chart-title' }, T('Linguagens mais usadas', 'Most used languages', 'Lenguajes más usados')),
+        hBarChart((s.languages || []).map((l) => ({ label: l.lang, value: l.submissions })), { hideZero: true, total: totSubs }),
+        langTable(s.languages || []))),
+    el('h3', { style: 'margin:1.2rem 0 .3rem' }, T('Veredictos por problema', 'Verdicts by problem', 'Veredictos por problema')), verdictMatrix(s, shortOf)));
+
+  if ((s.timeline || []).length) {
+    out.push(el('div', { class: 'section' }, el('h2', {}, T('Linha do tempo', 'Timeline', 'Línea de tiempo')),
+      el('div', { class: 'chart-title' }, T('Submissões ao longo do tempo (por 10 min)', 'Submissions over time (per 10 min)', 'Envíos a lo largo del tiempo (cada 10 min)')),
+      barChart(s.timeline.map((t) => ({ label: t.minute + 'm', value: t.submissions })), { rotateLabels: true }),
+      el('div', { class: 'chart-title', style: 'margin-top:.6rem' }, T('Aceitas ao longo do tempo', 'Accepted over time', 'Aceptados a lo largo del tiempo')),
+      barChart(s.timeline.map((t) => ({ label: t.minute + 'm', value: t.accepted })), { rotateLabels: true }),
+      el('div', { class: 'chart-title', style: 'margin-top:.6rem' }, T('Aceitas acumuladas', 'Cumulative accepted', 'Aceptadas acumuladas')),
+      lineChart((() => { let c = 0; return s.timeline.map((t) => ({ label: t.minute + 'm', y: (c += t.accepted) })); })())));
+  }
+
+  const q = quartiles(expandSolves(s.problems_solved_dist));
+  const distSec = el('div', { class: 'section' }, el('h2', {}, T('Distribuição de desempenho', 'Performance distribution', 'Distribución de desempeño')));
+  if (q) {
+    distSec.append(el('p', { class: 'muted small' }, q.n + T(' participantes. Quartis por nº de problemas resolvidos:', ' participants. Quartiles by number of problems solved:', ' participantes. Cuartiles por cantidad de problemas resueltos:')),
+      el('div', { class: 'stat-cards' },
+        el('div', { class: 'stat-card' }, el('div', { class: 'big-num' }, '≥' + q.top25), el('div', { class: 'big-sub' }, T('top 25% resolveu', 'top 25% solved', 'top 25% resolvió'))),
+        el('div', { class: 'stat-card' }, el('div', { class: 'big-num' }, String(q.median)), el('div', { class: 'big-sub' }, T('mediana (50%)', 'median (50%)', 'mediana (50%)'))),
+        el('div', { class: 'stat-card' }, el('div', { class: 'big-num' }, '≥' + q.bottom25), el('div', { class: 'big-sub' }, T('75% resolveu ao menos', '75% solved at least', '75% resolvió al menos'))),
+        el('div', { class: 'stat-card' }, el('div', { class: 'big-num' }, q.max + ' / ' + q.min), el('div', { class: 'big-sub' }, T('máx / mín resolvidos', 'max / min solved', 'máx. / mín. resueltos')))));
+  }
+  distSec.append(el('div', { class: 'two-col', style: 'margin-top:.6rem' },
+    el('div', {}, el('div', { class: 'chart-title' }, T('Participantes por nº de problemas resolvidos', 'Participants by number of problems solved', 'Participantes por cantidad de problemas resueltos')),
+      barChart((s.problems_solved_dist || []).map((d) => ({ label: String(d.solved), value: d.users })))),
+    el('div', {}, el('div', { class: 'chart-title' }, T('Tentativas até resolver', 'Attempts until solved', 'Intentos hasta resolver')),
+      barChart((s.attempts_dist || []).map((d) => ({ label: String(d.attempts), value: d.count }))))));
+  out.push(distSec);
+  const cmp = teamCompare(s, AN); if (cmp) out.push(cmp);
+  const perf = performanceSection(s, AN); if (perf) out.push(perf);
+  return out;
+}
+const STATS=
+{
+  "success": true,
+  "totals": {
+    "submissions": 650,
+    "accepted": 187,
+    "users": 47,
+    "problems_solved": 12,
+    "enrolled": 53,
+    "absent": 6
+  },
+  "view": false,
+  "problems": [
+    {
+      "problem_id": "mdp-unb-xiv#arvore-6-7",
+      "short_name": "A",
+      "full_name": "Árvore Six Seven",
+      "submissions": 77,
+      "attempted": 26,
+      "solved": 10,
+      "accepted_subs": 10,
+      "first_solver": "unbdarcy22",
+      "first_minute": 33,
+      "first_seconds": 2022,
+      "accept_rate": 0.38461538461538464,
+      "avg_subs": 2.96,
+      "avg_ac_min": 101,
+      "tries_per_ac": 3.6,
+      "dirt": 0.722,
+      "difficulty": "hard",
+      "ac_langs": {
+        "CPP": 10
+      },
+      "first_solver_name": "[UnB/Darcy] Abri a caixa e meu gato virou um WA"
+    },
+    {
+      "problem_id": "mdp-unb-xiv#perfect-numbers",
+      "short_name": "B",
+      "full_name": "Bom Balanço de Divisores",
+      "submissions": 34,
+      "attempted": 18,
+      "solved": 8,
+      "accepted_subs": 8,
+      "first_solver": "unbfcte02",
+      "first_minute": 64,
+      "first_seconds": 3846,
+      "accept_rate": 0.4444444444444444,
+      "avg_subs": 1.88,
+      "avg_ac_min": 163,
+      "tries_per_ac": 1.5,
+      "dirt": 0.333,
+      "difficulty": "hard",
+      "ac_langs": {
+        "CPP": 8
+      },
+      "first_solver_name": "[UnB/FCTE] Dedinhos Mágicos"
+    },
+    {
+      "problem_id": "mdp-unb-xiv#campinho",
+      "short_name": "C",
+      "full_name": "Campinho",
+      "submissions": 20,
+      "attempted": 7,
+      "solved": 5,
+      "accepted_subs": 5,
+      "first_solver": "unbdarcy22",
+      "first_minute": 142,
+      "first_seconds": 8539,
+      "accept_rate": 0.7142857142857143,
+      "avg_subs": 2.85,
+      "avg_ac_min": 199,
+      "tries_per_ac": 2.2,
+      "dirt": 0.545,
+      "difficulty": "easy",
+      "ac_langs": {
+        "CPP": 5
+      },
+      "first_solver_name": "[UnB/Darcy] Abri a caixa e meu gato virou um WA"
+    },
+    {
+      "problem_id": "mdp-unb-xiv#venician-ordered-set",
+      "short_name": "D",
+      "full_name": "Desvendando as Formigas",
+      "submissions": 9,
+      "attempted": 6,
+      "solved": 6,
+      "accepted_subs": 6,
+      "first_solver": "pucgo03",
+      "first_minute": 40,
+      "first_seconds": 2414,
+      "accept_rate": 1,
+      "avg_subs": 1.5,
+      "avg_ac_min": 134,
+      "tries_per_ac": 1.5,
+      "dirt": 0.333,
+      "difficulty": "veasy",
+      "ac_langs": {
+        "CPP": 6
+      },
+      "first_solver_name": "[PUC-GO] Morangos do Amor"
+    },
+    {
+      "problem_id": "mdp-unb-xiv#string-matchings",
+      "short_name": "E",
+      "full_name": "Encontrando Ocorrências",
+      "submissions": 65,
+      "attempted": 27,
+      "solved": 12,
+      "accepted_subs": 12,
+      "first_solver": "pucgo03",
+      "first_minute": 28,
+      "first_seconds": 1718,
+      "accept_rate": 0.4444444444444444,
+      "avg_subs": 2.4,
+      "avg_ac_min": 104,
+      "tries_per_ac": 1.7,
+      "dirt": 0.428,
+      "difficulty": "hard",
+      "ac_langs": {
+        "CPP": 12
+      },
+      "first_solver_name": "[PUC-GO] Morangos do Amor"
+    },
+    {
+      "problem_id": "mdp-unb-xiv#fada-quadrada",
+      "short_name": "F",
+      "full_name": "Fada Quadrada",
+      "submissions": 125,
+      "attempted": 45,
+      "solved": 41,
+      "accepted_subs": 43,
+      "first_solver": "pucgo01",
+      "first_minute": 7,
+      "first_seconds": 474,
+      "accept_rate": 0.9111111111111111,
+      "avg_subs": 2.77,
+      "avg_ac_min": 55,
+      "tries_per_ac": 2.2,
+      "dirt": 0.554,
+      "difficulty": "veasy",
+      "ac_langs": {
+        "C": 6,
+        "CPP": 32,
+        "PY": 3
+      },
+      "first_solver_name": "[PUC-GO] Herobrine"
+    },
+    {
+      "problem_id": "mdp-unb-xiv#grande-desastre",
+      "short_name": "G",
+      "full_name": "Grande Desastre",
+      "submissions": 11,
+      "attempted": 3,
+      "solved": 0,
+      "accepted_subs": 0,
+      "first_solver": "",
+      "first_minute": -1,
+      "first_seconds": -1,
+      "accept_rate": 0,
+      "avg_subs": 3.66,
+      "avg_ac_min": null,
+      "tries_per_ac": null,
+      "dirt": null,
+      "difficulty": "hard",
+      "ac_langs": {},
+      "first_solver_name": ""
+    },
+    {
+      "problem_id": "mdp-unb-xiv#edson-1421",
+      "short_name": "H",
+      "full_name": "Hugo e o Jogo das Palavras",
+      "submissions": 135,
+      "attempted": 38,
+      "solved": 25,
+      "accepted_subs": 25,
+      "first_solver": "unbdarcy19",
+      "first_minute": 15,
+      "first_seconds": 949,
+      "accept_rate": 0.6578947368421053,
+      "avg_subs": 3.55,
+      "avg_ac_min": 109,
+      "tries_per_ac": 2.6,
+      "dirt": 0.626,
+      "difficulty": "med",
+      "ac_langs": {
+        "CPP": 23,
+        "C": 2
+      },
+      "first_solver_name": "[UnB/Darcy] Alunos da Dra. Quirino"
+    },
+    {
+      "problem_id": "mdp-unb-xiv#edson-1425",
+      "short_name": "I",
+      "full_name": "Igualzim, não!",
+      "submissions": 48,
+      "attempted": 19,
+      "solved": 11,
+      "accepted_subs": 11,
+      "first_solver": "ufu01",
+      "first_minute": 23,
+      "first_seconds": 1387,
+      "accept_rate": 0.5789473684210527,
+      "avg_subs": 2.52,
+      "avg_ac_min": 72,
+      "tries_per_ac": 1.1,
+      "dirt": 0.153,
+      "difficulty": "med",
+      "ac_langs": {
+        "CPP": 11
+      },
+      "first_solver_name": "[UFU] Praise the Sonic"
+    },
+    {
+      "problem_id": "mdp-unb-xiv#jogo-da-memoria",
+      "short_name": "J",
+      "full_name": "Jogo da Memória",
+      "submissions": 34,
+      "attempted": 17,
+      "solved": 14,
+      "accepted_subs": 14,
+      "first_solver": "ufu01",
+      "first_minute": 76,
+      "first_seconds": 4607,
+      "accept_rate": 0.8235294117647058,
+      "avg_subs": 2,
+      "avg_ac_min": 174,
+      "tries_per_ac": 1.9,
+      "dirt": 0.481,
+      "difficulty": "easy",
+      "ac_langs": {
+        "C": 1,
+        "CPP": 13
+      },
+      "first_solver_name": "[UFU] Praise the Sonic"
+    },
+    {
+      "problem_id": "mdp-unb-xiv#colisao",
+      "short_name": "K",
+      "full_name": "Kolisão",
+      "submissions": 5,
+      "attempted": 3,
+      "solved": 1,
+      "accepted_subs": 1,
+      "first_solver": "ufu01",
+      "first_minute": 217,
+      "first_seconds": 13024,
+      "accept_rate": 0.3333333333333333,
+      "avg_subs": 1.66,
+      "avg_ac_min": 217,
+      "tries_per_ac": 2,
+      "dirt": 0.5,
+      "difficulty": "hard",
+      "ac_langs": {
+        "CPP": 1
+      },
+      "first_solver_name": "[UFU] Praise the Sonic"
+    },
+    {
+      "problem_id": "mdp-unb-xiv#super-dash",
+      "short_name": "L",
+      "full_name": "Longe de Casa",
+      "submissions": 9,
+      "attempted": 6,
+      "solved": 5,
+      "accepted_subs": 5,
+      "first_solver": "ufu01",
+      "first_minute": 37,
+      "first_seconds": 2251,
+      "accept_rate": 0.8333333333333334,
+      "avg_subs": 1.5,
+      "avg_ac_min": 144,
+      "tries_per_ac": 1.4,
+      "dirt": 0.285,
+      "difficulty": "easy",
+      "ac_langs": {
+        "CPP": 5
+      },
+      "first_solver_name": "[UFU] Praise the Sonic"
+    },
+    {
+      "problem_id": "mdp-unb-xiv#nome-usuario",
+      "short_name": "N",
+      "full_name": "Nome de Usuário",
+      "submissions": 78,
+      "attempted": 47,
+      "solved": 46,
+      "accepted_subs": 47,
+      "first_solver": "unbdarcy19",
+      "first_minute": 4,
+      "first_seconds": 250,
+      "accept_rate": 0.9787234042553191,
+      "avg_subs": 1.65,
+      "avg_ac_min": 40,
+      "tries_per_ac": 1.4,
+      "dirt": 0.323,
+      "difficulty": "veasy",
+      "ac_langs": {
+        "PY": 5,
+        "C": 6,
+        "CPP": 35
+      },
+      "first_solver_name": "[UnB/Darcy] Alunos da Dra. Quirino"
+    }
+  ],
+  "languages": [
+    {
+      "lang": "CPP",
+      "submissions": 488,
+      "accepted": 163,
+      "solvers": 37
+    },
+    {
+      "lang": "C",
+      "submissions": 111,
+      "accepted": 16,
+      "solvers": 8
+    },
+    {
+      "lang": "PY",
+      "submissions": 51,
+      "accepted": 8,
+      "solvers": 6
+    }
+  ],
+  "verdicts": [
+    {
+      "verdict": "Wrong Answer",
+      "count": 315
+    },
+    {
+      "verdict": "Accepted",
+      "count": 187
+    },
+    {
+      "verdict": "Time Limit Exceeded",
+      "count": 87
+    },
+    {
+      "verdict": "Compilation Error",
+      "count": 24
+    },
+    {
+      "verdict": "Runtime Error",
+      "count": 20
+    },
+    {
+      "verdict": "Possible Runtime Error",
+      "count": 17
+    }
+  ],
+  "timeline": [
+    {
+      "minute": 0,
+      "submissions": 26,
+      "accepted": 19
+    },
+    {
+      "minute": 10,
+      "submissions": 32,
+      "accepted": 21
+    },
+    {
+      "minute": 20,
+      "submissions": 23,
+      "accepted": 14
+    },
+    {
+      "minute": 30,
+      "submissions": 35,
+      "accepted": 16
+    },
+    {
+      "minute": 40,
+      "submissions": 22,
+      "accepted": 12
+    },
+    {
+      "minute": 50,
+      "submissions": 21,
+      "accepted": 8
+    },
+    {
+      "minute": 60,
+      "submissions": 34,
+      "accepted": 14
+    },
+    {
+      "minute": 70,
+      "submissions": 12,
+      "accepted": 6
+    },
+    {
+      "minute": 80,
+      "submissions": 15,
+      "accepted": 3
+    },
+    {
+      "minute": 90,
+      "submissions": 19,
+      "accepted": 5
+    },
+    {
+      "minute": 100,
+      "submissions": 27,
+      "accepted": 8
+    },
+    {
+      "minute": 110,
+      "submissions": 25,
+      "accepted": 8
+    },
+    {
+      "minute": 120,
+      "submissions": 17,
+      "accepted": 5
+    },
+    {
+      "minute": 130,
+      "submissions": 10,
+      "accepted": 2
+    },
+    {
+      "minute": 140,
+      "submissions": 25,
+      "accepted": 4
+    },
+    {
+      "minute": 150,
+      "submissions": 22,
+      "accepted": 5
+    },
+    {
+      "minute": 160,
+      "submissions": 18,
+      "accepted": 1
+    },
+    {
+      "minute": 170,
+      "submissions": 19,
+      "accepted": 5
+    },
+    {
+      "minute": 180,
+      "submissions": 25,
+      "accepted": 2
+    },
+    {
+      "minute": 190,
+      "submissions": 20,
+      "accepted": 4
+    },
+    {
+      "minute": 200,
+      "submissions": 22,
+      "accepted": 3
+    },
+    {
+      "minute": 210,
+      "submissions": 21,
+      "accepted": 5
+    },
+    {
+      "minute": 220,
+      "submissions": 28,
+      "accepted": 2
+    },
+    {
+      "minute": 230,
+      "submissions": 16,
+      "accepted": 2
+    },
+    {
+      "minute": 240,
+      "submissions": 17,
+      "accepted": 1
+    },
+    {
+      "minute": 250,
+      "submissions": 14,
+      "accepted": 1
+    },
+    {
+      "minute": 260,
+      "submissions": 23,
+      "accepted": 6
+    },
+    {
+      "minute": 270,
+      "submissions": 12,
+      "accepted": 1
+    },
+    {
+      "minute": 280,
+      "submissions": 15,
+      "accepted": 3
+    },
+    {
+      "minute": 290,
+      "submissions": 35,
+      "accepted": 1
+    }
+  ],
+  "problems_solved_dist": [
+    {
+      "solved": 0,
+      "users": 7
+    },
+    {
+      "solved": 1,
+      "users": 5
+    },
+    {
+      "solved": 2,
+      "users": 15
+    },
+    {
+      "solved": 3,
+      "users": 9
+    },
+    {
+      "solved": 4,
+      "users": 6
+    },
+    {
+      "solved": 5,
+      "users": 1
+    },
+    {
+      "solved": 6,
+      "users": 1
+    },
+    {
+      "solved": 7,
+      "users": 2
+    },
+    {
+      "solved": 8,
+      "users": 1
+    },
+    {
+      "solved": 9,
+      "users": 1
+    },
+    {
+      "solved": 11,
+      "users": 4
+    },
+    {
+      "solved": 12,
+      "users": 1
+    }
+  ],
+  "attempts_dist": [
+    {
+      "attempts": 1,
+      "count": 108
+    },
+    {
+      "attempts": 2,
+      "count": 37
+    },
+    {
+      "attempts": 3,
+      "count": 18
+    },
+    {
+      "attempts": 4,
+      "count": 5
+    },
+    {
+      "attempts": 5,
+      "count": 5
+    },
+    {
+      "attempts": 6,
+      "count": 4
+    },
+    {
+      "attempts": 7,
+      "count": 4
+    },
+    {
+      "attempts": 8,
+      "count": 1
+    },
+    {
+      "attempts": 9,
+      "count": 1
+    },
+    {
+      "attempts": 15,
+      "count": 1
+    }
+  ],
+  "verdict_by_problem": [
+    {
+      "problem": "mdp-unb-xiv#arvore-6-7",
+      "verdict": "Accepted",
+      "count": 10
+    },
+    {
+      "problem": "mdp-unb-xiv#arvore-6-7",
+      "verdict": "Compilation Error",
+      "count": 2
+    },
+    {
+      "problem": "mdp-unb-xiv#arvore-6-7",
+      "verdict": "Time Limit Exceeded",
+      "count": 1
+    },
+    {
+      "problem": "mdp-unb-xiv#arvore-6-7",
+      "verdict": "Wrong Answer",
+      "count": 64
+    },
+    {
+      "problem": "mdp-unb-xiv#campinho",
+      "verdict": "Accepted",
+      "count": 5
+    },
+    {
+      "problem": "mdp-unb-xiv#campinho",
+      "verdict": "Compilation Error",
+      "count": 1
+    },
+    {
+      "problem": "mdp-unb-xiv#campinho",
+      "verdict": "Runtime Error",
+      "count": 2
+    },
+    {
+      "problem": "mdp-unb-xiv#campinho",
+      "verdict": "Time Limit Exceeded",
+      "count": 3
+    },
+    {
+      "problem": "mdp-unb-xiv#campinho",
+      "verdict": "Wrong Answer",
+      "count": 9
+    },
+    {
+      "problem": "mdp-unb-xiv#colisao",
+      "verdict": "Accepted",
+      "count": 1
+    },
+    {
+      "problem": "mdp-unb-xiv#colisao",
+      "verdict": "Runtime Error",
+      "count": 1
+    },
+    {
+      "problem": "mdp-unb-xiv#colisao",
+      "verdict": "Time Limit Exceeded",
+      "count": 2
+    },
+    {
+      "problem": "mdp-unb-xiv#colisao",
+      "verdict": "Wrong Answer",
+      "count": 1
+    },
+    {
+      "problem": "mdp-unb-xiv#edson-1421",
+      "verdict": "Accepted",
+      "count": 25
+    },
+    {
+      "problem": "mdp-unb-xiv#edson-1421",
+      "verdict": "Compilation Error",
+      "count": 4
+    },
+    {
+      "problem": "mdp-unb-xiv#edson-1421",
+      "verdict": "Runtime Error",
+      "count": 4
+    },
+    {
+      "problem": "mdp-unb-xiv#edson-1421",
+      "verdict": "Time Limit Exceeded",
+      "count": 5
+    },
+    {
+      "problem": "mdp-unb-xiv#edson-1421",
+      "verdict": "Wrong Answer",
+      "count": 97
+    },
+    {
+      "problem": "mdp-unb-xiv#edson-1425",
+      "verdict": "Accepted",
+      "count": 11
+    },
+    {
+      "problem": "mdp-unb-xiv#edson-1425",
+      "verdict": "Runtime Error",
+      "count": 12
+    },
+    {
+      "problem": "mdp-unb-xiv#edson-1425",
+      "verdict": "Time Limit Exceeded",
+      "count": 5
+    },
+    {
+      "problem": "mdp-unb-xiv#edson-1425",
+      "verdict": "Wrong Answer",
+      "count": 20
+    },
+    {
+      "problem": "mdp-unb-xiv#fada-quadrada",
+      "verdict": "Accepted",
+      "count": 43
+    },
+    {
+      "problem": "mdp-unb-xiv#fada-quadrada",
+      "verdict": "Compilation Error",
+      "count": 5
+    },
+    {
+      "problem": "mdp-unb-xiv#fada-quadrada",
+      "verdict": "Possible Runtime Error",
+      "count": 16
+    },
+    {
+      "problem": "mdp-unb-xiv#fada-quadrada",
+      "verdict": "Runtime Error",
+      "count": 1
+    },
+    {
+      "problem": "mdp-unb-xiv#fada-quadrada",
+      "verdict": "Time Limit Exceeded",
+      "count": 6
+    },
+    {
+      "problem": "mdp-unb-xiv#fada-quadrada",
+      "verdict": "Wrong Answer",
+      "count": 54
+    },
+    {
+      "problem": "mdp-unb-xiv#grande-desastre",
+      "verdict": "Time Limit Exceeded",
+      "count": 5
+    },
+    {
+      "problem": "mdp-unb-xiv#grande-desastre",
+      "verdict": "Wrong Answer",
+      "count": 6
+    },
+    {
+      "problem": "mdp-unb-xiv#jogo-da-memoria",
+      "verdict": "Accepted",
+      "count": 14
+    },
+    {
+      "problem": "mdp-unb-xiv#jogo-da-memoria",
+      "verdict": "Time Limit Exceeded",
+      "count": 4
+    },
+    {
+      "problem": "mdp-unb-xiv#jogo-da-memoria",
+      "verdict": "Wrong Answer",
+      "count": 16
+    },
+    {
+      "problem": "mdp-unb-xiv#nome-usuario",
+      "verdict": "Accepted",
+      "count": 47
+    },
+    {
+      "problem": "mdp-unb-xiv#nome-usuario",
+      "verdict": "Compilation Error",
+      "count": 6
+    },
+    {
+      "problem": "mdp-unb-xiv#nome-usuario",
+      "verdict": "Possible Runtime Error",
+      "count": 1
+    },
+    {
+      "problem": "mdp-unb-xiv#nome-usuario",
+      "verdict": "Wrong Answer",
+      "count": 24
+    },
+    {
+      "problem": "mdp-unb-xiv#perfect-numbers",
+      "verdict": "Accepted",
+      "count": 8
+    },
+    {
+      "problem": "mdp-unb-xiv#perfect-numbers",
+      "verdict": "Compilation Error",
+      "count": 4
+    },
+    {
+      "problem": "mdp-unb-xiv#perfect-numbers",
+      "verdict": "Time Limit Exceeded",
+      "count": 16
+    },
+    {
+      "problem": "mdp-unb-xiv#perfect-numbers",
+      "verdict": "Wrong Answer",
+      "count": 6
+    },
+    {
+      "problem": "mdp-unb-xiv#string-matchings",
+      "verdict": "Accepted",
+      "count": 12
+    },
+    {
+      "problem": "mdp-unb-xiv#string-matchings",
+      "verdict": "Compilation Error",
+      "count": 2
+    },
+    {
+      "problem": "mdp-unb-xiv#string-matchings",
+      "verdict": "Time Limit Exceeded",
+      "count": 40
+    },
+    {
+      "problem": "mdp-unb-xiv#string-matchings",
+      "verdict": "Wrong Answer",
+      "count": 11
+    },
+    {
+      "problem": "mdp-unb-xiv#super-dash",
+      "verdict": "Accepted",
+      "count": 5
+    },
+    {
+      "problem": "mdp-unb-xiv#super-dash",
+      "verdict": "Wrong Answer",
+      "count": 4
+    },
+    {
+      "problem": "mdp-unb-xiv#venician-ordered-set",
+      "verdict": "Accepted",
+      "count": 6
+    },
+    {
+      "problem": "mdp-unb-xiv#venician-ordered-set",
+      "verdict": "Wrong Answer",
+      "count": 3
+    }
+  ],
+  "dirt": 0.495,
+  "by_region": {},
+  "by_country": {},
+  "ac_events": [
+    [
+      "unbdarcy19",
+      "mdp-unb-xiv#nome-usuario",
+      4,
+      1
+    ],
+    [
+      "pucgo01",
+      "mdp-unb-xiv#nome-usuario",
+      4,
+      1
+    ],
+    [
+      "unbfcte02",
+      "mdp-unb-xiv#nome-usuario",
+      5,
+      1
+    ],
+    [
+      "ufu01",
+      "mdp-unb-xiv#nome-usuario",
+      5,
+      1
+    ],
+    [
+      "unbdarcy16",
+      "mdp-unb-xiv#nome-usuario",
+      6,
+      1
+    ],
+    [
+      "pucgo02",
+      "mdp-unb-xiv#nome-usuario",
+      6,
+      1
+    ],
+    [
+      "unbdarcy06",
+      "mdp-unb-xiv#nome-usuario",
+      6,
+      2
+    ],
+    [
+      "unbdarcy08",
+      "mdp-unb-xiv#nome-usuario",
+      6,
+      1
+    ],
+    [
+      "pucgo01",
+      "mdp-unb-xiv#fada-quadrada",
+      7,
+      1
+    ],
+    [
+      "unbdarcy24",
+      "mdp-unb-xiv#nome-usuario",
+      7,
+      1
+    ],
+    [
+      "unbdarcy14",
+      "mdp-unb-xiv#nome-usuario",
+      8,
+      1
+    ],
+    [
+      "unbfcte07",
+      "mdp-unb-xiv#nome-usuario",
+      8,
+      1
+    ],
+    [
+      "pucgo03",
+      "mdp-unb-xiv#nome-usuario",
+      8,
+      1
+    ],
+    [
+      "unbdarcy19",
+      "mdp-unb-xiv#fada-quadrada",
+      8,
+      1
+    ],
+    [
+      "unbdarcy17",
+      "mdp-unb-xiv#nome-usuario",
+      9,
+      1
+    ],
+    [
+      "ifbctag02",
+      "mdp-unb-xiv#nome-usuario",
+      9,
+      1
+    ],
+    [
+      "unbdarcy09",
+      "mdp-unb-xiv#fada-quadrada",
+      9,
+      1
+    ],
+    [
+      "unbdarcy05",
+      "mdp-unb-xiv#nome-usuario",
+      9,
+      2
+    ],
+    [
+      "unbdarcy07",
+      "mdp-unb-xiv#nome-usuario",
+      9,
+      1
+    ],
+    [
+      "ufu02",
+      "mdp-unb-xiv#fada-quadrada",
+      10,
+      2
+    ],
+    [
+      "ifbctag01",
+      "mdp-unb-xiv#fada-quadrada",
+      10,
+      1
+    ],
+    [
+      "unbfcte02",
+      "mdp-unb-xiv#fada-quadrada",
+      10,
+      1
+    ],
+    [
+      "unbdarcy18",
+      "mdp-unb-xiv#nome-usuario",
+      11,
+      1
+    ],
+    [
+      "unbdarcy22",
+      "mdp-unb-xiv#fada-quadrada",
+      11,
+      2
+    ],
+    [
+      "pucgo03",
+      "mdp-unb-xiv#fada-quadrada",
+      12,
+      3
+    ],
+    [
+      "unbdarcy06",
+      "mdp-unb-xiv#fada-quadrada",
+      12,
+      1
+    ],
+    [
+      "unbfcte03",
+      "mdp-unb-xiv#nome-usuario",
+      12,
+      2
+    ],
+    [
+      "unbdarcy02",
+      "mdp-unb-xiv#nome-usuario",
+      12,
+      1
+    ],
+    [
+      "unbdarcy16",
+      "mdp-unb-xiv#fada-quadrada",
+      12,
+      1
+    ],
+    [
+      "unbfcte05",
+      "mdp-unb-xiv#nome-usuario",
+      13,
+      1
+    ],
+    [
+      "unbdarcy20",
+      "mdp-unb-xiv#nome-usuario",
+      13,
+      1
+    ],
+    [
+      "unbdarcy23",
+      "mdp-unb-xiv#nome-usuario",
+      14,
+      1
+    ],
+    [
+      "unbdarcy19",
+      "mdp-unb-xiv#edson-1421",
+      15,
+      1
+    ],
+    [
+      "pucgo02",
+      "mdp-unb-xiv#fada-quadrada",
+      17,
+      1
+    ],
+    [
+      "unbdarcy03",
+      "mdp-unb-xiv#fada-quadrada",
+      17,
+      1
+    ],
+    [
+      "ufu01",
+      "mdp-unb-xiv#fada-quadrada",
+      18,
+      1
+    ],
+    [
+      "unbdarcy22",
+      "mdp-unb-xiv#nome-usuario",
+      18,
+      2
+    ],
+    [
+      "unbdarcy15",
+      "mdp-unb-xiv#nome-usuario",
+      19,
+      3
+    ],
+    [
+      "unbdarcy17",
+      "mdp-unb-xiv#edson-1421",
+      19,
+      1
+    ],
+    [
+      "unbdarcy08",
+      "mdp-unb-xiv#fada-quadrada",
+      20,
+      1
+    ],
+    [
+      "unbdarcy24",
+      "mdp-unb-xiv#fada-quadrada",
+      20,
+      2
+    ],
+    [
+      "unbdarcy09",
+      "mdp-unb-xiv#nome-usuario",
+      21,
+      1
+    ],
+    [
+      "ufu01",
+      "mdp-unb-xiv#edson-1425",
+      23,
+      1
+    ],
+    [
+      "unbdarcy05",
+      "mdp-unb-xiv#fada-quadrada",
+      24,
+      1
+    ],
+    [
+      "unbdarcy07",
+      "mdp-unb-xiv#fada-quadrada",
+      24,
+      1
+    ],
+    [
+      "unbfcte05",
+      "mdp-unb-xiv#fada-quadrada",
+      24,
+      1
+    ],
+    [
+      "ufu02",
+      "mdp-unb-xiv#nome-usuario",
+      25,
+      1
+    ],
+    [
+      "unbdarcy03",
+      "mdp-unb-xiv#nome-usuario",
+      26,
+      1
+    ],
+    [
+      "ufu01",
+      "mdp-unb-xiv#edson-1421",
+      26,
+      1
+    ],
+    [
+      "unbdarcy10",
+      "mdp-unb-xiv#nome-usuario",
+      27,
+      1
+    ],
+    [
+      "unbdarcy01",
+      "mdp-unb-xiv#nome-usuario",
+      27,
+      1
+    ],
+    [
+      "pucgo03",
+      "mdp-unb-xiv#string-matchings",
+      28,
+      1
+    ],
+    [
+      "unbdarcy17",
+      "mdp-unb-xiv#fada-quadrada",
+      29,
+      1
+    ],
+    [
+      "unbdarcy04",
+      "mdp-unb-xiv#nome-usuario",
+      30,
+      1
+    ],
+    [
+      "unbdarcy22",
+      "mdp-unb-xiv#edson-1421",
+      30,
+      1
+    ],
+    [
+      "unbdarcy18",
+      "mdp-unb-xiv#fada-quadrada",
+      30,
+      2
+    ],
+    [
+      "ifbctag02",
+      "mdp-unb-xiv#edson-1421",
+      31,
+      1
+    ],
+    [
+      "unbdarcy20",
+      "mdp-unb-xiv#fada-quadrada",
+      32,
+      3
+    ],
+    [
+      "ifbctag02",
+      "mdp-unb-xiv#fada-quadrada",
+      32,
+      2
+    ],
+    [
+      "unbdarcy22",
+      "mdp-unb-xiv#arvore-6-7",
+      33,
+      2
+    ],
+    [
+      "unbfcte03",
+      "mdp-unb-xiv#fada-quadrada",
+      34,
+      1
+    ],
+    [
+      "unbdarcy15",
+      "mdp-unb-xiv#fada-quadrada",
+      35,
+      1
+    ],
+    [
+      "unbdarcy19",
+      "mdp-unb-xiv#arvore-6-7",
+      35,
+      2
+    ],
+    [
+      "ufu01",
+      "mdp-unb-xiv#super-dash",
+      37,
+      1
+    ],
+    [
+      "pucgo01",
+      "mdp-unb-xiv#arvore-6-7",
+      37,
+      4
+    ],
+    [
+      "unbfcte07",
+      "mdp-unb-xiv#fada-quadrada",
+      38,
+      1
+    ],
+    [
+      "ufu02",
+      "mdp-unb-xiv#edson-1421",
+      38,
+      2
+    ],
+    [
+      "unbdarcy14",
+      "mdp-unb-xiv#fada-quadrada",
+      38,
+      1
+    ],
+    [
+      "unbdarcy06",
+      "mdp-unb-xiv#edson-1421",
+      39,
+      1
+    ],
+    [
+      "pucgo03",
+      "mdp-unb-xiv#venician-ordered-set",
+      40,
+      1
+    ],
+    [
+      "unbdarcy22",
+      "mdp-unb-xiv#edson-1425",
+      40,
+      1
+    ],
+    [
+      "unbdarcy01",
+      "mdp-unb-xiv#fada-quadrada",
+      42,
+      2
+    ],
+    [
+      "unbdarcy19",
+      "mdp-unb-xiv#string-matchings",
+      44,
+      1
+    ],
+    [
+      "unbfcte16",
+      "mdp-unb-xiv#nome-usuario",
+      45,
+      1
+    ],
+    [
+      "uniceub02",
+      "mdp-unb-xiv#fada-quadrada",
+      46,
+      7
+    ],
+    [
+      "pucgo03",
+      "mdp-unb-xiv#edson-1421",
+      46,
+      1
+    ],
+    [
+      "unbdarcy22",
+      "mdp-unb-xiv#string-matchings",
+      47,
+      1
+    ],
+    [
+      "uniceub01",
+      "mdp-unb-xiv#nome-usuario",
+      47,
+      1
+    ],
+    [
+      "unbfcte13",
+      "mdp-unb-xiv#fada-quadrada",
+      48,
+      2
+    ],
+    [
+      "pucgo03",
+      "mdp-unb-xiv#edson-1425",
+      49,
+      1
+    ],
+    [
+      "pucgo01",
+      "mdp-unb-xiv#string-matchings",
+      49,
+      1
+    ],
+    [
+      "unbdarcy04",
+      "mdp-unb-xiv#fada-quadrada",
+      50,
+      1
+    ],
+    [
+      "unbdarcy11",
+      "mdp-unb-xiv#nome-usuario",
+      53,
+      1
+    ],
+    [
+      "unbdarcy19",
+      "mdp-unb-xiv#edson-1425",
+      54,
+      1
+    ],
+    [
+      "unbdarcy26",
+      "mdp-unb-xiv#fada-quadrada",
+      55,
+      1
+    ],
+    [
+      "ufu01",
+      "mdp-unb-xiv#string-matchings",
+      56,
+      1
+    ],
+    [
+      "unbfcte08",
+      "mdp-unb-xiv#nome-usuario",
+      57,
+      1
+    ],
+    [
+      "ifbctag01",
+      "mdp-unb-xiv#nome-usuario",
+      58,
+      1
+    ],
+    [
+      "ufu01",
+      "mdp-unb-xiv#arvore-6-7",
+      59,
+      3
+    ],
+    [
+      "pucgo01",
+      "mdp-unb-xiv#edson-1421",
+      60,
+      2
+    ],
+    [
+      "unbfcte06",
+      "mdp-unb-xiv#nome-usuario",
+      60,
+      2
+    ],
+    [
+      "unbdarcy24",
+      "mdp-unb-xiv#edson-1421",
+      60,
+      2
+    ],
+    [
+      "unbdarcy16",
+      "mdp-unb-xiv#edson-1421",
+      61,
+      2
+    ],
+    [
+      "unbdarcy26",
+      "mdp-unb-xiv#nome-usuario",
+      64,
+      1
+    ],
+    [
+      "pucgo03",
+      "mdp-unb-xiv#arvore-6-7",
+      64,
+      2
+    ],
+    [
+      "unbfcte02",
+      "mdp-unb-xiv#perfect-numbers",
+      64,
+      1
+    ],
+    [
+      "unbdarcy11",
+      "mdp-unb-xiv#fada-quadrada",
+      65,
+      2
+    ],
+    [
+      "unbdarcy17",
+      "mdp-unb-xiv#arvore-6-7",
+      65,
+      3
+    ],
+    [
+      "unbfcte13",
+      "mdp-unb-xiv#nome-usuario",
+      66,
+      2
+    ],
+    [
+      "unbdarcy16",
+      "mdp-unb-xiv#edson-1425",
+      67,
+      1
+    ],
+    [
+      "unbfcte16",
+      "mdp-unb-xiv#fada-quadrada",
+      67,
+      1
+    ],
+    [
+      "pucgo01",
+      "mdp-unb-xiv#edson-1425",
+      69,
+      1
+    ],
+    [
+      "ufu02",
+      "mdp-unb-xiv#edson-1425",
+      69,
+      1
+    ],
+    [
+      "pucgo02",
+      "mdp-unb-xiv#edson-1421",
+      72,
+      2
+    ],
+    [
+      "unbdarcy25",
+      "mdp-unb-xiv#nome-usuario",
+      73,
+      1
+    ],
+    [
+      "unbfcte02",
+      "mdp-unb-xiv#edson-1425",
+      75,
+      1
+    ],
+    [
+      "unbdarcy05",
+      "mdp-unb-xiv#string-matchings",
+      76,
+      1
+    ],
+    [
+      "ufu01",
+      "mdp-unb-xiv#jogo-da-memoria",
+      76,
+      1
+    ],
+    [
+      "unbdarcy14",
+      "mdp-unb-xiv#edson-1421",
+      79,
+      3
+    ],
+    [
+      "unbfcte02",
+      "mdp-unb-xiv#edson-1421",
+      81,
+      1
+    ],
+    [
+      "unbfcte05",
+      "mdp-unb-xiv#edson-1421",
+      83,
+      1
+    ],
+    [
+      "unbdarcy19",
+      "mdp-unb-xiv#jogo-da-memoria",
+      84,
+      1
+    ],
+    [
+      "unbdarcy22",
+      "mdp-unb-xiv#perfect-numbers",
+      90,
+      1
+    ],
+    [
+      "unbdarcy02",
+      "mdp-unb-xiv#fada-quadrada",
+      92,
+      5
+    ],
+    [
+      "pucgo03",
+      "mdp-unb-xiv#jogo-da-memoria",
+      92,
+      1
+    ],
+    [
+      "unbdarcy23",
+      "mdp-unb-xiv#fada-quadrada",
+      95,
+      3
+    ],
+    [
+      "unbdarcy09",
+      "mdp-unb-xiv#string-matchings",
+      102,
+      2
+    ],
+    [
+      "unbdarcy22",
+      "mdp-unb-xiv#venician-ordered-set",
+      103,
+      1
+    ],
+    [
+      "unbdarcy05",
+      "mdp-unb-xiv#edson-1421",
+      103,
+      6
+    ],
+    [
+      "ufu01",
+      "mdp-unb-xiv#perfect-numbers",
+      103,
+      1
+    ],
+    [
+      "pucgo03",
+      "mdp-unb-xiv#super-dash",
+      104,
+      1
+    ],
+    [
+      "unbfcte12",
+      "mdp-unb-xiv#fada-quadrada",
+      106,
+      1
+    ],
+    [
+      "uniceub02",
+      "mdp-unb-xiv#nome-usuario",
+      106,
+      3
+    ],
+    [
+      "unbdarcy16",
+      "mdp-unb-xiv#arvore-6-7",
+      108,
+      3
+    ],
+    [
+      "unbfcte02",
+      "mdp-unb-xiv#string-matchings",
+      110,
+      1
+    ],
+    [
+      "unbdarcy17",
+      "mdp-unb-xiv#edson-1425",
+      111,
+      2
+    ],
+    [
+      "unbfcte03",
+      "mdp-unb-xiv#edson-1421",
+      112,
+      1
+    ],
+    [
+      "unbdarcy22",
+      "mdp-unb-xiv#jogo-da-memoria",
+      114,
+      1
+    ],
+    [
+      "ufu02",
+      "mdp-unb-xiv#string-matchings",
+      114,
+      2
+    ],
+    [
+      "unbdarcy24",
+      "mdp-unb-xiv#edson-1425",
+      116,
+      1
+    ],
+    [
+      "unbfcte02",
+      "mdp-unb-xiv#arvore-6-7",
+      119,
+      2
+    ],
+    [
+      "ufu01",
+      "mdp-unb-xiv#venician-ordered-set",
+      119,
+      2
+    ],
+    [
+      "unbdarcy21",
+      "mdp-unb-xiv#nome-usuario",
+      122,
+      3
+    ],
+    [
+      "unbfcte04",
+      "mdp-unb-xiv#nome-usuario",
+      125,
+      2
+    ],
+    [
+      "unbdarcy19",
+      "mdp-unb-xiv#venician-ordered-set",
+      126,
+      3
+    ],
+    [
+      "unbfcte03",
+      "mdp-unb-xiv#edson-1425",
+      127,
+      2
+    ],
+    [
+      "ifbctag03",
+      "mdp-unb-xiv#nome-usuario",
+      128,
+      2
+    ],
+    [
+      "unbdarcy17",
+      "mdp-unb-xiv#string-matchings",
+      134,
+      2
+    ],
+    [
+      "unbfcte02",
+      "mdp-unb-xiv#jogo-da-memoria",
+      134,
+      1
+    ],
+    [
+      "ufu01",
+      "mdp-unb-xiv#campinho",
+      142,
+      1
+    ],
+    [
+      "unbdarcy22",
+      "mdp-unb-xiv#campinho",
+      142,
+      1
+    ],
+    [
+      "unbfcte15",
+      "mdp-unb-xiv#nome-usuario",
+      149,
+      2
+    ],
+    [
+      "pucgo01",
+      "mdp-unb-xiv#perfect-numbers",
+      156,
+      1
+    ],
+    [
+      "unbfcte08",
+      "mdp-unb-xiv#fada-quadrada",
+      156,
+      5
+    ],
+    [
+      "unbdarcy19",
+      "mdp-unb-xiv#super-dash",
+      157,
+      1
+    ],
+    [
+      "unbfcte02",
+      "mdp-unb-xiv#venician-ordered-set",
+      158,
+      1
+    ],
+    [
+      "unbfcte12",
+      "mdp-unb-xiv#nome-usuario",
+      159,
+      2
+    ],
+    [
+      "unbfcte14",
+      "mdp-unb-xiv#nome-usuario",
+      166,
+      7
+    ],
+    [
+      "unbdarcy24",
+      "mdp-unb-xiv#jogo-da-memoria",
+      171,
+      1
+    ],
+    [
+      "unbdarcy08",
+      "mdp-unb-xiv#edson-1421",
+      174,
+      6
+    ],
+    [
+      "pucgo03",
+      "mdp-unb-xiv#campinho",
+      176,
+      4
+    ],
+    [
+      "unbdarcy17",
+      "mdp-unb-xiv#jogo-da-memoria",
+      177,
+      1
+    ],
+    [
+      "pucgo01",
+      "mdp-unb-xiv#jogo-da-memoria",
+      179,
+      2
+    ],
+    [
+      "unbdarcy19",
+      "mdp-unb-xiv#perfect-numbers",
+      181,
+      1
+    ],
+    [
+      "unbdarcy25",
+      "mdp-unb-xiv#edson-1421",
+      183,
+      2
+    ],
+    [
+      "unbdarcy03",
+      "mdp-unb-xiv#edson-1421",
+      193,
+      1
+    ],
+    [
+      "unbdarcy09",
+      "mdp-unb-xiv#edson-1421",
+      193,
+      8
+    ],
+    [
+      "unbdarcy08",
+      "mdp-unb-xiv#jogo-da-memoria",
+      197,
+      1
+    ],
+    [
+      "unbdarcy24",
+      "mdp-unb-xiv#string-matchings",
+      198,
+      3
+    ],
+    [
+      "unbdarcy25",
+      "mdp-unb-xiv#fada-quadrada",
+      200,
+      15
+    ],
+    [
+      "ifbctag02",
+      "mdp-unb-xiv#jogo-da-memoria",
+      207,
+      5
+    ],
+    [
+      "pucgo01",
+      "mdp-unb-xiv#super-dash",
+      208,
+      1
+    ],
+    [
+      "unbfcte04",
+      "mdp-unb-xiv#fada-quadrada",
+      212,
+      6
+    ],
+    [
+      "unbdarcy22",
+      "mdp-unb-xiv#super-dash",
+      215,
+      3
+    ],
+    [
+      "unbdarcy23",
+      "mdp-unb-xiv#jogo-da-memoria",
+      216,
+      3
+    ],
+    [
+      "ufu01",
+      "mdp-unb-xiv#colisao",
+      217,
+      2
+    ],
+    [
+      "unbdarcy16",
+      "mdp-unb-xiv#perfect-numbers",
+      217,
+      4
+    ],
+    [
+      "unbdarcy05",
+      "mdp-unb-xiv#arvore-6-7",
+      222,
+      9
+    ],
+    [
+      "unbdarcy15",
+      "mdp-unb-xiv#edson-1421",
+      229,
+      7
+    ],
+    [
+      "pucgo03",
+      "mdp-unb-xiv#perfect-numbers",
+      234,
+      2
+    ],
+    [
+      "unbfcte15",
+      "mdp-unb-xiv#fada-quadrada",
+      238,
+      3
+    ],
+    [
+      "ufu02",
+      "mdp-unb-xiv#jogo-da-memoria",
+      244,
+      5
+    ],
+    [
+      "unbdarcy19",
+      "mdp-unb-xiv#campinho",
+      251,
+      1
+    ],
+    [
+      "pucgo01",
+      "mdp-unb-xiv#venician-ordered-set",
+      261,
+      1
+    ],
+    [
+      "unbdarcy24",
+      "mdp-unb-xiv#perfect-numbers",
+      263,
+      1
+    ],
+    [
+      "unbdarcy03",
+      "mdp-unb-xiv#jogo-da-memoria",
+      264,
+      1
+    ],
+    [
+      "unbdarcy18",
+      "mdp-unb-xiv#edson-1421",
+      265,
+      7
+    ],
+    [
+      "unbdarcy23",
+      "mdp-unb-xiv#edson-1421",
+      266,
+      4
+    ],
+    [
+      "unbdarcy26",
+      "mdp-unb-xiv#arvore-6-7",
+      268,
+      6
+    ],
+    [
+      "unbdarcy21",
+      "mdp-unb-xiv#edson-1421",
+      275,
+      3
+    ],
+    [
+      "unbdarcy21",
+      "mdp-unb-xiv#fada-quadrada",
+      280,
+      3
+    ],
+    [
+      "pucgo01",
+      "mdp-unb-xiv#campinho",
+      285,
+      4
+    ],
+    [
+      "unbdarcy16",
+      "mdp-unb-xiv#jogo-da-memoria",
+      286,
+      3
+    ],
+    [
+      "unbdarcy16",
+      "mdp-unb-xiv#string-matchings",
+      292,
+      5
+    ]
+  ],
+  "penalty_minutes": 20,
+  "unranked_regex": "",
+  "teams_idx": {
+    "pucgo01": {
+      "n": "[PUC-GO] Herobrine",
+      "c": "",
+      "r": "",
+      "rs": []
+    },
+    "pucgo02": {
+      "n": "[PUC-GO] naoseicodarsemautocomplete",
+      "c": "",
+      "r": "",
+      "rs": []
+    },
+    "pucgo03": {
+      "n": "[PUC-GO] Morangos do Amor",
+      "c": "",
+      "r": "",
+      "rs": []
+    },
+    "unbfcte12": {
+      "n": "[UnB/FCTE] REM",
+      "c": "",
+      "r": "",
+      "rs": []
+    },
+    "unbfcte13": {
+      "n": "[UnB/FCTE] Constante Mágica",
+      "c": "",
+      "r": "",
+      "rs": []
+    },
+    "unbfcte14": {
+      "n": "[UnB/FCTE] CREATE DATABASE",
+      "c": "",
+      "r": "",
+      "rs": []
+    },
+    "unbfcte15": {
+      "n": "[UnB/FCTE] Os Pylantra",
+      "c": "",
+      "r": "",
+      "rs": []
+    },
+    "unbfcte16": {
+      "n": "[UnB/FCTE] Lovelace",
+      "c": "",
+      "r": "",
+      "rs": []
+    },
+    "unbdarcy10": {
+      "n": "[UnB/Darcy] Nascimento",
+      "c": "",
+      "r": "",
+      "rs": []
+    },
+    "unbdarcy11": {
+      "n": "[UnB/Darcy] Lifan 320 2011 13  mucho texto",
+      "c": "",
+      "r": "",
+      "rs": []
+    },
+    "unbdarcy14": {
+      "n": "[UnB/Darcy] MSN",
+      "c": "",
+      "r": "",
+      "rs": []
+    },
+    "unbdarcy15": {
+      "n": "[UnB/Darcy] Guaxinins do cerrado",
+      "c": "",
+      "r": "",
+      "rs": []
+    },
+    "unbdarcy16": {
+      "n": "[UnB/Darcy] O nome anterior do nosso time quebrou o BOCA",
+      "c": "",
+      "r": "",
+      "rs": []
+    },
+    "ufu01": {
+      "n": "[UFU] Praise the Sonic",
+      "c": "",
+      "r": "",
+      "rs": []
+    },
+    "unbdarcy17": {
+      "n": "[UnB/Darcy] py.sandu mma experts carona da silva mauro patrão opala 6 cilindros não somos do gama 90 anos da vovó oliveira",
+      "c": "",
+      "r": "",
+      "rs": []
+    },
+    "ufu02": {
+      "n": "[UFU] Haaland, você não é bem vindo em Douradoquara",
+      "c": "",
+      "r": "",
+      "rs": []
+    },
+    "unbdarcy18": {
+      "n": "[UnB/Darcy] Naruto_Ninja_Storm_4",
+      "c": "",
+      "r": "",
+      "rs": []
+    },
+    "unbdarcy19": {
+      "n": "[UnB/Darcy] Alunos da Dra. Quirino",
+      "c": "",
+      "r": "",
+      "rs": []
+    },
+    "ifbctag01": {
+      "n": "[IFB/CTAG] wrongtime error exceeded",
+      "c": "",
+      "r": "",
+      "rs": []
+    },
+    "ifbctag02": {
+      "n": "[IFB/CTAG] O(lival)",
+      "c": "",
+      "r": "",
+      "rs": []
+    },
+    "ifbctag03": {
+      "n": "[IFB/CTAG] Napolitano",
+      "c": "",
+      "r": "",
+      "rs": []
+    },
+    "unbfcte02": {
+      "n": "[UnB/FCTE] Dedinhos Mágicos",
+      "c": "",
+      "r": "",
+      "rs": []
+    },
+    "unbfcte03": {
+      "n": "[UnB/FCTE] mico balão dourado",
+      "c": "",
+      "r": "",
+      "rs": []
+    },
+    "unbfcte04": {
+      "n": "[UnB/FCTE] Night Raid",
+      "c": "",
+      "r": "",
+      "rs": []
+    },
+    "unbfcte05": {
+      "n": "[UnB/FCTE] A terceira é da sorte mesmo?",
+      "c": "",
+      "r": "",
+      "rs": []
+    },
+    "unbfcte06": {
+      "n": "[UnB/FCTE] Bufus Regularias",
+      "c": "",
+      "r": "",
+      "rs": []
+    },
+    "unbfcte07": {
+      "n": "[UnB/FCTE] ClaudioCodes",
+      "c": "",
+      "r": "",
+      "rs": []
+    },
+    "unbfcte08": {
+      "n": "[UnB/FCTE] CM^2",
+      "c": "",
+      "r": "",
+      "rs": []
+    },
+    "unbdarcy01": {
+      "n": "[UnB/Darcy] Alexa ligar aura",
+      "c": "",
+      "r": "",
+      "rs": []
+    },
+    "unbdarcy02": {
+      "n": "[UnB/Darcy] Main de família",
+      "c": "",
+      "r": "",
+      "rs": []
+    },
+    "unbdarcy03": {
+      "n": "[UnB/Darcy] HelloWorld(\"print\")",
+      "c": "",
+      "r": "",
+      "rs": []
+    },
+    "unbdarcy04": {
+      "n": "[UnB/Darcy] trio ternura",
+      "c": "",
+      "r": "",
+      "rs": []
+    },
+    "unbdarcy05": {
+      "n": "[UnB/Darcy] pySandu Restaurante Careca",
+      "c": "",
+      "r": "",
+      "rs": []
+    },
+    "unbdarcy06": {
+      "n": "[UnB/Darcy] rapaz, não vai dar não, vou pra oficina do bolo… vou comer bolo com meus colegas",
+      "c": "",
+      "r": "",
+      "rs": []
+    },
+    "unbdarcy07": {
+      "n": "[UnB/Darcy] Monitubbies",
+      "c": "",
+      "r": "",
+      "rs": []
+    },
+    "unbdarcy20": {
+      "n": "[UnB/Darcy] steelBallonRun",
+      "c": "",
+      "r": "",
+      "rs": []
+    },
+    "unbdarcy08": {
+      "n": "[UnB/Darcy] Vetores Bugados na Matrix-",
+      "c": "",
+      "r": "",
+      "rs": []
+    },
+    "unbdarcy21": {
+      "n": "[UnB/Darcy] Banco Santander",
+      "c": "",
+      "r": "",
+      "rs": []
+    },
+    "unbdarcy09": {
+      "n": "[UnB/Darcy] PySandu Gomutcho, se não pagar é mérito",
+      "c": "",
+      "r": "",
+      "rs": []
+    },
+    "unbdarcy22": {
+      "n": "[UnB/Darcy] Abri a caixa e meu gato virou um WA",
+      "c": "",
+      "r": "",
+      "rs": []
+    },
+    "unbdarcy23": {
+      "n": "[UnB/Darcy] vendo celta batido",
+      "c": "",
+      "r": "",
+      "rs": []
+    },
+    "unbdarcy24": {
+      "n": "[UnB/Darcy] Essa caiu na prova pra se matricular na creche do Riacho Fundo 1",
+      "c": "",
+      "r": "",
+      "rs": []
+    },
+    "unbdarcy25": {
+      "n": "[UnB/Darcy] UnB Vela",
+      "c": "",
+      "r": "",
+      "rs": []
+    },
+    "unbdarcy26": {
+      "n": "[UnB/Darcy] Runtime Terror",
+      "c": "",
+      "r": "",
+      "rs": []
+    },
+    "uniceub01": {
+      "n": "[UniCEUB] While True",
+      "c": "",
+      "r": "",
+      "rs": []
+    },
+    "uniceub02": {
+      "n": "[UniCEUB] Hyper bolicos",
+      "c": "",
+      "r": "",
+      "rs": []
+    }
+  },
+  "top_teams": [
+    {
+      "login": "ufu01",
+      "name": "[UFU] Praise the Sonic",
+      "solved": 12,
+      "penalty": 961
+    },
+    {
+      "login": "unbdarcy22",
+      "name": "[UnB/Darcy] Abri a caixa e meu gato virou um WA",
+      "solved": 11,
+      "penalty": 943
+    },
+    {
+      "login": "pucgo03",
+      "name": "[PUC-GO] Morangos do Amor",
+      "solved": 11,
+      "penalty": 993
+    },
+    {
+      "login": "unbdarcy19",
+      "name": "[UnB/Darcy] Alunos da Dra. Quirino",
+      "solved": 11,
+      "penalty": 1019
+    },
+    {
+      "login": "pucgo01",
+      "name": "[PUC-GO] Herobrine",
+      "solved": 11,
+      "penalty": 1475
+    },
+    {
+      "login": "unbfcte02",
+      "name": "[UnB/FCTE] Dedinhos Mágicos",
+      "solved": 9,
+      "penalty": 776
+    },
+    {
+      "login": "unbdarcy16",
+      "name": "[UnB/Darcy] O nome anterior do nosso time quebrou o BOCA",
+      "solved": 8,
+      "penalty": 1289
+    },
+    {
+      "login": "unbdarcy17",
+      "name": "[UnB/Darcy] py.sandu mma experts carona da silva mauro patrão opala 6 cilindros não somos do gama 90 anos da vovó oliveira",
+      "solved": 7,
+      "penalty": 624
+    },
+    {
+      "login": "unbdarcy24",
+      "name": "[UnB/Darcy] Essa caiu na prova pra se matricular na creche do Riacho Fundo 1",
+      "solved": 7,
+      "penalty": 915
+    },
+    {
+      "login": "ufu02",
+      "name": "[UFU] Haaland, você não é bem vindo em Douradoquara",
+      "solved": 6,
+      "penalty": 640
+    }
+  ],
+  "performance": {
+    "teams_with_ac": 46,
+    "solved": {
+      "mean": 4,
+      "median": 3,
+      "q1": 2,
+      "q3": 4,
+      "p90": 9
+    },
+    "penalty": {
+      "mean": 435,
+      "median": 325,
+      "q1": 115,
+      "q3": 640
+    },
+    "first_ac_median": 12
+  }
+}
+;
+const CNAMES={};
+const RTREE=[];
+(function(){
+  var host=document.getElementById('stats'); if(!host) return;
+  // analytics do RECORTE (01/09): corrida/comparação/desempenho saem dos ac_events
+  // GLOBAIS filtrados — região pela pertença teams_idx[login].rs (regra única de sedes, a mesma das
+  // fatias by_region); país por teams_idx[login].c (paridade com a página ao vivo). Estatística sem `rs`
+  // (gerada antes de 28/09/2026) cai no casamento antigo.
+  var AIDX=STATS.teams_idx||{}, AUNR=null;
+  try{ AUNR=STATS.unranked_regex?new RegExp(STATS.unranked_regex):null }catch(e){ AUNR=null }
+  function anFor(kind,key){
+    if(!STATS.ac_events) return null;
+    var filter=null;
+    if(kind==='r'){
+      var kl=String(key).toLowerCase(), hasRs=Object.keys(AIDX).some(function(k){ return AIDX[k]&&AIDX[k].rs });
+      if(hasRs) filter=function(lg){ return ((AIDX[lg]&&AIDX[lg].rs)||[]).some(function(n){ return String(n).toLowerCase()===kl }) };
+      else filter=function(lg){ return String((AIDX[lg]&&AIDX[lg].r)||'').toLowerCase()===kl };
+    } else if(kind==='c'){
+      filter=function(lg){ return ((AIDX[lg]&&AIDX[lg].c)||'')===key };
+    }
+    return {events:STATS.ac_events, idx:AIDX, pen:STATS.penalty_minutes||20, unrankedRe:AUNR, filter:filter};
+  }
+  function render(s,kind,key){
+    host.innerHTML='';
+    try{ statsSections(s,{analytics:anFor(kind,key)}).forEach(function(x){ host.append(x) }) }
+    catch(e){ host.innerHTML='<p class="note">'+String(e)+'</p>' }
+  }
+  var bar=document.getElementById('sbar'), selR=document.getElementById('sRegion'),
+      selC=document.getElementById('sFlag'), cnt=document.getElementById('sCount');
+  // Sede = a ÁRVORE do regions.json (ordem e indentação do seletor do placar), só os nós
+  // com recorte computado; sedes fora da árvore entram no fim, ordenadas
+  var have=STATS.by_region||{}, regs=[], seenR={};
+  RTREE.forEach(function(t){
+    if(t.n && Object.prototype.hasOwnProperty.call(have,t.n)){ regs.push(t); seenR[t.n.toLowerCase()]=1; }
+  });
+  Object.keys(have).sort(function(a,b){ return a.localeCompare(b) }).forEach(function(n){
+    if(!seenR[n.toLowerCase()]) regs.push({n:n,d:0});
+  });
+  var ctys=Object.keys(STATS.by_country||{}).sort(function(a,b){
+    return String(CNAMES[a]||a).localeCompare(String(CNAMES[b]||b)) });
+  if(!bar || (!regs.length && !ctys.length)){ render(STATS,'',''); return; }
+  bar.hidden=false;
+  regs.forEach(function(r){ var o=document.createElement('option'); o.value=r.n;
+    o.textContent=new Array((r.d||0)+1).join('  ')+r.n; selR.add(o) });
+  ctys.forEach(function(c){ var o=document.createElement('option'); o.value=c;
+    o.textContent=CNAMES[c]||c.toUpperCase(); selC.add(o) });
+  if(selR.options.length<2) selR.parentNode.style.display='none';
+  if(selC.options.length<2) selC.parentNode.style.display='none';
+  function pick(){
+    if(selR.value) return {s:(STATS.by_region||{})[selR.value]||STATS, nm:selR.value, k:'r', key:selR.value};
+    if(selC.value) return {s:(STATS.by_country||{})[selC.value]||STATS, nm:(CNAMES[selC.value]||selC.value.toUpperCase()), k:'c', key:selC.value};
+    return {s:STATS, nm:'', k:'', key:''};
+  }
+  function upd(){
+    var p=pick(); render(p.s,p.k,p.key);
+    if(!cnt) return;
+    if(p.nm){ cnt.textContent=(bar.getAttribute('data-sel')||'%s %s %s')
+        .replace('%s',p.nm).replace('%s',p.s.totals.users).replace('%s',STATS.totals.users); }
+    else cnt.textContent=(bar.getAttribute('data-glob')||'%s').replace('%s',STATS.totals.users);
+  }
+  // mutuamente exclusivos: escolher um zera o outro (o recorte é UM, nunca a interseção)
+  selR.addEventListener('change',function(){ if(selR.value) selC.value=''; upd() });
+  selC.addEventListener('change',function(){ if(selC.value) selR.value=''; upd() });
+  upd();
+})();
+</script>
+<noscript>
+<p class="note">Falha ao renderizar as estatísticas.</p>
+</noscript>
+<footer>Gerado em 29/09/2026 20:38 pelo MOJ — moj.naquadah.com.br</footer>
+</div>
+</body>
+</html>

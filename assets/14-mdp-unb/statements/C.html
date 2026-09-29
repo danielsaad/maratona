@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>enunciado</title>
+  <style>
+html {
+color: #1a1a1a;
+background-color: #fdfdfd;
+}
+body {
+margin: 0 auto;
+max-width: 36em;
+padding-left: 50px;
+padding-right: 50px;
+padding-top: 50px;
+padding-bottom: 50px;
+hyphens: auto;
+overflow-wrap: break-word;
+text-rendering: optimizeLegibility;
+font-kerning: normal;
+}
+@media (max-width: 600px) {
+body {
+font-size: 0.9em;
+padding: 12px;
+}
+h1 {
+font-size: 1.8em;
+}
+}
+@media print {
+html {
+background-color: white;
+}
+body {
+background-color: transparent;
+color: black;
+font-size: 12pt;
+}
+p, h2, h3 {
+orphans: 3;
+widows: 3;
+}
+h2, h3, h4 {
+page-break-after: avoid;
+}
+}
+p {
+margin: 1em 0;
+}
+a {
+color: #1a1a1a;
+}
+a:visited {
+color: #1a1a1a;
+}
+img {
+max-width: 100%;
+}
+svg {
+height: auto;
+max-width: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+margin-top: 1.4em;
+}
+h5, h6 {
+font-size: 1em;
+font-style: italic;
+}
+h6 {
+font-weight: normal;
+}
+ol, ul {
+padding-left: 1.7em;
+margin-top: 1em;
+}
+li > ol, li > ul {
+margin-top: 0;
+}
+blockquote {
+margin: 1em 0 1em 1.7em;
+padding-left: 1em;
+border-left: 2px solid #e6e6e6;
+color: #606060;
+}
+code {
+font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+font-size: 85%;
+margin: 0;
+hyphens: manual;
+}
+pre {
+margin: 1em 0;
+overflow: auto;
+}
+pre code {
+padding: 0;
+overflow: visible;
+overflow-wrap: normal;
+}
+.sourceCode {
+background-color: transparent;
+overflow: visible;
+}
+hr {
+background-color: #1a1a1a;
+border: none;
+height: 1px;
+margin: 1em 0;
+}
+table {
+margin: 1em 0;
+border-collapse: collapse;
+width: 100%;
+overflow-x: auto;
+display: block;
+font-variant-numeric: lining-nums tabular-nums;
+}
+table caption {
+margin-bottom: 0.75em;
+}
+tbody {
+margin-top: 0.5em;
+border-top: 1px solid #1a1a1a;
+border-bottom: 1px solid #1a1a1a;
+}
+th {
+border-top: 1px solid #1a1a1a;
+padding: 0.25em 0.5em 0.25em 0.5em;
+}
+td {
+padding: 0.125em 0.5em 0.25em 0.5em;
+}
+header {
+margin-bottom: 4em;
+text-align: center;
+}
+#TOC li {
+list-style: none;
+}
+#TOC ul {
+padding-left: 1.3em;
+}
+#TOC > ul {
+padding-left: 0;
+}
+#TOC a:not(:hover) {
+text-decoration: none;
+}
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+
+ul.task-list[class]{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+font-size: inherit;
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+</style>
+<style>body{font-family:system-ui,Arial,sans-serif;max-width:52rem;margin:1rem auto;padding:0 1rem;line-height:1.55;color:#111}.moj-title{margin:.2rem 0 1.1rem}pre{background:#f3f4f6;padding:.6rem;border-radius:6px;overflow:auto;white-space:pre-wrap}.moj-exemplos h2{margin-top:1.2rem}.moj-exemplo{border:1px solid #e5e7eb;border-radius:8px;padding:.2rem .8rem;margin:.6rem 0}.moj-exemplo h3,.moj-exemplo h4{margin:.5rem 0 .2rem}.moj-exemplo-nota{margin:.1rem 0 .5rem;color:#374151}img{max-width:100%}.moj-graph{margin:1rem 0}.moj-graph.center{text-align:center}.moj-graph svg{max-width:100%;height:auto}table{border-collapse:collapse}td,th{border:1px solid #ccc;padding:.2rem .5rem}</style>
+</head>
+<body>
+<h1 class="moj-title">Campinho</h1>
+<p>João Vitor gosta de jogar “Campinho”: um “fantasy game” em que você
+compra jogadores de futebol para o seu time a fim de alcançar a maior
+pontuação possível. A pontuação do time é simplesmente a soma das
+pontuações de cada jogador.</p>
+<p>No jogo, cada um dos jogadores disponíveis tem uma posição fixa,
+representada por uma letra: goleiro (G), zagueiro (Z), lateral (L),
+meio-campista (M) ou atacante (A). Cada jogador também tem um preço (em
+reais, com duas casas decimais). A pontuação de cada jogador depende de
+como ele irá se sair na próxima partida, mas, devido ao conhecimento
+avançado de João em Analytics, ele também sabe a pontuação que cada
+jogador receberá (também um número com duas casas decimais).</p>
+<p>Sendo um apreciador de táticas modernas, João usará a formação 4-3-3,
+o que significa que seu time consistirá de 1 goleiro (G), 2 zagueiros
+(Z), 2 laterais (L), 3 meio-campistas (M) e 3 atacantes (A). Além disso,
+ele tem apenas
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>X</mi><annotation encoding="application/x-tex">X</annotation></semantics></math>
+reais para gastar com jogadores. Com base nos preços e pontuações
+informados para cada jogador, ele consegue montar um time com a formação
+4-3-3? Se sim, qual é a pontuação máxima que ele pode alcançar?</p>
+<h2 id="entrada">Entrada</h2>
+<p>A primeira linha da entrada contém dois valores separados por um
+espaço:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>N</mi><annotation encoding="application/x-tex">N</annotation></semantics></math>
+e
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>X</mi><annotation encoding="application/x-tex">X</annotation></semantics></math>.
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>N</mi><annotation encoding="application/x-tex">N</annotation></semantics></math>
+é o número de jogadores disponíveis para compra
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">(</mo><mn>1</mn><mo>≤</mo><mi>N</mi><mo>≤</mo><mn>200</mn><mo stretchy="true" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(1 \leq N \leq 200)</annotation></semantics></math>.
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>X</mi><annotation encoding="application/x-tex">X</annotation></semantics></math>
+é o valor, em reais, que João tem para gastar, com exatamente duas casas
+decimais
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">(</mo><mn>0.00</mn><mo>≤</mo><mi>X</mi><mo>≤</mo><mn>200.00</mn><mo stretchy="true" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(0.00 \leq X \leq 200.00)</annotation></semantics></math>.</p>
+<p>As próximas
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>N</mi><annotation encoding="application/x-tex">N</annotation></semantics></math>
+linhas descrevem os jogadores disponíveis. A
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>i</mi><annotation encoding="application/x-tex">i</annotation></semantics></math>-ésima
+dessas linhas contém três valores separados por um espaço:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>C</mi><mi>i</mi></msub><annotation encoding="application/x-tex">C_i</annotation></semantics></math>,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>P</mi><mi>i</mi></msub><annotation encoding="application/x-tex">P_i</annotation></semantics></math>
+e
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>S</mi><mi>i</mi></msub><annotation encoding="application/x-tex">S_i</annotation></semantics></math>.
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>C</mi><mi>i</mi></msub><annotation encoding="application/x-tex">C_i</annotation></semantics></math>
+é um caractere maiúsculo representando a posição do
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>i</mi><annotation encoding="application/x-tex">i</annotation></semantics></math>-ésimo
+jogador: G, Z, L, M ou A.
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>P</mi><mi>i</mi></msub><annotation encoding="application/x-tex">P_i</annotation></semantics></math>
+e
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>S</mi><mi>i</mi></msub><annotation encoding="application/x-tex">S_i</annotation></semantics></math>
+têm ambos exatamente duas casas decimais
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">(</mo><mn>0.00</mn><mo>≤</mo><msub><mi>P</mi><mi>i</mi></msub><mo>,</mo><msub><mi>S</mi><mi>i</mi></msub><mo>≤</mo><mn>50.00</mn><mo stretchy="true" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(0.00 \leq P_i, S_i \leq 50.00)</annotation></semantics></math>
+e representam, respectivamente, o preço e a pontuação desse jogador.</p>
+<h2 id="saída">Saída</h2>
+<p>Se João não conseguir montar um time com a formação 4-3-3, imprima
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mn>1</mn></mrow><annotation encoding="application/x-tex">-1</annotation></semantics></math>.
+Caso contrário, imprima a pontuação máxima que ele pode alcançar, com
+exatamente duas casas decimais.</p>
+<section class="moj-exemplos"><h2>Exemplos</h2><div class="moj-exemplo"><h3>Entrada</h3><pre data-sample="sample1" data-kind="input">1 200.00
+G 0.00 50.00
+</pre><h3>Saída</h3><pre data-sample="sample1" data-kind="output">-1
+</pre><div class="moj-exemplo-nota"><h3>Explicação</h3><p>No primeiro caso de teste, não é possível montar um time com a
+formação 4-3-3.</p></div></div><div class="moj-exemplo"><h3>Entrada</h3><pre data-sample="sample2" data-kind="input">18 101.00
+G 0.00 0.00
+G 10.00 10.00
+Z 5.00 2.00
+Z 5.00 2.00
+Z 7.00 1.00
+Z 7.00 1.00
+L 50.00 18.00
+L 50.00 18.00
+L 20.00 4.00
+L 20.00 4.00
+M 1.00 1.00
+M 2.00 2.00
+M 3.00 3.00
+M 10.00 10.00
+A 15.00 15.00
+A 12.00 18.00
+A 3.00 2.00
+A 0.00 0.00
+</pre><h3>Saída</h3><pre data-sample="sample2" data-kind="output">69.00
+</pre><div class="moj-exemplo-nota"><h3>Explicação</h3><p>No segundo caso de teste, o melhor time custa exatamente <span class="math inline">101.00</span> e consiste no goleiro custando <span class="math inline">10.00</span>; nos dois zagueiros custando <span class="math inline">5.00</span> cada; nos dois laterais custando <span class="math inline">20.00</span> cada; nos meio-campistas custando <span class="math inline">1.00</span>, <span class="math inline">3.00</span> e
+<span class="math inline">10.00</span>; e nos atacantes custando <span class="math inline">15.00</span>, <span class="math inline">12.00</span>
+e <span class="math inline">0.00</span>. As pontuações deles são,
+respectivamente, <span class="math inline">10.00</span>, <span class="math inline">2.00</span>, <span class="math inline">2.00</span>,
+<span class="math inline">4.00</span>, <span class="math inline">4.00</span>, <span class="math inline">1.00</span>,
+<span class="math inline">3.00</span>, <span class="math inline">10.00</span>, <span class="math inline">15.00</span>, <span class="math inline">18.00</span>
+e <span class="math inline">0.00</span>, totalizando uma pontuação de
+<span class="math inline">69.00</span>.</p></div></div></section>
+</body>
+</html>
