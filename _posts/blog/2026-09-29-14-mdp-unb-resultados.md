@@ -22,7 +22,7 @@ Abaixo seguem os mais bem colocados, os créditos da comissão organizadora e re
 
 1. **[UFU] Praise the Sonic**: Carlos Cabral de Menezes, Guilherme Cabral de Menezes, Luís Augusto Queiroz Martins
 2. **[UnB/Darcy] Abri a caixa e meu gato virou um WA**: Pedro Avila Beneveli, Iasmim de Queiroz Freitas, Emerson Luiz Cruz Junior
-3. **[PUC-GO] Morangos do Amor**: Donald Knuth, James Morris, Vaughan Pratt
+3. **[PUC-GO] Morangos do Amor**: Allann Cintra, João Guilherme, Matheus Campos
 4. **[UnB/Darcy] Alunos da Dra. Quirino**: Luiz Eduardo Pereira dos Reis, Henrique Quirino de Oliveira, Giovana Carmo Rosa
 5. **[PUC-GO] Herobrine**: Lorenzo Oliveira Maciel, Eduardo Valcacer Coelho, Fernando Augusto Gonçalves de Lacerda
 
