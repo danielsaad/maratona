@@ -84,6 +84,6 @@ Abaixo seguem os mais bem colocados, os créditos da comissão organizadora e re
 
 O problema *G*, possuia um problema na solução modelo. Ela foi arrumada e as submissões
 foram rejulgadas após a competição. Infelizmente houve uma inversão entre o 2° e 3°
-lugares por conta disso. O autor do problema, quem vos escreve, humildemente, pede
+lugares por conta disso. O autor do problema, quem vos escreve, humildemente pede
 desculpas pela confusão. No tutorial existe a explicação do ocorrido com mais detalhes e a
 descrição da nova solução esperada.
