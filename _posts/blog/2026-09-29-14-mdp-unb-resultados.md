@@ -28,9 +28,28 @@ Abaixo seguem os mais bem colocados, os créditos da comissão organizadora e re
 
 ### Melhor Equipe Feminina
 
-- **[UnB/Darcy] mod não, apelidos são pra amigos e a congruência modular não é minha amiga**: Adrielly Medeiros Nunes, Luisa Ribeiro de Oliveira e Nikolle dos Santos Licá  
+- **[UnB/Darcy] rapaz, não vai dar não, vou pra oficina do bolo… vou comer bolo com meus colegas**: Adrielly Medeiros Nunes, Nikolle dos Santos Licá, Luisa Ribeiro de Oliveira
 
 ## Organização
+
+- Alberto Tavares (UnB) 
+- Arthur Botelho (UnB)
+- Bruno Ribas (UnB/FCTE)
+- Cauê Trindade (UnB)
+- Carlos Brasil (UnB/FCTE)
+- Daniel Porto (UnB)
+- Daniel Saad (IFB)
+- Edson A. C. Júnior (UnB/FCTE)
+- Eduardo Freire (UnB)
+- Eduardo Quirino (UnB)
+- Guilherme Ramos (UnB)
+- Jeremias Gomes (IDP)
+- José Leite
+- Lucas Sala (UnB)
+- Pedro Gallo (UnB)
+- Ruan Petrus (UnB)
+- Yuri Lavinas (UnB)
+- Wilson Guimarães (UnB)
 
 ### Elaboração dos Problemas
 
@@ -51,8 +70,9 @@ Abaixo seguem os mais bem colocados, os créditos da comissão organizadora e re
 
 ### Staff 🍉
 
--
--
+- Andressa Rocha
+- Lara Emanuele Silva Lemos Mota Jardim
+- Luan Quintanilha Nunes
 
 ## Recursos
 
@@ -60,6 +80,10 @@ Abaixo seguem os mais bem colocados, os créditos da comissão organizadora e re
 - [Participação Virtual](https://moj.naquadah.com.br/treino/virtual/?c=xiv-maratona-unb)
 - [Treino Livre](https://moj.naquadah.com.br/treino/?searchcol=mdp-unb-xiv)
 
-## Disclaimer
+## Aviso
 
-O problema *G*, possuia um problema na solução modelo. Ela foi arrumada e as submissões foram rejulgadas após a competição. Infelizmente houve uma inversão entre o 2° e 3° lugar por conta disso. O autor do problema, quem vos escreve, pede desculpas pela confusão. No editorial existe a explicação do ocorrido e a solução correta.
+O problema *G*, possuia um problema na solução modelo. Ela foi arrumada e as submissões
+foram rejulgadas após a competição. Infelizmente houve uma inversão entre o 2° e 3°
+lugares por conta disso. O autor do problema, quem vos escreve, humildemente, pede
+desculpas pela confusão. No tutorial existe a explicação do ocorrido com mais detalhes e a
+descrição da nova solução esperada.
