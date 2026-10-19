@@ -31,7 +31,7 @@ placar final, tutoriais e caderno de problemas.
 
 ### Melhor Equipe Feminina
 
-- **[IFB-CCEI] <Roxinhas.h>**: Vitória Vieira de Oliveira, Sofia Dias Bastos e Winne Lemes Barcellos.
+- **[IFB-CCEI] \<Roxinhas.h\>**: Vitória Vieira de Oliveira, Sofia Dias Bastos e Winne Lemes Barcellos.
 
 ### Melhor Equipe do IFB
 
