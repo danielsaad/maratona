@@ -1,6 +1,6 @@
 ---
 title: "I Maratona Padawan de Programação do IFB: Resultados"
-date: 2026-10-02 00:00
+date: 2026-10-19 00:00
 timezone: America/Sao_Paulo
 layout: post
 categories: blog
