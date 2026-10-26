@@ -52,17 +52,19 @@ Abaixo seguem os mais bem colocados, os créditos da comissão organizadora e re
 ### Staff  ️
 
 - Arthur Carlos Neuhauss
-- Ciro Moraes
-- Erick Saraiva
-- Gabriel Pinho
-- Giovanni Lucas
-- Giulianna Ellen
+- Ciro Moraes Rocha
+- Erick Sousa Saraiva
+- Gabriel de Oliveira Pinho
+- Giovanni Lucas Oliveira da Silva
+- Giulianna Ellen Alves do Nascimento
 - Isaque Camargos
-- João Henrique
-- João Brito
-- Letícia Torres
-- Luan Mateus Nunes
-- Maria Eduarda Moraes
+- João Henrique Rodrigues Lopes
+- João Alexandre Britto de Faria
+- Letícia de Mendonça Torres
+- Luan Mateus Durães Nunes
+- Maria Eduarda Candeira Moraes
+
+
 
 ### Sistemas
 
